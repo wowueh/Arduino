@@ -32,23 +32,22 @@ LiquidCrystal595 lcd(2,3,4);
 
 void setup() 
 {
-  lcd.begin(16,2);
+  lcd.begin(20,4);
 
   // Print a message to the LCD.
   lcd.setCursor(0,0);
   lcd.print("This is line 1");
   delay(1000);
-
+  
   lcd.setCursor(0,1);
   lcd.print("This is line 2");
   delay(1000);
-
-  lcd.setCursor(0,0);
-  lcd.clear();
+  
+  lcd.setCursor(0,2);
   lcd.print(127, HEX);
   delay(1000);
   
-  lcd.setCursor(0,1);
+  lcd.setCursor(0,3);
   lcd.print("This is line ");
   lcd.print(4, BIN); // << Snagged from the Print class
   delay(1000);
@@ -60,3 +59,4 @@ void loop()
 {
   
 }
+

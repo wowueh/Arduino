@@ -36,7 +36,7 @@
  */
 
 // include the library code:
-#include <LiquidCrystal595.h>
+#include <LiquidCrystal.h>
 
 // these constants won't change.  But you can change the size of
 // your LCD using them:
@@ -44,7 +44,7 @@ const int numRows = 2;
 const int numCols = 16;
 
 // initialize the library with the numbers of the interface pins
-LiquidCrystal595 lcd(2,3,4);
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 void setup() {
   // set up the LCD's number of columns and rows: 

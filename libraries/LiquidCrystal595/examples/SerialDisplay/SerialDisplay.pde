@@ -36,10 +36,10 @@
  */
 
 // include the library code:
-#include <LiquidCrystal595.h>
+#include <LiquidCrystal.h>
 
 // initialize the library with the numbers of the interface pins
-LiquidCrystal595 lcd(2,3,4);
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 void setup(){
     // set up the LCD's number of columns and rows: 

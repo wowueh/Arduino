@@ -1,6 +1,6 @@
 /* -----------------------------------------------------------------------------------
  * $Author: robaby@gmail.com $
- * $Date: 2012-04-08 23:54:07 +0100 (Sun, 08 Apr 2012) $
+ * $Date: 2012-04-08 22:54:07 +0000 (Sun, 08 Apr 2012) $
  * $Revision: 4 $
  * ----------------------------------
  * 
@@ -20,9 +20,9 @@
  *
  *
  * ---Shift Register 74HC595---
- * [SR Pin 14 (DS)]    to Red wire - [datapin]
- * [SR Pin 12 (ST_CP)] to Green wire - [latchpin]
- * [SR Pin 11 (SH_CP)] to Black wire - [clockpin]
+ * [SR Pin 14 (DS)]    to Arduino pin - [datapin]
+ * [SR Pin 12 (ST_CP)] to Arduino pin - [latchpin]
+ * [SR Pin 11 (SH_CP)] to Arduino pin - [clockpin]
  * Black wire to Ground
  * Red wire to +5v
  *
@@ -40,10 +40,10 @@
  */
 // 595 mappings - LED1 is also the backlight controller
 
-#define ENABLE_PIN	B00000001
+#define ENABLE_PIN  B00000001
 #define RS_PIN		B10000000
-#define LED1_PIN    	B00100000
-#define LED2_PIN    	B01000000
+#define LED1_PIN    B00100000
+#define LED2_PIN    B01000000
 #define DATABITS	B00011110
 #define PIN_D4		B00010000
 #define PIN_D5		B00001000
@@ -186,7 +186,7 @@ void LiquidCrystal595::begin(uint8_t cols, uint8_t lines, uint8_t dotsize)
   _displaymode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
   // set the entry mode
   command(LCD_ENTRYMODESET | _displaymode);
-  setLED1Pin(HIGH);
+
 }
 
 /********** high level commands, for the user! */
@@ -292,6 +292,8 @@ inline void LiquidCrystal595::command(uint8_t value) {
 
 inline size_t LiquidCrystal595::write(uint8_t value) {
   send(value, HIGH);
+  return 1; // This is necessary for this library to work on IDE 1.6.6 and above.
+            // Without a return value, the LCD displays only one character per line.
 }
 
 /************ low level data pushing commands **********/

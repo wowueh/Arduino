@@ -1,6 +1,6 @@
 /* -----------------------------------------------------------------------------------
  * $Author: robaby@gmail.com $
- * $Date: 2012-04-08 23:54:07 +0100 (Sun, 08 Apr 2012) $
+ * $Date: 2012-04-08 22:54:07 +0000 (Sun, 08 Apr 2012) $
  * $Revision: 4 $
  * ----------------------------------
  * 
@@ -20,18 +20,11 @@
  *
  *
  * ---Shift Register 74HC595---
- * [SR Pin 14 (DS)]    to Red wire - [datapin]
- * [SR Pin 12 (ST_CP)] to Green wire - [latchpin]
- * [SR Pin 11 (SH_CP)] to Black wire - [clockpin]
+ * [SR Pin 14 (DS)]    to Arduino pin - [datapin]
+ * [SR Pin 12 (ST_CP)] to Arduino pin - [latchpin]
+ * [SR Pin 11 (SH_CP)] to Arduino pin - [clockpin]
  * Black wire to Ground
  * Red wire to +5v
- *
- * //Definir chamada parametros: datapin, latchpin, clockpin, [num_lines]
- * LiquidCrystal595 lcd(2,3,4); // black, green, red wires
- *
- *
- *
- *
  *
  * -----Shift Reg to LCD--------
  * SR Pin 15  - ENABLE        10000000
