@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://diyhacking.com/esp8266-gpio/ -->
+<html itemscope="itemscope" itemtype="http://schema.org/Article" xmlns="https://www.w3.org/1999/xhtml" lang="en-US" prefix="og: http://ogp.me/ns#" class="csstransforms csstransforms3d csstransitions js no-touch cssanimations csstransitions Chrome Chrome61 js_active  vc_desktop  vc_transform  vc_transform"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="format-detection" content="telephone=no">
+<title itemprop="name">
+        ESP8266 Tutorial: Programming the Onboard GPIO Pins | DIY Hacking        </title>
+<link rel="shortcut icon" href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/favicon512x5121-min.png">
+<link rel="apple-touch-icon-precomposed" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/DIY-Hacking-Logo.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/DIY-Hacking-Logo.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/DIY-Hacking-Logo.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/DIY-Hacking-Logo.png">
+<link rel="alternate" type="application/rss+xml" title="DIY Hacking RSS Feed" href="https://diyhacking.com/feed/">
+<link rel="alternate" type="application/atom+xml" title="DIY Hacking Atom Feed" href="https://diyhacking.com/feed/atom/">
+<link rel="pingback" href="https://diyhacking.com/xmlrpc.php">
+<!--[if lt IE 9]>
+         <script src="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/js/html5shiv.js" type="text/javascript"></script>
+         <link rel='stylesheet' href='https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/stylesheet/css/ie.css' /> 
+         <![endif]-->
+<!--[if IE 7 ]>
+               <link href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/stylesheet/css/ie7.css" media="screen" rel="stylesheet" type="text/css" />
+               <![endif]-->
+<!--[if IE 8 ]>
+               <link href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/stylesheet/css/ie8.css" media="screen" rel="stylesheet" type="text/css" />
+         <![endif]-->
+<!--[if lte IE 8]>
+            <script type="text/javascript" src="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/js/respond.js"></script>
+         <![endif]-->
+<script src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/779889472158467" async=""></script><script async="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/fbevents.js.tải xuống"></script><script type="text/javascript" async="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/conversion_async.js.tải xuống"></script><script src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pubads_impl_rendering_162.js.tải xuống"></script><script src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/ads"></script><script async="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/gtm.js.tải xuống"></script><script async="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/analytics.js.tải xuống"></script><script type="text/javascript" async="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/ga.js.tải xuống"></script><script type="text/javascript" id="www-widgetapi-script" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/www-widgetapi.js.tải xuống" async=""></script><script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/player_api"></script>
+<script type="text/javascript" src="https://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+<script type="text/javascript">
+          // Init aplication namespace 
+          var abb = {};
+          var php = {};
+          
+          var mk_header_parallax, mk_banner_parallax, mk_page_parallax, mk_footer_parallax, mk_body_parallax;
+          var mk_images_dir = "https://diyhacking.com/wp-content/themes/jupiter/images",
+          mk_theme_js_path = "https://diyhacking.com/wp-content/themes/jupiter/js",
+          mk_theme_dir = "https://diyhacking.com/wp-content/themes/jupiter",
+          mk_captcha_placeholder = "Enter Captcha",
+          mk_captcha_invalid_txt = "Invalid. Try again.",
+          mk_captcha_correct_txt = "Captcha correct.",
+          mk_responsive_nav_width = 1140,
+          mk_grid_width = 1140,
+          mk_ajax_search_option = "fullscreen_search",
+          mk_preloader_txt_color = "#444444",
+          mk_preloader_bg_color = "#ffffff",
+          mk_accent_color = "#f97352",
+          mk_preloader_bar_color = "#f97352",
+          mk_preloader_logo = "";
+                    var mk_header_parallax = false,
+          mk_banner_parallax = false,
+          mk_page_parallax = false,
+          mk_footer_parallax = false,
+          mk_body_parallax = false,
+          mk_no_more_posts = "No More Posts";
+                    
+          function is_touch_device() {
+              return ('ontouchstart' in document.documentElement);
+          }
+          
+         </script>
+<script type="text/javascript">var ajaxurl = "https://diyhacking.com/wp-admin/admin-ajax.php"</script>
+
+<title>ESP8266 Tutorial: Programming the Onboard GPIO Pins | DIY Hacking</title>
+<meta name="description" content="This easy beginners tutorial shows how to program the GPIO pins on ESP8266 or ESP-01 module using Arduino. Learn to use the onboard GPIO pins of ESP8266.">
+<meta name="robots" content="noodp">
+<link rel="canonical" href="https://diyhacking.com/esp8266-gpio/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ESP8266 Tutorial: Programming the Onboard GPIO Pins | DIY Hacking">
+<meta property="og:description" content="This easy beginners tutorial shows how to program the GPIO pins on ESP8266 or ESP-01 module using Arduino. Learn to use the onboard GPIO pins of ESP8266.">
+<meta property="og:url" content="https://diyhacking.com/esp8266-gpio/">
+<meta property="og:site_name" content="DIY Hacking">
+<meta property="article:publisher" content="https://www.facebook.com/diyhacking">
+<meta property="article:tag" content="Arduino">
+<meta property="article:tag" content="ESP-01">
+<meta property="article:tag" content="ESP8266">
+<meta property="article:tag" content="ESP8266 GPIO">
+<meta property="article:tag" content="GPIO">
+<meta property="article:tag" content="iot">
+<meta property="article:section" content="Arduino projects">
+<meta property="article:published_time" content="2016-07-24T14:28:59+00:00">
+<meta property="article:modified_time" content="2017-03-24T22:02:38+00:00">
+<meta property="og:updated_time" content="2017-03-24T22:02:38+00:00">
+<meta property="og:image" content="https://diyhacking.com/wp-content/uploads/2016/07/esp1-min.jpg">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="DIY Hacking » Feed" href="https://diyhacking.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="DIY Hacking » Comments Feed" href="https://diyhacking.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="DIY Hacking » ESP8266 Tutorial: Programming the Onboard GPIO Pins Comments Feed" href="https://diyhacking.com/esp8266-gpio/feed/">
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/diyhacking.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.1"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/wp-emoji-release.min.js.tải xuống" type="text/javascript" defer=""></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="math-captcha-frontend-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="easy-facebook-likebox-plugin-styles-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/public.css" type="text/css" media="all">
+<link rel="stylesheet" id="easy-facebook-likebox-popup-styles-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/magnific-popup.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-styles-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/theme-styles.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="pe-line-icon-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pe-line-icons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="icomoon-fonts-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/icomoon-fonts.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-icons-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/theme-icons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-font-api-special-1-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="mk-style-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-dynamic-styles-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/custom.css" type="text/css" media="all">
+<style id="theme-dynamic-styles-inline-css" type="text/css">
+body {}body {font-family: Open Sans }body{background-color: #fff;}#mk-header{background-color: #f7f7f7;}.mk-header-bg{background-color: #fff;}.mk-header-toolbar{background-color: #ffffff;}#theme-page{background-color: #f0f0f0;}#mk-footer{background-color: #3d4045;}#mk-footer .footer-wrapper{padding:10px 0;}#mk-footer .widget{margin-bottom:10px;}#mk-footer [class*='mk-col-'] {padding:0 2%;}#sub-footer{background-color: #43474d;}.mk-footer-copyright {font-size:11px;letter-spacing: 1px;}#mk-boxed-layout{  -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0);  -moz-box-shadow: 0 0 0px rgba(0, 0, 0, 0);  box-shadow: 0 0 0px rgba(0, 0, 0, 0);}.mk-tabs-panes,.mk-news-tab .mk-tabs-tabs li.ui-tabs-active a,.mk-divider .divider-go-top,.ajax-container,.mk-fancy-title.pattern-style span,.mk-portfolio-view-all,.mk-woo-view-all,.mk-blog-view-all{background-color: #f0f0f0;}.mk-header-bg{  -webkit-opacity: 1;  -moz-opacity: 1;  -o-opacity: 1;  opacity: 1;}.header-sticky-ready .mk-header-bg{  -webkit-opacity: 1;  -moz-opacity: 1;  -o-opacity: 1;  opacity: 1;}.mk-header-inner,.header-sticky-ready .mk-header-inner,.header-style-2.header-sticky-ready .mk-classic-nav-bg{border-bottom:1px solid #ededed;}.header-style-4.header-align-left .mk-header-inner,.header-style-4.header-align-center .mk-header-inner {border-bottom:none;border-right:1px solid #ededed;}.header-style-4.header-align-right .mk-header-inner {border-bottom:none;border-left:1px solid #ededed;}.header-style-2 .mk-header-nav-container {border-top:1px solid #ededed;}body{font-size: 14px;color: #444444;font-weight: normal;line-height: 1.66em;}p,.mk-box-icon-2-content {font-size: 16px;color: #444444;line-height: 1.66em;}a {color: #f97352;}a:hover {color: #2e2e2e;}#theme-page strong {color: #444444;}#theme-page h1{font-size: 36px;color: #444444;font-weight: bold;text-transform: uppercase;}#theme-page h2{font-size: 30px;color: #444444;font-weight: bold;text-transform: uppercase;}#theme-page h3{font-size: 24px;color: #f97352;font-weight: bold;text-transform: uppercase;}#theme-page h4{font-size: 18px;color: #f97352;font-weight: bold;text-transform: none;}#theme-page h5{font-size: 16px;color: #f97352;font-weight: bold;text-transform: uppercase;}#theme-page h6{font-size: 14px;color: #f97352;font-weight: normal;text-transform: uppercase;}.page-introduce-title{font-size: 20px;color: ;text-transform: uppercase;font-weight: normal;letter-spacing: 2px;}.page-introduce-subtitle{font-size: 14px;line-height: 100%;color: ;font-size: 14px;text-transform: none;}::-webkit-selection{background-color: #f97352;color:#fff;}::-moz-selection{background-color: #f97352;color:#fff;}::selection{background-color: #f97352;color:#fff;}#mk-sidebar,#mk-sidebar p{font-size: 14px;color: #777777;font-weight: normal;}#mk-sidebar .widgettitle{text-transform: uppercase;font-size: 14px;color: #333333;font-weight: bolder;}#mk-sidebar .widgettitle a{color: #333333;}#mk-sidebar .widget a{color: #777777;}#mk-footer,#mk-footer p{font-size: 14px;color: #808080;font-weight: normal;}#mk-footer .widgettitle{text-transform: uppercase;font-size: 14px;color: #ffffff;font-weight: 800;}#mk-footer .widgettitle a{color: #ffffff;}#mk-footer .widget:not(.widget_social_networks) a{color: #999999;}.mk-side-dashboard {background-color: #444444;}.mk-side-dashboard,.mk-side-dashboard p{font-size: 12px;color: #444444;font-weight: normal;}.mk-side-dashboard .widgettitle{text-transform: uppercase;font-size: 14px;color: #ffffff;font-weight: 800;}.mk-side-dashboard .widgettitle a{color: #ffffff;}.mk-side-dashboard .widget a{color: #fafafa;}.sidedash-navigation-ul li a,.sidedash-navigation-ul li .mk-nav-arrow {color:#ffffff;}.sidedash-navigation-ul li a:hover {color:#ffffff;background-color:;}.mk-fullscreen-nav{background-color:#444444;}.mk-fullscreen-nav .mk-fullscreen-nav-wrapper .mk-fullscreen-nav-logo {margin-bottom: 125px;}.mk-fullscreen-nav .fullscreen-navigation-ul .menu-item a{color: #ffffff;text-transform: uppercase;font-size: 16px;letter-spacing: 0;font-weight: 800;padding: 25px 0;color: #ffffff;}.mk-fullscreen-nav .fullscreen-navigation-ul .menu-item a:hover{background-color: #ffffff;color: #444444;}#mk-sidebar .widget:not(.widget_social_networks) a:hover {color: #f97352;}#mk-footer .widget:not(.widget_social_networks) a:hover {color: #f97352;}.mk-side-dashboard .widget:not(.widget_social_networks) a:hover{color: #f97352;}.mk-grid{max-width: 1140px;}.mk-header-nav-container, .mk-classic-menu-wrapper{width: 1140px;}.theme-page-wrapper #mk-sidebar.mk-builtin{width: 20%;}.theme-page-wrapper.right-layout .theme-content,.theme-page-wrapper.left-layout .theme-content{width: 80%;}.mk-boxed-enabled #mk-boxed-layout,.mk-boxed-enabled #mk-boxed-layout .header-style-1 .mk-header-holder,.mk-boxed-enabled #mk-boxed-layout .header-style-3 .mk-header-holder{max-width: 1200px;}.mk-boxed-enabled #mk-boxed-layout .header-style-1 .mk-header-holder,.mk-boxed-enabled #mk-boxed-layout .header-style-3 .mk-header-holder{width: 100% !important;left:auto !important;}.mk-boxed-enabled #mk-boxed-layout .header-style-2.header-sticky-ready .mk-header-nav-container {width: 1200px !important;left:auto !important;}.header-style-1 .mk-header-start-tour,.header-style-3 .mk-header-start-tour,.header-style-1 .mk-header-inner #mk-header-search,.header-style-1 .mk-header-inner,.header-style-1 .mk-search-trigger,.header-style-3 .mk-header-inner,.header-style-1 .header-logo,.header-style-3 .header-logo,.header-style-1 .shopping-cart-header,.header-style-3 .shopping-cart-header,.header-style-1 #mk-header-social.header-section a,.header-style-2 #mk-header-social.header-section a,.header-style-3 #mk-header-social.header-section a{height: 92px;line-height:92px;}@media handheld, only screen and (max-width: 1140px){.header-grid.mk-grid .header-logo.left-logo{left: 15px !important;}.header-grid.mk-grid .header-logo.right-logo, .mk-header-right {right: 15px !important;}}#mk-theme-container:not(.mk-transparent-header) .header-style-1 .mk-header-padding-wrapper,#mk-theme-container:not(.mk-transparent-header) .header-style-3 .mk-header-padding-wrapper {padding-top:92px;}@media handheld, only screen and (max-width: 960px){.theme-page-wrapper .theme-content{width: 100% !important;float: none !important;}.theme-page-wrapper{padding-right:15px !important;padding-left: 15px !important;}.theme-page-wrapper .theme-content:not(.no-padding){padding:25px 0 !important;}.theme-page-wrapper #mk-sidebar{width: 100% !important;float: none !important;padding: 0 !important;}.theme-page-wrapper #mk-sidebar .sidebar-wrapper{padding:20px 0 !important;}}@media handheld, only screen and (max-width: 1140px){.mk-go-top,.mk-quick-contact-wrapper{bottom:70px !important;}.mk-grid {width: 100%;}.mk-padding-wrapper {padding: 0 20px;} }#mk-toolbar-navigation ul li a,.mk-language-nav > a,.mk-header-login .mk-login-link,.mk-subscribe-link,.mk-checkout-btn,.mk-header-tagline a,.header-toolbar-contact a,#mk-toolbar-navigation ul li a:hover,.mk-language-nav > a:hover,.mk-header-login .mk-login-link:hover,.mk-subscribe-link:hover,.mk-checkout-btn:hover,.mk-header-tagline a:hover{color:#999999;}.mk-header-tagline,.header-toolbar-contact,.mk-header-date{color:#999999;}.mk-header-toolbar #mk-header-social a i {color:#999999;}.header-section#mk-header-social ul li a i {color: #999999;}.header-section#mk-header-social ul li a:hover i {color: #cccccc;}.header-style-2 .header-logo,.header-style-4 .header-logo{height: 92px !important;}.header-style-4 .header-logo {margin:10px 0;}.header-style-2 .mk-header-inner{line-height:92px;}.mk-header-nav-container{background-color: ;}.mk-header-start-tour{font-size: 14px;color: #333333;}.mk-header-start-tour:hover{color: #333333;}.mk-classic-nav-bg{background-color: #fff;}.mk-search-trigger,.mk-shoping-cart-link i,.mk-header-cart-count,.mk-toolbar-resposnive-icon i{color: #444444;}.mk-css-icon-close div,.mk-css-icon-menu div {background-color: #444444;}#mk-header-searchform .text-input{background-color: !important;color: #c7c7c7;}#mk-header-searchform span i{color: #c7c7c7;}#mk-header-searchform .text-input::-webkit-input-placeholder{color: #c7c7c7;}#mk-header-searchform .text-input:-ms-input-placeholder{color: #c7c7c7;}#mk-header-searchform .text-input:-moz-placeholder{color: #c7c7c7;}.header-style-1.header-sticky-ready .menu-hover-style-1 .main-navigation-ul > li > a,.header-style-3.header-sticky-ready .menu-hover-style-1 .main-navigation-ul > li > a,.header-style-1.header-sticky-ready .menu-hover-style-5 .main-navigation-ul > li,.header-style-1.header-sticky-ready .menu-hover-style-2 .main-navigation-ul > li > a,.header-style-3.header-sticky-ready .menu-hover-style-2 .main-navigation-ul > li > a,.header-style-1.header-style-1.header-sticky-ready .menu-hover-style-4 .main-navigation-ul > li > a,.header-style-3.header-sticky-ready .menu-hover-style-4 .main-navigation-ul > li > a,.header-style-1.header-sticky-ready .menu-hover-style-3 .main-navigation-ul > li,.header-style-1.header-sticky-ready .mk-header-inner #mk-header-search,.header-style-3.header-sticky-ready .mk-header-holder #mk-header-search,.header-sticky-ready.header-style-3 .mk-header-start-tour,.header-sticky-ready.header-style-1 .mk-header-start-tour,.header-sticky-ready.header-style-1 .mk-header-inner,.header-sticky-ready.header-style-3 .mk-header-inner,.header-sticky-ready.header-style-3 .header-logo,.header-sticky-ready.header-style-1 .header-logo,.header-sticky-ready.header-style-1 .mk-search-trigger,.header-sticky-ready.header-style-1 .mk-search-trigger i,.header-sticky-ready.header-style-1 .shopping-cart-header,.header-sticky-ready.header-style-1 .shopping-cart-header i,.header-sticky-ready.header-style-3 .shopping-cart-header,.header-sticky-ready.header-style-1 #mk-header-social.header-section a,.header-sticky-ready.header-style-3 #mk-header-social.header-section a{height:50px !important;line-height:50px !important;}#mk-header-social.header-section a.small {margin-top: 29px;}#mk-header-social.header-section a.medium {margin-top: 21px;}#mk-header-social.header-section a.large {margin-top: 13px;}.header-sticky-ready #mk-header-social.header-section a.small,.header-sticky-ready #mk-header-social.header-section a.medium,.header-sticky-ready #mk-header-social.header-section a.large {margin-top: 8px;line-height: 16px !important;height: 16px !important;font-size: 16px !important;width: 16px !important;padding: 8px !important;}.header-sticky-ready #mk-header-social.header-section a.small i:before,.header-sticky-ready #mk-header-social.header-section a.medium i:before,.header-sticky-ready #mk-header-social.header-section a.large i:before {line-height: 16px !important;font-size: 16px !important;}.main-navigation-ul > li.menu-item > a.menu-item-link{color: #444444;font-size: 13px;font-weight: bold;padding-right:20px;padding-left:20px;text-transform:uppercase;letter-spacing:0px;}.mk-vm-menuwrapper ul li a {color: #444444;font-size: 13px;font-weight: bold;text-transform:uppercase;}.mk-vm-menuwrapper li > a:after,.mk-vm-menuwrapper li.mk-vm-back:after {color: #444444;}.main-navigation-ul > li.no-mega-menu ul.sub-menu li.menu-item a.menu-item-link {width:210px;}.mk-header-3-menu-trigger {color: #444444;}.menu-hover-style-1 .main-navigation-ul li.menu-item > a.menu-item-link:hover,.menu-hover-style-1 .main-navigation-ul li.menu-item:hover > a.menu-item-link,.menu-hover-style-1 .main-navigation-ul li.current-menu-item > a.menu-item-link,.menu-hover-style-1 .main-navigation-ul li.current-menu-ancestor > a.menu-item-link,.menu-hover-style-2 .main-navigation-ul li.menu-item > a.menu-item-link:hover,.menu-hover-style-2 .main-navigation-ul li.menu-item:hover > a.menu-item-link,.menu-hover-style-2 .main-navigation-ul li.current-menu-item > a.menu-item-link,.menu-hover-style-2 .main-navigation-ul li.current-menu-ancestor > a.menu-item-link,.menu-hover-style-1.mk-vm-menuwrapper li.menu-item > a:hover,.menu-hover-style-1.mk-vm-menuwrapper li.menu-item:hover > a,.menu-hover-style-1.mk-vm-menuwrapper li.current-menu-item > a,.menu-hover-style-1.mk-vm-menuwrapper li.current-menu-ancestor > a,.menu-hover-style-2.mk-vm-menuwrapper li.menu-item > a:hover,.menu-hover-style-2.mk-vm-menuwrapper li.menu-item:hover > a,.menu-hover-style-2.mk-vm-menuwrapper li.current-menu-item > a,.menu-hover-style-2.mk-vm-menuwrapper li.current-menu-ancestor > a{color: #f97352 !important;}.menu-hover-style-3 .main-navigation-ul > li.menu-item > a.menu-item-link:hover,.menu-hover-style-3 .main-navigation-ul > li.menu-item:hover > a.menu-item-link,.menu-hover-style-3.mk-vm-menuwrapper li > a:hover,.menu-hover-style-3.mk-vm-menuwrapper li:hover > a{border:2px solid #f97352;}.menu-hover-style-3 .main-navigation-ul > li.current-menu-item > a.menu-item-link,.menu-hover-style-3 .main-navigation-ul > li.current-menu-ancestor > a.menu-item-link,.menu-hover-style-3.mk-vm-menuwrapper li.current-menu-item > a,.menu-hover-style-3.mk-vm-menuwrapper li.current-menu-ancestor > a{border:2px solid #f97352;background-color:#f97352;color:#ffffff;}.menu-hover-style-3.mk-vm-menuwrapper li.current-menu-ancestor > a:after {color:#ffffff;}.menu-hover-style-4 .main-navigation-ul li.menu-item > a.menu-item-link:hover,.menu-hover-style-4 .main-navigation-ul li.menu-item:hover > a.menu-item-link,.menu-hover-style-4 .main-navigation-ul li.current-menu-item > a.menu-item-link,.menu-hover-style-4 .main-navigation-ul li.current-menu-ancestor > a.menu-item-link,.menu-hover-style-4.mk-vm-menuwrapper li a:hover,.menu-hover-style-4.mk-vm-menuwrapper li:hover > a,.menu-hover-style-4.mk-vm-menuwrapper li.current-menu-item > a,.menu-hover-style-4.mk-vm-menuwrapper li.current-menu-ancestor > a,.menu-hover-style-5 .main-navigation-ul > li.menu-item > a.menu-item-link:after{background-color: #f97352;color:#ffffff;}.menu-hover-style-4.mk-vm-menuwrapper li.current-menu-ancestor > a:after,.menu-hover-style-4.mk-vm-menuwrapper li.current-menu-item > a:after,.menu-hover-style-4.mk-vm-menuwrapper li:hover > a:after,.menu-hover-style-4.mk-vm-menuwrapper li a:hover::after {color:#ffffff;}.menu-hover-style-1 .main-navigation-ul > li.dropdownOpen > a.menu-item-link,.menu-hover-style-1 .main-navigation-ul > li.active > a.menu-item-link,.menu-hover-style-1 .main-navigation-ul > li.open > a.menu-item-link,.menu-hover-style-1 .main-navigation-ul > li.menu-item > a:hover,.menu-hover-style-1 .main-navigation-ul > li.current-menu-item > a.menu-item-link,.menu-hover-style-1 .main-navigation-ul > li.current-menu-ancestor > a.menu-item-link {border-top-color:#f97352;}.menu-hover-style-1.mk-vm-menuwrapper li > a:hover,.menu-hover-style-1.mk-vm-menuwrapper li.current-menu-item > a,.menu-hover-style-1.mk-vm-menuwrapper li.current-menu-ancestor > a{border-left-color:#f97352;}.header-style-1 .menu-hover-style-1 .main-navigation-ul > li > a,.header-style-1 .menu-hover-style-2 .main-navigation-ul > li > a,.header-style-1 .menu-hover-style-4 .main-navigation-ul > li > a,.header-style-1 .menu-hover-style-5 .main-navigation-ul > li {height: 92px;line-height:92px;}.header-style-1 .menu-hover-style-3 .main-navigation-ul > li,.header-style-1 .menu-hover-style-5 .main-navigation-ul > li{height: 92px;line-height:92px;}.header-style-1 .menu-hover-style-3 .main-navigation-ul > li > a {line-height:46px;}.header-style-1.header-sticky-ready .menu-hover-style-3 .main-navigation-ul > li > a {line-height:33.3333333333px;}.header-style-1 .menu-hover-style-5 .main-navigation-ul > li > a {line-height:20px;vertical-align:middle;}.main-navigation-ul > li.no-mega-menu  ul.sub-menu:after,.main-navigation-ul > li.has-mega-menu > ul.sub-menu:after{  background-color:#f97352;}.mk-shopping-cart-box {border-top:2px solid #f97352;}#mk-main-navigation li.no-mega-menu ul.sub-menu,#mk-main-navigation li.has-mega-menu > ul.sub-menu,.mk-shopping-cart-box{background-color: #333333;}#mk-main-navigation ul.sub-menu a.menu-item-link,#mk-main-navigation ul .megamenu-title,.megamenu-widgets-container a,.mk-shopping-cart-box .product_list_widget li a,.mk-shopping-cart-box .product_list_widget li.empty,.mk-shopping-cart-box .product_list_widget li span,.mk-shopping-cart-box .widget_shopping_cart .total{color: #b3b3b3;}.mk-shopping-cart-box .mk-button.cart-widget-btn {border-color:#b3b3b3;color:#b3b3b3;}.mk-shopping-cart-box .mk-button.cart-widget-btn:hover {background-color:#b3b3b3;color:#333333;}#mk-main-navigation ul .megamenu-title{color: #ffffff;}#mk-main-navigation ul .megamenu-title:after{background-color: #ffffff;}.megamenu-widgets-container {color: #b3b3b3;}.megamenu-widgets-container .widgettitle{text-transform: uppercase;font-size: 14px;font-weight: bolder;}#mk-main-navigation ul.sub-menu li.menu-item ul.sub-menu li.menu-item a.menu-item-link i{color: #e0e0e0;}#mk-main-navigation ul.sub-menu a.menu-item-link:hover{color: #ffffff !important;}.megamenu-widgets-container a:hover {color: #ffffff;}.main-navigation-ul li.menu-item ul.sub-menu li.menu-item a.menu-item-link:hover,.main-navigation-ul li.menu-item ul.sub-menu li.menu-item:hover > a.menu-item-link,.main-navigation-ul ul.sub-menu li.menu-item a.menu-item-link:hover,.main-navigation-ul ul.sub-menu li.menu-item:hover > a.menu-item-link,.main-navigation-ul ul.sub-menu li.current-menu-item > a.menu-item-link{background-color: !important;}.mk-search-trigger:hover,.mk-header-start-tour:hover{color: #f97352;}.main-navigation-ul li.menu-item ul.sub-menu li.menu-item a.menu-item-link{font-size: 12px;font-weight: normal;text-transform:uppercase;letter-spacing: 1px;}.has-mega-menu .megamenu-title {letter-spacing: 1px;}.header-style-4 {text-align : left}.mk-vm-menuwrapper li > a {padding-right: 45px;}@media handheld, only screen and (max-width: 1140px){.header-style-1 .mk-header-inner,.header-style-3 .mk-header-inner,.header-style-3 .header-logo,.header-style-1 .header-logo,.header-style-1 .shopping-cart-header,.header-style-3 .shopping-cart-header{height:90px;line-height:90px;}#mk-header:not(.header-style-4) .mk-header-holder {position:relative !important;top:0 !important;}.mk-header-padding-wrapper {display:none !important;}.mk-header-nav-container{width: auto !important;display:none;}.header-style-1 .mk-header-right,.header-style-2 .mk-header-right,.header-style-3 .mk-header-right {right:55px !important;}.header-style-1 .mk-header-inner #mk-header-search,.header-style-2 .mk-header-inner #mk-header-search,.header-style-3 .mk-header-inner #mk-header-search{display:none !important;}.mk-fullscreen-search-overlay {display:none;}#mk-header-search{padding-bottom: 10px !important;}#mk-header-searchform span .text-input{width: 100% !important;}.header-style-2 .header-logo .center-logo{    text-align: right !important;}.header-style-2 .header-logo .center-logo a{    margin: 0 !important;}.header-logo,.header-style-4 .header-logo{    height: 90px !important;}.mk-header-inner{padding-top:0 !important;}.header-logo{position:relative !important;right:auto !important;left:auto !important;float:left !important;text-align:left;}.shopping-cart-header{margin:0 20px 0 0 !important;}#mk-responsive-nav{background-color:#ffffff !important;}.mk-header-nav-container #mk-responsive-nav{visibility: hidden;}#mk-responsive-nav li ul li .megamenu-title:hover,#mk-responsive-nav li ul li .megamenu-title,#mk-responsive-nav li a, #mk-responsive-nav li ul li a:hover,#mk-responsive-nav .mk-nav-arrow{  color:#333333 !important;}.mk-mega-icon{display:none !important;}.mk-header-bg{zoom:1 !important;filter:alpha(opacity=100) !important;opacity:1 !important;}.header-style-1 .mk-nav-responsive-link,.header-style-2 .mk-nav-responsive-link{display:block !important;}.mk-header-nav-container{height:100%;z-index:200;}#mk-main-navigation{position:relative;z-index:2;}.mk_megamenu_columns_2,.mk_megamenu_columns_3,.mk_megamenu_columns_4,.mk_megamenu_columns_5,.mk_megamenu_columns_6{width:100% !important;}.header-style-1.header-align-right .header-logo img,.header-style-3.header-align-right .header-logo img,.header-style-3.header-align-center .header-logo img {float: left !important;right:auto !important;}.header-style-4 .mk-header-inner {width: auto !important;position: relative !important;overflow: visible;padding-bottom: 0;}.admin-bar .header-style-4 .mk-header-inner {top:0 !important;}.header-style-4 .mk-header-right {display: none;}.header-style-4 .mk-nav-responsive-link {display: block !important;}.header-style-4 .mk-vm-menuwrapper,.header-style-4 #mk-header-search {display: none;}.header-style-4 .header-logo {width:auto !important;display: inline-block !important;text-align:left !important;margin:0 !important;}.vertical-header-enabled .header-style-4 .header-logo img {max-width: 100% !important;left: 20px!important;top:50%!important;-webkit-transform: translate(0, -50%)!important;-moz-transform: translate(0, -50%)!important;-ms-transform: translate(0, -50%)!important;-o-transform: translate(0, -50%)!important;transform: translate(0, -50%)!important;position:relative !important;}.vertical-header-enabled.vertical-header-left #theme-page > .mk-main-wrapper-holder,.vertical-header-enabled.vertical-header-center #theme-page > .mk-main-wrapper-holder,.vertical-header-enabled.vertical-header-left #theme-page > .mk-page-section,.vertical-header-enabled.vertical-header-center #theme-page > .mk-page-section,.vertical-header-enabled.vertical-header-left #theme-page > .wpb_row,.vertical-header-enabled.vertical-header-center #theme-page > .wpb_row,.vertical-header-enabled.vertical-header-left #mk-theme-container:not(.mk-transparent-header), .vertical-header-enabled.vertical-header-center #mk-footer,.vertical-header-enabled.vertical-header-left #mk-footer,.vertical-header-enabled.vertical-header-center #mk-theme-container:not(.mk-transparent-header) {  padding-left: 0 !important;}.vertical-header-enabled.vertical-header-right #theme-page > .mk-main-wrapper-holder,.vertical-header-enabled.vertical-header-right #theme-page > .mk-page-section,.vertical-header-enabled.vertical-header-right #theme-page > .wpb_row,.vertical-header-enabled.vertical-header-right #mk-footer,.vertical-header-enabled.vertical-header-right #mk-theme-container:not(.mk-transparent-header) {  padding-right: 0 !important;}}@media handheld, only screen and (min-width: 1140px) {  .mk-transparent-header .sticky-style-slide .mk-header-holder {    position: absolute;  }  .mk-transparent-header .remove-header-bg-true:not(.header-sticky-ready) .mk-header-bg {    opacity: 0;  }  .mk-transparent-header .remove-header-bg-true#mk-header:not(.header-sticky-ready) .mk-header-inner {    border: 0;  }  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-desktop-logo.light-logo {    display: block !important;  }  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-desktop-logo.dark-logo {    display: none !important;  }  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .main-navigation-ul > li.menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-search-trigger,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-shoping-cart-link i,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-header-cart-count,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-header-start-tour,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) #mk-header-social a i,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.menu-item > a.menu-item-link:hover,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.menu-item:hover > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.current-menu-ancestor > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul > li.menu-item > a.menu-item-link:hover,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul > li.menu-item:hover > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul > li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li a,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li > a:after,   .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li.mk-vm-back:after {    color: #fff !important;  }  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-css-icon-menu div {    background-color: #fff !important;  }  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.dropdownOpen > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.active > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.open > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.menu-item > a:hover,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.current-menu-ancestor > a.menu-item-link {    border-top-color: #fff;  }  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul > li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul > li.current-menu-ancestor > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li.current-menu-item > a,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li.current-menu-ancestor > a {    border: 2px solid #fff;    background-color: #fff;    color: #222 !important;  }  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul > li.menu-item > a.menu-item-link:hover,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul > li.menu-item:hover > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li > a:hover,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li:hover > a {    border: 2px solid #fff;  }  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.menu-item > a.menu-item-link:hover,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.menu-item:hover > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-5 .main-navigation-ul > li.menu-item > a.menu-item-link:after {    background-color: #fff;    color: #222 !important;  }  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-desktop-logo.dark-logo {    display: block !important;  }  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-desktop-logo.light-logo {    display: none !important;  }  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .main-navigation-ul > li.menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-search-trigger,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-shoping-cart-link i,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-header-cart-count,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-header-start-tour,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) #mk-header-social a i,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul li.menu-item > a.menu-item-link:hover,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul li.menu-item:hover > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul li.current-menu-ancestor > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul li.menu-item > a.menu-item-link:hover,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul li.menu-item:hover > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul li.current-menu-ancestor > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li a,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li > a:after,   .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li.mk-vm-back:after {    color: #222 !important;  }  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.dropdownOpen > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.active > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.open > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.menu-item > a:hover,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul > li.current-menu-ancestor > a.menu-item-link {    border-top-color: #222;  }  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-css-icon-menu div {    background-color: #222 !important;  }  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul > li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul > li.current-menu-ancestor > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li.current-menu-item > a,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li.current-menu-ancestor > a {    border: 2px solid #222;    background-color: #222;    color: #fff !important;  }  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul > li.menu-item > a.menu-item-link:hover,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul > li.menu-item:hover > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li > a:hover,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li:hover > a {    border: 2px solid #222;  }  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.menu-item > a.menu-item-link:hover,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.menu-item:hover > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.current-menu-item > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.current-menu-ancestor > a.menu-item-link,  .mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-5 .main-navigation-ul > li.menu-item > a.menu-item-link:after {    background-color: #222;    color: #fff !important;  }}.comment-reply a,.mk-toggle .mk-toggle-title.active-toggle:before,.mk-testimonial-author,.modern-style .mk-testimonial-company,#wp-calendar td#today,.news-full-without-image .news-categories span,.news-half-without-image .news-categories span,.news-fourth-without-image .news-categories span,.mk-read-more,.news-single-social li a,.portfolio-widget-cats,.portfolio-carousel-cats,.blog-showcase-more,.simple-style .mk-employee-item:hover .team-member-position,.mk-readmore,.about-author-name,.mk-portfolio-classic-item .portfolio-categories a,.register-login-links a:hover,.not-found-subtitle,.mk-mini-callout a,.search-loop-meta a,.new-tab-readmore,.mk-news-tab .mk-tabs-tabs li.ui-tabs-active a,.mk-tooltip a,.mk-accordion-single.current .mk-accordion-tab i,.monocolor.pricing-table .pricing-price span,.quantity .plus:hover,.quantity .minus:hover,.mk-woo-tabs .mk-tabs-tabs li.ui-state-active a,.product .add_to_cart_button i,.blog-modern-comment:hover,.blog-modern-share:hover,{color: #f97352;}.mk-tabs .mk-tabs-tabs li.ui-tabs-active a > i,.mk-accordion .mk-accordion-single.current .mk-accordion-tab:before,.mk-tweet-list a,.widget_testimonials .testimonial-slider .testimonial-author,#mk-filter-portfolio li a:hover,#mk-language-navigation ul li a:hover,#mk-language-navigation ul li.current-menu-item > a,.mk-quick-contact-wrapper h4,.divider-go-top:hover i,.widget-sub-navigation ul li a:hover,#mk-footer .widget_posts_lists ul li .post-list-meta time,.mk-footer-tweets .tweet-username,.product-category .item-holder:hover h4,{color: #f97352 !important;}.image-hover-overlay,.newspaper-portfolio,.similar-posts-wrapper .post-thumbnail:hover > .overlay-pattern,.portfolio-logo-section,.post-list-document .post-type-thumb:hover,#cboxTitle,#cboxPrevious,#cboxNext,#cboxClose,.comment-form-button,.mk-dropcaps.fancy-style,.mk-image-overlay,.pinterest-item-overlay,.news-full-with-image .news-categories span,.news-half-with-image .news-categories span,.news-fourth-with-image .news-categories span,.widget-portfolio-overlay,.portfolio-carousel-overlay,.blog-carousel-overlay,.mk-classic-comments span,.mk-similiar-overlay,.mk-skin-button,.mk-flex-caption .flex-desc span,.mk-icon-box .mk-icon-wrapper i:hover,.mk-quick-contact-link:hover,.quick-contact-active.mk-quick-contact-link,.mk-fancy-table th,.ui-slider-handle,.widget_price_filter .ui-slider-range,.shop-skin-btn,#review_form_wrapper input[type=submit],#mk-nav-search-wrapper form .nav-side-search-icon:hover,form.ajax-search-complete i,.blog-modern-btn,.showcase-blog-overlay,.gform_button[type=submit],.button.alt,#respond #submit,.woocommerce .price_slider_amount .button.button,.mk-shopping-cart-box .mk-button.checkout,.widget_shopping_cart .mk-button.checkout,.widget_shopping_cart .mk-button.checkout{background-color: #f97352 !important;}.mk-circle-image .item-holder{-webkit-box-shadow:0 0 0 1px #f97352;-moz-box-shadow:0 0 0 1px #f97352;box-shadow:0 0 0 1px #f97352;}.mk-blockquote.line-style,.bypostauthor .comment-content,.bypostauthor .comment-content:after,.mk-tabs.simple-style .mk-tabs-tabs li.ui-tabs-active a{border-color: #f97352 !important;}.news-full-with-image .news-categories span,.news-half-with-image .news-categories span,.news-fourth-with-image .news-categories span,.mk-flex-caption .flex-desc span{box-shadow: 8px 0 0 #f97352, -8px 0 0 #f97352;}.monocolor.pricing-table .pricing-cols .pricing-col.featured-plan{border:1px solid #f97352 !important;}.mk-skin-button.three-dimension{box-shadow: 0px 3px 0px 0px #c75c42;}.mk-skin-button.three-dimension:active{box-shadow: 0px 1px 0px 0px #c75c42;}.mk-footer-copyright, #mk-footer-navigation li a{color: #8c8e91;}.mk-woocommerce-main-image img:hover, .mk-single-thumbnails img:hover{border:1px solid #f97352 !important;}.product-loading-icon{background-color:rgba(249,115,82,0.6);}.bigger-font-size p, .bigger-font-size {font-size: 16px;line-height: 27px;color: #777;}.cmk-center-align {text-align: center;}.match-height .vc_grid-item-mini {background-color: #f9f9f9;height: 100%;}.article-excerpt-tiles p {    height: 80px;    overflow: hidden;    margin-bottom: 0px;    word-break: break-all;}.article-excerpt-tiles::after {content: '[...]';    position: absolute;    bottom: 30px;    right: 10px;    padding-left: 9px;    background: #f9f9f9;}.article-excerpt-tiles p a {color: #777;}.home-all-project .vc_gitem-col {    max-height: 250px;}.get-ebook-container input[type="text"],.get-ebook-container input[type="email"],.get-ebook-container select {min-width: 350px;font-size: 15px;}.get-ebook-container input[type="email"] {  min-width: 326px;}.get-ebook-container select.occupation {width: 350px;font-size: 14px !important;line-height: 14px  !important;}.get-ebook-container input[type="checkbox"] {margin-right: 10px;}.get-ebook-container .submit-btn {background-color: #f79468;color: #fff !important;-webkit-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;border: transparent;box-shadow: none;padding: 10px 16px;font-size: 18px;line-height: 1.33;border-radius: 6px;}.get-ebook-container .submit-btn:hover {    background-color: #f57f4b;}.get-ebook-container .product-interest label span,.get-ebook-container .industry-interest label span {cursor: pointer;}.get-ebook-container .product-interest .field-title,.get-ebook-container .industry-interest .field-title,.get-ebook-container .gender-container .field-title {font-size: 18px;font-weight: bold;}.get-ebook-container .gender-container label {margin-right: 10px;}.get-ebook-container .gender-container label span {cursor: pointer;}.get-ebook-container .product-interest .error-field,.get-ebook-container .industry-interest .error-field {color: #e85c41;}.mc4wp-response .mc4wp-alert.mc4wp-success p {color: #5cb85c;font-weight: bold;}.mc4wp-response .mc4wp-alert.mc4wp-error p,.mc4wp-response .mc4wp-alert.mc4wp-danger p {color: #e85c41;font-weight: bold;}.homepage-slider {display:none}#theme-page {background: #fff !important;}.mk-dynamic-styles {display:none}
+</style>
+<link rel="stylesheet" id="js_composer_front-css" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/js_composer.css" type="text/css" media="all">
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/jquery.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/jquery-migrate.min.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/jquery.magnific-popup.min.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/jquery.cookie.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/public.js.tải xuống"></script>
+<link rel="https://api.w.org/" href="https://diyhacking.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://diyhacking.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://diyhacking.com/wp-includes/wlwmanifest.xml">
+<link rel="shortlink" href="https://diyhacking.com/?p=8325">
+<link rel="alternate" type="application/json+oembed" href="https://diyhacking.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdiyhacking.com%2Fesp8266-gpio%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://diyhacking.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdiyhacking.com%2Fesp8266-gpio%2F&amp;format=xml">
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-57872254-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<meta name="generator" content="Jupiter 4.0.9.2">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/plugins/js_composer_theme/assets/css/vc-ie8.css" media="screen"><![endif]--><meta property="og:image" content="https://diyhacking.com/wp-content/uploads/2016/07/esp1-min.jpg">
+<meta property="og:url" content="https://diyhacking.com/esp8266-gpio/">
+<meta property="og:title" content="ESP8266 Tutorial: Programming the Onboard GPIO Pins">
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1434200116345{background-color: #ffffff !important;}</style><script async="async" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/gpt.js.tải xuống"></script>
+<script>
+  function searchFor(obj, query) {
+    for(var key in obj) {
+      if(obj.hasOwnProperty(key) && (typeof obj[key] === "string")) {
+        if(obj[key] === query) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+
+  googletag.cmd.push(function() {
+    googletag.pubads().setTargeting('category', ["arduino","computing","it-networking","iot","mobile","raspberry-pi","analog","connectors","development-boards","electromechanical","embedded","embedded-software","optoelectronics","pcb","power","wireless-rf"]);
+    googletag.defineOutOfPageSlot('/62616433/DIY_Wallpaper', 'div-gpt-ad-1491855244676-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/62616433/DIY_Leaderboard', [728, 90], 'div-gpt-ad-1492456195571-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<script>
+  googletag.cmd.push(function() {
+  var mappingWelcome = googletag.sizeMapping().
+      addSize([0,0], [300, 250]).
+        addSize([640, 0], [640, 480]).
+        build();
+  
+    googletag.defineSlot('/62616433/DIY_Welcome_Ad', [[640, 480], [300, 250]], 'div-gpt-ad-1494427027465-0').defineSizeMapping(mappingWelcome).addService(googletag.pubads());
+    googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if(event.isEmpty === false && searchFor(event.slot, "/62616433/DIY_Welcome_Ad") === true) {
+          $('#div-gpt-ad-1494427027465-0').trigger('adready');
+        } 
+    });
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();  
+    googletag.enableServices();
+  });
+</script>
+<script>
+	var mp = document.createElement('script');
+	mp.setAttribute('src','https://api.diyhacking.com/pixel.php?url=' + window.location.href);
+	mp.async = true;
+	document.head.appendChild(mp);
+	</script><script src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pixel.php" async=""></script>
+<link href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/adpopup-pro.min.css" rel="stylesheet">
+<link rel="preload" href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/integrator.js.tải xuống" as="script"><script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/integrator.js.tải xuống"></script><script src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pubads_impl_162.js.tải xuống" async=""></script><style type="text/css"></style><style type="text/css" data-ajax=""></style><style type="text/css">.fancybox-margin{margin-right:17px;}</style><link rel="prefetch" href="https://securepubads.g.doubleclick.net/static/3p_cookie.html"><script src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/saved_resource"></script></head>
+<body class="post-template-default single single-post postid-8325 single-format-standard  wpb-js-composer js-comp-ver-4.4.2 vc_responsive navigation-initialised" data-backtext="Back" data-vm-anim="1"><div class="adpopup-overlay adpopup-style-overlay-dark" style="opacity: 0.5; display: none;"></div>
+<div id="mk-boxed-layout">
+<div id="mk-theme-container">
+<header id="mk-header" data-height="92" data-hover-style="5" data-transparent-skin="light" data-header-style="1" data-sticky-height="50" data-sticky-style="slide" data-sticky-offset="header" class="header-style-1 header-align-left header-toolbar-false sticky-style-slide  mk-background-stretch boxed-header header-sticky-prepare header-sticky-ready">
+<div class="mk-header-holder">
+<div class="mk-header-inner">
+<div class="mk-header-bg "></div>
+<div class="mk-grid header-grid">
+<div class="mk-header-nav-container one-row-style menu-hover-style-5"><nav id="mk-main-navigation" class="main_menu"><ul id="menu-diyhacking-main-menu" class="main-navigation-ul dropdownJavascript"><li id="menu-item-8469" class="menu-item menu-item-type-post_type menu-item-object-page has-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/become-star-maker/">Submit Project</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/">Projects</a>
+<ul style="" class="sub-menu ">
+<li id="menu-item-9015" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-projects/raspberry-pi-projects/">Raspberry Pi</a></li>
+<li id="menu-item-9014" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-projects/arduino-projects/">Arduino</a></li>
+<li id="menu-item-9010" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-drones/">Drones</a></li>
+<li id="menu-item-9009" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/3d-designing/">3D Design</a></li>
+<li id="menu-item-9011" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/cyber-security-tutorials/">Cyber Security</a></li>
+<li id="menu-item-9012" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-robotics/">Robotics</a></li>
+<li id="menu-item-9013" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/augmented-reality-virtual-reality/">Virtual and Augmented Reality</a></li>
+<li id="menu-item-9016" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-projects/other-diy-projects/">Other Projects</a></li>
+</ul>
+</li>
+<li id="menu-item-6967" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/tutorials/">How To</a>
+<ul style="" class="sub-menu ">
+<li id="menu-item-9192" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="https://diyhacking.com/tutorials/">All Articles</a></li>
+<li id="menu-item-9088" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/get-the-ebook/">Get The eBook</a></li>
+</ul>
+</li>
+<li id="menu-item-10225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/get-started/">Community</a>
+<ul style="" class="sub-menu ">
+<li id="menu-item-9001" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/get-started/">Get Started</a></li>
+<li id="menu-item-8350" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="http://diy-makers.herokuapp.com/">Live Chat on Slack</a></li>
+</ul>
+</li>
+<li id="menu-item-7967" class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/blog/">Blog</a></li>
+<li id="menu-item-10547" class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/newsletter/">Newsletter</a></li>
+</ul></nav><div class="main-nav-side-search">
+<a class="mk-search-trigger mk-fullscreen-trigger" href="https://diyhacking.com/esp8266-gpio/#"><i class="mk-icon-search"></i></a>
+</div></div>
+<div class=" mk-nav-responsive-link">
+<div class="mk-css-icon-menu">
+<div class="mk-css-icon-menu-line-1"></div>
+<div class="mk-css-icon-menu-line-2"></div>
+<div class="mk-css-icon-menu-line-3"></div>
+</div>
+</div>
+<div class="header-logo logo-is-responsive logo-has-sticky">
+<a href="https://diyhacking.com/" title="DIY Hacking">
+<img class="mk-desktop-logo dark-logo" alt="DIY Hacking" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/DIY-Hacking-Logo.png">
+<img class="mk-desktop-logo light-logo" alt="DIY Hacking" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/DIY-Hacking-Logo.png">
+<img class="mk-resposnive-logo" alt="DIY Hacking" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/DIY-Hacking-Logo.png">
+<img class="mk-sticky-logo" alt="DIY Hacking" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/DIY-Hacking-Logo.png">
+</a>
+</div>
+<div class="clearboth"></div>
+</div>
+<div class="mk-header-right">
+</div>
+</div>
+</div>
+<div class="clearboth"></div>
+<div class="mk-header-padding-wrapper enable-padding"></div>
+<div class="clearboth"></div>
+<div class="mk-zindex-fix">
+</div>
+<div class="clearboth"></div>
+<form class="responsive-searchform" method="get" style="display:none;" action="https://diyhacking.com/">
+<input type="text" class="text-input" value="" name="s" id="s" placeholder="Search..">
+<i class="mk-icon-search"><input value="" type="submit"></i>
+</form>
+</header>
+<div id="theme-page">
+<div class="mk-main-wrapper-holder">
+<div class="theme-page-wrapper mk-blog-single full-layout vc_row-fluid mk-grid ">
+<div class="theme-content ">
+<article id="8325" class="post-8325 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino-projects category-beginners tag-arduino tag-esp-01 tag-esp8266 tag-esp8266-gpio tag-gpio tag-iot">
+<h1 class="blog-single-title">ESP8266 Tutorial: Programming the Onboard GPIO Pins</h1>
+<div class="single-social-section">
+<div class="mk-love-holder"><a href="https://diyhacking.com/esp8266-gpio/#" class="mk-love-this " id="mk-love-8325"><i class="mk-icon-heart"><span>&nbsp;</span></i> <span class="mk-love-count">15</span></a></div>
+<a href="https://diyhacking.com/esp8266-gpio/#comments" class="blog-modern-comment"><i class="mk-moon-bubble-9"></i><span> 22</span></a>
+<a class="mk-blog-print" onclick="window.print()" href="https://diyhacking.com/esp8266-gpio/#" title="Print"><i class="mk-moon-print-3"></i></a>
+<div class="clearboth"></div>
+</div>
+<div class="clearboth"></div>
+
+<div id="div-gpt-ad-1492456195571-0" class="center-ad" style="height: 90px; width: 728px; display: none;" data-google-query-id="CKiPkfS7ktcCFUmVvQoduHQCjw">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1492456195571-0'); });
+</script>
+<div id="google_ads_iframe_/62616433/DIY_Leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/DIY_Leaderboard_0" title="3rd party ad content" name="google_ads_iframe_/62616433/DIY_Leaderboard_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/saved_resource.html"></iframe></div></div>
+<div class="mk-single-content" itemprop="mainContentOfPage">
+<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
+<div style="" class="vc_col-sm-12 wpb_column column_container vc_custom_1434200116345 ">
+<div style="text-align: left;" class="mk-text-block  "><h4><span style="color: #333333;">By Robin Thomas</span></h4>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/esp1-min.jpg"><img class="aligncenter wp-image-8326 size-full" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/esp1-min.jpg" alt="esp8266" width="400" height="400" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/esp1-min.jpg 400w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/esp1-min-150x150.jpg 150w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/esp1-min-300x300.jpg 300w" sizes="(max-width: 400px) 100vw, 400px"></a></p>
+<p>The ESP8266 is a great tool for enabling your project to access the internet. You can plug it into an Arduino easily as shown and allow your project to communicate through the internet. Or even more exciting, to control it from anywhere in the world!</p>
+<p>The ESP8266 is a very low-cost module that comes pre-programmed with an AT command set firmware, meaning, you can simply hook this up to your Arduino device and get about as much WiFi-ability as a WiFi Shield offers. This module has a powerful on-board processing and storage capability that allows it to be integrated with the sensors and other application through its GPIOs.</p>
+<p>In this tutorial, we can see how to get started with the ESP-01 Wi-Fi module, configure it, and verify that there is communication established between the module and another device without using an FTDI chip.</p>
+<h3><span style="color: #333333;">Bill of Materials</span></h3>
+<ol>
+<li><a href="https://www.allaboutcircuits.com/electronic-components/?p=arduino+uno">Arduino board.</a></li>
+<li><a href="https://www.allaboutcircuits.com/electronic-components/?p=WRL-13678">ESP8266.</a></li>
+<li>Breadboard.</li>
+<li>Female to male and male to male jumpers.</li>
+</ol>
+<h3><span style="color: #333333;">How Does it Work?</span></h3>
+<p>The ESP8266 communicates with the Arduino through a serial interface. That is, it uses theArduino’s Rx and Tx pins (digital pins 0 and 1) hooked up to the module for receiving commands and communicates back. The module features a full TCP/UDP stack support and can be configured as a web server.<a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/esp8266_pinout-min.png"><img class="size-full wp-image-8327 aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/esp8266_pinout-min.png" alt="esp8266 pinout" width="550" height="324" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/esp8266_pinout-min.png 550w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/esp8266_pinout-min-300x177.png 300w" sizes="(max-width: 550px) 100vw, 550px"></a></p>
+<p>The ESP8266 or ESP-01 module also has two GPIO pins that can be used for directly manipulating any output devices like LEDs or relays. Moreover, the ESP-01 module powers the onboard ESP8266 through 3.3V. Therefore if your Arduino doesn’t have a 3.3V output pin, you will have to use a voltage regulator like the <a href="http://www.unisonic.com.tw/datasheet/78RXX.pdf">78R33</a> to step down the 5V from the Arduino to 3.3V in order to power the ESP8266.</p>
+<h3></h3>
+<h3><span style="color: #333333;">Setting up the Arduino</span></h3>
+<p>First, download Arduino IDE ensure that you have the latest software version (some older versions won’t work). Visit the following URL: <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>.</p>
+<p>Upload <a href="https://www.arduino.cc/en/Tutorial/BareMinimum" target="_blank"><strong>Bareminimum</strong> sketch</a> from examples to your Arduino, this is to make sure that there are no other programs running on the Arduino and using serial communication channel. AT firmware is compatible with the Arduino IDE, so we are going to use this firmware for this tutorial.</p>
+<p>&nbsp;</p>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/bareMin-min.jpg"><img class="aligncenter wp-image-8330 size-full" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/bareMin-min.jpg" alt="Arduino Bareminimum ESP8266" width="400" height="237" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/bareMin-min.jpg 400w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/bareMin-min-300x178.jpg 300w" sizes="(max-width: 400px) 100vw, 400px"></a></p>
+<p>&nbsp;</p>
+<p>Now, connect the ESP8266&nbsp;using the instructions below</p>
+<ul>
+<li>VCC will be connected to the 3.3V power supply</li>
+<li>GPIO0 and GPIO2 are general purpose digital ports. GPIO0 also controls the module mode (programming or normal operation). In our case (normal operation), it shall be connected to 3.3V (high). GPIO2 is not used in this example.</li>
+<li>Rx: Goes to Arduino pin0 (But needs a voltage adjusting)</li>
+<li>CH_PD: Chip enable. Keep it on high (3.3V) for normal operation</li>
+<li>RST: Reset. Keep it on high (3.3V) for normal operation. Put it on 0V to reset the chip.</li>
+<li>GND is ground.</li>
+<li>Tx: Goes to Arduino pin1.</li>
+</ul>
+<p>&nbsp;</p>
+<p><img class="size-full wp-image-8329 aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/conn-min-1.jpg" alt="ESP8266 connection" width="550" height="517" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/conn-min-1.jpg 550w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/conn-min-1-300x282.jpg 300w" sizes="(max-width: 550px) 100vw, 550px"></p>
+<p>&nbsp;</p>
+<p><strong>ESP8266 modes: (Setup continued)</strong></p>
+<p>Open the serial monitor and change the baud rate to <strong>115200</strong> and choose <strong>NL and CR&nbsp;</strong>(new line and carriage return) from the drop-down menu. Type <strong>AT</strong> on the serial monitor you will see: <strong>OK </strong>as the<strong>&nbsp;</strong>response. If you see garbage value on the screen, try resetting the module, or checking your baud rate. Make sure the NL and CR option is set. Moreover, the&nbsp;ESP8266 module has three operational modes:</p>
+<p><strong>1</strong>.&nbsp;<strong>Access Point (AP)</strong></p>
+<p>In <strong>AP,</strong> the Wi-Fi module acts as a Wi-Fi network, or access point (hence the name). It allows other devices to connect to it. And&nbsp;establishes a two-way communication between the ESP8266 and the device that is connected to it via Wi-Fi.</p>
+<p><strong>2</strong>.&nbsp;<strong>Station (STA)</strong></p>
+<p>In <strong>STA</strong> mode, the ESP-01 can connect to an AP(access point) such as the Wi-Fi network from your house. This allows any device connected to that network to communicate with the module.</p>
+<p><strong>3. Both</strong></p>
+<p>In this mode ESP-01 act as both an <strong>AP</strong> as well as in <strong>STA </strong>mode.</p>
+<p>Refer to the following site for more <a href="http://pridopia.co.uk/pi-doc/ESP8266ATCommandsSet.pdf" target="_blank">ESP8266 AT commands</a>.</p>
+<h3><span style="color: #333333;">Installing the ESP8266 Platform</span></h3>
+<p>First, the Arduino environment has to be setup to make it compatible with the <strong>ESP-01&nbsp;</strong>module. It is required to have <strong>Arduino version 1.6.4 or higher</strong> in order to install the ESP8266’s platform packages.</p>
+<p>1.Open the preferences window from the Arduino IDE. Go to File &gt;Preferences</p>
+<p>&nbsp;</p>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref-min.jpg"><img class="wp-image-8331 size-full aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref-min.jpg" alt="ESP8266 preferences" width="400" height="315" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref-min.jpg 400w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref-min-300x236.jpg 300w" sizes="(max-width: 400px) 100vw, 400px"></a></p>
+<p>&nbsp;</p>
+<p>2.&nbsp;Enter&nbsp;<strong>http://arduino.esp8266.com/stable/package_esp8266com_index.json</strong> into Additional Board Manager URLs field and click the “OK” button</p>
+<p>&nbsp;</p>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref2-min.jpg"><img class="wp-image-8332 size-full aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref2-min.jpg" alt="ESP8266 setting" width="500" height="352" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref2-min.jpg 500w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref2-min-300x211.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"></a></p>
+<p>&nbsp;</p>
+<p>3. Open boards manager. Go to: Tools &gt; Board &gt; Boards Manager…</p>
+<p>&nbsp;</p>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref3-min.jpg"><img class="wp-image-8333 size-full aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref3-min.jpg" alt="ESP8266 setting" width="600" height="485" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref3-min.jpg 600w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref3-min-300x243.jpg 300w" sizes="(max-width: 600px) 100vw, 600px"></a></p>
+<p>&nbsp;</p>
+<p>4.&nbsp;Scroll down, select the ESP8266 board menu and install “esp8266 platform”.</p>
+<p>&nbsp;</p>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref4-min.jpg"><img class="wp-image-8334 size-full aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref4-min.jpg" alt="ESP8266 setting" width="600" height="342" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref4-min.jpg 600w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref4-min-300x171.jpg 300w" sizes="(max-width: 600px) 100vw, 600px"></a></p>
+<p>&nbsp;</p>
+<p>5.&nbsp;Choose your ESP8266 board from Tools &gt; Board &gt; Generic ESP8266 Module</p>
+<p>&nbsp;</p>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref5-min.jpg"><img class="size-full wp-image-8335 aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/pref5-min.jpg" alt="ESP8266 setup" width="600" height="441" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref5-min.jpg 600w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/pref5-min-300x221.jpg 300w" sizes="(max-width: 600px) 100vw, 600px"></a></p>
+<h3></h3>
+<h3><span style="color: #333333;">Controlling the Input and Output</span></h3>
+<p>In Arduino IDE, go to “examples” and open the blink program. Change the pin number to <strong>2 </strong>from<strong> 13,&nbsp;</strong>since there are only two GPIObpins for the ESP8266 (<strong>GPIO0 and GPIO2</strong>).</p>
+<p><strong>NOTE:&nbsp;</strong>Make sure that<strong> GPIO0 </strong>is grounded while uploading the code.</p>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/conn2-min.jpg"><img class="size-full wp-image-8336 aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/conn2-min.jpg" alt="ESP8266 connection" width="500" height="469" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/conn2-min.jpg 500w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/conn2-min-300x281.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"></a></p>
+<p>&nbsp;</p>
+<p>Connect the ESP-01 module&nbsp;as per the diagram above, then upload the sketch shown below and watch the magic!</p>
+<p>&nbsp;</p>
+<p><a href="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/program-min.jpg"><img class="size-full wp-image-8337 aligncenter" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/program-min.jpg" alt="ESP8266 program" width="600" height="300" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/program-min.jpg 600w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/program-min-300x150.jpg 300w" sizes="(max-width: 600px) 100vw, 600px"></a></p>
+<p>&nbsp;</p>
+<p><strong><em>Feedback and Questions are welcome! Thanks for reading.</em></strong></p>
+<div class="clearboth"></div></div>
+</div></div>
+</div>
+<div class="single-post-tags">
+Tags: <a href="https://diyhacking.com/tag/arduino/" rel="tag">Arduino</a>, <a href="https://diyhacking.com/tag/esp-01/" rel="tag">ESP-01</a>, <a href="https://diyhacking.com/tag/esp8266/" rel="tag">ESP8266</a>, <a href="https://diyhacking.com/tag/esp8266-gpio/" rel="tag">ESP8266 GPIO</a>, <a href="https://diyhacking.com/tag/gpio/" rel="tag">GPIO</a>, <a href="https://diyhacking.com/tag/iot/" rel="tag">iot</a> </div>
+<section class="blog-similar-posts"><div class="similar-post-title">Recommended Posts</div><ul class="four-cols"><li><div class="similar-post-holder"><a class="mk-similiar-thumbnail" href="https://diyhacking.com/make-web-controlled-servo-arduino-esp8266/" title="Make a Web-Controlled Servo with an Arduino and an ESP8266"><img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/Arduino-Web-Controlled-Servo_featured-nefcuw1nknsftthd3ois5gjbh3kj2gmndl7ql9bzk2.jpg" alt="Make a Web-Controlled Servo with an Arduino and an ESP8266"><div class="image-hover-overlay"></div></a><a href="https://diyhacking.com/make-web-controlled-servo-arduino-esp8266/" class="mk-similiar-title">Make a Web-Controlled Servo with an Arduino and an ESP8266</a></div></li><li><div class="similar-post-holder"><a class="mk-similiar-thumbnail" href="https://diyhacking.com/connecting-raspberry-pi-iot-devices-mqtt/" title="Connecting Raspberry Pi IoT Devices with MQTT"><img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/MQTT_featured-nddbcbs9l2aqmu7efvks0aezijmke7vekk5x9wqfnm.jpg" alt="Connecting Raspberry Pi IoT Devices with MQTT"><div class="image-hover-overlay"></div></a><a href="https://diyhacking.com/connecting-raspberry-pi-iot-devices-mqtt/" class="mk-similiar-title">Connecting Raspberry Pi IoT Devices with MQTT</a></div></li><li><div class="similar-post-holder"><a class="mk-similiar-thumbnail" href="https://diyhacking.com/sound-activated-iot-alarm-esp8266-riotous/" title="Sound-Activated IoT Alarm with ESP8266 and RIOTOUS"><img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/Robin_sound-alarm_image1-ncry0u5nkx9e3bg6nckrw5dzxf64lkp4sm35vl42bm.jpg" alt="Sound-Activated IoT Alarm with ESP8266 and RIOTOUS"><div class="image-hover-overlay"></div></a><a href="https://diyhacking.com/sound-activated-iot-alarm-esp8266-riotous/" class="mk-similiar-title">Sound-Activated IoT Alarm with ESP8266 and RIOTOUS</a></div></li><li><div class="similar-post-holder"><a class="mk-similiar-thumbnail" href="https://diyhacking.com/diy-daq-arduino-calibrating-sensors/" title="DIY DAQ with an Arduino: Calibrating the Sensors"><img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/Arduino-DAQ-in-the-Lab-ncoosusiomf8ez7jdqlg5jplysxc90ns9n1mn44f5u.jpg" alt="DIY DAQ with an Arduino: Calibrating the Sensors"><div class="image-hover-overlay"></div></a><a href="https://diyhacking.com/diy-daq-arduino-calibrating-sensors/" class="mk-similiar-title">DIY DAQ with an Arduino: Calibrating the Sensors</a></div></li></ul><div class="clearboth"></div></section>
+<section id="comments">
+<div class="blog-comment-title">Showing 22 comments</div>
+<ul class="mk-commentlist">
+<li class="comment even thread-even depth-1" id="li-comment-5719">
+<div class="mk-single-comment" id="comment-5719">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/48a884c4aa0c4a32daf65616ccc970dd" srcset="https://secure.gravatar.com/avatar/48a884c4aa0c4a32daf65616ccc970dd?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">jai garg</span>
+<time class="comment-time">August 23, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5719#respond" onclick="return addComment.moveForm( &quot;comment-5719&quot;, &quot;5719&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to jai garg">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>MY ESP IS NOT ACCEPTING AT COMMANDS AFTER UPLOADING THIS SKETCH WHAT TO DO</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5654">
+<div class="mk-single-comment" id="comment-5654">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/b0451e837d80ae0e95b3522f954c2d1a" srcset="https://secure.gravatar.com/avatar/b0451e837d80ae0e95b3522f954c2d1a?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">matsolo</span>
+<time class="comment-time">August 1, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5654#respond" onclick="return addComment.moveForm( &quot;comment-5654&quot;, &quot;5654&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to matsolo">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>For all people having error when uploading. It is very easy actualy . It is just that you cannot upload the prog in your esp8266 if it is not in flashing mode. </p>
+<p>To put it in flashing mode : gpio 0 to ground (steady) then reset pin to ground ( just a pulse). Your esp is now ready to be uploaded with your program</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1" id="li-comment-5583">
+<div class="mk-single-comment" id="comment-5583">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/5a2dcff920ba2283916a433dbda47dba" srcset="https://secure.gravatar.com/avatar/5a2dcff920ba2283916a433dbda47dba?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Mr C</span>
+<time class="comment-time">July 13, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5583#respond" onclick="return addComment.moveForm( &quot;comment-5583&quot;, &quot;5583&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Mr C">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Mine works fine (i think!), LED flashes along with the Blue LED on the ESP8266</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5522">
+<div class="mk-single-comment" id="comment-5522">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/666ef362cc4f86f555c83d1535ef9308" srcset="https://secure.gravatar.com/avatar/666ef362cc4f86f555c83d1535ef9308?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Jason</span>
+<time class="comment-time">June 29, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5522#respond" onclick="return addComment.moveForm( &quot;comment-5522&quot;, &quot;5522&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Jason">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Thank you for this tutorial to help get me started…</p>
+<p>My arduino sketch seemed to upload okay, but I’m not getting any output from the serial port. I took out all references to wifi and uploaded this simple sketch below, but still nothing:</p>
+<p>void setup() {<br>
+delay(100);<br>
+Serial.begin(115200);<br>
+delay(10);<br>
+}</p>
+<p>void loop() {<br>
+Serial.println(“TEST”);<br>
+delay(1000);<br>
+}</p>
+<p>I’m using the following adapter with a added button to put it into programming mode:<br>
+<a href="https://www.amazon.com/ESP8266-Wireless-Computer-Communication-Development/dp/B01J2UXXCA/ref=cm_cr_arp_d_product_top?ie=UTF8" rel="nofollow">https://www.amazon.com/ESP8266-Wireless-Computer-Communication-Development/dp/B01J2UXXCA/ref=cm_cr_arp_d_product_top?ie=UTF8</a><br>
+Then connect the reset pin to ground for a moment to reset.</p>
+<p>Am I missing anything?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1" id="li-comment-5470">
+<div class="mk-single-comment" id="comment-5470">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/b94f9a73fd92aef57434c27adfd015a4" srcset="https://secure.gravatar.com/avatar/b94f9a73fd92aef57434c27adfd015a4?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">LlamaMan</span>
+<time class="comment-time">June 13, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5470#respond" onclick="return addComment.moveForm( &quot;comment-5470&quot;, &quot;5470&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to LlamaMan">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p><a href="https://embeddedinn.wordpress.com/tutorials/getting-started-with-esp8266-wifi-module/" rel="nofollow">https://embeddedinn.wordpress.com/tutorials/getting-started-with-esp8266-wifi-module/</a></p>
+<p>*not mine, but helped me</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5280">
+<div class="mk-single-comment" id="comment-5280">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/0641d98ab36defbcce531e7e15477577" srcset="https://secure.gravatar.com/avatar/0641d98ab36defbcce531e7e15477577?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Oguzhan Ozdogan</span>
+<time class="comment-time">April 24, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5280#respond" onclick="return addComment.moveForm( &quot;comment-5280&quot;, &quot;5280&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Oguzhan Ozdogan">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Hi, I want that connect between raspberry and arduino/esp8266 with modbus. I did it with ethernet shield. But I cant do it ESP8266. Can you help me this about?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1" id="li-comment-5256">
+<div class="mk-single-comment" id="comment-5256">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/96f2ec9a7a4a6a0e83cb5ad924c644d3" srcset="https://secure.gravatar.com/avatar/96f2ec9a7a4a6a0e83cb5ad924c644d3?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Aadithya S</span>
+<time class="comment-time">April 18, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5256#respond" onclick="return addComment.moveForm( &quot;comment-5256&quot;, &quot;5256&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Aadithya S">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>I’ new to this, so bear with me if I sound stupid. Can the GPIO0 and GPIO2 be both used as a input? Can any of the the other pins be used as a input ? I would like to have 3 input pins if possible, Thanks for your time?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-5235">
+<div class="mk-single-comment" id="comment-5235">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/3e3d3953bf1116aaad45e40268ec8726" srcset="https://secure.gravatar.com/avatar/3e3d3953bf1116aaad45e40268ec8726?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Anders Borg</span>
+<time class="comment-time">April 12, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5235#respond" onclick="return addComment.moveForm( &quot;comment-5235&quot;, &quot;5235&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Anders Borg">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>“Therefore if your Arduino doesn’t have a 3.3V output pin”</p>
+<p>The Uno has (confirmed). It’s even shown in the example, but it’s not used. Too low wattage?</p>
+<p>Cheers,<br>
+Anders</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1" id="li-comment-4823">
+<div class="mk-single-comment" id="comment-4823">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/09811cce1a73ab8d925d59fa6118ba1d" srcset="https://secure.gravatar.com/avatar/09811cce1a73ab8d925d59fa6118ba1d?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Barun Kumar Jha</span>
+<time class="comment-time">February 13, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4823#respond" onclick="return addComment.moveForm( &quot;comment-4823&quot;, &quot;4823&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Barun Kumar Jha">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Hi Robin,<br>
+Is it possible to directly connect sensor data pin to GPIO pin of ESP8266 module and send data to receiver module/board?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4744">
+<div class="mk-single-comment" id="comment-4744">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/4253614b54178513c31a03c084bf3e43" srcset="https://secure.gravatar.com/avatar/4253614b54178513c31a03c084bf3e43?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Dhamodharan Krishnan</span>
+<time class="comment-time">January 29, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4744#respond" onclick="return addComment.moveForm( &quot;comment-4744&quot;, &quot;4744&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Dhamodharan Krishnan">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>This Sketch is not working as described I am getting below error as described by Scott. Please advise.</p>
+<p>Sketch uses 222,153 bytes (51%) of program storage space. Maximum is 434,160 bytes.<br>
+Global variables use 31,528 bytes (38%) of dynamic memory, leaving 50,392 bytes for local variables. Maximum is 81,920 bytes.<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+warning: espcomm_sync failed<br>
+error: espcomm_open failed<br>
+error: espcomm_upload_mem failed<br>
+error: espcomm_upload_mem failed</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1" id="li-comment-4653">
+<div class="mk-single-comment" id="comment-4653">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/23676ea104e94a538ca5b4ecd7785ea8" srcset="https://secure.gravatar.com/avatar/23676ea104e94a538ca5b4ecd7785ea8?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Scott</span>
+<time class="comment-time">January 15, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4653#respond" onclick="return addComment.moveForm( &quot;comment-4653&quot;, &quot;4653&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Scott">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>I’ve followed your tutorial, which was well laid out and easy to follow, by the way! When trying to upload the sketch, I get the following errors:</p>
+<p>Arduino: 1.6.13 (Windows 10), Board: “Generic ESP8266 Module, 80 MHz, 40MHz, DIO, 115200, 512K (64K SPIFFS), ck, Disabled, None”</p>
+<p>Sketch uses 222,237 bytes (51%) of program storage space. Maximum is 434,160 bytes.<br>
+Global variables use 31,580 bytes (38%) of dynamic memory, leaving 50,340 bytes for local variables. Maximum is 81,920 bytes.<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+error: failed reading byte<br>
+warning: espcomm_send_command: cant receive slip payload data<br>
+warning: espcomm_sync failed<br>
+error: espcomm_open failed<br>
+error: espcomm_upload_mem failed<br>
+error: espcomm_upload_mem failed</p>
+<p>This report would have more information with<br>
+“Show verbose output during compilation”<br>
+option enabled in File -&gt; Preferences.</p>
+<p>Please HELP!! I’m finding this esp8266 so frustrating…nothing seems to work as it should…</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4475">
+<div class="mk-single-comment" id="comment-4475">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/31976b53a8e154365928a9d2059bd571" srcset="https://secure.gravatar.com/avatar/31976b53a8e154365928a9d2059bd571?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Bharat</span>
+<time class="comment-time">December 19, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4475#respond" onclick="return addComment.moveForm( &quot;comment-4475&quot;, &quot;4475&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Bharat">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Dear Mr. Robin ,<br>
+Thanks a lot , We have implemented the project in local wifi successfully .But now we want to implement it on internet. We have internet access through Jio sim on a mobile .Can we do port forwarding in such condition also . Will it involve any additional cost. Please guide us . Thanks</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment even thread-even depth-1" id="li-comment-4473">
+<div class="mk-single-comment" id="comment-4473">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/d34e7c40194096c325e480e2dd40087e" srcset="https://secure.gravatar.com/avatar/d34e7c40194096c325e480e2dd40087e?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">sri</span>
+<time class="comment-time">December 19, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4473#respond" onclick="return addComment.moveForm( &quot;comment-4473&quot;, &quot;4473&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to sri">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>the best</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4461">
+<div class="mk-single-comment" id="comment-4461">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/afb469b525015c8a59cb69903c7fc9aa" srcset="https://secure.gravatar.com/avatar/afb469b525015c8a59cb69903c7fc9aa?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">NIKHIL RAJ</span>
+<time class="comment-time">December 18, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4461#respond" onclick="return addComment.moveForm( &quot;comment-4461&quot;, &quot;4461&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to NIKHIL RAJ">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Sketch uses 221,999 bytes (51%) of program storage space. Maximum is 434,160 bytes.<br>
+Global variables use 31,564 bytes (38%) of dynamic memory, leaving 50,356 bytes for local variables. Maximum is 81,920 bytes.<br>
+warning: espcomm_sync failed<br>
+error: espcomm_open failed<br>
+error: espcomm_upload_mem failed<br>
+error: espcomm_upload_mem failed</p>
+<div class="clearboth"></div>
+</div>
+</div>
+<ul class="children">
+<li class="comment even depth-2" id="li-comment-5269">
+<div class="mk-single-comment" id="comment-5269">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/5f09b27bc3127c3f26497fb5b1bcf898" srcset="https://secure.gravatar.com/avatar/5f09b27bc3127c3f26497fb5b1bcf898?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Dave W</span>
+<time class="comment-time">April 20, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5269#respond" onclick="return addComment.moveForm( &quot;comment-5269&quot;, &quot;5269&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Dave W">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Have you selected the correct SUB Port in Arduino IDE?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-3" id="li-comment-5270">
+<div class="mk-single-comment" id="comment-5270">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/5f09b27bc3127c3f26497fb5b1bcf898" srcset="https://secure.gravatar.com/avatar/5f09b27bc3127c3f26497fb5b1bcf898?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Dave W</span>
+<time class="comment-time">April 20, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5270#respond" onclick="return addComment.moveForm( &quot;comment-5270&quot;, &quot;5270&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Dave W">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Doh.. USB Port..</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li class="comment even depth-2" id="li-comment-5821">
+<div class="mk-single-comment" id="comment-5821">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/425274172987df200a9703e0a2fa4f0c" srcset="https://secure.gravatar.com/avatar/425274172987df200a9703e0a2fa4f0c?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">rishi</span>
+<time class="comment-time">September 22, 2017</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=5821#respond" onclick="return addComment.moveForm( &quot;comment-5821&quot;, &quot;5821&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to rishi">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>hello nikhil,</p>
+<p>Did u solve that problem actually i am also facing the same problem if u solved that so please help me out also.</p>
+<p>Thanks</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li class="comment odd alt thread-even depth-1" id="li-comment-4184">
+<div class="mk-single-comment" id="comment-4184">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/384edf0aedb882fc308ffd0b79395a0a" srcset="https://secure.gravatar.com/avatar/384edf0aedb882fc308ffd0b79395a0a?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Ikya</span>
+<time class="comment-time">November 10, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4184#respond" onclick="return addComment.moveForm( &quot;comment-4184&quot;, &quot;4184&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Ikya">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>What about an ESP8266 14 GPIO pins?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-4019">
+<div class="mk-single-comment" id="comment-4019">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/b5478c96be5b6b35851619ef80650b89" srcset="https://secure.gravatar.com/avatar/b5478c96be5b6b35851619ef80650b89?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">raul</span>
+<time class="comment-time">October 18, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4019#respond" onclick="return addComment.moveForm( &quot;comment-4019&quot;, &quot;4019&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to raul">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>if the GIPO2 pin is 2, the pin for the GPIO 0 is 0?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment odd alt thread-even depth-1" id="li-comment-3652">
+<div class="mk-single-comment" id="comment-3652">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/31a7090573aca6ee0f1d1b5ca04a774c" srcset="https://secure.gravatar.com/avatar/31a7090573aca6ee0f1d1b5ca04a774c?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Mohamed Hegab</span>
+<time class="comment-time">August 19, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=3652#respond" onclick="return addComment.moveForm( &quot;comment-3652&quot;, &quot;3652&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Mohamed Hegab">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>It Gives me </p>
+<p>warning: espcomm_sync failed</p>
+<p>I connected the circuit like the diagram</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-3515">
+<div class="mk-single-comment" id="comment-3515">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/fe2edd5372bc85536061b157d1c3c635" srcset="https://secure.gravatar.com/avatar/fe2edd5372bc85536061b157d1c3c635?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Thomas Kanattu</span>
+<time class="comment-time">July 24, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=3515#respond" onclick="return addComment.moveForm( &quot;comment-3515&quot;, &quot;3515&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to Thomas Kanattu">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Well done</p>
+<div class="clearboth"></div>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-2" id="li-comment-4020">
+<div class="mk-single-comment" id="comment-4020">
+<div class="gravatar"><img alt="" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/b5478c96be5b6b35851619ef80650b89" srcset="https://secure.gravatar.com/avatar/b5478c96be5b6b35851619ef80650b89?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">raul</span>
+<time class="comment-time">October 18, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/esp8266-gpio/?replytocom=4020#respond" onclick="return addComment.moveForm( &quot;comment-4020&quot;, &quot;4020&quot;, &quot;respond&quot;, &quot;8325&quot; )" aria-label="Reply to raul">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Mohamed<br>
+NOTE:Make sure that GPIO0 is grounded while uploading the code.<br>
+then connect the GPIO0 to ground before upload the sketch</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title"><div class="respond-heading">Leave a Comment</div> <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://diyhacking.com/esp8266-gpio/#respond" style="display:none;">Cancel reply</a></small></h3> <form action="https://diyhacking.com/wp-comments-post.php?wpe-comment-post=diyhacking" method="post" id="commentform" class="comment-form">
+<div class="comment-textarea"><textarea placeholder="LEAVE YOUR COMMENT" class="textarea" name="comment" rows="8" id="comment" tabindex="58"></textarea></div><div class="comment-form-name comment-form-row"><input type="text" name="author" class="text_input" id="author" tabindex="54" placeholder="Name (Required)"></div>
+<div class="comment-form-email comment-form-row"><input type="text" name="email" class="text_input" id="email" tabindex="56" placeholder="Email (Required)"></div>
+<p class="math-captcha-form">
+<label>Math Captcha<br></label>
+<span>38 + <input type="text" size="2" length="2" id="mc-input" class="mc-input" name="mc-value" value="" aria-required="true"> = 43</span>
+</p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="POST COMMENT"> <input type="hidden" name="comment_post_ID" value="8325" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="a7c7e25920"></p><p style="display: none;"></p> <input type="hidden" id="ak_js" name="ak_js" value="1509164508255"></form>
+</div>
+</section>
+</article>
+<div class="clearboth"></div>
+</div>
+<div class="clearboth"></div>
+</div>
+</div>
+</div>
+<section id="mk-footer" class="">
+<div class="footer-wrapper mk-grid">
+<div class="mk-padding-wrapper">
+<div class="mk-col-1-3"><section id="social-3" class="widget widget_social_networks"><div class="widgettitle">Follow Us</div><div id="social-59f405c2308a7" class="align-left"><a href="https://www.facebook.com/diyhacking" rel="nofollow" class="builtin-icons custom large facebook-hover" target="_blank" alt="Follow Us facebook" title="Follow Us facebook"><i class="mk-jupiter-icon-facebook"></i></a><a href="https://twitter.com/DIYhacking" rel="nofollow" class="builtin-icons custom large twitter-hover" target="_blank" alt="Follow Us twitter" title="Follow Us twitter"><i class="mk-jupiter-icon-twitter"></i></a><a href="https://www.youtube.com/channel/UC6G4RDruQIPufKH-NLbXwAA" rel="nofollow" class="builtin-icons custom large youtube-hover" target="_blank" alt="Follow Us youtube" title="Follow Us youtube"><i class="mk-jupiter-icon-youtube"></i></a>
+<style>
+						#social-59f405c2308a7 a { 
+							opacity: 100 !important;color: #9f9f9f !important;}
+						#social-59f405c2308a7 a:hover { color: #fb734c !important;}
+					</style></div></section></div>
+<div class="mk-col-1-3"><section id="recent_posts-3" class="widget widget_posts_lists"><div class="widgettitle">Recent Posts</div>
+<ul>
+<li class="post-list-image">
+<a href="https://diyhacking.com/how-to-make-pic-powered-gas-alarm/" title="How to Make a PIC-Powered Gas Alarm" class="post-list-thumb">
+<img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/image1-3-150x150-nggb8h2s5e62kdbsvp5ih46i1vk3niadeonpp6nc4g.jpg" alt="How to Make a PIC-Powered Gas Alarm">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/how-to-make-pic-powered-gas-alarm/" class="post-list-title">How to Make a PIC-Powered Gas Alarm</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+<li class="post-list-image">
+<a href="https://diyhacking.com/how-to-make-wireless-thermostat/" title="How to Make a Wireless Thermostat" class="post-list-thumb">
+<img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/image3-6-150x150-nggdn4t48isqy5g7uno9uqxdnqfcaxbhnlw9ik5ogw.jpg" alt="How to Make a Wireless Thermostat">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/how-to-make-wireless-thermostat/" class="post-list-title">How to Make a Wireless Thermostat</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+<li class="post-list-image">
+<a href="https://diyhacking.com/how-to-make-hho-generator/" title="How to Make an HHO Generator" class="post-list-thumb">
+<img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/image1-2-150x150-ngcr7y5c7hfzqrgvfmyxk27s8ee8j2rd4llny3r6zk.jpg" alt="How to Make an HHO Generator">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/how-to-make-hho-generator/" class="post-list-title">How to Make an HHO Generator</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+<li class="post-list-image">
+<a href="https://diyhacking.com/how-to-make-a-flame-detector/" title="How to Make a Flame Detector" class="post-list-thumb">
+<img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/Flame-Detector-Featured-150x150-ng4hf0eds5aeng886gc7egata4j4zrdqgvwoofsnxc.jpg" alt="How to Make a Flame Detector">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/how-to-make-a-flame-detector/" class="post-list-title">How to Make a Flame Detector</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+<li class="post-list-image">
+<a href="https://diyhacking.com/making-your-own-pcbs-to-mill-or-to-etch/" title="Making Your Own PCBs: To Mill or to Etch?" class="post-list-thumb">
+<img src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/image3-1-150x150-ng3z5m1xxhcypf4wxafijcf4morjkjjzf2dfjmizog.jpg" alt="Making Your Own PCBs: To Mill or to Etch?">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/making-your-own-pcbs-to-mill-or-to-etch/" class="post-list-title">Making Your Own PCBs: To Mill or to Etch?</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+</ul>
+</section></div>
+<div class="mk-col-1-3"><section id="categories-3" class="widget widget_categories"><div class="widgettitle">Categories</div> <ul>
+<li class="cat-item cat-item-496"><a href="https://diyhacking.com/category/3ddesign/" title="Learn how to 3D design parts and products for your projects and prototype them in the real world using our simple tutorials and projects.">3D Designing</a>
+</li>
+<li class="cat-item cat-item-216"><a href="https://diyhacking.com/category/advanced/" title="This category hosts an advanced set of projects from various Makers around the country.">Advanced</a>
+</li>
+<li class="cat-item cat-item-694"><a href="https://diyhacking.com/category/analog/">Analog</a>
+</li>
+<li class="cat-item cat-item-2"><a href="https://diyhacking.com/category/arduino-projects/" title="Our collection of best Arduino Projects! Follow these simple instructions at DIY hacking to start building cool arduino projects! Click next at the end of the post to view all our best science fair projects and robotics projects.">Arduino projects</a>
+</li>
+<li class="cat-item cat-item-3"><a href="https://diyhacking.com/category/beginners/">Beginners</a>
+</li>
+<li class="cat-item cat-item-235"><a href="https://diyhacking.com/category/blog/">Blog</a>
+</li>
+<li class="cat-item cat-item-552"><a href="https://diyhacking.com/category/collaboration-tools/">Collaboration tools</a>
+</li>
+<li class="cat-item cat-item-494"><a href="https://diyhacking.com/category/cybersecurity/" title="Learn about cybersecurity and ethical hacking using our simple guides and tutorials and learn to protect yourself from attacks.">Cyber Security</a>
+</li>
+<li class="cat-item cat-item-533"><a href="https://diyhacking.com/category/diy-drones/" title="Learn how you can build a UAV (unmanned aerial vehicle) from scratch using these tutorials and guides.">Drones</a>
+</li>
+<li class="cat-item cat-item-218"><a href="https://diyhacking.com/category/ebooks/" title="Our collection of eBooks to help you get started on becoming a Maker!">eBooks</a>
+</li>
+<li class="cat-item cat-item-4"><a href="https://diyhacking.com/category/electronics-hacks/" title="Hacking using simple everyday electronics components. Follow these simple instructions at DIY hacking to start hacking with electronics!  Click next at the end of the post to view other electronics projects.">Electronics hacks</a>
+</li>
+<li class="cat-item cat-item-1000"><a href="https://diyhacking.com/category/esp8266/">ESP8266</a>
+</li>
+<li class="cat-item cat-item-576"><a href="https://diyhacking.com/category/home-automation/">Home Automation</a>
+</li>
+<li class="cat-item cat-item-5"><a href="https://diyhacking.com/category/intel-edison/">Intel Edison</a>
+</li>
+<li class="cat-item cat-item-215"><a href="https://diyhacking.com/category/intermediate/" title="This category has a collection of projects and tutorials for intermediate level Makers.">Intermediate</a>
+</li>
+<li class="cat-item cat-item-6"><a href="https://diyhacking.com/category/raspberrypi-projects/" title="Our collection of the best Raspberry Pi projects. Follow the simple instructions at DIY hacking to build cool raspberry pi 2  projects and robotics projects. And build the best science fair projects!">Raspberry pi projects</a>
+</li>
+<li class="cat-item cat-item-575"><a href="https://diyhacking.com/category/resources/">Resources</a>
+</li>
+<li class="cat-item cat-item-497"><a href="https://diyhacking.com/category/robotics/" title="Enter the world of Robotics and become an expert using our simple guides and project tutorials.">Robotics</a>
+</li>
+<li class="cat-item cat-item-999"><a href="https://diyhacking.com/category/sensors/">Sensors</a>
+</li>
+<li class="cat-item cat-item-495"><a href="https://diyhacking.com/category/vr-ar/" title="Learn how you can start developing applications on Virtual and Augmented Reality platforms using our simple getting started guides and tutorials.">VR and AR</a>
+</li>
+</ul>
+</section></div>
+<div class="clearboth"></div>
+</div>
+</div>
+<div id="sub-footer">
+<div class=" mk-grid">
+<span class="mk-footer-copyright">© EETech Media, LLC. All rights reserved. Unauthorized use and/or duplication of this material without express and written permission from the author and/or owner is strictly prohibited. Links to this site may be used, provided that full and clear credit is given to DIYHacking.com with appropriate and specific direction to the original content.</span>
+</div>
+<div class="clearboth"></div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55418412-1', 'auto');
+  ga('send', 'pageview');
+
+jQuery(document).ajaxComplete(function() {
+    jQuery('.vc_grid-item.match-height').matchHeight({
+      		byRow: true,
+      		property: 'height',
+      		target: null,
+      		remove: false
+	});
+	jQuery('.home-all-project .vc_grid-item.match-height').matchHeight({
+      		byRow: false,
+      		property: 'height',
+      		target: null,
+      		remove: false
+	});
+});
+
+jQuery('body').on('click', '.vc_grid-btn-load_more', function(e) {
+jQuery('.vc_grid-item.match-height').matchHeight({
+      		byRow: true,
+      		property: 'height',
+      		target: null,
+      		remove: false
+	});
+	jQuery('.home-all-project .vc_grid-item.match-height').matchHeight({
+      		byRow: false,
+      		property: 'height',
+      		target: null,
+      		remove: false
+	});
+});
+
+jQuery('.get-ebook-container .submit-btn').on('click', function(e) {
+    if(jQuery('.industry-interest :checkbox:checked').length < 2) {
+        jQuery('.get-ebook-container .industry-interest .help-text').addClass('error-field');        
+        jQuery('.get-ebook-container .industry-interest :input:enabled:visible:first').focus();
+        e.preventDefault();
+    } else {    
+        jQuery('.get-ebook-container .industry-interest .help-text').removeClass('error-field');
+    }
+
+    if(jQuery('.product-interest :checkbox:checked').length < 2) {
+        jQuery('.get-ebook-container .product-interest .help-text').addClass('error-field');
+        jQuery('.get-ebook-container .product-interest :input:enabled:visible:first').focus();
+        e.preventDefault();
+    } else {    
+        jQuery('.get-ebook-container .product-interest .help-text').removeClass('error-field');
+    }
+});
+
+if(jQuery('.mc4wp-response .mc4wp-alert').length) {
+    jQuery('html,body').animate({
+        scrollTop: jQuery('.mc4wp-response').offset().top - 200 },
+    'slow');
+}		</script>
+</div>
+<a href="https://diyhacking.com/esp8266-gpio/#" class="mk-go-top off"><i class="mk-icon-chevron-up"></i></a>
+<div class="mk-fullscreen-search-overlay">
+<a href="https://diyhacking.com/esp8266-gpio/#" class="mk-fullscreen-close"><i class="mk-moon-close-2"></i></a>
+<div id="mk-fullscreen-search-wrapper">
+<p>Start typing and press Enter to search</p>
+<form method="get" id="mk-fullscreen-searchform" action="https://diyhacking.com/">
+<input type="text" value="" name="s" id="mk-fullscreen-search-input">
+<i class="mk-icon-search fullscreen-search-icon"><input value="" type="submit"></i>
+</form>
+</div>
+</div>
+<script type="text/javascript">  
+    php = {
+        hasAdminbar: false,
+        json: (null != null) ? null : "",
+        styles:  '',
+        jsPath: 'https://diyhacking.com/wp-content/themes/jupiter/js'
+      };
+      
+    var styleTag = document.createElement("style"),
+      head = document.getElementsByTagName("head")[0];
+
+    styleTag.type = "text/css";
+    styleTag.innerHTML = php.styles;
+    head.appendChild(styleTag);
+    </script><script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/comment-reply.min.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/jquery.form.min.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"https:\/\/diyhacking.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/scripts.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/core.min.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/widget.min.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/tabs.min.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/jquery.matchHeight-min.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_login_object = {"ajaxurl":"https:\/\/diyhacking.com\/wp-admin\/admin-ajax.php","redirecturl":"https:\/\/diyhacking.com\/esp8266-gpio\/","loadingmessage":"Sending user info, please wait..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/scripts-vendors.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/wp-embed.min.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/jquerytransit.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/js_composer_front.js.tải xuống"></script>
+<script type="text/javascript" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/form.js.tải xuống"></script>
+<script type="text/javascript">
+		window.$ = jQuery
+
+		var dynamic_styles = '';
+		var dynamic_styles_ids = ([] != null) ? [] : [];
+
+		var styleTag = document.createElement('style'),
+			head = document.getElementsByTagName('head')[0];
+
+			//console.log('jhonny')
+		styleTag.type = 'text/css';
+		styleTag.setAttribute('data-ajax', '');
+		styleTag.innerHTML = dynamic_styles;
+		head.appendChild(styleTag);
+
+		$('.mk-dynamic-styles').each(function() {
+			$(this).remove();
+		});
+
+		function ajaxStylesInjector() {
+			$('.mk-dynamic-styles').each(function() {
+				var $this = $(this),
+					id = $this.attr('id'),
+					commentedStyles = $this.html();
+					styles = commentedStyles
+							 .replace('<!--', '')
+							 .replace('-->', '');
+
+
+				if(dynamic_styles_ids.indexOf(id) === -1) {
+					$('style[data-ajax]').append(styles);
+					$this.remove();
+				}
+
+				dynamic_styles_ids.push(id);
+			});
+		};
+
+		abb.modules.theme_header.init({id: 'mk-header',height: '92',stickyHeight: '50',stickyOffset: 'header',hasToolbar: 'false',}); 
+abb.init();	</script>
+
+<div id="div-gpt-ad-1491855244676-0" data-google-query-id="CKePkfS7ktcCFUmVvQoduHQCjw" style="display: none;">
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1491855244676-0'); });
+</script>
+<div id="google_ads_iframe_/62616433/DIY_Wallpaper_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/62616433/DIY_Wallpaper_0" title="3rd party ad content" name="google_ads_iframe_/62616433/DIY_Wallpaper_0" width="1" height="1" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/saved_resource(1).html"></iframe></div></div>
+<script>
+$(window).load(function() {
+        if($('#wallpaperad').length) {
+            var wa = $('#wallpaperad');
+            var mh = $("#theme-page").height();
+            wa.height(mh + 70);
+        }
+});
+</script>
+<script src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/adpopup-pro.modified.min.js.tải xuống"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+      var ads = {
+        'ad_1': {
+          'type': 'jquery',
+          'elem': '#div-gpt-ad-1494427027465-0'
+        }
+      };
+
+      $('body').adPopupPro({
+        ads: ads,
+        width: 640,
+        height: 480,
+        popup_color: 'dark',
+        overlay_close: false,
+        overlay_color: 'dark',
+        auto_close_after: 18000,
+        escape_close: false,
+        show_type: 'day',
+        cookie_id: 'diy_welcome'
+      });
+});
+
+$('#div-gpt-ad-1494427027465-0').bind('adready',function() {
+console.log("Hey");
+	$('.adpopup-overlay').show();
+	$('.adpopup').show();
+});
+</script>
+
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","779889472158467");fbq("track","PageView");fbq("track","ViewContent",{content_ids:google_tag_manager["GTM-N2G8QQB"].macro('gtm1'),content_type:"category"});</script>
+<iframe id="ace-frame" src="./ESP8266 Tutorial_ Programming the Onboard GPIO Pins _ DIY Hacking_files/ace_frame.html" style="visibility: hidden; display: none;"></iframe></body></html>
