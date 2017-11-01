@@ -2,7 +2,7 @@
 <DataChest>
   <Data name="ComboBoxFlashBaudrate.Text">
     <Type>String</Type>
-    <Value>9600</Value>
+    <Value>115200</Value>
   </Data>
   <Data name="ComboBoxFlashSize.ItemIndex">
     <Type>Integer</Type>
@@ -22,7 +22,7 @@
   </Data>
   <Data name="FrameConfigLine1.FilePath">
     <Type>String</Type>
-    <Value>C:\Users\thanhhdn\Documents\Arduino\Reference\ESP8266\Firmware\ESP8266-Tools\ESP8266-Tools-master\ai-thinker-0.9.5.2-115200.bin</Value>
+    <Value>C:\Users\thanhhdn\Documents\Arduino\references\ESP8266\Firmware\ESP8266-Tools\ESP8266-Tools-master\blank_1MB.bin</Value>
   </Data>
   <Data name="FrameConfigLine1.Offset">
     <Type>String</Type>
@@ -34,11 +34,11 @@
   </Data>
   <Data name="FrameConfigLine2.FilePath">
     <Type>String</Type>
-    <Value>C:\Users\thanhhdn\Documents\Arduino\Reference\ESP8266\Firmware\ESP8266-Tools\ESP8266-Tools-master\blank_1MB.bin</Value>
+    <Value/>
   </Data>
   <Data name="FrameConfigLine2.Offset">
     <Type>String</Type>
-    <Value>0x10000</Value>
+    <Value/>
   </Data>
   <Data name="FrameConfigLine3.Checked">
     <Type>Boolean</Type>
@@ -46,11 +46,11 @@
   </Data>
   <Data name="FrameConfigLine3.FilePath">
     <Type>String</Type>
-    <Value>C:\Users\thanhhdn\Documents\Arduino\Reference\ESP8266\Firmware\ESP8266-Tools\ESP8266-Tools-master\blank_1MB.bin</Value>
+    <Value/>
   </Data>
   <Data name="FrameConfigLine3.Offset">
     <Type>String</Type>
-    <Value>0x20000</Value>
+    <Value/>
   </Data>
   <Data name="FrameConfigLine4.Checked">
     <Type>Boolean</Type>
@@ -58,11 +58,11 @@
   </Data>
   <Data name="FrameConfigLine4.FilePath">
     <Type>String</Type>
-    <Value>C:\Users\thanhhdn\Documents\Arduino\Reference\ESP8266\Firmware\ESP8266-Tools\ESP8266-Tools-master\blank_1MB.bin</Value>
+    <Value/>
   </Data>
   <Data name="FrameConfigLine4.Offset">
     <Type>String</Type>
-    <Value>0x30000</Value>
+    <Value/>
   </Data>
   <Data name="FrameConfigLine5.Checked">
     <Type>Boolean</Type>
