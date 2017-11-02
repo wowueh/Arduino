@@ -70,7 +70,7 @@ void sendSensor()
   Blynk.virtualWrite(V5, h);
   Blynk.virtualWrite(V6, t);
 }
-/*-----------------------------------------------------------------------------------------*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 
 
@@ -119,7 +119,7 @@ void setup()
   // Setup a function to be called every second
   timer.setInterval(1000L, sendSensor);
 
-  /*|--------------------------------------------------------------------------------------|*/
+  /*|XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|*/
 }
 
 
@@ -133,6 +133,6 @@ void loop()
   
   /*|++++++++++++++++++++++++++ Here below code for DHTxx sensor ++++++++++++++++++++++++++|*/
   timer.run();
-  /*|--------------------------------------------------------------------------------------|*/
+  /*|XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|*/
 }
 
