@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz -->
+<html lang="vi" dir="ltr" prefix="fb: http://www.facebook.com/2008/fbml content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#" class="js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--[if IE]><![endif]-->
+
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="http://cdn.arduino.vn/">
+<!--[if IE 9]>
+<link rel="prefetch" href="//cdn.arduino.vn" />
+<![endif]-->
+<link rel="shortlink" href="http://arduino.vn/node/436">
+<meta name="Generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz">
+<link rel="shortcut icon" href="http://cdn.arduino.vn/sites/all/themes/arduino2016/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz | Cộng đồng Arduino Việt Nam</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="cleartype" content="on">
+
+  <link type="text/css" rel="stylesheet" href="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/css__ESU007kA6OXANIbKIwepmrvExwT8VDRTYCrhccFBFLE__ZxK0cgdG17xiZD-tyAOKdZdMlu1gorOfS0NGmMomJxM___NdL6D9oDW7TzkpF_-wnuV.css" media="all">
+  <script async="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/analytics.js.tải xuống"></script><script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/js__q4ZluDEr7yHOp8TDo4l-cypOrRNOvxyaxrSrBudwQ2E__WkhiV_lrksVYyEJqyxuOCz7YWesQGK8L6lcma1zwobw___NdL6D9oDW7TzkpF_.tải xuống"></script>
+<script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/js__nok8G7hcnetIw76kyOWGSjfV7ZbfyfFwm807kxsEXGI__BaEwjj6wscfXL9ZDWHeXT4eowghF20sqLavOStFRjgc___NdL6D9oDW7TzkpF_.tải xuống" defer="defer"></script>
+<script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/js__xGEy8v8KoFRG4RwjWeKtO1qs4jG00zQzljVuTJJbmVg__vIR04uxM19JnU8uRv2AV0QvWZjQMvFLWlppxYu020gY___NdL6D9oDW7TzkpF_.tải xuống"></script>
+<script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/js__bzh0uY3h0wP16p2vug7GVZc8YwQII2MvMdP74GgvZU4__29hprtUJjUrYFd0x57Qa4s7jvCu9CPbbzQPyX0FxplE___NdL6D9oDW7TzkpF_.tải xuống" defer="defer"></script>
+<script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/js__jyUB1nv6AYQUrEUvVaOKKhrTTcSJT3MbSu52cufH51U__9bg2uB03d-iB9idDXtIBd0m13yvqr8JcTxXdPlkFfGw___NdL6D9oDW7TzkpF_.tải xuống"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"arduino2016","theme_token":"CwIBACJaO0wbiFifCawyHeIipxuajnGQ2ZuBgD79V_Q","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/field_hidden\/field_hidden.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/fbconnect\/fbconnect.css":1,"sites\/all\/modules\/rate\/rate.css":1,"sites\/default\/files\/sl_sprites.css":1,"sites\/all\/modules\/rate\/templates\/thumbs-up\/thumbs-up.css":1,"sites\/all\/modules\/gauth\/gauth_login\/gauth_login.css":1,"sites\/all\/modules\/path_breadcrumbs\/css\/path_breadcrumbs.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/libraries\/superfish\/style\/ktheme.css":1,"sites\/all\/themes\/arduino2016\/system.menus.css":1,"sites\/all\/themes\/arduino2016\/system.messages.css":1,"sites\/all\/themes\/arduino2016\/system.theme.css":1,"sites\/all\/themes\/arduino2016\/css\/metro.css":1,"sites\/all\/themes\/arduino2016\/css\/nprocess.css":1,"sites\/all\/themes\/arduino2016\/css\/style.css":1,"sites\/all\/modules\/prettify\/styles\/googlecode.css":1},"js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/google-code-prettify\/prettify.js":1,"sites\/all\/libraries\/google-code-prettify\/lang-css.js":1,"public:\/\/languages\/vi_93a90fQN-FyrA-_Ia5ssjsDkf9U1IfsIqx_3tJYrNm4.js":1,"sites\/all\/modules\/fbconnect\/fbconnect.js":1,"sites\/all\/modules\/prettify\/prettify.loader.js":1,"sites\/all\/modules\/rate\/rate.js":1,"sites\/all\/modules\/disqus\/disqus.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/sfsmallscreen.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/superfish\/superfish.js":1,"sites\/all\/themes\/arduino2016\/js\/jquery.js":1,"sites\/all\/themes\/arduino2016\/js\/swipe.jquery.js":1,"sites\/all\/themes\/arduino2016\/js\/phpjs.js":1,"sites\/all\/themes\/arduino2016\/js\/metro.js":1,"sites\/all\/themes\/arduino2016\/js\/nprocess.js":1,"sites\/all\/themes\/arduino2016\/js\/site.js":1,"sites\/all\/themes\/arduino2016\/js\/cookie.js":1}},"fbconnect":{"user_pictures":"disallow","language_code":"vi_VN","app_id":"1424185567850442","debug":0,"connect_js":"document.location.protocol + \u0027\/\/connect.facebook.net\/vi_VN\/all.js\u0027","loginout_mode":"manual","invite_name":"C\u1ed9ng \u0111\u1ed3ng Arduino Vi\u1ec7t Nam","fast_reg_mode":1,"fast_reg_autoname":1,"fbuid":0,"user":{"uid":0,"fbuid":null}},"prettify":{"linenums":false,"match":".content,#content","nocode":"no-code","custom":[],"markup":{"code":true,"pre":true,"precode":false}},"rate":{"basePath":"\/rate\/vote\/js","destination":"node\/436"},"disqusComments":"arduinovnn","better_exposed_filters":{"views":{"cac_bai_viet_cung_tac_gia":{"displays":{"block":{"filters":[]}}},"node_count_by_user":{"displays":{"block_1":{"filters":[]}}}}},"superfish":{"1":{"id":"1","sf":{"delay":"10","animation":{"opacity":"show","height":"show"},"speed":10,"autoArrows":true,"dropShadows":true,"disableHI":false},"plugins":{"smallscreen":{"mode":"window_width","addSelected":false,"menuClasses":false,"hyperlinkClasses":false,"title":"Main menu"},"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}}},"urlIsAjaxTrusted":{"\/bai-viet\/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz":true,"\/bai-viet\/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz?destination=node\/436":true},"disqus":{"domain":"arduinovnn","url":"http:\/\/arduino.vn\/bai-viet\/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz","title":"M\u1ed9t c\u00e1ch ti\u1ebfp c\u1eadn kh\u00e1c v\u1edbi s\u00f3ng v\u00f4 tuy\u1ebfn 315 hay 433Mhz","identifier":"node\/436","language":"vi","sso":{"name":"C\u1ed9ng \u0111\u1ed3ng Arduino Vi\u1ec7t Nam","url":"http:\/\/arduino.vn\/user\/login?destination=disqus\/closewindow","logout":"http:\/\/arduino.vn\/user\/logout?destination=node\/436","width":800,"height":600,"button":"\/\/cdn.arduino.vn\/sites\/default\/files\/images\/logo_3.png","icon":"\/\/cdn.arduino.vn\/sites\/all\/themes\/arduino2016\/favicon.ico"},"api_key":"HYyUbnayRKyvJXL3JDIMXGwU073P5OvZt0TYdVd7urTp4SQGmjwJqKULyc2Oeow3","remote_auth_s3":"W10= 5de8d04d17b80b0525fc4ce7652144f5c6ef57f4 1509676909"}});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen/js/html5-respond.js"></script>
+    <![endif]-->
+  <link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.b86d4f6eedbae580658ac980cc1aa322.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.8edffe1405dcc2d5eb5ee9d96a2866d1.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.39785835b889caac941e173b57b89a91.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/count-data.js.tải xuống"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-436 node-type-article section-bai-viet disqus-processed" style="">
+  <div class="grid condensed">
+          <p id="skip-link">
+        <a href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+      </p>
+            
+
+  <div class="row">
+    <div class="cell">
+      <header id="navigation" class="app-bar fixed-top bg-teal" data-role="appbar">
+        <div class="container">
+          
+            <div class="region region-navigation">
+    <div id="block-superfish-1" class="">
+			<ul class="app-bar-menu small-dropdown"><li><div class="app-bar-element">
+              <a href="javascript:;" class="fg-white"><span class="mif-apps mif-2x"></span></a>
+              <div class="app-bar-drop-container bg-white fg-dark data-no-close overflow-visible" data-role="dropdown" style="width:400px;min-width: 200px;">
+                                  <div class="login-form-container padding10 bg-grayLighter"><form action="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz?destination=node/436" method="post" id="user-login-form" accept-charset="UTF-8" class="login-form"><div class="tabcontrol"><div class="form-item form-type-textfield form-item-name">
+  <p><label for="edit-name" class="sub-header">Tên người dùng <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control text"><span class="mif-user prepend-icon"></span><input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required"></div>
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <p><label for="edit-pass" class="sub-header">Mật khẩu <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control password"><span class="mif-lock prepend-icon"></span><input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required"></div>
+</div>
+<div class="item-list tabs"><ul><li class="first"><a href="http://arduino.vn/user/register" title="Tạo tài khoản người dùng mới.">Tạo tài khoản mới</a></li>
+<li class="last"><a href="http://arduino.vn/user/password" title="Yêu cầu gửi mật khẩu mới qua thư điện tử.">Yêu cầu mật khẩu mới</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-iqXRydF-9S1XqE0-fnuowxxHv-hE8fVwKflPHIeTqF0">
+<input type="hidden" name="form_id" value="user_login_block">
+<div id="fbconnect_button" class="form-item form-type-item" style="text-align:center;">
+  <p style="display: none;"><label for="fbconnect_button" class="sub-header">Đăng nhập bằng Facebook </label></p>
+ <fb:login-button size="large" background="dark" v="3" data-scope="email" login_text="Connect" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1424185567850442&amp;container_width=0&amp;locale=vi_VN&amp;login_text=Connect&amp;scope=email&amp;sdk=joey&amp;size=large"><span style="vertical-align: bottom; width: 87px; height: 25px;"><iframe name="f39739c3460efcc" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:login_button Facebook Social Plugin" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/login_button.html" class="" style="border: none; visibility: visible; width: 87px; height: 25px;"></iframe></span></fb:login-button>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2" style="text-align:center;"><input type="submit" id="edit-submit--2" name="op" value="Đăng nhập" class="form-submit button success block-shadow-success text-shadow"></div><div style="text-align:center;"><input type="submit" id="edit-submit-google" name="op" value="" class="form-submit"></div></div></form></div>
+                              </div>
+          </div></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="0" data-flexorder="1"><a href="http://arduino.vn/" title=""><span class="mif-home"></span></a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="1" data-flexorder="2"><a href="http://arduino.vn/tham-khao" class="dropdown-toggle">Tham khảo</a><ul class="d-menu overflow-visible" data-role="dropdown"><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference/howto" title="">Tự học Arduino</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference/getting-started/step1">Học Arduino cần những gì?</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/gioi-thieu-ve-arduino" title="">Giới thiệu về Arduino</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/raspberry-pi" title="">Raspberry Pi</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/intel-galileo" title="">Intel Galileo</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/tags/intel-edison" title="">Intel Edison</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference">Tài liệu tham khảo</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/chuong-trinh-mau" class="dropdown-toggle">Chương trình mẫu</a><ul class="d-menu overflow-visible" data-role="dropdown"><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/chuong-trinh-mau/level-beginner-vo-long" title="">Beginner - Vỡ lòng</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/chuong-trinh-mau/level-intermediate-co-kien-thuc-co-ban" title="">Intermediate - Có kiến thức cơ bản</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/chuong-trinh-mau/level-advanced-nang-cao" title="">Advanced - Nâng cao</a></li></ul></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference/library" title="">Thư viện</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference/cac-loi-thuong-gap-tren-Arduino-va-cach-khac-phuc">Lỗi của Arduino ?</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/dien-tu-co-ban" title="">Điện tử cơ bản</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/lap-trinh-c" title="">Lập trình C</a></li></ul></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="2" data-flexorder="3"><a href="http://arduino.vn/nao-cung-lam" title="Nào cùng làm với cộng đồng Arduino" class="dropdown-toggle">Nào cùng làm!</a><ul class="d-menu overflow-visible" data-role="dropdown"><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/nao-cung-lam" title="">Khám phá thế giới dự án</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/tags/c-0" title="">C Sharp (C#)</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/nodejs" title="">NodeJS - IOT</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/VBLUno" title="">VBLUno</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/phan-loai-he-thong/hacking" title="">Hacking (Sẵn sàng chứ?)</a></li></ul></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="3" data-flexorder="4"><a href="http://arduino.vn/bai-viet/cach-chia-se">Đăng bài</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="4" data-flexorder="5"><a href="http://arduino.vn/bai-viet/tai-ve-cac-tai-nguyen">Tải về</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="5" data-flexorder="6"><a href="http://arduino.vn/cuoc-thi" title="">Cuộc thi</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="6" data-flexorder="7"><a href="http://arduino.vn/ve-chung-toi">Về chúng tôi</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="7" data-flexorder="8"><a href="http://arduino.vn/exam" title="">Bài tập</a></li></ul>  	<div class="app-bar-pullbutton automatic" style="display: none;"></div><div class="clearfix" style="width: 0;"></div><nav class="app-bar-pullmenu hidden flexstyle-app-bar-menu" style="display: none;"><ul class="app-bar-pullmenubar hidden app-bar-menu"><li><div class="app-bar-element">
+              <a href="javascript:;" class="fg-white"><span class="mif-apps mif-2x"></span></a>
+              <div class="app-bar-drop-container bg-white fg-dark data-no-close overflow-visible" data-role="dropdown" style="width:400px;min-width: 200px;">
+                                  <div class="login-form-container padding10 bg-grayLighter"><form action="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz?destination=node/436" method="post" id="user-login-form" accept-charset="UTF-8" class="login-form"><div class="tabcontrol"><div class="form-item form-type-textfield form-item-name">
+  <p><label for="edit-name" class="sub-header">Tên người dùng <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control text"><span class="mif-user prepend-icon"></span><input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required"></div>
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <p><label for="edit-pass" class="sub-header">Mật khẩu <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control password"><span class="mif-lock prepend-icon"></span><input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required"></div>
+</div>
+<div class="item-list tabs"><ul><li class="first"><a href="http://arduino.vn/user/register" title="Tạo tài khoản người dùng mới.">Tạo tài khoản mới</a></li>
+<li class="last"><a href="http://arduino.vn/user/password" title="Yêu cầu gửi mật khẩu mới qua thư điện tử.">Yêu cầu mật khẩu mới</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-iqXRydF-9S1XqE0-fnuowxxHv-hE8fVwKflPHIeTqF0">
+<input type="hidden" name="form_id" value="user_login_block">
+<div id="fbconnect_button" class="form-item form-type-item" style="text-align:center;">
+  <p style="display: none;"><label for="fbconnect_button" class="sub-header">Đăng nhập bằng Facebook </label></p>
+ <fb:login-button size="large" background="dark" v="3" data-scope="email" login_text="Connect" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1424185567850442&amp;container_width=0&amp;locale=vi_VN&amp;login_text=Connect&amp;scope=email&amp;sdk=joey&amp;size=large"><span style="vertical-align: bottom; width: 87px; height: 25px;"><iframe name="f20727af15b690c" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:login_button Facebook Social Plugin" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/login_button(1).html" class="" style="border: none; visibility: visible; width: 87px; height: 25px;"></iframe></span></fb:login-button>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2" style="text-align:center;"><input type="submit" id="edit-submit--2" name="op" value="Đăng nhập" class="form-submit button success block-shadow-success text-shadow"></div><div style="text-align:center;"><input type="submit" id="edit-submit-google" name="op" value="" class="form-submit"></div></div></form></div>
+                              </div>
+          </div></li></ul></nav></div>  </div>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell bg-grayLighter padding5">
+      <div class="header">
+        <div class="grid">
+          <div class="row cells12">
+            <div class="cell colspan2">
+              <div class="fg-teal">
+                <div class="logo">
+                                      <a href="http://arduino.vn/" title="Nhà"><img src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/logo.png"></a>
+                                  </div>
+              </div>
+            </div>
+            <div class="cell colspan10 header-right">
+                <div class="header__region region region-header">
+    <div id="block-search-form" class="block block-search first odd" role="search">
+			<form action="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz" method="post" id="search-block-form" accept-charset="UTF-8"><div><h3 class="fg-orange sub-header uppercase">Bạn đang tìm kiếm điều gì?</h3>
+<div data-role="input" class="input-control text full-size">
+	<input type="text" id="edit-search-block-form--2" name="search_block_form" value="" placeholder="Vút bay..." style="padding-right: 54px;">
+    <button class="button" type="submit"><span class="mif-search"></span></button>
+</div>
+<input type="hidden" name="form_build_id" value="form-nV9rL3b9-LlV2WvbbIfaqN3DxzOOFPRwTHMhK7JjLAA">
+<input type="hidden" name="form_id" value="search_block_form">
+</div></form>  	</div><div id="block-views-tips-block" class="block block-views last even">
+			<div class="view view-tips view-id-tips view-display-id-block view-dom-id-048940c7bab2831914e1dacd5d116d22">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-9 views-row-odd">
+    <div class="text-right">
+	    <blockquote>
+	    	<h5 class="sub-alt-header">  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Hãy giúp arduino.vn <strong>chia sẻ bài viết</strong> để nhiều dự án hay xuất hiện ở đây hơn</p>
+</div>  </div></h5>
+	    	<a href="http://arduino.vn/"><small class="fg-grayLight">Cộng đồng Arduino Việt Nam</small></a>
+	    </blockquote>
+	</div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  	</div>  </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="main">
+  
+  <div class="row">
+    <div class="cell">
+            <h2 class="element-invisible">Bạn đang ở đây</h2><ul class="breadcrumbs bg-teal fg-white"><li class="inline odd first fg-white" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><span class="icon mif-home"></span> <a href="http://arduino.vn/" itemprop="url"><span itemprop="title">Arduino.vn</span></a></li><li class="inline even fg-white" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://arduino.vn/chuong-trinh-mau" itemprop="url"><span itemprop="title">Chương trình mẫu</span></a></li><li class="inline odd last fg-white" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://arduino.vn/chuong-trinh-mau/level-intermediate-co-kien-thuc-co-ban" itemprop="url"><span itemprop="title">Level: Intermediate - Có kiến thức cơ bản</span></a></li></ul>    </div>
+  </div>
+
+    <div class="row">
+    <div class="cell">
+      <div class="main-content">
+        <div class="grid">
+          <div class="row cells4">
+                        <div class="padding10 cell colspan3 rounded article full-article">
+                                          <h1 class="page__title title" id="page-title">Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz</h1>
+                                                                                                  
+
+
+<article class="node-436 not-in-frontpage node node-article node-promoted view-mode-full clearfix" about="/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz" typeof="sioc:Item foaf:Document">
+<div class="truyen_cam_hung_link"><a href="http://arduino.vn/node/add/results?edit%5Bfield_post_reference%5D%5Bund%5D%5B0%5D%5Bnid%5D=M%E1%BB%99t%20c%C3%A1ch%20ti%E1%BA%BFp%20c%E1%BA%ADn%20kh%C3%A1c%20v%E1%BB%9Bi%20s%C3%B3ng%20v%C3%B4%20tuy%E1%BA%BFn%20315%20hay%20433Mhz%20%5Bnid%3A%20436%5D">Bạn có một DỰ ÁN hay giống thế này? Chia sẻ nhé!</a></div>
+      <header>
+                  <span property="dc:title" content="Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz" class="rdf-meta element-hidden"></span>
+              <p class="submitted text-secondary">
+                    <span property="dc:date dc:created" content="2015-06-30T05:55:55+07:00" datatype="xsd:dateTime" rel="sioc:has_creator"><a href="http://arduino.vn/users/toi-yeu-arduino" title="Xem hồ sơ người dùng." class="username mif-user-md" xml:lang="" about="/users/toi-yeu-arduino" typeof="sioc:UserAccount" property="foaf:name" datatype="">Tôi yêu Arduino</a> gửi vào <time pubdate="" datetime="2015-06-30T05:55:55+07:00">Thứ ba, 30 Tháng 6, 2015 - 05:55</time></span>        </p>
+        <div class="tabcontrol">
+          <ul class="links inline tabs"><li class="statistics_counter first last"><a href="http://arduino.vn/bai-viet/918-quy-doi-do-am-dat-thanh-phan-tram-voi-arduino"><span class="mif-eye fg-blue" style="font-size: 12px">25412 lượt xem</span></a></li>
+</ul>        </div>
+      
+          </header>
+  
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2 class="rtejustify" id="index0"><span style="color:#FF8C00"><strong>Giới thiệu</strong></span></h2>
+<p class="rtejustify">Yeah, cộng đồng Arduino Việt Nam chúng ta đã có một bài viết về <a href="http://arduino.vn/bai-viet/289-truyen-tin-hieu-voi-module-radio-frequence-433mhz" class="tag info fg-white" target="_blank" style="text-decoration: none;">sóng vô tuyến</a> rất hay của <a href="http://arduino.vn/users/ntppro" class="tag info fg-white" target="_blank" style="text-decoration: none;">NTP_PRO</a> phải không nào! Tuy nhiên, mình thấy một số ý kiến về sự đụng độ thư viện VirtualWire và Servo (của Arduino). Vì vậy, qua cách tiếp cận này của mình sẽ giúp các bạn giải quyết vấn đề trên nhé. Ngoài ra, qua bài viết, mình muốn chia sẻ cho các bạn cách "hack" những thiết bị vô tuyến hiện có như xe độ, hay cửa sắt tự động,...<a href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz">.</a> Từ đó, tự các bạn chế ra những <strong>bộ remote&nbsp;</strong>của riêng mình.&nbsp;<img alt="heart" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/heart.png" style="height: auto; width: 23px;" title="heart"></p>
+<h2 class="rtejustify" id="index1"><span style="color:#FF8C00"><strong>Phần cứng</strong></span></h2>
+<ol class="numeric-list">
+<li class="rtejustify">Arduino UNO / Mini,...</li>
+<li class="rtejustify">Một mạch phát 315 (hoặc 433) Mhz nếu có mạch thu nữa thì càng tốt! Bất kỳ mạch thu có IC nào trong danh sách sau:&nbsp;SC5262 / SC5272, HX2262 / HX2272, PT2262 / PT2272 (<a href="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1438_882450-1435588895-0-rx315mhz-ic-500x500.jpg" class="tag info fg-white" target="_blank" style="text-decoration: none;">SC2272</a>), EV1527, RT1527, FP1527 hoặc HS1527</li>
+<li class="rtejustify">... hình như là đủ òi :D... nhưng nếu bạn có một chiếc remote 315 (hoặc 433) Mhz nữa thì thật là tuyệt vời&nbsp;<img alt="devil" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/devil_smile.png" style="height: auto; width: 23px;" title="devil">.</li>
+</ol>
+<h2 class="rtejustify" id="index2"><span style="color:#FF8C00"><strong>Đặt vấn đề</strong></span></h2>
+<p class="rtejustify">Oki, như chúng ta đã biết về <a href="http://arduino.vn/bai-viet/277-song-vo-tuyen-la-gi-va-nhung-suc-manh-cua-no-khi-ket-hop-voi-arduino" class="tag info fg-white" target="_blank" style="text-decoration: none;">sóng vô tuyến</a>, để truyền / thu tín hiệu vẫn nhau thì chúng phải nằm ở cùng tấn số. Nghĩa là, một bộ phát 315Mhz chỉ có thể phát tín hiệu đến những mạch thu nào có thạch anh rung động ở tần số 315Mhz mà thôi (tất nhiên là nó chỉ thu được nếu khoảng cách giữa 2 mạch không quá xa, tùy chất lượng bố thu và bộ phát). Như vậy, nếu bạn đang sở hữu những thiết bị được điều khiển thông qua sóng vô tuyến ở các tần số 315 / 433 Mhz thì bạn có thể "hack" chúng để chúng thông minh hơn (chẳng hạn).&nbsp;</p>
+<p class="rtejustify">Lấy một ví dụ hơi "phá một tí"&nbsp;<img alt="devil" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/devil_smile.png" style="height: auto; width: 23px;" title="devil">, bạn có một mạch Arduino, một bố phát 315Mhz. Bạn biết rằng (giả định thôi nhé), cửa kéo nhà hàng xóm của bạn có một cửa kéo điều khiển từ xa ở tần số 315Mhz và bạn muốn "mở" nó một cách bất hợp pháp&nbsp;<img alt="crying" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/cry_smile.png" style="height: auto; width: 23px;" title="crying">. Như vậy, theo lý thuyết ở trên, bạn có thể làm được. Vấn đề ở đây là tín hiệu bạn gửi đi là gì?&nbsp;<img alt="enlightened" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/lightbulb.png" style="height: auto; width: 23px;" title="enlightened">Một cách dễ nhất bạn có thể làm, đó là ... cho quét toàn bộ những đoạn mã số tín hiệu vô tuyến mà bạn có thể gửi đi! Không chỉ cửa nhà hàng xóm, mà nếu có xe máy sử dụng đề từ xa hoặc báo động từ xa, nó sẽ kêu ủm tòi cho mà toi.&nbsp;<img alt="cheeky" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/tongue_smile.png" style="height: auto; width: 23px;" title="cheeky">&nbsp;KHÔNG tin ư, hãy thử đọc bài này và bạn vọc thử xem... tuy nhiên, tôi không khuyến khích bạn thương mại hóa hay ứng dụng nó để làm việc xấu nhé.<img alt="heart" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/heart.png" style="height: auto; width: 23px;" title="heart"></p>
+<p class="rtecenter"><a href="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1413_812450-1435623173-0-hacking-550x412.jpg"><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1413_812450-1435623173-0-hacking-550x412.jpg" style="height: auto;"></a></p>
+<p class="rtejustify">Tóm lại, bài viết chúng ta chỉ có 2 vấn đề đơn giản sau:</p>
+<ol class="numeric-list">
+<li class="rtejustify">Tín hiệu của sóng 315Mhz được mã hóa rồi gửi đi như thế nào?</li>
+<li class="rtejustify">Làm thế nào để gửi, nhận và hiểu những tín hiệu đó?</li>
+</ol>
+<h3 class="rtejustify" id="index3"><span style="color:#008080"><strong>1. Tín hiệu của sóng 315Mhz được gửi đi như thế nào trong thế giới Arduino RC Switch?</strong></span></h3>
+<blockquote><p><em>Lưu ý, trong phần mô tả quy trình dưới đây chỉ áp dụng được cho các mach thu 315Mhz có IC. Với các lại mạch thu không IC sẽ được ghi chú ở mỗi phần.&nbsp;</em></p>
+</blockquote>
+<p>Yeah, nó là một quy trình đơn giản như hình sau:</p>
+<p class="rtecenter"><a href="http://k1.arduino.vn/img/2015/06/30/0/1473_123450-1435629265-0-diagram1.png"><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1441_882450-1435629266-0-diagram1.750x386.png" style="height: auto; width: 750px;"></a></p>
+<p>Giải thích quy trình:</p>
+<ul class="simple-list">
+<li>Dữ liệu của các biến trong Arduino được lưu trong RAM (các bạn có thể tìm đọc bài viết này trên arduino.vn). Như vậy, tùy kiểu dữ liệu mà nó sẽ chiếm hữu một số byte xác định cụ thể!</li>
+<li>Và cứ mỗi lần gửi dữ liệu chúng ta sẽ gửi <strong>từng byte</strong> (8 bit) như vậy. Mỗi cặp 2 bit sẽ mã hóa dữ liệu cho 1 chân, nếu nó là 11 thì chân đó sẽ có tín hiệu là HIGH (output 5V), còn lại là LOW (output GND).</li>
+<li>Mỗi bộ thu có một địa chỉ nhà (nếu những bộ thu khác nhau nhưng chung địa chỉ nhà thì khi bạn gửi cả 2 bộ thu sẽ cùng nhận được tín hiệu =&gt; lỗi đúng đẵn của dữ liệu), mỗi địa chỉ là một <a href="http://arduino.vn/reference/word" class="tag info fg-white" target="_blank" style="text-decoration: none;"><strong>word</strong></a> (nôm na là 2 byte = 16 bit). Mỗi lần gửi dữ liệu ngoài từng byte lưu trữ dữ liệu ta phải gửi <strong>thèm theo</strong> địa chỉ này.</li>
+<li>Như vậy ta phải gửi tổng cộng 8 + 16 = 24 bit cho mỗi lần gửi dữ liệu, bao gồm địa chỉ bộ thu và byte dữ liệu.</li>
+</ul>
+<p><em>Như vậy nếu một kiểu <a href="http://arduino.vn/reference/int" class="tag info fg-white" target="_blank" style="text-decoration: none;">int</a> hay một chuỗi kiểu <a href="http://arduino.vn/reference/string" class="tag info fg-white" target="_blank" style="text-decoration: none;">char</a>, thì làm thế nào để chúng ta gửi được dữ liệu, vì khi gửi chúng ta chỉ có thể gửi từng byte?</em></p>
+<p>Yeah, lúc này chúng ta phải xây dựng một thư viện đặc biệt để xử lý nhiệm vụ này, các bạn có thể tham khảo thư viện VirtualWire đã được trình bày cụ thể rõ ràng ở <a href="http://arduino.vn/bai-viet/289-truyen-tin-hieu-voi-module-radio-frequence-433mhz" class="tag info fg-white" target="_blank" style="text-decoration: none;">bài viết này</a>. Còn nếu muốn xây dựng một thư viện của riêng mình thì tốt nhất bạn không nên làm vì nó hơi thừa và nếu bạn muốn tự làm lại để học hỏi vì nên tham khảo phương pháp của Virtual Wire, chúng ta sẽ không đi sâu vào vấn đề này,... vì mình thấy nó không cần thiết với những gì mình định nói.</p>
+<h3 id="index4"><span style="color:#008080"><strong>2. Vậy với ý tưởng truyền sóng như trên, làm thế nào để xây dựng một mô hình truyền gửi to lớn với mạch Arduino?</strong></span></h3>
+<p class="rtejustify">Chúng ta biết rằng, mỗi địa chỉ của bộ thu được mã hóa bằng 16 bit tương đương 2<sup>16</sup> cảm biến, tuy nhiên để biết kiệm chân nhằm giảm kích thước mạch thu 315Mhz có IC, người ta chỉ dùng 8 chân để mã hóa 16 bit theo cách sau: cứ mỗi cặp 2 bit trong 16 bit sẽ được quy về 1 pin. Nếu pin này không được mắc với cực âm hay cực dương (không nối) thì nó sẽ quy định 2 bit 01, nếu nó được mắc vào cực dương (VCC) thì nó sẽ quy định 2 bit 11, còn nối vào cực âm (GND) thì nó quy định 2 bit 00. Như vậy chúng ta sẽ có thể xây dựng được tối đa một hệ thống có 3<sup>8</sup> cảm biến với khả năng mỗi cảm biến nhận được 2<sup>4</sup>&nbsp;= 16 giá trị. (Nôm na là cứ mỗi địa chỉ là một mạch thu 4 kênh).</p>
+<p class="rtejustify">Tuy nhiên, nếu dùng với hệ thống VirtualWire và IC thu không IC giải mã thì bạn có thể xây dựng một hệ thống bá đạo hơn nhưng đồng thời nó cũng nặng hơn về dung lượng chương trình đấy nhé. Vì sao? Vì ngay từ bước 1 "làm thế nào" thì nó đã rộng hơn rồi! Bạn chọn bao nhiêu bit để mã hóa địa chỉ hay dữ liệu cũng được... Nếu so sánh VirtualWire với Rc-Switch trong Arduino, thì bạn chỉ cần xem VirtualWire là một con trỏ chuỗi và RC-Switch là một ký tự. Rõ ràng, bạn thấy thằng nào đơn giản hơn rồi đấy. Con trỏ thì luôn mang chiều hướng phức tạp còn những byte cố định thì luôn là một lựa chọn tối ưu trong một hệ thống tối ưu. Vì sao? Bạn hãy đọc bài viết cách lưu trữ biến trong Arduino trên cộng đồng của chúng ta.</p>
+<p class="rtejustify">Ngoài ra, với việc sử dụng RC-switch cho các loại IC thu không IC bạn cũng có thể tự mình điều chỉnh lại độ dài bit lưu trữ địa chỉ hay giá trị. Vì lúc này, chính con Arduino đảm nhiệm như vai trò giải mã, chứ không phải con IC giải mã có sẵn trên mạch thu 315Mhz có IC.</p>
+<h3 class="rtejustify" id="index5"><span style="color:#008080"><strong>3. Thực hành</strong></span></h3>
+<p class="rtejustify">Chúng ta sẽ thống nhất với nhau sử dụng mạch thu có IC 2272 (L4) trong bài viết này nhé, sau đây là hình ảnh của em nó.</p>
+<p class="rtecenter"><a href="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1438_882450-1435588895-0-rx315mhz-ic-500x500.jpg"><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1438_882450-1435588895-0-rx315mhz-ic-500x500.jpg" style="height: auto; width: 500px;"></a></p>
+<p class="rtecenter"><a href="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1411_812450-1435588898-0-rx315mhz-ic-2-500x500.jpg"><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1411_812450-1435588898-0-rx315mhz-ic-2-500x500.jpg" style="height: auto; width: 500px;"></a></p>
+<p class="rtejustify">Mỗi loại mạch thu hầu hết đều có các chân sau: VCC, GND, D0 (10), D1 (11), D2 (12), D3 (13), VT(17), ANT và 8 chân mã hóa địa chỉ. Hình sau mô tả chi tiết các chân quan trọng của mạch thu của chúng ta.</p>
+<p class="rtecenter"><a href="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1471_123450-1435589999-0-1411-812450-1435588898-0-rx315mhz-ic-2-500x500.jpg-nh-jpeg-500x500-pixels---mozilla-firefox.jpg"><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1471_123450-1435589999-0-1411-812450-1435588898-0-rx315mhz-ic-2-500x500.jpg-nh-jpeg-500x500-pixels---mozilla-firefox.jpg" style="height: auto;"></a></p>
+<p class="rtejustify">Như hình trên thì theo lý thuyết địa chỉ của em này là <strong>0101010101010101</strong> (8 cặp 01). Để sửa địa chỉ, bạn chỉ việc lấy mối hàn và một mảnh đồng nhỏ để hàn các chân trong 8 chân địa chỉ nhằm thiết lập địa chỉ cho một mạch thu (node). Ví dụ như mạch sau, địa chỉ của hắn là&nbsp;010101010101<strong>0000.</strong></p>
+<p class="rtecenter"><strong><a href="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1439_882450-1435590583-0-ngo-hunh-ngc-khanh---mozilla-firefox.jpg"><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1439_882450-1435590583-0-ngo-hunh-ngc-khanh---mozilla-firefox.jpg" style="height: auto;"></a></strong></p>
+<p class="rtejustify">À, có một câu hỏi đặt ra là, nhiệm vụ của các chân D0, D1, D2, D3 và VT là gì? Nếu bạn chưa biết về mạch này nhưng qua quá trình đọc có thể đoán được rằng chân D0, D1, D2, D3 sẽ là 4 chân output của mạch thu này. Vâng, thật vậy&nbsp;<img alt="devil" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/devil_smile.png" style="height: auto; width: 23px;" title="devil">! Còn chân VT là chân debug, nghĩa là khi mạch này nhận được tín hiệu vào không cần biết địa chỉ là gì, miễn đúng địa chỉ thì nó nhận và nó sẽ sáng (HIGH) đến khi nào còn nhận dữ liệu và tắt thì không nhận dữ liệu. Ngoài ra, điểm đặc biệt của dòng mạch SC2272 là nó sẽ lưu giữ tín hiệu cuối cùng mà nó nhận được. Nghĩa là khi mạch này còn hoạt động (được cấp 5V vào VCC) thì nó còn lưu giữ tín hiệu mà nó nhận được trước đó (nếu chưa nhận được gì thì nó sẽ xuất ra 4 chân mã LOW). Nôm na, nếu bạn làm một chiếc xe điều khiển với mạch này thì khi xe đang chạy thẳng, mặc dù khi nó chạy ra khỏi vùng phủ sóng thì nó vẫn chạy tiếp.</p>
+<p class="rtejustify"><strong>Lắp mạch</strong></p>
+<p class="rtejustify">Mạch thu, các chân D0 -&gt; D3 và chân VT sẽ nối với một con LED. Còn chân VCC sẽ mắc vào một bộ nguồn 5V (4 cục pin tiểu hay cục ắc quy 6Vol vẫn ok), chân GND sẽ nối với cực âm của nguồn. Ở mạch này chúng ta sẽ không mắc bất cứ thứ gì với mạch Arduino. Vì mạch thu này hoạt động độc lập. Chúng ta sẽ không hàn các chân địa chỉ hoặc hàn thành bất cứ kiểu gì bạn muốn.</p>
+<p class="rtejustify">Mạch phát, các bạn mắc như hình</p>
+<p class="rtecenter"><a href="http://k3.arduino.vn/img/2015/06/29/0/1412_812450-1435592138-0-wiring-transmitter.png"><img alt="image" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1472_123450-1435592151-0-wiring-transmitter.750x293.png" style="height: auto; width: 750px;"></a></p>
+<p class="rtecenter">Hình mẫu trên mạng, Din (hoặc DATA hoăc ATAD).</p>
+<p class="rtejustify"><strong>Lập trình</strong></p>
+<p class="rtejustify">Các bạn xin download thư viện rc-switch tại địa chỉ <strong><a href="https://code.google.com/p/rc-switch/downloads/list" class="tag info fg-white" target="_blank" style="text-decoration: none;">này</a></strong>&nbsp;(<a href="http://k2.arduino.vn/img/2015/06/29/0/1440_882450-1435592283-0-rcswitch-2.51.zip" class="tag info fg-white" target="_blank" style="text-decoration: none;">dự phòng</a>).</p>
+<p class="rtejustify">Chúng ta sẽ bắt đầu với bài đơn giản là link với led D3. Mình có nhờ ksp làm một video với con bò sữa khá đẹp, các bạn xem demo bên dưới nhé.</p>
+<pre class="prettyprint linenums lang-c_pp  prettyprinted" data-pbcklang="c_pp" data-pbcktabsize="4" style=""><ol class="linenums numeric-list"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;RCSwitch.h&gt;</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="typ">RCSwitch</span><span class="pln"> mySwitch </span><span class="pun">=</span><span class="pln"> </span><span class="typ">RCSwitch</span><span class="pun">();</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="kwd">void</span><span class="pln"> setup</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L5"><span class="pln">  </span><span class="com">//Chân phát là chân số 10.  </span></li><li class="L6"><span class="pln">  mySwitch</span><span class="pun">.</span><span class="pln">enableTransmit</span><span class="pun">(</span><span class="lit">10</span><span class="pun">);</span></li><li class="L7"><span class="pun">}</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="kwd">void</span><span class="pln"> loop</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L0"><span class="pln">  </span><span class="kwd">unsigned</span><span class="pln"> </span><span class="kwd">long</span><span class="pln"> address </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0b0101010101010101</span><span class="pun">;</span></li><li class="L1"><span class="pln">  </span><span class="com">/*</span></li><li class="L2"><span class="com">    Chúng ta phải để address là unsigned long vì:</span></li><li class="L3"><span class="com">    + address sẽ là biến nhận 24 bit dữ liệu má hóa nên kích thước của nó phải đủ lớn để chứa 16 bit địa chỉ và 8 bit dữ liệu</span></li><li class="L4"><span class="com">    + nó dương (unsigned) để chúng ta chuyển nó sang thập phân cho dễ (khỏi quân tâm đến số âm)</span></li><li class="L5"><span class="com">  */</span></li><li class="L6"><span class="pln">  </span><span class="com">/*</span></li><li class="L7"><span class="com">    Code blink D3</span></li><li class="L8"><span class="com">  */</span></li><li class="L9"><span class="pln">  mySwitch</span><span class="pun">.</span><span class="pln">send</span><span class="pun">((</span><span class="pln">address </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="lit">8</span><span class="pun">)</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> </span><span class="lit">0b00000011</span><span class="pun">,</span><span class="pln"> </span><span class="lit">24</span><span class="pun">);</span></li><li class="L0"><span class="pln">  delay</span><span class="pun">(</span><span class="lit">1000</span><span class="pun">);</span></li><li class="L1"><span class="pln">  mySwitch</span><span class="pun">.</span><span class="pln">send</span><span class="pun">((</span><span class="pln">address </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="lit">8</span><span class="pun">)</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> </span><span class="lit">0b00000000</span><span class="pun">,</span><span class="pln"> </span><span class="lit">24</span><span class="pun">);</span></li><li class="L2"><span class="pln">  delay</span><span class="pun">(</span><span class="lit">1000</span><span class="pun">);</span></li><li class="L3"><span class="pun">}</span></li></ol></pre><p class="rtecenter">
+<iframe align="middle" frameborder="0" height="315" scrolling="no" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/t907KhKoxz4.html" width="560"></iframe></p>
+<p class="rtejustify">Lập trình cho 4 đèn LED sáng đuổi nhau.</p>
+<pre class="prettyprint linenums lang-c_pp prettyprinted" style=""><ol class="linenums numeric-list"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;RCSwitch.h&gt;</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="typ">RCSwitch</span><span class="pln"> mySwitch </span><span class="pun">=</span><span class="pln"> </span><span class="typ">RCSwitch</span><span class="pun">();</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="kwd">void</span><span class="pln"> setup</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L5"><span class="pln">  </span><span class="com">//Chân phát là chân số 10.  </span></li><li class="L6"><span class="pln">  mySwitch</span><span class="pun">.</span><span class="pln">enableTransmit</span><span class="pun">(</span><span class="lit">10</span><span class="pun">);</span></li><li class="L7"><span class="pun">}</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="kwd">void</span><span class="pln"> loop</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L0"><span class="pln">  </span><span class="kwd">unsigned</span><span class="pln"> </span><span class="kwd">long</span><span class="pln"> address </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0b0101010101010101</span><span class="pun">;</span><span class="pln">  </span><span class="com">//chưa hàn bất kì chân tín hiệu nào =&gt; địa chỉ là 8 cặp 01</span></li><li class="L1"><span class="pln">  </span><span class="com">/*</span></li><li class="L2"><span class="com">    Chúng ta phải để address là unsigned long vì:</span></li><li class="L3"><span class="com">    + address sẽ là biến nhận 24 bit dữ liệu má hóa nên kích thước của nó phải đủ lớn để chứa 16 bit địa chỉ và 8 bit dữ liệu</span></li><li class="L4"><span class="com">    + nó dương (unsigned) để chúng ta chuyển nó sang thập phân cho dễ (khỏi quân tâm đến số âm)</span></li><li class="L5"><span class="com">  */</span></li><li class="L6"><span class="pln">  </span><span class="kwd">unsigned</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> data </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></li><li class="L7"><span class="pln">  </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;=</span><span class="pln"> </span><span class="lit">4</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L8"><span class="pln">    mySwitch</span><span class="pun">.</span><span class="pln">send</span><span class="pun">((</span><span class="pln">address </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="lit">8</span><span class="pun">)</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> data</span><span class="pun">,</span><span class="pln"> </span><span class="lit">24</span><span class="pun">);</span></li><li class="L9"><span class="pln">    </span><span class="com">// tham số đầu là 24 bit mã hóa, phía sau là độ dài chuỗi mã hóa (max = 24). Nếu bé hơn 24 thì nó sẽ tự động thêm vào các bit 0 ở phía trước</span></li><li class="L0"><span class="pln">    data </span><span class="pun">&lt;&lt;=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="com">// đẩy trái 2 bit</span></li><li class="L1"><span class="pln">    data </span><span class="pun">|=</span><span class="pln"> </span><span class="lit">3</span><span class="pun">;</span><span class="com">//3 = 0b00000011</span></li><li class="L2"><span class="pln">    delay</span><span class="pun">(</span><span class="lit">100</span><span class="pun">);</span></li><li class="L3"><span class="pln">  </span><span class="pun">}</span></li><li class="L4"><span class="pun">}</span></li></ol></pre><h3 id="index6"><span style="color:#008080"><strong>4. Mở rộng</strong></span></h3>
+<p class="rtejustify">Như mình đã nói ở mục một, chúng ta hoàn toàn có thể hack được một mạch thu phát sóng, bây giờ mình sẽ mô hình hóa quá trình đó để các bạn có thể tự thử nghiệm ở nhà</p>
+<p class="rtejustify">Bây giờ, theo mình nghĩ, chúng ta có 2 cách đơn giản nhất để hack một hệ thống thu / phát 315. Đó là:</p>
+<ol class="numeric-list">
+<li class="rtejustify">Đặt một máy thu 315MHz tại nhà nạn nhân và ngồi ở quán cafe 1 ngày để thu được tín hiệu mã hóa gồm 16 bit địa chỉ và 8 bit dữ liệu. Vì phần lớn mấy cái cửa sắt toàn của bọn Trung Quốc nên chúng làm ăn "mèo" lắm.</li>
+<li class="rtejustify">"Dò trâu" từng địa chỉ với việc bật cả 4 kênh lên mức HIGH. Cái này dễ hơn, giống như trong phim người ta dò số để mở cửa vậy. Nhưng sẽ hơi tốn thời gian một tí. Nhưng điều đó chấp nhận được.</li>
+</ol>
+<p class="rtejustify">Chúng ta sẽ tìm hiểu cách 2 cho dễ, không cần đòi hỏi gì nhiều, chỉ cần một bé arduino hoặc promini và một module phát giá 25k là có thể hack một cái cửa hay một cái xe máy òi.&nbsp;<img alt="devil" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/devil_smile.png" style="height: auto; width: 23px;" title="devil">.&nbsp;</p>
+<blockquote><p class="rtejustify"><u><strong>Lưu ý:&nbsp;</strong></u>Bài viết này không cổ vũ cho các bạn đi phá nhà người khác, mà chỉnh mong muốn các bạn thông minh hơn để tự phòng vệ cho chính bản thân mình. Hãy loại bỏ những chiếc cửa mà có thể bị hack bởi bài viết này, vì nó không an toàn. Nếu bạn không bỏ nó thì sẽ có ngày nhà của bạn sẽ bị viến thăm bởi các tên trộm công nghệ cao.</p>
+</blockquote>
+<p class="rtejustify">Có thể chúng ta sẽ mất đến khoảng 30 phút (tối đa) để dò được địa chỉ mạch thu của nạn nhân, nhưng thông thường quá trình đó chỉ mất khoảng vài phút. Tuy nhiên, trong trường hợp thử nghiệm của bạn ksp, thì chỉ mất vài giây để mò ra địa chỉ và bật sáng con bò sữa... Như vậy lý thuyết đã được kiểm chứng, các bạn có thể "mò" sâu hơn nếu "cần".&nbsp;<img alt="crying" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/cry_smile.png" style="height: auto; width: 23px;" title="crying"></p>
+<p class="rtejustify">Đây là phần code dò mã của chúng ta.</p>
+<pre class="prettyprint linenums lang-c_pp  prettyprinted" data-pbcklang="c_pp" data-pbcktabsize="4" style=""><ol class="linenums numeric-list"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;RCSwitch.h&gt;</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="typ">RCSwitch</span><span class="pln"> mySwitch </span><span class="pun">=</span><span class="pln"> </span><span class="typ">RCSwitch</span><span class="pun">();</span></li><li class="L3"><span class="kwd">const</span><span class="pln"> </span><span class="kwd">byte</span><span class="pln"> block</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">};</span><span class="pln"> </span><span class="com">//01, 00, 11</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="kwd">void</span><span class="pln"> setup</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L6"><span class="pln">  </span><span class="com">//Chân phát là chân số 10.  </span></li><li class="L7"><span class="pln">  mySwitch</span><span class="pun">.</span><span class="pln">enableTransmit</span><span class="pun">(</span><span class="lit">10</span><span class="pun">);</span></li><li class="L8"><span class="pun">}</span></li><li class="L9"><span class="pln">&nbsp;</span></li><li class="L0"><span class="kwd">void</span><span class="pln"> tryhack</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">unsigned</span><span class="pln"> </span><span class="kwd">long</span><span class="pln"> address</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L1"><span class="pln">  </span></li><li class="L2"><span class="pln">  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="pun">==</span><span class="pln"> </span><span class="lit">8</span><span class="pun">)</span></li><li class="L3"><span class="pln">    mySwitch</span><span class="pun">.</span><span class="pln">send</span><span class="pun">((</span><span class="pln">address </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="lit">8</span><span class="pun">)</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> </span><span class="lit">255</span><span class="pun">,</span><span class="pln"> </span><span class="lit">24</span><span class="pun">);</span></li><li class="L4"><span class="pln">  </span><span class="kwd">else</span></li><li class="L5"><span class="pln">    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> j </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> j </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">3</span><span class="pun">;</span><span class="pln"> j</span><span class="pun">++)</span></li><li class="L6"><span class="pln">        tryhack</span><span class="pun">(</span><span class="pln">i </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="pln">address </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> block</span><span class="pun">[</span><span class="pln">j</span><span class="pun">]);</span></li><li class="L7"><span class="pun">}</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="kwd">void</span><span class="pln"> loop</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L0"><span class="pln">  tryhack</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span></li><li class="L1"><span class="pun">}</span></li></ol></pre><p>Trong đoạn code trên, chúng ta dùng một thuật toán đệ quy đơn giản nhằm sinh ra các địa chỉ có thể có sau đó phát lệnh bật toàn bộ 4 kênh ở bên mạch thu.</p>
+<p>Video</p>
+<p class="rtecenter">
+<iframe align="middle" frameborder="0" height="315" scrolling="no" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/M9nbxCFFoyw.html" width="560"></iframe></p>
+<h2 class="rtejustify" id="index7"><span style="color:#FF8C00"><strong>Kết luận</strong></span></h2>
+<p class="rtejustify">Như vậy, qua cách tiếp cận như thế này, chúng ta có thể hack bất cứ thứ gì. Vâng, ở trên mình vẫn chưa nói về cách hack 1, cách này được dùng thường xuyên để lắng nghe rồi từ đó điều khiển một thiết bị bằng chính "đồ nghề" của mình. Các bạn có thể tham khảo <a href="https://sui77.wordpress.com/2011/04/12/163/">bài viết của một anh Tây</a> nhằm tự mình tìm tòi thêm nhé.</p>
+<p class="rtejustify">Với cách tiếp cận này, các bạn chỉ cần một mạch Arduino và từ đó "hack" và "control" mọi thứ. Chúc các bạn thành công.</p>
+</div></div></div><div class="form-item form-type-item">
+  <p><label class="sub-header">Rate node </label></p>
+ <div class="rate-widget-1 rate-widget clear-block rate-user rate-widget-thumbs_up rate-cf4a36851e27a825164f08915391b6c0 rate-node-436-1-1 rate-processed" id="rate-node-436-1-1"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-1" rel="nofollow" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz?rate=kOnB0Op-c_O46_OCga_lmSMIH5WZVler4_FgGntfzdU" title="lên">lên</a><div class="rate-info">13 thành viên đã đánh giá bài viết này hữu ích.</div></div>
+</div>
+  <div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-above"><div class="field-label">Từ khóa:&nbsp;</div><div class="field-items"><div class="field-item even tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/315mhz" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">315MHz</a></div><div class="field-item odd tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/315" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">315</a></div><div class="field-item even tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/433-mhz" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">433 Mhz</a></div><div class="field-item odd tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/song-vo-tuyen" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">sóng vô tuyến</a></div><div class="field-item even tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/dieu-khien-tu-xa" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">điều khiển từ xa</a></div><div class="field-item odd tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/hack" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">hack</a></div></div></div>  <div class="field field-name-field-chuyen-muc field-type-taxonomy-term-reference field-label-above"><div class="field-label">Chuyên mục:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="http://arduino.vn/chuong-trinh-mau/level-intermediate-co-kien-thuc-co-ban" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Intermediate - Có kiến thức cơ bản</a></div></div></div>  
+</article>
+<div id="block-views-5bc6b1a48db1f93a690eb9d673ebdab6" class="block block-views even">
+			<div class="view view-clone-of-b-i-li-n-quan-b-i-ti-p-trong-m-t-danh-s-ch view-id-clone_of_b_i_li_n_quan_b_i_ti_p_trong_m_t_danh_s_ch view-display-id-block view-dom-id-cf49fdd0b9a7723f6b6713bbc25886d7">
+            <div class="view-header">
+      <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+.full-render div.frame div {height: 130px !important;}
+.full-render div.element-selected div.frame div {height: 122px !important;}
+.full-render div.image-overlay h3 {font-size:12px !important;}
+.full-render .element-selected {
+    border: 4px #FF8C00 solid;
+}
+.full-render .element-selected:after {
+    border-top: 28px solid #FF8C00;
+}
+.view-clone-of-b-i-li-n-quan-b-i-ti-p-trong-m-t-danh-s-ch .views-field-title {
+    font-size: 24px;
+    color: #FF8C00;
+    font-weight: bold;
+}
+
+
+/*--><!]]>*/
+</style>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Hướng dẫn sử dụng các loại module</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><blockquote><p>Nếu bạn đang muốn thực hiện hóa ý tưởng của mình mà không biết dùng loại module nào? Hãy tham khảo các module trong danh sách sau</p>
+</blockquote></div>  </div>  
+  <div class="views-field views-field-field-danh-sach-bai-viet">        <div class="field-content"><div class="grid full-render"><div class="row cells7"><div class="cell"><a href="http://arduino.vn/bai-viet/214-cach-lap-trinh-nhieu-con-led-7-doan-loai-don" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/10/08/0/3209_882450-1475942550-0-1806-812450-1451613449-0-seven-segment-display-animated.gif&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Cách lập trình nhiều con LED 7 đoạn (loại đơn)</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/180-gioi-thieu-cam-bien-anh-sang-va-cach-lap-trinh" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2014/06/17/0/561_812105-1403007394-0-mach-cam-bien-anh-sang-300x250.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Giới thiệu cảm biến ánh sáng và cách lập trình</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/233-su-dung-cam-bien-khoang-cach-hc-sr04" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2014/07/01/0/601_8121-1404217627-0-hcsr04-3-500x500.399x399.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Sử dụng cảm biến khoảng cách HC-SR04</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/274-cam-bien-mua-voi-arduino" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2014/07/24/0/654_8121-1406176658-0-dglmcf8i45dkps3thd7c.400x267.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Cảm biến mưa với Arduino</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/522-pir-sensor-alarm" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2015/11/03/0/1659_88220-1446562470-0-hqdefault.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">PIR sensor alarm - Cách dùng cảm biến chuyển động</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/531-dieu-khien-lcd-bang-arduino-uno" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2015/11/10/0/1663_8122246-1447140882-0-lcd-bb.750x578.350x270.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển LCD bằng Arduino UNO</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/536-lap-trinh-lcd-1602-voi-chip-74hc595" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2015/11/17/0/1721_1233522-1447715173-0-lcd-1602.200x150.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Lập trình LCD 1602 với chip 74HC595</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/91-doc-nhiet-do-do-am-va-xuat-ra-man-hinh-lcd" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2014/05/27/0/479_88220-1401181018-0-dht-11.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Đọc nhiệt độ - độ ẩm và xuất ra màn hình LCD</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/tutorial/1345-nokia5110-huong-dan-su-dung-va-chia-se-thu-vien-hoang-sa" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2016/11/24/0/3330_81215469-1479990346-0-20161124-192939-unnamed-road.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">NOKIA5110 | Hướng dẫn sử dụng và chia sẻ thư viện HOÀNG SA</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/tutorial/1319-st7565-huong-dan-su-dung-glcd-st7565-homephone-va-chia-se-thu-vien" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/11/05/0/3249_88215469-1478332147-0-truc-toa-do.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">ST7565 | Hướng dẫn sử dụng glcd ST7565 homephone và chia sẻ thư viện</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/302-module-relay-cach-su-dung-ro-le-va-nhung-ung-dung-hay-cua-no" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2014/09/02/0/814_1231-1409633786-0-module-relay.400x323.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Module Relay - Cách sử dụng rơ le và những ứng dụng hay của nó</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/289-truyen-tin-hieu-voi-module-radio-frequence-433mhz" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2014/08/14/0/752_12381-1408019249-0-download.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Truyền tín hiệu với module radio frequence 433Mhz</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/562-su-dung-module-nrf24l01" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2015/12/30/0/1799_8823522-1451430458-0-687474703a2f2f6563782e696d616765732d616d617a6f6e2e636f6d2f696d616765732f492f3531392d5673577949504c2e5f53593330305f2e6a7067.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Sử dụng Module NRF24L01 - Thu phát sóng vô tuyến 2.4GHz với Arduino</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/333-dieu-khien-arduino-thong-qua-bluetooth-bang-dien-thoai-android" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2014/11/14/0/814_882662-1415938508-0-untitled-1.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển Arduino thông qua Bluetooth bằng điện thoại Android</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz" target="_blank"><div class="image-container image-format-square element-selected" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2015/06/30/0/1414_812450-1435629354-0-rx315mhz-ic-2-500x500.400x400.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/209-dieu-khien-toc-do-motor-dc" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2014/06/23/0/581_88281-1403528202-0-download.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển tốc độ Motor DC</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2015/05/27/0/1401_882105-1432712627-0-xe-cat.200x150.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Làm dự án xe với module điều khiển động cơ L293D </h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/181-gioi-thieu-servo-va-cach-dieu-khien-bang-bien-tro" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2014/06/19/0/618_123105-1403179198-0-servo.200x150.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Giới thiệu Servo và cách điều khiển bằng biến trở</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/541-sdcard-breakout-board-cach-dung-mach-doc-ghi-trong-du-su-dung-am-thanh" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2015/11/27/0/1748_8124688-1448638060-0-bk-sdcard.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">SDcard breakout board - Cách dùng mạch đọc ghi thẻ trong dự án sử dụng âm thanh</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/369-giao-tiep-i2c-va-su-dung-module-realtime-clock-ds1307" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2015/02/08/0/919_12381-1423393619-0-20120519140128202.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Giao tiếp I2C và sử dụng module Realtime clock DS1307 (module RTC)</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/464-dieu-khien-mach-arduino-thong-qua-wifi-su-dung-mach-xbee" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2015/08/11/0/1501_8123235-1439264306-0-2015-08-11-11.36.58.400x400.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển mạch Arduino thông qua Wifi sử dụng mạch XBee. </h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/256-hien-thi-hinh-anh-voi-led-matrix-8x8" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2014/07/11/0/624_88281-1405027504-0-images.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Hiển thị hình ảnh với LED MATRIX 8x8</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/1231-ket-noi-voi-esp8266-thuan-voi-board-mo-rong-va-ket-noi-voi-cp2102" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/09/11/0/3137_88212621-1473594848-0-esp-12.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Kết nối với ESP8266 thuần với board mở rộng và kết nối với CP2102</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/1172-lap-trinh-esp8266-bang-arduino-ide" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/08/15/0/3075_1234656-1471258090-0-wifi-serial-transceiver-module.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Lập trình ESP8266 bằng Arduino IDE</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/1171-dieu-khien-thiet-bi-qua-web-sever-voi-esp8266-khong-can-arduino" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/08/15/0/3075_1234656-1471258090-0-wifi-serial-transceiver-module.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển thiết bị qua Web Sever với ESP8266 không cần Arduino</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/951-gioi-thieu-ethernet-shield-ung-dung-dieu-khien-thiet-bi-o-moi-noi-tren-gioi-khi-co" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/07/04/0/2639_1234301-1467638715-0-ethernetshield-500x500.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Giới thiệu ethernet shield - ứng dụng điều khiển thiết bị ở mọi nơi trên thế giới khi có internet</h3></div></div></a></div></div></div></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  	</div><div id="block-fblikebutton-fblikebutton-dynamic-block" class="block block-fblikebutton odd">
+			
+<iframe src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/like.html" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 450px; height: 80px; " allowtransparency="true"></iframe>
+  	</div><div id="block-views-b-i-li-n-quan-block" class="block block-views even">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Bài liên quan</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div class="view view-b-i-li-n-quan view-id-b_i_li_n_quan view-display-id-block view-dom-id-775389f4b638a64034e48db6cc5199a0">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul class="simple-list">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://arduino.vn/bai-viet/277-song-vo-tuyen-la-gi-va-nhung-suc-manh-cua-no-khi-ket-hop-voi-arduino">Sóng vô tuyến là gì và những sức mạnh của nó khi kết hợp với Arduino</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://arduino.vn/bai-viet/289-truyen-tin-hieu-voi-module-radio-frequence-433mhz">Truyền tín hiệu với module radio frequence 433Mhz</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>		    </div>
+		</div>
+	</div><div id="block-views-inspire-project-views-block" class="block block-views odd">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Các dự án được truyền cảm hứng</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div class="view view-inspire-project-views view-id-inspire_project_views view-display-id-block view-dom-id-a2b168b6e33f3a4e1126fe394c4adef6">
+        
+  
+  
+      <div class="view-empty">
+      <p>Select any filter and click on Apply to see results</p>
+    <div class="tabcontrol"><ul class="tabs bg-orange"><li id="truyen_cam_hung"><a href="http://arduino.vn/node/add/results?edit%5Bfield_post_reference%5D%5Bund%5D%5B0%5D%5Bnid%5D=M%E1%BB%99t%20c%C3%A1ch%20ti%E1%BA%BFp%20c%E1%BA%ADn%20kh%C3%A1c%20v%E1%BB%9Bi%20s%C3%B3ng%20v%C3%B4%20tuy%E1%BA%BFn%20315%20hay%20433Mhz%20%5Bnid%3A%20436%5D" class="fg-white">Bạn có một DỰ ÁN hay giống thế này? Chia sẻ nhé!</a></li></ul></div></div>
+  
+  
+  
+  
+  
+  
+</div>		    </div>
+		</div>
+	</div><div id="block-views-cac-bai-viet-cung-tac-gia-block" class="block block-views even">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Các bài viết cùng tác giả</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div class="view view-cac-bai-viet-cung-tac-gia view-id-cac_bai_viet_cung_tac_gia view-display-id-block view-dom-id-104df348c9af1b276b1c1faa85492200">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <article class="node-918 not-in-frontpage node node-results node-promoted node-teaser clearfix" about="/bai-viet/918-quy-doi-do-am-dat-thanh-phan-tram-voi-arduino" typeof="sioc:Item foaf:Document">
+<div class="truyen_cam_hung_link"><a href="http://arduino.vn/node/add/results?edit%5Bfield_post_reference%5D%5Bund%5D%5B0%5D%5Bnid%5D=Quy%20%C4%91%E1%BB%95i%20%C4%91%E1%BB%99%20%E1%BA%A9m%20%C4%91%E1%BA%A5t%20th%C3%A0nh%20ph%E1%BA%A7n%20tr%C4%83m%20%28%25%29%20v%E1%BB%9Bi%20Arduino%20%5Bnid%3A%20918%5D">Bạn có một DỰ ÁN hay giống thế này? Chia sẻ nhé!</a></div>
+      <header>
+                    <h2 class="header" id="index8"><a class="fg-orange" href="http://arduino.vn/bai-viet/918-quy-doi-do-am-dat-thanh-phan-tram-voi-arduino">Quy đổi độ ẩm đất thành phần trăm (%) với Arduino</a></h2>
+            <span property="dc:title" content="Quy đổi độ ẩm đất thành phần trăm (%) với Arduino" class="rdf-meta element-hidden"></span>
+              <p class="submitted text-secondary">
+                    <span property="dc:date dc:created" content="2016-06-29T20:57:52+07:00" datatype="xsd:dateTime" rel="sioc:has_creator"><a href="http://arduino.vn/users/toi-yeu-arduino" title="Xem hồ sơ người dùng." class="username mif-user-md" xml:lang="" about="/users/toi-yeu-arduino" typeof="sioc:UserAccount" property="foaf:name" datatype="">Tôi yêu Arduino</a> gửi vào <time pubdate="" datetime="2016-06-29T20:57:52+07:00">Thứ tư, 29 Tháng 6, 2016 - 20:57</time></span>        </p>
+        <div class="tabcontrol">
+          <ul class="links inline tabs"><li class="node-readmore first" style="display: none;"><a href="http://arduino.vn/bai-viet/918-quy-doi-do-am-dat-thanh-phan-tram-voi-arduino" rel="tag" title="Quy đổi độ ẩm đất thành phần trăm (%) với Arduino">Xem thêm<span class="element-invisible"> về Quy đổi độ ẩm đất thành phần trăm (%) với Arduino</span></a></li>
+<li class="disqus_comments_num"><a href="http://arduino.vn/bai-viet/918-quy-doi-do-am-dat-thanh-phan-tram-voi-arduino#disqus_thread" data-disqus-identifier="node/918">5 bình luận</a></li>
+<li class="statistics_counter last"><a href="http://arduino.vn/bai-viet/918-quy-doi-do-am-dat-thanh-phan-tram-voi-arduino"><span class="mif-eye" style="font-size: 12px">4868 lượt xem</span></a></li>
+</ul>        </div>
+      
+          </header>
+  
+  <div class="field field-name-field-avatar field-type-kImageManager field-label-hidden"><div class="field-items"><div class="field-item even padding10 image-container bordered float-left"><img src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/2575_812450-1467208059-0-percent-sign.gif" style="width: 200px; height: auto; max-width: 170px;">
+</div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Bài viết về cảm biến độ ẩm đất của bạn Đỗ Hữu Toàn rất hay. Tuy nhiên, bạn ý không nhắc đến phương pháp quy đổi độ ẩm từ analog sang tỉ lệ phần trăm. Qua bài viết này, mình sẽ hướng dẫn các bạn làm được điều đó.</p>
+</div></div></div><div class="form-item form-type-item">
+  <p><label class="sub-header">Rate node </label></p>
+ <div class="rate-widget-1 rate-widget clear-block rate-user rate-widget-thumbs_up rate-a92817d0cb9fafb6c8df120b211ed284 rate-node-918-1-1 rate-processed" id="rate-node-918-1-1"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-2" rel="nofollow" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz?rate=vIsyu4DpWq848xS7AUcTmwu1eOLFNyihDDxCaiB_oGM" title="lên">lên</a><div class="rate-info">16 thành viên đã đánh giá bài viết này hữu ích.</div></div>
+</div>
+
+<iframe src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/like(1).html" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 450px; height: 80px; " allowtransparency="true"></iframe>
+      
+</article>
+  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+    <article class="node-531 not-in-frontpage node node-article node-promoted node-teaser clearfix" about="/bai-viet/531-dieu-khien-lcd-bang-arduino-uno" typeof="sioc:Item foaf:Document">
+<div class="truyen_cam_hung_link"><a href="http://arduino.vn/node/add/results?edit%5Bfield_post_reference%5D%5Bund%5D%5B0%5D%5Bnid%5D=%C4%90i%E1%BB%81u%20khi%E1%BB%83n%20LCD%20b%E1%BA%B1ng%20Arduino%20UNO%20%5Bnid%3A%20531%5D">Bạn có một DỰ ÁN hay giống thế này? Chia sẻ nhé!</a></div>
+      <header>
+                    <h2 class="header" id="index9"><a class="fg-orange" href="http://arduino.vn/bai-viet/531-dieu-khien-lcd-bang-arduino-uno">Điều khiển LCD bằng Arduino UNO</a></h2>
+            <span property="dc:title" content="Điều khiển LCD bằng Arduino UNO" class="rdf-meta element-hidden"></span>
+              <p class="submitted text-secondary">
+                    <span property="dc:date dc:created" content="2015-11-10T17:11:57+07:00" datatype="xsd:dateTime" rel="sioc:has_creator"><a href="http://arduino.vn/users/toi-yeu-arduino" title="Xem hồ sơ người dùng." class="username mif-user-md" xml:lang="" about="/users/toi-yeu-arduino" typeof="sioc:UserAccount" property="foaf:name" datatype="">Tôi yêu Arduino</a> gửi vào <time pubdate="" datetime="2015-11-10T17:11:57+07:00">Thứ ba, 10 Tháng 11, 2015 - 17:11</time></span>        </p>
+        <div class="tabcontrol">
+          <ul class="links inline tabs"><li class="node-readmore first" style="display: none;"><a href="http://arduino.vn/bai-viet/531-dieu-khien-lcd-bang-arduino-uno" rel="tag" title="Điều khiển LCD bằng Arduino UNO">Xem thêm<span class="element-invisible"> về Điều khiển LCD bằng Arduino UNO</span></a></li>
+<li class="disqus_comments_num"><a href="http://arduino.vn/bai-viet/531-dieu-khien-lcd-bang-arduino-uno#disqus_thread" data-disqus-identifier="node/531">80 bình luận</a></li>
+<li class="statistics_counter last"><a href="http://arduino.vn/bai-viet/918-quy-doi-do-am-dat-thanh-phan-tram-voi-arduino"><span class="mif-eye fg-blue" style="font-size: 12px">90340 lượt xem</span></a></li>
+</ul>        </div>
+      
+          </header>
+  
+  <div class="field field-name-field-avatar field-type-kImageManager field-label-hidden"><div class="field-items"><div class="field-item even padding10 image-container bordered float-left"><img src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/1663_8122246-1447140882-0-lcd-bb.750x578.350x270.png" style="width: 200px; height: auto; max-width: 170px;">
+</div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Hôm nay, các bạn sẽ tìm cách điều khiển màn hình LCD bằng Arduino mà không sử dụng module I2C LCD. Vì chỉ cần Arduino và LCD thì bạn sẽ tốn khá nhiều dây để lập trình điều khiển được LCD<a href="http://arduino.vn/bai-viet/531-dieu-khien-lcd-bang-arduino-uno">.</a></p>
+</div></div></div><div class="form-item form-type-item">
+  <p><label class="sub-header">Rate node </label></p>
+ <div class="rate-widget-1 rate-widget clear-block rate-user rate-widget-thumbs_up rate-deff01773190d1ccf88dc77bad639ee1 rate-node-531-1-1 rate-processed" id="rate-node-531-1-1"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-3" rel="nofollow" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz?rate=tHNcnNguBNWz85V7y_6xaw3fkIFe7y9iLhOO9cberMY" title="lên">lên</a><div class="rate-info">44 thành viên đã đánh giá bài viết này hữu ích.</div></div>
+</div>
+
+<iframe src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/like(2).html" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 450px; height: 80px; " allowtransparency="true"></iframe>
+  <div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-above"><div class="field-label">Từ khóa:&nbsp;</div><div class="field-items"><div class="field-item even tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/lcd" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">LCD</a></div><div class="field-item odd tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/arduino-uno" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">Arduino UNO</a></div></div></div>    
+</article>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>		    </div>
+		</div>
+	</div><div id="block-disqus-disqus-comments" class="block block-disqus last odd">
+			<div id="disqus_thread"><iframe id="dsq-app4707" name="dsq-app4707" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;"></iframe><iframe id="dsq-app4704" name="dsq-app4704" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/saved_resource(2).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 4780px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>  	</div>                          </div>
+                          <div class="cell">
+                  <section class="region region-sidebar-second column">
+    <div id="block-user-login" class="block block-user first odd" role="form">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Đăng nhập</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <form action="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz?destination=node/436" method="post" id="user-login-form" accept-charset="UTF-8" class="login-form"><div class="tabcontrol"><div class="form-item form-type-textfield form-item-name">
+  <p><label for="edit-name" class="sub-header">Tên người dùng <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control text"><span class="mif-user prepend-icon"></span><input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required"></div>
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <p><label for="edit-pass" class="sub-header">Mật khẩu <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control password"><span class="mif-lock prepend-icon"></span><input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required"></div>
+</div>
+<div class="item-list tabs"><ul><li class="first"><a href="http://arduino.vn/user/register" title="Tạo tài khoản người dùng mới.">Tạo tài khoản mới</a></li>
+<li class="last"><a href="http://arduino.vn/user/password" title="Yêu cầu gửi mật khẩu mới qua thư điện tử.">Yêu cầu mật khẩu mới</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-iqXRydF-9S1XqE0-fnuowxxHv-hE8fVwKflPHIeTqF0">
+<input type="hidden" name="form_id" value="user_login_block">
+<div id="fbconnect_button" class="form-item form-type-item" style="text-align:center;">
+  <p style="display: none;"><label for="fbconnect_button" class="sub-header">Đăng nhập bằng Facebook </label></p>
+ <fb:login-button size="large" background="dark" v="3" data-scope="email" login_text="Connect" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1424185567850442&amp;container_width=57&amp;locale=vi_VN&amp;login_text=Connect&amp;scope=email&amp;sdk=joey&amp;size=large"><span style="vertical-align: bottom; width: 87px; height: 25px;"><iframe name="f219d5c4591d67c" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:login_button Facebook Social Plugin" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/login_button(2).html" style="border: none; visibility: visible; width: 87px; height: 25px;" class=""></iframe></span></fb:login-button>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2" style="text-align:center;"><input type="submit" id="edit-submit--2" name="op" value="Đăng nhập" class="form-submit button success block-shadow-success text-shadow"></div><div style="text-align:center;"><input type="submit" id="edit-submit-google" name="op" value="" class="form-submit"></div></div></form>		    </div>
+		</div>
+	</div><div id="block-block-20" class="block block-block even">
+			<p class="rtecenter">
+<iframe allowfullscreen="" frameborder="0" height="230" scrolling="no" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/zczdCQ1_PIw.html" width="560"></iframe></p>
+<h3 class="rtecenter"><a href="http://arduino.vn/bai-viet/diem-cong-dong/giai-thuong"><span style="color:#FF8C00;"><strong>Chia sẻ tình yêu với </strong></span></a></h3>
+<h3 class="rtecenter"><a href="http://arduino.vn/bai-viet/diem-cong-dong/giai-thuong"><span style="color:#FF8C00;"><strong><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/2678_882450-1468511881-0-icon-hot.gif" style="width: 30px; height: 12px;">&nbsp;</strong></span><span style="color:#008080;"><strong>Arduino</strong></span></a>&nbsp;<a href="http://arduino.vn/bai-viet/diem-cong-dong/giai-thuong"><span style="color: rgb(255, 140, 0);"><strong><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/2678_882450-1468511881-0-icon-hot.gif" style="width: 30px; height: 12px;"></strong></span></a></h3>
+  	</div><div id="block-disqus-disqus-recent-comments" class="block block-disqus odd">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Bình luận gần đây</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div id="dsq-recentcomments" class="dsq-widget"><script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/recent_comments_widget.js.tải xuống"></script> <style type="text/css" media="screen">	 .dsq-widget ul.dsq-widget-list {	 padding: 0;	 margin: 0;	 text-align: left;	 }	 img.dsq-widget-avatar {	 width: 32px;	 height: 32px;	 border: 0px;	 margin: 0px;	 padding: 0px 3px 3px 0px;	 float: left;	 }	 a.dsq-widget-user {	 font-weight: bold;	 }	 a.dsq-widget-thread {	 font-weight: bold;	 }	 p.dsq-widget-meta {	 clear: both;	 font-size: 80%;	 padding: 0;	 margin: 0;	 }	 li.dsq-widget-item {	 margin: 15px 0;	 list-style-type: none;	 clear: both;	 }	 span.dsq-widget-clout {	 padding: 0 2px;	 background-color: #ff7300;	 color: #fff;	 }	 table.dsq-widget-horiz td {	 padding-right: 15px;	 }	 .dsq-widget-comment p {	 display: inline;	 }	 </style>	 <ul class="dsq-widget-list">	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/disqus_rJkFSmRDLr/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_rJkFSmRDLr/">Kevin Chu</a>	 <span class="dsq-widget-comment"><p>mình lắp mạch và code y hệt nhưng động cơ lại không quay mà lại kêu tiếng nhỏ nhỏ bên trong động cơ dc. các bạn nào chuyên ngàng cho mình hỏi có những lí do hoặc lỗi...</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/948-bam-xung-dieu-khien-toc-do-dong-co-bang-l298">Băm xung - Điều khiển tốc độ động cơ bằng L298</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/948-bam-xung-dieu-khien-toc-do-dong-co-bang-l298#comment-3598385047">40 minutes ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/arduinovnn-a5f6843546044cef853b3474cf1e359d/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92(1).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-a5f6843546044cef853b3474cf1e359d/">Phạm Văn Trung</a>	 <span class="dsq-widget-comment"><p>AD cho mình hỏi tại sao khi mình tháo điện trở 10k ra khỏi mạch, không cần ấn nút nhấn mà đèn led cứ sáng tắt liên tục nhỉ.<br>tác dụng của điện trở 10k đó là chi vậy hê.</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/153-bai-8-dung-button-nut-bam-de-dieu-khien-mot-den-led">Bài 8: Dùng button (nút bấm) để điều khiển một đèn LED</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/153-bai-8-dung-button-nut-bam-de-dieu-khien-mot-den-led#comment-3598379128">43 minutes ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/arduinovnn-9bdd43757138e5ea2ece8bf9115a2ab4/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92(2).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-9bdd43757138e5ea2ece8bf9115a2ab4/">phungvantien</a>	 <span class="dsq-widget-comment"><p>cho hỏi lập  mode aduirno ở đâu trên máy tính????</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/912-dung-may-tinh-dieu-khien-arduino-thong-qua-bluetooth">Dùng máy tính điều khiển Arduino thông qua bluetooth</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/912-dung-may-tinh-dieu-khien-arduino-thong-qua-bluetooth#comment-3597889456">9 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/tran_minh_thanh/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/tran_minh_thanh/">Tran Minh Thanh</a>	 <span class="dsq-widget-comment"><p>Cho em với code như trên em có thể thay đổi môt xíu để truyền không dây bằng UART được không ạ ?</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/562-su-dung-module-nrf24l01">Sử dụng Module NRF24L01</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/562-su-dung-module-nrf24l01#comment-3597841449">11 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/voanhtu28/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/voanhtu28/">voanhtu28</a>	 <span class="dsq-widget-comment"><p>đơn vị lưu trữ thấp nhất là byte nhe bạn. tức là bạn không thể ghi được 1 bit lên ổ đĩa (hoặc bộ nhớ) mà phải ghi 1 byte (1 block gồm 8 bit)</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/reference/boolean">boolean</a>&nbsp;·&nbsp;<a href="http://arduino.vn/reference/boolean#comment-3597784512">12 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/duc_tin/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/duc_tin/">Duc Tin</a>	 <span class="dsq-widget-comment"><p>Mình tưởng biến boolean sẽ chỉ chiếm 1 bit thôi chứ nhỉ? Sao lại cần đến 1 byte?</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/reference/boolean">boolean</a>&nbsp;·&nbsp;<a href="http://arduino.vn/reference/boolean#comment-3597510047">15 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/disqus_PO1WIMSG4p/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_PO1WIMSG4p/">Công Danh</a>	 <span class="dsq-widget-comment"><p>Cái này thì bạn nên lập trình với MCU rồi,sử dụng ngắt bạn nhé.Khi có xung vào thì bật rơle-cái này thì đơn giản rồi. Còn vấn đề xung 5-300Hz: Bạn dùng chức năng Input...</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/302-module-relay-cach-su-dung-ro-le-va-nhung-ung-dung-hay-cua-no">Module Relay - Cách sử dụng rơ le và những ứng dụng hay của nó</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/302-module-relay-cach-su-dung-ro-le-va-nhung-ung-dung-hay-cua-no#comment-3597050141">20 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/disqus_rJkFSmRDLr/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_rJkFSmRDLr/">Kevin Chu</a>	 <span class="dsq-widget-comment"><p>giúp e với e mới học arduino e lắp mạch và chép code y hệt tại sao động cơ ko quay mà chỉ nghe tiếng ở bên trong khi đưa sát tai thôi, giúp e với</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/893-cach-dung-module-dieu-khien-dong-co-l298n-cau-h-de-dieu-khien-dong-co-dc">Cách dùng Module điều khiển động cơ L298N - cầu H để điều khiển động cơ DC</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/893-cach-dung-module-dieu-khien-dong-co-l298n-cau-h-de-dieu-khien-dong-co-dc#comment-3596896640">22 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/disqus_kPStayUgyX/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92(3).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_kPStayUgyX/">Văn Tường</a>	 <span class="dsq-widget-comment"><p>Bạn ơi cho mình hỏi: khi mình lắp thêm relay "jqc-3ff sz " thì ko điều khiển được tốc độ nữa, mình phải để speed &gt;155 thì motor mới chạy, và khi tăng speed lên 255 thì...</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/209-dieu-khien-toc-do-motor-dc">Điều khiển tốc độ Motor DC</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/209-dieu-khien-toc-do-motor-dc#comment-3596340326">1 day ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/evansskii/"><img class="dsq-widget-avatar" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/evansskii/">evans skii</a>	 <span class="dsq-widget-comment"><p>cho mình hỏi làm sao để clear màn hình lcd st7920? mình dùng thư viện u8glib</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/935-lcd-graphic-128x64-dong-ks0108-va-st7920">LCD Graphic 128x64 dòng KS0108 VÀ ST7920</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/935-lcd-graphic-128x64-dong-ks0108-va-st7920#comment-3594996474">2 days ago</a></p>	 </li>	 </ul>
+</div>		    </div>
+		</div>
+	</div><div id="block-disqus-disqus-popular-threads" class="block block-disqus even">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Bài đọc nhiều</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div id="dsq-popthreads" class="dsq-widget"><script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/popular_threads_widget.js.tải xuống"></script> <style type="text/css" media="screen">	 .dsq-widget ul.dsq-widget-list {	 padding: 0;	 margin: 0;	 text-align: left;	 }	 img.dsq-widget-avatar {	 border: 0px;	 margin: 0px;	 padding: 0px 3px 3px 0px;	 float: left;	 }	 a.dsq-widget-user {	 font-weight: bold;	 }	 a.dsq-widget-thread {	 font-weight: bold;	 }	 p.dsq-widget-meta {	 clear: both;	 font-size: 80%;	 padding: 0;	 margin: 0;	 }	 li.dsq-widget-item {	 margin: 15px 0;	 list-style-type: none;	 clear: both;	 }	 span.dsq-widget-clout {	 padding: 0 2px;	 background-color: #ff7300;	 color: #fff;	 }	 table.dsq-widget-horiz td {	 padding-right: 15px;	 }	 .dsq-widget-comment p {	 display: inline;	 }	 </style>	 <ul class="dsq-widget-list">	 <li class="dsq-widget-item">	 <a class="dsq-widget-thread" href="http://arduino.vn/result/1921-tu-lam-thiet-bi-bat-tat-den-dieu-khien-qua-phan-mem-inut-tren-android-va-iphone">Tự làm thiết bị bật tắt đèn điều khiển qua phần mềm iNut trên Android và iPhone</a>	 <p class="dsq-widget-meta">6 comments · 2 days ago</p>	 </li>	 <li class="dsq-widget-item">	 <a class="dsq-widget-thread" href="http://arduino.vn/tutorial/1869-nang-cap-32kbyte-ram-cho-arduino-mega-voi-ic-ut62256cscl-70ll">Nâng cấp 32kbyte RAM cho arduino mega với ic UT62256CSCL-70LL</a>	 <p class="dsq-widget-meta">2 comments · 3 weeks ago</p>	 </li>	 </ul>
+</div>		    </div>
+		</div>
+	</div><div id="block-block-4" class="block block-block last odd">
+			<p><a href="http://masocongty.vn/" style="text-decoration:none;"><span style="color:#FFFFFF;">mã số thuế</span></a><br><a href="http://timraovat.com/" style="text-decoration:none;"><span style="color:#FFFFFF;">Tìm kiếm</span></a><br><a href="http://ptj.vn/" style="text-decoration:none;"><span style="color:#FFFFFF;">Trang sức bạc</span><br>
+</a></p>
+  	</div>  </section>
+              </div>
+                      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row cells4 footer-column">
+      <div class="cell hide">
+        <div class="region region-footer-firstcolumn">
+    <div id="block-user-online" class="block block-user first last odd" role="complementary">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Thành viên trực tuyến</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <p>Hiện đang có 98 người trực tuyến.</p><div class="item-list"><ul class="simple-list"><li class="first"><a href="http://arduino.vn/users/truong-xuan-thi" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/truong-xuan-thi" typeof="sioc:UserAccount" property="foaf:name" datatype="">Trương Xuân Thi</a></li>
+<li><a href="http://arduino.vn/users/summerscent" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/summerscent" typeof="sioc:UserAccount" property="foaf:name" datatype="">summerscent</a></li>
+<li><a href="http://arduino.vn/users/anh-tuan-nguyen-le" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/anh-tuan-nguyen-le" typeof="sioc:UserAccount" property="foaf:name" datatype="">Anh Tuấn Nguyễn Lê</a></li>
+<li><a href="http://arduino.vn/users/pham-van-trung" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/pham-van-trung" typeof="sioc:UserAccount" property="foaf:name" datatype="">Phạm Văn Trung</a></li>
+<li class="last"><a href="http://arduino.vn/users/anhphong94" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/anhphong94" typeof="sioc:UserAccount" property="foaf:name" datatype="">anhphong94</a></li>
+</ul></div>		    </div>
+		</div>
+	</div>  </div>
+    </div>
+    <div class="cell hide">
+        <div class="region region-footer-secondcolumn">
+    <div id="block-user-new" class="block block-user first last odd" role="complementary">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Thành viên mới</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div class="item-list"><ul class="simple-list"><li class="first"><a href="http://arduino.vn/users/ricardolen" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/ricardolen" typeof="sioc:UserAccount" property="foaf:name" datatype="">RicardoLen</a></li>
+<li><a href="http://arduino.vn/users/gachimjah" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/gachimjah" typeof="sioc:UserAccount" property="foaf:name" datatype="">Gachimjah</a></li>
+<li><a href="http://arduino.vn/users/ivangot" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/ivangot" typeof="sioc:UserAccount" property="foaf:name" datatype="">IvanGot</a></li>
+<li><a href="http://arduino.vn/users/cosartkneep" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/cosartkneep" typeof="sioc:UserAccount" property="foaf:name" datatype="">CosartkNeeP</a></li>
+<li><a href="http://arduino.vn/users/jameshoope" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/jameshoope" typeof="sioc:UserAccount" property="foaf:name" datatype="">Jameshoope</a></li>
+<li><a href="http://arduino.vn/users/thaibao" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/thaibao" typeof="sioc:UserAccount" property="foaf:name" datatype="">thaibao</a></li>
+<li><a href="http://arduino.vn/users/scottwrike" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/scottwrike" typeof="sioc:UserAccount" property="foaf:name" datatype="">Scottwrike</a></li>
+<li class="last"><a href="http://arduino.vn/users/pham-diep" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/pham-diep" typeof="sioc:UserAccount" property="foaf:name" datatype="">pham diep</a></li>
+</ul></div>		    </div>
+		</div>
+	</div>  </div>
+    </div>
+    <div class="cell">
+        <div class="region region-footer-thirdcolumn">
+    <div id="block-block-1" class="block block-block first last odd">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Về chúng tôi</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <p class="rtejustify"><a href="http://arduino.vn/">Arduino.vn</a> được xây dựng trên nền tảng Drupal 7, phiên bản hiện tại 2.3 tên mã <a href="http://arduino.vn/changelog">Chia sẻ tình yêu với Arduino</a>.</p>
+<p class="rtejustify">Đây là trang thông tin phi lợi nhuận ra đời hướng tới cộng đồng trẻ, những chủ nhân tương lai của đất nước. <strong><a href="http://arduino.vn/ve-chung-toi">Tìm hiểu thêm</a></strong></p>
+		    </div>
+		</div>
+	</div>  </div>
+    </div>
+    <div class="cell">
+        <div class="region region-footer-fourthcolumn">
+    <div id="block-block-2" class="block block-block first last odd">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Liên kết</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <p>Một sản phẩm hợp tác với <a href="http://machtudong.vn/">Machtudong.vn</a></p>
+<p class="rtecenter"><img alt="" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/grzxrak875oi.png"></p>
+<script>
+<!--//--><![CDATA[// ><!--
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-103385129-1', 'auto');
+  ga('send', 'pageview');
+
+
+//--><!]]>
+</script>		    </div>
+		</div>
+	</div>  </div>
+    </div>
+    </div>
+<div class="row">
+  <div class="cell footer">
+      <div class="region region-bottom">
+    <div id="block-block-3" class="block block-block first last odd">
+			<div style="margin: 0; padding-top:15px;"><a class="dmca-badge" href="http://www.dmca.com/Protection/Status.aspx?ID=78aa6fcb-6c63-4023-b42d-872e89882865" style="line-height: 1.6;" title="DMCA.com Protection Program"><img alt="DMCA.com Protection Status" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/dmca_protected_sml_120m.png" style="border-style:solid; border-width:0px"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" style="line-height: 1.6; font-family: &#39;courier new&#39;, courier, monospace;"><img alt="Creative Commons License" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/88x31.png" style="border-style:solid; border-width:0px"></a><br><span style="font-size:14px"><span style="font-family:verdana,geneva,sans-serif">Nội dung trên trang <a href="http://arduino.vn/" style="font-family: &#39;courier new&#39;, courier, monospace; font-size: 14px; line-height: 1.6;">Arduino.vn</a> được phân phối theo giấy phép <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" style="font-family: &#39;courier new&#39;, courier, monospace; font-size: 14px; line-height: 1.6;">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span></span><br><span style="font-size:14px"><span style="font-family:verdana,geneva,sans-serif">Vui lòng ghi rõ nguồn và link về bài gốc nếu bạn tham khảo nội dung từ <a href="http://masocongty.vn/" target="_blank" style="color:#000000;text-decoration: none;">website</a> này.</span></span></div>
+  	</div>  </div>
+  </div>
+</div>
+<div data-role="dialog" id="dialog-place-top-center" class="padding20 dialog bg-darkTeal fg-white" data-close-button="true" data-place="top-center" style="width: auto; height: auto; visibility: hidden;">
+  <h3 class="header">Bạn ơi ^_^!</h3>
+  <div class="content align-center"></div>
+  <div class="fblike align-center">
+			
+<iframe src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/like(3).html" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 450px; height: 80px; " allowtransparency="true"></iframe>
+  	</div>
+  <div class="fanpage align-center">
+    <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/Arduino.Vietnam/?fref=ts" data-layout="button_count" data-action="recommend" data-size="small" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=recommend&amp;app_id=1424185567850442&amp;container_width=450&amp;href=https%3A%2F%2Fwww.facebook.com%2FArduino.Vietnam%2F%3Ffref%3Dts&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small"><span style="vertical-align: bottom; width: 146px; height: 20px;"><iframe name="f1248443cf704d4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/like(4).html" style="border: none; visibility: visible; width: 146px; height: 20px;" class=""></iframe></span></div>
+  </div>
+</div>
+
+<div class="charm charmMobile right-side" data-role="charm" data-position="right" style="opacity: 1; display: none;">
+  <h2 class="header">Mục lục</h2>
+  <div class="content" style="display:none;;"><div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index0">Giới thiệu
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index1">Phần cứng
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index2">Đặt vấn đề
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index3">1. Tín hiệu của sóng 315Mhz được gửi đi như thế nào trong thế giới Arduino RC Switch?
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index4">2. Vậy với ý tưởng truyền sóng như trên, làm thế nào để xây dựng một mô hình truyền gửi to lớn với mạch Arduino?
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index5">3. Thực hành
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index6">4. Mở rộng
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index7">Kết luận
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index8">Quy đổi độ ẩm đất thành phần trăm (%) với Arduino
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz#index9">Điều khiển LCD bằng Arduino UNO
+</a></div>
+</div>
+    <div class="region region-charm-guest">
+    <div id="block-block-19" class="block block-block first last odd">
+			<p>Hãy trở thành thành viên của Cộng đồng Arudino Việt Nam để mở khóa chức năng này.</p>
+  	</div>  </div>
+<span class="charm-closer"></span></div>
+
+<button class="button warning block-shadow-warning text-shadow large-button fixed-bottom menu-toggle" style="">Mục lục</button>
+<div style="display: none;"></div>
+
+
+<div data-role="dialog" id="login-please" class="padding20 dialog info" data-close-button="true" data-type="info" style="width: auto; height: auto; visibility: hidden;">
+    <h1>Bạn ơi</h1>
+    <p>
+        Cùng <a href="http://arduino.vn/user/login" class="fg-yellow"><strong>đăng nhập</strong></a> vào <strong>Cộng đồng Arduino Việt Nam</strong> để mở hết các chức năng của Cộng đồng nhé.
+    </p>
+    <span class="dialog-close-button"></span>
+</div>
+<script type="text/javascript">
+function showDialog(id){
+    var dialog = $(id).data('dialog');
+    dialog.open();
+    $("#login-please a").click(function() {
+      if (!$(".app-bar-element form input").length)
+        return true;
+      $("#login-please").hide();
+      $(".app-bar-element > a").last().click();
+      return false;
+    });
+}
+$(document).ready(function() {
+  $(".dialog-close-button").click(function() {
+    $("#login-please").hide();
+    $.cookie('timer1', 0);
+  });
+  var max = 60000 * 4;
+  if (intval($.cookie('timer1')) < max) {
+
+    var interval = setInterval(function() {
+      $.cookie('timer1', intval($.cookie('timer1')) + 1000);
+      if (intval($.cookie('timer1')) >= max) {
+        clearInterval(interval);
+        showDialog('#login-please');
+      } else 
+        console.log($.cookie('timer1'));
+    }, 1000);
+  } else 
+    showDialog('#login-please');
+})
+  
+</script>
+      <div class="region region-page-bottom">
+    <div id="fb-root" class=" fb_reset"><script src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/all.js.tải xuống" async=""></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/BbnCpbXY9X8.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/BbnCpbXY9X8(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+      <script type="text/javascript">
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId : '1424185567850442',
+            cookie : true, // enable cookies to allow the server to access the session
+            xfbml : true,
+            logging: '0',
+            channelURL: 'http://arduino.vn/sites/all/modules/fbconnect/channel.html',
+            oauth  : true
+          });
+          // whenever the user logs in, we tell our login service
+          FB.Event.subscribe('auth.login', function() {
+            window.location.reload();
+          });
+          FB.Event.subscribe('auth.logout', function(response) {
+            window.location.reload();
+          });
+
+          jQuery(document).trigger('fb:init');
+        };
+
+        (function() {
+          var e = document.createElement('script');
+          e.src = document.location.protocol + '//connect.facebook.net/vi_VN/all.js';
+          e.async = true;
+          document.getElementById('fb-root').appendChild(e);
+        }());
+      </script>  </div>
+  </div>
+
+
+</div><iframe style="display: none;" src="./Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz _ Cộng đồng Arduino Việt Nam_files/saved_resource(3).html"></iframe></body></html>

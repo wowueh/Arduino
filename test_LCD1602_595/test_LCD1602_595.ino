@@ -24,6 +24,10 @@ void setup() {
     lcd.print("Wow. 3 pins!");
     lcd.setCursor(0,1);
     lcd.print("Fabulous");
+    delay(5000);
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("HO DUC NHAT THANH");
 }
 
 void loop() {

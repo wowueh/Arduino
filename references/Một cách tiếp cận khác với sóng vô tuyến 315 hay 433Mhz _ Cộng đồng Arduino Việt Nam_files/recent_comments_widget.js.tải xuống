@@ -1,0 +1,109 @@
+
+
+document.write(' \
+<style type="text/css" media="screen">\
+	 .dsq-widget ul.dsq-widget-list {\
+	 padding: 0;\
+	 margin: 0;\
+	 text-align: left;\
+	 }\
+	 img.dsq-widget-avatar {\
+	 width: 32px;\
+	 height: 32px;\
+	 border: 0px;\
+	 margin: 0px;\
+	 padding: 0px 3px 3px 0px;\
+	 float: left;\
+	 }\
+	 a.dsq-widget-user {\
+	 font-weight: bold;\
+	 }\
+	 a.dsq-widget-thread {\
+	 font-weight: bold;\
+	 }\
+	 p.dsq-widget-meta {\
+	 clear: both;\
+	 font-size: 80%;\
+	 padding: 0;\
+	 margin: 0;\
+	 }\
+	 li.dsq-widget-item {\
+	 margin: 15px 0;\
+	 list-style-type: none;\
+	 clear: both;\
+	 }\
+	 span.dsq-widget-clout {\
+	 padding: 0 2px;\
+	 background-color: #ff7300;\
+	 color: #fff;\
+	 }\
+	 table.dsq-widget-horiz td {\
+	 padding-right: 15px;\
+	 }\
+	 .dsq-widget-comment p {\
+	 display: inline;\
+	 }\
+	 </style>\
+	 <ul class="dsq-widget-list">\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_rJkFSmRDLr/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_rJkFSmRDLr/">Kevin Chu</a>\
+	 <span class="dsq-widget-comment"><p>mình lắp mạch và code y hệt nhưng động cơ lại không quay mà lại kêu tiếng nhỏ nhỏ bên trong động cơ dc. các bạn nào chuyên ngàng cho mình hỏi có những lí do hoặc lỗi...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/948-bam-xung-dieu-khien-toc-do-dong-co-bang-l298">Băm xung - Điều khiển tốc độ động cơ bằng L298</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/948-bam-xung-dieu-khien-toc-do-dong-co-bang-l298#comment-3598385047">40 minutes ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-a5f6843546044cef853b3474cf1e359d/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/26975/3110/avatar92.jpg?1509719173"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-a5f6843546044cef853b3474cf1e359d/">Phạm Văn Trung</a>\
+	 <span class="dsq-widget-comment"><p>AD cho mình hỏi tại sao khi mình tháo điện trở 10k ra khỏi mạch, không cần ấn nút nhấn mà đèn led cứ sáng tắt liên tục nhỉ.<br>tác dụng của điện trở 10k đó là chi vậy hê.</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/153-bai-8-dung-button-nut-bam-de-dieu-khien-mot-den-led">Bài 8: Dùng button (nút bấm) để điều khiển một đèn LED</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/153-bai-8-dung-button-nut-bam-de-dieu-khien-mot-den-led#comment-3598379128">43 minutes ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-9bdd43757138e5ea2ece8bf9115a2ab4/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27007/6010/avatar92.jpg?1509685879"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-9bdd43757138e5ea2ece8bf9115a2ab4/">phungvantien</a>\
+	 <span class="dsq-widget-comment"><p>cho hỏi lập  mode aduirno ở đâu trên máy tính????</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/912-dung-may-tinh-dieu-khien-arduino-thong-qua-bluetooth">Dùng máy tính điều khiển Arduino thông qua bluetooth</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/912-dung-may-tinh-dieu-khien-arduino-thong-qua-bluetooth#comment-3597889456">9 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/tran_minh_thanh/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/tran_minh_thanh/">Tran Minh Thanh</a>\
+	 <span class="dsq-widget-comment"><p>Cho em với code như trên em có thể thay đổi môt xíu để truyền không dây bằng UART được không ạ ?</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/562-su-dung-module-nrf24l01">Sử dụng Module NRF24L01</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/562-su-dung-module-nrf24l01#comment-3597841449">11 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/voanhtu28/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/voanhtu28/">voanhtu28</a>\
+	 <span class="dsq-widget-comment"><p>đơn vị lưu trữ thấp nhất là byte nhe bạn. tức là bạn không thể ghi được 1 bit lên ổ đĩa (hoặc bộ nhớ) mà phải ghi 1 byte (1 block gồm 8 bit)</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/reference/boolean">boolean</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/reference/boolean#comment-3597784512">12 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/duc_tin/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/duc_tin/">Duc Tin</a>\
+	 <span class="dsq-widget-comment"><p>Mình tưởng biến boolean sẽ chỉ chiếm 1 bit thôi chứ nhỉ? Sao lại cần đến 1 byte?</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/reference/boolean">boolean</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/reference/boolean#comment-3597510047">15 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_PO1WIMSG4p/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_PO1WIMSG4p/">Công Danh</a>\
+	 <span class="dsq-widget-comment"><p>Cái này thì bạn nên lập trình với MCU rồi,sử dụng ngắt bạn nhé.Khi có xung vào thì bật rơle-cái này thì đơn giản rồi. Còn vấn đề xung 5-300Hz: Bạn dùng chức năng Input...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/302-module-relay-cach-su-dung-ro-le-va-nhung-ung-dung-hay-cua-no">Module Relay - Cách sử dụng rơ le và những ứng dụng hay của nó</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/302-module-relay-cach-su-dung-ro-le-va-nhung-ung-dung-hay-cua-no#comment-3597050141">20 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_rJkFSmRDLr/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_rJkFSmRDLr/">Kevin Chu</a>\
+	 <span class="dsq-widget-comment"><p>giúp e với e mới học arduino e lắp mạch và chép code y hệt tại sao động cơ ko quay mà chỉ nghe tiếng ở bên trong khi đưa sát tai thôi, giúp e với</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/893-cach-dung-module-dieu-khien-dong-co-l298n-cau-h-de-dieu-khien-dong-co-dc">Cách dùng Module điều khiển động cơ L298N - cầu H để điều khiển động cơ DC</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/893-cach-dung-module-dieu-khien-dong-co-l298n-cau-h-de-dieu-khien-dong-co-dc#comment-3596896640">22 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_kPStayUgyX/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/22432/5962/avatar92.jpg?1509613396"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_kPStayUgyX/">Văn Tường</a>\
+	 <span class="dsq-widget-comment"><p>Bạn ơi cho mình hỏi: khi mình lắp thêm relay "jqc-3ff sz " thì ko điều khiển được tốc độ nữa, mình phải để speed &gt;155 thì motor mới chạy, và khi tăng speed lên 255 thì...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/209-dieu-khien-toc-do-motor-dc">Điều khiển tốc độ Motor DC</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/209-dieu-khien-toc-do-motor-dc#comment-3596340326">1 day ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/evansskii/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/evansskii/">evans skii</a>\
+	 <span class="dsq-widget-comment"><p>cho mình hỏi làm sao để clear màn hình lcd st7920? mình dùng thư viện u8glib</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/935-lcd-graphic-128x64-dong-ks0108-va-st7920">LCD Graphic 128x64 dòng KS0108 VÀ ST7920</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/935-lcd-graphic-128x64-dong-ks0108-va-st7920#comment-3594996474">2 days ago</a></p>\
+	 </li>\
+	 </ul>\
+');

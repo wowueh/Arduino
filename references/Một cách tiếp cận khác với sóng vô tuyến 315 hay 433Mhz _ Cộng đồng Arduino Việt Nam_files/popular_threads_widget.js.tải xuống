@@ -1,0 +1,55 @@
+
+
+document.write(' \
+<style type="text/css" media="screen">\
+	 .dsq-widget ul.dsq-widget-list {\
+	 padding: 0;\
+	 margin: 0;\
+	 text-align: left;\
+	 }\
+	 img.dsq-widget-avatar {\
+	 border: 0px;\
+	 margin: 0px;\
+	 padding: 0px 3px 3px 0px;\
+	 float: left;\
+	 }\
+	 a.dsq-widget-user {\
+	 font-weight: bold;\
+	 }\
+	 a.dsq-widget-thread {\
+	 font-weight: bold;\
+	 }\
+	 p.dsq-widget-meta {\
+	 clear: both;\
+	 font-size: 80%;\
+	 padding: 0;\
+	 margin: 0;\
+	 }\
+	 li.dsq-widget-item {\
+	 margin: 15px 0;\
+	 list-style-type: none;\
+	 clear: both;\
+	 }\
+	 span.dsq-widget-clout {\
+	 padding: 0 2px;\
+	 background-color: #ff7300;\
+	 color: #fff;\
+	 }\
+	 table.dsq-widget-horiz td {\
+	 padding-right: 15px;\
+	 }\
+	 .dsq-widget-comment p {\
+	 display: inline;\
+	 }\
+	 </style>\
+	 <ul class="dsq-widget-list">\
+	 <li class="dsq-widget-item">\
+	 <a class="dsq-widget-thread" href="http://arduino.vn/result/1921-tu-lam-thiet-bi-bat-tat-den-dieu-khien-qua-phan-mem-inut-tren-android-va-iphone">Tự làm thiết bị bật tắt đèn điều khiển qua phần mềm iNut trên Android và iPhone</a>\
+	 <p class="dsq-widget-meta">6 comments &middot; 2 days ago</p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a class="dsq-widget-thread" href="http://arduino.vn/tutorial/1869-nang-cap-32kbyte-ram-cho-arduino-mega-voi-ic-ut62256cscl-70ll">Nâng cấp 32kbyte RAM cho arduino mega với ic UT62256CSCL-70LL</a>\
+	 <p class="dsq-widget-meta">2 comments &middot; 3 weeks ago</p>\
+	 </li>\
+	 </ul>\
+');

@@ -1,0 +1,15 @@
+HUONG DAN CAI DAT CONG TAC BATTO BT-SSR-3M3.0 433MHZ
+
+1. Cai dat hoc lenh remote:
+- Bam va giu nut tron den khi den chop.
+- Neu muon Bat va Tat cung mot nut remote thi bam nut remote muon cai dat.
+- Bam them nut tron mot lan nua de cai dat nut remote Bat (only).
+- Bam them nut tron mot lan nua de cai dat nut remote Tat (only).
+Luu y: moi kenh nho duoc 23 lenh remote.
+
+2. Cai dat hen gio: (Chua bit)
+Luu y: thoi gian hen gio: 1, 3, 6, 12, 30, 60 phut.
+
+3. Xoa cai dat hen gio:
+- O che do hoc lenh, bam nut Bat cong tat co tay tuong ung.
+
