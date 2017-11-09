@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d -->
+<html lang="vi" dir="ltr" prefix="fb: http://www.facebook.com/2008/fbml content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#" class="js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--[if IE]><![endif]-->
+
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="http://cdn.arduino.vn/">
+<!--[if IE 9]>
+<link rel="prefetch" href="//cdn.arduino.vn" />
+<![endif]-->
+<link rel="shortlink" href="http://arduino.vn/node/429">
+<meta name="Generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d">
+<link rel="shortcut icon" href="http://cdn.arduino.vn/sites/all/themes/arduino2016/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Làm dự án xe với module điều khiển động cơ L293D  | Cộng đồng Arduino Việt Nam</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="cleartype" content="on">
+
+  <link type="text/css" rel="stylesheet" href="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/css__ESU007kA6OXANIbKIwepmrvExwT8VDRTYCrhccFBFLE__ZxK0cgdG17xiZD-tyAOKdZdMlu1gorOfS0NGmMomJxM___NdL6D9oDW7TzkpF_-wnuVmFAITnv.css" media="all">
+  <script async="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/analytics.js.tải xuống"></script><script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/js__q4ZluDEr7yHOp8TDo4l-cypOrRNOvxyaxrSrBudwQ2E__WkhiV_lrksVYyEJqyxuOCz7YWesQGK8L6lcma1zwobw___NdL6D9oDW7TzkpF_-wnuVmF.tải xuống"></script>
+<script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/js__nok8G7hcnetIw76kyOWGSjfV7ZbfyfFwm807kxsEXGI__BaEwjj6wscfXL9ZDWHeXT4eowghF20sqLavOStFRjgc___NdL6D9oDW7TzkpF_-wnuVmF.tải xuống" defer="defer"></script>
+<script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/js__xGEy8v8KoFRG4RwjWeKtO1qs4jG00zQzljVuTJJbmVg__vIR04uxM19JnU8uRv2AV0QvWZjQMvFLWlppxYu020gY___NdL6D9oDW7TzkpF_-wnuVmF.tải xuống"></script>
+<script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/js__bzh0uY3h0wP16p2vug7GVZc8YwQII2MvMdP74GgvZU4__29hprtUJjUrYFd0x57Qa4s7jvCu9CPbbzQPyX0FxplE___NdL6D9oDW7TzkpF_-wnuVmF.tải xuống" defer="defer"></script>
+<script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/js__jyUB1nv6AYQUrEUvVaOKKhrTTcSJT3MbSu52cufH51U__9bg2uB03d-iB9idDXtIBd0m13yvqr8JcTxXdPlkFfGw___NdL6D9oDW7TzkpF_-wnuVmF.tải xuống"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"arduino2016","theme_token":"OX4qYlBKcnqTQJwk-oAAjUzc55D-irxPxd_22Ij1Ce4","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/field_hidden\/field_hidden.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/fbconnect\/fbconnect.css":1,"sites\/all\/modules\/rate\/rate.css":1,"sites\/default\/files\/sl_sprites.css":1,"sites\/all\/modules\/rate\/templates\/thumbs-up\/thumbs-up.css":1,"sites\/all\/modules\/gauth\/gauth_login\/gauth_login.css":1,"sites\/all\/modules\/path_breadcrumbs\/css\/path_breadcrumbs.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/libraries\/superfish\/style\/ktheme.css":1,"sites\/all\/themes\/arduino2016\/system.menus.css":1,"sites\/all\/themes\/arduino2016\/system.messages.css":1,"sites\/all\/themes\/arduino2016\/system.theme.css":1,"sites\/all\/themes\/arduino2016\/css\/metro.css":1,"sites\/all\/themes\/arduino2016\/css\/nprocess.css":1,"sites\/all\/themes\/arduino2016\/css\/style.css":1,"sites\/all\/modules\/prettify\/styles\/googlecode.css":1},"js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/google-code-prettify\/prettify.js":1,"sites\/all\/libraries\/google-code-prettify\/lang-css.js":1,"public:\/\/languages\/vi_93a90fQN-FyrA-_Ia5ssjsDkf9U1IfsIqx_3tJYrNm4.js":1,"sites\/all\/modules\/fbconnect\/fbconnect.js":1,"sites\/all\/modules\/prettify\/prettify.loader.js":1,"sites\/all\/modules\/rate\/rate.js":1,"sites\/all\/modules\/disqus\/disqus.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/sfsmallscreen.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/superfish\/superfish.js":1,"sites\/all\/themes\/arduino2016\/js\/jquery.js":1,"sites\/all\/themes\/arduino2016\/js\/swipe.jquery.js":1,"sites\/all\/themes\/arduino2016\/js\/phpjs.js":1,"sites\/all\/themes\/arduino2016\/js\/metro.js":1,"sites\/all\/themes\/arduino2016\/js\/nprocess.js":1,"sites\/all\/themes\/arduino2016\/js\/site.js":1,"sites\/all\/themes\/arduino2016\/js\/cookie.js":1}},"fbconnect":{"user_pictures":"disallow","language_code":"vi_VN","app_id":"1424185567850442","debug":0,"connect_js":"document.location.protocol + \u0027\/\/connect.facebook.net\/vi_VN\/all.js\u0027","loginout_mode":"manual","invite_name":"C\u1ed9ng \u0111\u1ed3ng Arduino Vi\u1ec7t Nam","fast_reg_mode":1,"fast_reg_autoname":1,"fbuid":0,"user":{"uid":0,"fbuid":null}},"prettify":{"linenums":false,"match":".content,#content","nocode":"no-code","custom":[],"markup":{"code":true,"pre":true,"precode":false}},"rate":{"basePath":"\/rate\/vote\/js","destination":"node\/429"},"disqusComments":"arduinovnn","better_exposed_filters":{"views":{"cac_bai_viet_cung_tac_gia":{"displays":{"block":{"filters":[]}}},"node_count_by_user":{"displays":{"block_1":{"filters":[]}}}}},"superfish":{"1":{"id":"1","sf":{"delay":"10","animation":{"opacity":"show","height":"show"},"speed":10,"autoArrows":true,"dropShadows":true,"disableHI":false},"plugins":{"smallscreen":{"mode":"window_width","addSelected":false,"menuClasses":false,"hyperlinkClasses":false,"title":"Main menu"},"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}}},"urlIsAjaxTrusted":{"\/bai-viet\/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d":true,"\/bai-viet\/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d?destination=node\/429":true},"disqus":{"domain":"arduinovnn","url":"http:\/\/arduino.vn\/bai-viet\/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d","title":"L\u00e0m d\u1ef1 \u00e1n xe v\u1edbi module \u0111i\u1ec1u khi\u1ec3n \u0111\u1ed9ng c\u01a1 L293D ","identifier":"node\/429","language":"vi","sso":{"name":"C\u1ed9ng \u0111\u1ed3ng Arduino Vi\u1ec7t Nam","url":"http:\/\/arduino.vn\/user\/login?destination=disqus\/closewindow","logout":"http:\/\/arduino.vn\/user\/logout?destination=node\/429","width":800,"height":600,"button":"\/\/cdn.arduino.vn\/sites\/default\/files\/images\/logo_3.png","icon":"\/\/cdn.arduino.vn\/sites\/all\/themes\/arduino2016\/favicon.ico"},"api_key":"HYyUbnayRKyvJXL3JDIMXGwU073P5OvZt0TYdVd7urTp4SQGmjwJqKULyc2Oeow3","remote_auth_s3":"W10= 51c9205afefb16534ef1ef9e5301b0cc77faaf5e 1510022434"}});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen/js/html5-respond.js"></script>
+    <![endif]-->
+  <script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/count-data.js.tải xuống"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.b86d4f6eedbae580658ac980cc1aa322.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.8edffe1405dcc2d5eb5ee9d96a2866d1.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.329e132f404e98b8a5595dd712187b0e.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_mobile_overlay_active{height:100%;overflow:hidden;position:fixed;width:100%}.fb_shrink_active{opacity:1;transform:scale(1, 1);transition-duration:200ms;transition-timing-function:ease-out}.fb_shrink_active:active{opacity:.5;transform:scale(.75, .75)}</style></head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-429 node-type-article section-bai-viet disqus-processed" style="">
+  <div class="grid condensed">
+          <p id="skip-link">
+        <a href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+      </p>
+            
+
+  <div class="row">
+    <div class="cell">
+      <header id="navigation" class="app-bar fixed-top bg-teal" data-role="appbar">
+        <div class="container">
+          
+            <div class="region region-navigation">
+    <div id="block-superfish-1" class="">
+			<ul class="app-bar-menu small-dropdown"><li><div class="app-bar-element">
+              <a href="javascript:;" class="fg-white"><span class="mif-apps mif-2x"></span></a>
+              <div class="app-bar-drop-container bg-white fg-dark data-no-close overflow-visible" data-role="dropdown" style="width:400px;min-width: 200px;">
+                                  <div class="login-form-container padding10 bg-grayLighter"><form action="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d?destination=node/429" method="post" id="user-login-form" accept-charset="UTF-8" class="login-form"><div class="tabcontrol"><div class="form-item form-type-textfield form-item-name">
+  <p><label for="edit-name" class="sub-header">Tên người dùng <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control text"><span class="mif-user prepend-icon"></span><input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required"></div>
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <p><label for="edit-pass" class="sub-header">Mật khẩu <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control password"><span class="mif-lock prepend-icon"></span><input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required"></div>
+</div>
+<div class="item-list tabs"><ul><li class="first"><a href="http://arduino.vn/user/register" title="Tạo tài khoản người dùng mới.">Tạo tài khoản mới</a></li>
+<li class="last"><a href="http://arduino.vn/user/password" title="Yêu cầu gửi mật khẩu mới qua thư điện tử.">Yêu cầu mật khẩu mới</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-6_01PW2wfUBsMHljlUo1RkUTMvzTQH5dpqxbnr2zLrw">
+<input type="hidden" name="form_id" value="user_login_block">
+<div id="fbconnect_button" class="form-item form-type-item" style="text-align:center;">
+  <p style="display: none;"><label for="fbconnect_button" class="sub-header">Đăng nhập bằng Facebook </label></p>
+ <fb:login-button size="large" background="dark" v="3" data-scope="email" login_text="Connect" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1424185567850442&amp;container_width=0&amp;locale=vi_VN&amp;login_text=Connect&amp;scope=email&amp;sdk=joey&amp;size=large"><span style="vertical-align: bottom; width: 87px; height: 25px;"><iframe name="f1f2bea747dc0d4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:login_button Facebook Social Plugin" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/login_button.html" class="" style="border: none; visibility: visible; width: 87px; height: 25px;"></iframe></span></fb:login-button>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2" style="text-align:center;"><input type="submit" id="edit-submit--2" name="op" value="Đăng nhập" class="form-submit button success block-shadow-success text-shadow"></div><div style="text-align:center;"><input type="submit" id="edit-submit-google" name="op" value="" class="form-submit"></div></div></form></div>
+                              </div>
+          </div></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="0" data-flexorder="1"><a href="http://arduino.vn/" title=""><span class="mif-home"></span></a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="1" data-flexorder="2"><a href="http://arduino.vn/tham-khao" class="dropdown-toggle">Tham khảo</a><ul class="d-menu overflow-visible" data-role="dropdown"><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference/howto" title="">Tự học Arduino</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference/getting-started/step1">Học Arduino cần những gì?</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/gioi-thieu-ve-arduino" title="">Giới thiệu về Arduino</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/raspberry-pi" title="">Raspberry Pi</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/intel-galileo" title="">Intel Galileo</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/tags/intel-edison" title="">Intel Edison</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference">Tài liệu tham khảo</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/chuong-trinh-mau" class="dropdown-toggle">Chương trình mẫu</a><ul class="d-menu overflow-visible" data-role="dropdown"><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/chuong-trinh-mau/level-beginner-vo-long" title="">Beginner - Vỡ lòng</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/chuong-trinh-mau/level-intermediate-co-kien-thuc-co-ban" title="">Intermediate - Có kiến thức cơ bản</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/chuong-trinh-mau/level-advanced-nang-cao" title="">Advanced - Nâng cao</a></li></ul></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference/library" title="">Thư viện</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/reference/cac-loi-thuong-gap-tren-Arduino-va-cach-khac-phuc">Lỗi của Arduino ?</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/dien-tu-co-ban" title="">Điện tử cơ bản</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/lap-trinh-c" title="">Lập trình C</a></li></ul></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="2" data-flexorder="3"><a href="http://arduino.vn/nao-cung-lam" title="Nào cùng làm với cộng đồng Arduino" class="dropdown-toggle">Nào cùng làm!</a><ul class="d-menu overflow-visible" data-role="dropdown"><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/nao-cung-lam" title="">Khám phá thế giới dự án</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/tags/c-0" title="">C Sharp (C#)</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/nodejs" title="">NodeJS - IOT</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/VBLUno" title="">VBLUno</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan"><a href="http://arduino.vn/phan-loai-he-thong/hacking" title="">Hacking (Sẵn sàng chứ?)</a></li></ul></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="3" data-flexorder="4"><a href="http://arduino.vn/bai-viet/cach-chia-se">Đăng bài</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="4" data-flexorder="5"><a href="http://arduino.vn/bai-viet/tai-ve-cac-tai-nguyen">Tải về</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="5" data-flexorder="6"><a href="http://arduino.vn/cuoc-thi" title="">Cuộc thi</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="6" data-flexorder="7"><a href="http://arduino.vn/ve-chung-toi">Về chúng tôi</a></li><li class=" bg-hover-darkCyan bg-active-darkCyan" data-flexorderorigin="7" data-flexorder="8"><a href="http://arduino.vn/exam" title="">Bài tập</a></li></ul>  	<div class="app-bar-pullbutton automatic" style="display: none;"></div><div class="clearfix" style="width: 0;"></div><nav class="app-bar-pullmenu hidden flexstyle-app-bar-menu" style="display: none;"><ul class="app-bar-pullmenubar hidden app-bar-menu"><li><div class="app-bar-element">
+              <a href="javascript:;" class="fg-white"><span class="mif-apps mif-2x"></span></a>
+              <div class="app-bar-drop-container bg-white fg-dark data-no-close overflow-visible" data-role="dropdown" style="width:400px;min-width: 200px;">
+                                  <div class="login-form-container padding10 bg-grayLighter"><form action="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d?destination=node/429" method="post" id="user-login-form" accept-charset="UTF-8" class="login-form"><div class="tabcontrol"><div class="form-item form-type-textfield form-item-name">
+  <p><label for="edit-name" class="sub-header">Tên người dùng <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control text"><span class="mif-user prepend-icon"></span><input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required"></div>
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <p><label for="edit-pass" class="sub-header">Mật khẩu <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control password"><span class="mif-lock prepend-icon"></span><input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required"></div>
+</div>
+<div class="item-list tabs"><ul><li class="first"><a href="http://arduino.vn/user/register" title="Tạo tài khoản người dùng mới.">Tạo tài khoản mới</a></li>
+<li class="last"><a href="http://arduino.vn/user/password" title="Yêu cầu gửi mật khẩu mới qua thư điện tử.">Yêu cầu mật khẩu mới</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-6_01PW2wfUBsMHljlUo1RkUTMvzTQH5dpqxbnr2zLrw">
+<input type="hidden" name="form_id" value="user_login_block">
+<div id="fbconnect_button" class="form-item form-type-item" style="text-align:center;">
+  <p style="display: none;"><label for="fbconnect_button" class="sub-header">Đăng nhập bằng Facebook </label></p>
+ <fb:login-button size="large" background="dark" v="3" data-scope="email" login_text="Connect" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1424185567850442&amp;container_width=0&amp;locale=vi_VN&amp;login_text=Connect&amp;scope=email&amp;sdk=joey&amp;size=large"><span style="vertical-align: bottom; width: 87px; height: 25px;"><iframe name="f29841ca3307c08" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:login_button Facebook Social Plugin" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/login_button(1).html" class="" style="border: none; visibility: visible; width: 87px; height: 25px;"></iframe></span></fb:login-button>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2" style="text-align:center;"><input type="submit" id="edit-submit--2" name="op" value="Đăng nhập" class="form-submit button success block-shadow-success text-shadow"></div><div style="text-align:center;"><input type="submit" id="edit-submit-google" name="op" value="" class="form-submit"></div></div></form></div>
+                              </div>
+          </div></li></ul></nav></div>  </div>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell bg-grayLighter padding5">
+      <div class="header">
+        <div class="grid">
+          <div class="row cells12">
+            <div class="cell colspan2">
+              <div class="fg-teal">
+                <div class="logo">
+                                      <a href="http://arduino.vn/" title="Nhà"><img src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/logo.png"></a>
+                                  </div>
+              </div>
+            </div>
+            <div class="cell colspan10 header-right">
+                <div class="header__region region region-header">
+    <div id="block-search-form" class="block block-search first odd" role="search">
+			<form action="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d" method="post" id="search-block-form" accept-charset="UTF-8"><div><h3 class="fg-orange sub-header uppercase">Bạn đang tìm kiếm điều gì?</h3>
+<div data-role="input" class="input-control text full-size">
+	<input type="text" id="edit-search-block-form--2" name="search_block_form" value="" placeholder="Vút bay..." style="padding-right: 54px;">
+    <button class="button" type="submit"><span class="mif-search"></span></button>
+</div>
+<input type="hidden" name="form_build_id" value="form-dzW53u96cVZpUWxDMUDNVlEURsdKbWuIXAQneixRMaA">
+<input type="hidden" name="form_id" value="search_block_form">
+</div></form>  	</div><div id="block-views-tips-block" class="block block-views last even">
+			<div class="view view-tips view-id-tips view-display-id-block view-dom-id-894f0a0d64168e6e673766667bb74e13">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-7 views-row-odd">
+    <div class="text-right">
+	    <blockquote>
+	    	<h5 class="sub-alt-header">  
+  <div class="views-field views-field-body">        <div class="field-content"><p><strong>Bài viết truyền cảm hứng cho bạn<span style="color:#008080">?</span></strong> Hãy làm theo và đóng góp lại cho tác giả <a href="http://arduino.vn/node/add/results">tại đây</a>.</p>
+</div>  </div></h5>
+	    	<a href="http://arduino.vn/"><small class="fg-grayLight">Cộng đồng Arduino Việt Nam</small></a>
+	    </blockquote>
+	</div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  	</div>  </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="main">
+  
+  <div class="row">
+    <div class="cell">
+            <h2 class="element-invisible">Bạn đang ở đây</h2><ul class="breadcrumbs bg-teal fg-white"><li class="inline odd first fg-white" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><span class="icon mif-home"></span> <a href="http://arduino.vn/" itemprop="url"><span itemprop="title">Arduino.vn</span></a></li><li class="inline even fg-white" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://arduino.vn/nao-cung-lam" itemprop="url"><span itemprop="title">Nào cùng làm</span></a></li><li class="inline odd last fg-white" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">Làm dự án xe với module điều khiển động cơ L293D</span></li></ul>    </div>
+  </div>
+
+    <div class="row">
+    <div class="cell">
+      <div class="main-content">
+        <div class="grid">
+          <div class="row cells4">
+                        <div class="padding10 cell colspan3 rounded article full-article">
+                                          <h1 class="page__title title" id="page-title">Làm dự án xe với module điều khiển động cơ L293D </h1>
+                                                                                                  
+
+
+<article class="node-429 not-in-frontpage node node-article node-promoted view-mode-full clearfix" about="/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d" typeof="sioc:Item foaf:Document">
+<div class="truyen_cam_hung_link"><a href="http://arduino.vn/node/add/results?edit%5Bfield_post_reference%5D%5Bund%5D%5B0%5D%5Bnid%5D=L%C3%A0m%20d%E1%BB%B1%20%C3%A1n%20xe%20v%E1%BB%9Bi%20module%20%C4%91i%E1%BB%81u%20khi%E1%BB%83n%20%C4%91%E1%BB%99ng%20c%C6%A1%20L293D%20%20%5Bnid%3A%20429%5D">Bạn có một DỰ ÁN hay giống thế này? Chia sẻ nhé!</a></div>
+      <header>
+                  <span property="dc:title" content="Làm dự án xe với module điều khiển động cơ L293D " class="rdf-meta element-hidden"></span>
+              <p class="submitted text-secondary">
+                    <span property="dc:date dc:created" content="2015-05-27T15:01:56+07:00" datatype="xsd:dateTime" rel="sioc:has_creator"><a href="http://arduino.vn/users/ndt" title="Xem hồ sơ người dùng." class="username mif-user-md" xml:lang="" about="/users/ndt" typeof="sioc:UserAccount" property="foaf:name" datatype="">NDT</a> gửi vào <time pubdate="" datetime="2015-05-27T15:01:56+07:00">Thứ tư, 27 Tháng 5, 2015 - 15:01</time></span>        </p>
+        <div class="tabcontrol">
+          <ul class="links inline tabs"><li class="statistics_counter first last"><a href="http://arduino.vn/bai-viet/1190-huong-dan-cai-dat-va-su-dung-tu-z-cho-orange-pi-lite-cai-armbian-va-ket-noi-wifi-lan"><span class="mif-eye fg-blue" style="font-size: 12px">75658 lượt xem</span></a></li>
+</ul>        </div>
+      
+          </header>
+  
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Chắc hẳn từ lúc mới đầu nghiên cứu Arduino đến nay bạn đã từng có suy nghĩ muốn làm một dự án nho nhỏ nào đó để thỏa lòng đam mê hay tò mò của mình và dự án được đa số bạn thích thú hướng đến có lẽ là xe, xe điều khiển, xe dò đường... hay là một dự án to bự như kBot của admin Ngô Huỳnh Ngọc Khánh (ksp) ^^. Vậy làm thế nào để có thể điều khiển được các bánh xe, servo, động cơ bước cho "chiến xa" trong khi board arduino chỉ cho phép bạn xuất các tín hiệu điện HIGH, LOW<a href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l239d">!</a> Ở bài này mình xin giới thiệu đến các bạn một công cụ cực chất đó là shield điều khiển động cơ l293d, giúp bạn dễ dàng trong việc xử lý các thao tác điều khiển độc lập các motor của mình, nào ta bắt đầu thôi <img alt="devil" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/devil_smile.png" style="height: auto; width: 23px;" title="devil"> &nbsp;&nbsp;</p>
+<h2 class="rtecenter" id="index0"><a href="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1400_882105-1432712147-0-l239d-logo.jpg"><img alt="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1400_882105-1432712147-0-l239d-logo.jpg" style="border-style: solid; border-width: 0px; height: auto; width: 300px;"></a><a href="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1376_812105-1432712258-0-l239d-logo-sau.jpg"><img alt="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1376_812105-1432712258-0-l239d-logo-sau.jpg" style="height: auto; width: 300px;"></a></h2>
+<p class="rtecenter"><em><span style="color:#0000FF">Hình 1: Motor Shield Driver L293D mặt trên và mặt dưới</span></em></p>
+<h2 id="index1"><strong><span style="color:rgb(255, 0, 0); font-family:inherit">CHUẨN BỊ&nbsp;</span></strong></h2>
+<ol class="numeric-list"><li>1x board&nbsp;<a href="http://arduino.vn/bai-viet/42-arduino-uno-r3" style="font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: 1.5em; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 151, 156); text-decoration: none;" class="tag info fg-white" target="_blank">Arduino UNO R3</a>.</li>
+<li>1x motor driver shield L293D</li>
+<li>1x pin 9v và rắc nguồn nối với UNO</li>
+<li>x4 hộp số motor DC</li>
+<li><span style="font-family:inherit"><span style="color:rgb(0, 0, 0); font-family:inherit">1x&nbsp;<a href="http://k1.arduino.vn/img/2014/06/19/0/618_123105-1403179198-0-servo.200x150.jpg" style="font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: 1.5em; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 151, 156); text-decoration: none;" target="_blank" class="tag info fg-white">Micro Servo</a></span></span></li>
+<li><a href="http://machtudong.vn/image/cache/data/dung-cu-khac/cap/breadboard-cable-65-500x500.jpg" style="font-family: inherit; font-stretch: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: 1.5em; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 151, 156); text-decoration: none;" target="_blank" class="tag info fg-white">Dây cắm breadboard</a></li>
+</ol><h2 id="index2"><span style="color:rgb(255, 0, 0); font-family:inherit"><strong>GIỚI THIỆU VỀ MOTOR DRIVER SHIELD L293D</strong></span></h2>
+<h3 id="index3"><strong><span style="color:rgb(0, 128, 0)">Motor Driver Shield L293D là shield mở rộng dành cho Arduino</span></strong></h3>
+<p><strong><span style="color:#000000">Motor Driver Shield L293D</span><span style="color:rgb(0, 128, 0)"> </span></strong>tương thích tốt với board Arduino Uno&nbsp;R3, Arduino Leonado, Arduino Mega&nbsp;2560.</p>
+<p><strong><span style="color:rgb(0, 0, 0)">Motor Driver Shield L293D</span></strong>&nbsp;sử dụng 2 IC cầu H&nbsp;<strong><a href="http://machtudong.vn/sanpham/l293d-cau-h.html" style="margin: 0px; padding: 0px; border: 0px; cursor: pointer; color: rgb(0, 153, 204); font-size: 12px; text-decoration: none;">L</a></strong><a href="http://machtudong.vn/sanpham/l293d-cau-h.html" class="tag info fg-white" target="_blank" style="text-decoration: none;"><strong>293D</strong></a>&nbsp;và 1 IC logic 74HC595&nbsp;điều khiển. Do&nbsp;đó, shield này có thể điều khiển nhiều loại motor khác nhau với mức áp lên đến 36V, dòng tối đa 600mA mỗi kênh điều khiển.</p>
+<blockquote><p><strong>L293D </strong>là một IC cầu H tương tự như IC <strong>SN754410</strong>. Các bạn có thể tham khảo thêm về cách hoạt động của cầu H tại bài viết&nbsp;<a href="http://arduino.vn/bai-viet/281-mach-cau-h-va-dieu-khien-dong-co-voi-sn754410">Mạch cầu H và điều khiển động cơ với SN754410</a>.&nbsp;<strong><span style="color:rgb(0, 0, 0)">Motor Driver Shield L293D</span></strong><span style="color:rgb(0, 0, 0)">&nbsp;tích hợp sẵn 2 IC L293D giúp bạn có thể dễ dàng thao tác với IC hơn.</span></p>
+</blockquote>
+<h3 id="index4"><strong><span style="color:#008000">Các thành phần Motor Driver Shield L293D có thể điều khiển</span></strong></h3>
+<ul class="simple-list"><li><span style="color:rgb(255, 140, 0)"><strong>2 servo</strong></span>.</li>
+<li><strong><span style="color:rgb(255, 140, 0)">4 motor điện DC</span></strong>&nbsp;(M1, M2, M3, M4) theo các hướng khác nhau (mỗi motor có thể chạy với 1 hướng tới/lùi bất kì) thông qua 4 cầu H của L293D dòng 600mA (cực đại 1.2A).</li>
+<li><span style="color:rgb(255, 140, 0)"><strong>2 stepper motor</strong></span>&nbsp;loại đơn cực (unipolar) hoặc lưỡng cực (bipolar).</li>
+</ul><p>Motor driver shield L293D có sẵn các điện trở nối GND nhằm tránh các motor tự quay lúc khởi động và&nbsp;nút RESET để khởi động lại board Arduino mà nó đang gắn vào.</p>
+<h3 id="index5"><strong><span style="color:rgb(0, 128, 0)">Các chân trên Shield được kết nối với board Arduino như sau</span></strong></h3>
+<ul class="simple-list"><li>2 dây điều khiển 2 servo kết nối với chân số 9 và 10. Nguồn nuôi lấy trực tiếp từ board Arduino (nguồn 5V).</li>
+<li>Motor 1 nối với chân 11</li>
+<li>Motor 2 nối với chân 3</li>
+<li>Motor 3 nối với chân 5</li>
+<li>Motor 4 nối với chân 6</li>
+</ul><p>Chân 4, 7, 8, 12 dùng điều khiển motor thông qua IC 74HC595</p>
+<p>Các chân chưa sử dụng: 2, 13, A0, A1, A2, A3, A4, A5</p>
+<p>Trên shield có 1 jumper màu vàng&nbsp;<span style="color:rgb(255, 215, 0)"><strong>PWR&nbsp;</strong></span>được sử dụng: nếu kết nối nguồn ngoài cho board Arduino thông qua jack DC (dùng pin 9V chẳng hạn) thì nguồn nuôi motor được lấy luôn từ jack này, không cần nối nguồn với&nbsp;<strong><span style="color:rgb(0, 0, 255)">EXT_PWR</span></strong>. Nếu ngắt jumper, bạn cần nối 1 nguồn riêng vào terminal&nbsp;<strong><span style="color:rgb(0, 0, 255)">EXT_PWR</span>&nbsp;</strong>để nuôi motor.</p>
+<blockquote><p><strong>Cảnh báo !</strong></p>
+<p>Khi chạy thử, bạn không nên để motor bì ì vì lúc này cường độ dòng điện sẽ tăng cao, dễ làm cháy nguồn nuôi. Nếu cần, hãy cấp nguồn ngoài có công suất cao cho nó (hãy quên pin tiểu và pin vuông 9V đi).</p>
+</blockquote>
+<h2 id="index6"><span style="color:#FF0000"><strong>ĐIỀU KHIỂN MOTOR DC</strong></span></h2>
+<h3 id="index7"><span style="color:#FF8C00"><strong>KẾT NỐI</strong></span></h3>
+<p>Trước tiên, bạn sẽ ghép board Arduino UNO R3 và Motor Shield Driver L293D lại với nhau như hình 2.</p>
+<p class="rtecenter"><strong>&nbsp;</strong><a href="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1403_882105-1432712981-0-l239d-arduino-11111.200x150.png"><img alt="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1403_882105-1432712981-0-l239d-arduino-11111.200x150.png" style="height: auto; line-height: 27.7333px; width: 200px;"></a></p>
+<p class="rtecenter"><em><span style="color:#0000FF">Hình 2: Ráp nối mạch Arduino UNO R3 và&nbsp;Motor Shield Driver L293D</span></em></p>
+<p>Sau để kết nối với một động cơ, chỉ cần hàn hai dây để các thiết bị đầu cuối và sau đó kết nối chúng vào một trong hai&nbsp;<strong>M1, M2, M3,</strong>hoặc&nbsp;<strong>M</strong><strong>4,&nbsp;</strong>ở đây mình test thử với chân<strong>&nbsp;M2</strong>.</p>
+<p class="rtecenter"><a href="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1380_812105-1432714546-0-tam.jpg"><img alt="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1380_812105-1432714546-0-tam.jpg" style="height: auto; width: 300px;"></a></p>
+<p class="rtecenter"><em><span style="color:#0000FF">Hình 3: Lắp động cơ vào shield.</span></em></p>
+<h3 id="index8"><span style="color:#FF8C00"><strong>LẬP TRÌNH</strong></span></h3>
+<blockquote><p><em>Đầu tiên, các bạn cần tải và cài đặt thư viện&nbsp;</em><strong>AFMotor&nbsp;</strong><em>trước. Link download&nbsp;</em><a href="http://k2.arduino.vn/img/2015/05/27/0/1406_882450-1432722684-0-af-motor.zip" style="font-family: Georgia, Times, &quot;Times New Roman&quot;, serif; font-style: italic; line-height: 16.64px; text-align: justify; text-decoration: none;" class="tag info fg-white" target="_blank">tại đây</a></p>
+</blockquote>
+<pre class="prettyprint linenums lang-c_pp prettyprinted" style=""><ol class="linenums numeric-list"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;AFMotor.h&gt;</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">AF_DCMotor motor</span><span class="pun">(</span><span class="lit">2</span><span class="pun">,</span><span class="pln"> MOTOR12_64KHZ</span><span class="pun">);</span><span class="pln"> </span><span class="com">// tạo động cơ #2, 64KHz pwm  </span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="kwd">void</span><span class="pln"> setup</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">  </span></li><li class="L5"><span class="pln">    </span></li><li class="L6"><span class="pln">    </span><span class="typ">Serial</span><span class="pun">.</span><span class="kwd">begin</span><span class="pun">(</span><span class="lit">9600</span><span class="pun">);</span><span class="pln">           </span><span class="com">// mở cổng Serial monitor 9600 bps </span></li><li class="L7"><span class="pln">    </span></li><li class="L8"><span class="pln">    </span><span class="typ">Serial</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Hello my racing"</span><span class="pun">);</span><span class="pln">     </span></li><li class="L9"><span class="pln">    </span></li><li class="L0"><span class="pln">    motor</span><span class="pun">.</span><span class="pln">setSpeed</span><span class="pun">(</span><span class="lit">255</span><span class="pun">);</span><span class="pln">     </span><span class="com">// chọn tốc độ maximum 255`/255</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pun">}</span><span class="pln">  </span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="kwd">void</span><span class="pln"> loop</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">  </span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pln">    </span><span class="typ">Serial</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="str">"tien"</span><span class="pun">);</span><span class="pln">     </span></li><li class="L7"><span class="pln">    </span></li><li class="L8"><span class="pln">    motor</span><span class="pun">.</span><span class="pln">run</span><span class="pun">(</span><span class="pln">FORWARD</span><span class="pun">);</span><span class="pln">      </span><span class="com">// động cơ tiến </span></li><li class="L9"><span class="pln">    </span></li><li class="L0"><span class="pln">    delay</span><span class="pun">(</span><span class="lit">1000</span><span class="pun">);</span><span class="pln">    </span></li><li class="L1"><span class="pln">    </span></li><li class="L2"><span class="pln">    </span><span class="typ">Serial</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="str">"lui"</span><span class="pun">);</span><span class="pln">  </span></li><li class="L3"><span class="pln">    </span></li><li class="L4"><span class="pln">    motor</span><span class="pun">.</span><span class="pln">run</span><span class="pun">(</span><span class="pln">BACKWARD</span><span class="pun">);</span><span class="pln">     </span><span class="com">// động cơ lùi  </span></li><li class="L5"><span class="pln">    </span></li><li class="L6"><span class="pln">    delay</span><span class="pun">(</span><span class="lit">1000</span><span class="pun">);</span><span class="pln">     </span></li><li class="L7"><span class="pln">    </span></li><li class="L8"><span class="pln">    </span><span class="typ">Serial</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="str">"tack"</span><span class="pun">);</span><span class="pln">  </span></li><li class="L9"><span class="pln">    </span></li><li class="L0"><span class="pln">    motor</span><span class="pun">.</span><span class="pln">run</span><span class="pun">(</span><span class="pln">RELEASE</span><span class="pun">);</span><span class="pln">      </span><span class="com">//   dừng động cơ</span></li><li class="L1"><span class="pln">    </span></li><li class="L2"><span class="pln">    delay</span><span class="pun">(</span><span class="lit">1000</span><span class="pun">);</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="pun">}</span></li></ol></pre><h2 id="index9"><span style="color:#FF0000"><strong>ĐIỀU KHIỂN SERVO</strong></span></h2>
+<h3 id="index10"><span style="color:#FF8C00"><strong>KẾT NỐI</strong></span></h3>
+<p>Trên shield có 2 vị trí để nối tương ứng với 2 servo, bạn chỉ việc cắm theo đúng thứ tự các chân Vcc (+), GND (-), Signal (S)</p>
+<p class="rtecenter"><a href="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1381_812105-1432719231-0-tam2.jpg"><img alt="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/1381_812105-1432719231-0-tam2.jpg" style="height: auto; width: 400px;"></a></p>
+<h3 id="index11"><span style="color:#FF8C00"><strong>LẬP TRÌNH</strong></span></h3>
+<pre class="prettyprint linenums lang-c_pp prettyprinted" style=""><ol class="linenums numeric-list"><li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;AFMotor.h&gt;</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;Servo.h&gt;</span><span class="pln"> </span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="kwd">int</span><span class="pln"> i</span><span class="pun">;</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="typ">Servo</span><span class="pln"> servo1</span><span class="pun">;</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="kwd">void</span><span class="pln"> setup</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">  </span></li><li class="L9"><span class="pln">&nbsp;</span></li><li class="L0"><span class="pln">    </span><span class="typ">Serial</span><span class="pun">.</span><span class="kwd">begin</span><span class="pun">(</span><span class="lit">9600</span><span class="pun">);</span><span class="pln">           </span><span class="com">// mở cổng monitor 9600 bps  </span></li><li class="L1"><span class="pln">    </span></li><li class="L2"><span class="pln">    </span><span class="typ">Serial</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Test servo!"</span><span class="pun">);</span><span class="pln">     </span></li><li class="L3"><span class="pln">    </span></li><li class="L4"><span class="pln">    servo1</span><span class="pun">.</span><span class="pln">attach</span><span class="pun">(</span><span class="lit">9</span><span class="pun">);</span><span class="pln">    </span><span class="com">// Khai báo chân servo</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pun">}</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="kwd">void</span><span class="pln"> loop</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L9"><span class="pln">&nbsp;</span></li><li class="L0"><span class="pln">    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">&lt;</span><span class="lit">255</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">   </span><span class="com">// chạy từ 0 đến 255 giá trị     </span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">        servo1</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);</span><span class="pln">    </span></li><li class="L3"><span class="pln">        </span></li><li class="L4"><span class="pln">        delay</span><span class="pun">(</span><span class="lit">3</span><span class="pun">);</span><span class="pln"> </span><span class="com">// đợi 3 mili dây</span></li><li class="L5"><span class="pln">    </span><span class="pun">}</span><span class="pln">    </span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">    </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">255</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">!=</span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">--)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L8"><span class="pln">        servo1</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">i</span><span class="pun">-</span><span class="lit">255</span><span class="pun">);</span><span class="pln"> </span></li><li class="L9"><span class="pln">        delay</span><span class="pun">(</span><span class="lit">3</span><span class="pun">);</span><span class="pln">  </span></li><li class="L0"><span class="pln">    </span><span class="pun">}</span><span class="pln">   </span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pun">}</span></li></ol></pre><p><span style="color:#FF8C00"><span style="font-size:16px"><strong>KẾT LUẬN</strong></span></span></p>
+<blockquote><p>Bạn chỉ việc kết hợp 2 đoạn code nho nhỏ ở trên thì có thể tạo ra một dự án xe cho riêng mình rồi. Bài này mình chỉ giới thiệu về mạch điều khiển động cơ này, bài sau chúng ta cùng làm một dự án thật sự: Robot dò đường bằng cảm biên siêu âm nhé. Chúc bạn thành công và có một project pro cho riêng mình !!</p>
+</blockquote>
+</div></div></div><div class="form-item form-type-item">
+  <p><label class="sub-header">Rate node </label></p>
+ <div class="rate-widget-1 rate-widget clear-block rate-user rate-widget-thumbs_up rate-94ea987b3d63fb8e696de0e41911ee8c rate-node-429-1-1 rate-processed" id="rate-node-429-1-1"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-1" rel="nofollow" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d?rate=Tf08xmnpZHHpRxheGWkPXxZQmhpoxSmQrsp0sWLHVfE" title="lên">lên</a><div class="rate-info">46 thành viên đã đánh giá bài viết này hữu ích.</div></div>
+</div>
+  <div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-above"><div class="field-label">Từ khóa:&nbsp;</div><div class="field-items"><div class="field-item even tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/arduino" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">arduino</a></div><div class="field-item odd tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/do-duong" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">dò đường</a></div><div class="field-item even tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/l293d" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">l293d</a></div><div class="field-item odd tag success margin5" rel="dc:subject"><a href="http://arduino.vn/tags/dieu-khien-dong-co" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">điều khiển động cơ</a></div></div></div>  <div class="field field-name-field-chuyen-muc field-type-taxonomy-term-reference field-label-above"><div class="field-label">Chuyên mục:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="http://arduino.vn/chuong-trinh-mau/level-beginner-vo-long" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Level: Beginner - Vỡ lòng</a></div><div class="field-item odd"><a href="http://arduino.vn/nao-cung-lam" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Nào cùng làm!</a></div></div></div>  
+</article>
+<div id="block-views-5bc6b1a48db1f93a690eb9d673ebdab6" class="block block-views even">
+			<div class="view view-clone-of-b-i-li-n-quan-b-i-ti-p-trong-m-t-danh-s-ch view-id-clone_of_b_i_li_n_quan_b_i_ti_p_trong_m_t_danh_s_ch view-display-id-block view-dom-id-aa65f828863e1a75aa7777577fc6ad39">
+            <div class="view-header">
+      <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+.full-render div.frame div {height: 130px !important;}
+.full-render div.element-selected div.frame div {height: 122px !important;}
+.full-render div.image-overlay h3 {font-size:12px !important;}
+.full-render .element-selected {
+    border: 4px #FF8C00 solid;
+}
+.full-render .element-selected:after {
+    border-top: 28px solid #FF8C00;
+}
+.view-clone-of-b-i-li-n-quan-b-i-ti-p-trong-m-t-danh-s-ch .views-field-title {
+    font-size: 24px;
+    color: #FF8C00;
+    font-weight: bold;
+}
+
+
+/*--><!]]>*/
+</style>    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Hướng dẫn sử dụng các loại module</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><blockquote><p>Nếu bạn đang muốn thực hiện hóa ý tưởng của mình mà không biết dùng loại module nào? Hãy tham khảo các module trong danh sách sau</p>
+</blockquote></div>  </div>  
+  <div class="views-field views-field-field-danh-sach-bai-viet">        <div class="field-content"><div class="grid full-render"><div class="row cells7"><div class="cell"><a href="http://arduino.vn/bai-viet/214-cach-lap-trinh-nhieu-con-led-7-doan-loai-don" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/10/08/0/3209_882450-1475942550-0-1806-812450-1451613449-0-seven-segment-display-animated.gif&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Cách lập trình nhiều con LED 7 đoạn (loại đơn)</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/180-gioi-thieu-cam-bien-anh-sang-va-cach-lap-trinh" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2014/06/17/0/561_812105-1403007394-0-mach-cam-bien-anh-sang-300x250.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Giới thiệu cảm biến ánh sáng và cách lập trình</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/233-su-dung-cam-bien-khoang-cach-hc-sr04" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2014/07/01/0/601_8121-1404217627-0-hcsr04-3-500x500.399x399.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Sử dụng cảm biến khoảng cách HC-SR04</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/274-cam-bien-mua-voi-arduino" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2014/07/24/0/654_8121-1406176658-0-dglmcf8i45dkps3thd7c.400x267.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Cảm biến mưa với Arduino</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/522-pir-sensor-alarm" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2015/11/03/0/1659_88220-1446562470-0-hqdefault.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">PIR sensor alarm - Cách dùng cảm biến chuyển động</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/531-dieu-khien-lcd-bang-arduino-uno" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2015/11/10/0/1663_8122246-1447140882-0-lcd-bb.750x578.350x270.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển LCD bằng Arduino UNO</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/536-lap-trinh-lcd-1602-voi-chip-74hc595" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2015/11/17/0/1721_1233522-1447715173-0-lcd-1602.200x150.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Lập trình LCD 1602 với chip 74HC595</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/91-doc-nhiet-do-do-am-va-xuat-ra-man-hinh-lcd" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2014/05/27/0/479_88220-1401181018-0-dht-11.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Đọc nhiệt độ - độ ẩm và xuất ra màn hình LCD</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/tutorial/1345-nokia5110-huong-dan-su-dung-va-chia-se-thu-vien-hoang-sa" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2016/11/24/0/3330_81215469-1479990346-0-20161124-192939-unnamed-road.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">NOKIA5110 | Hướng dẫn sử dụng và chia sẻ thư viện HOÀNG SA</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/tutorial/1319-st7565-huong-dan-su-dung-glcd-st7565-homephone-va-chia-se-thu-vien" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/11/05/0/3249_88215469-1478332147-0-truc-toa-do.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">ST7565 | Hướng dẫn sử dụng glcd ST7565 homephone và chia sẻ thư viện</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/302-module-relay-cach-su-dung-ro-le-va-nhung-ung-dung-hay-cua-no" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2014/09/02/0/814_1231-1409633786-0-module-relay.400x323.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Module Relay - Cách sử dụng rơ le và những ứng dụng hay của nó</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/289-truyen-tin-hieu-voi-module-radio-frequence-433mhz" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2014/08/14/0/752_12381-1408019249-0-download.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Truyền tín hiệu với module radio frequence 433Mhz</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/562-su-dung-module-nrf24l01" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2015/12/30/0/1799_8823522-1451430458-0-687474703a2f2f6563782e696d616765732d616d617a6f6e2e636f6d2f696d616765732f492f3531392d5673577949504c2e5f53593330305f2e6a7067.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Sử dụng Module NRF24L01 - Thu phát sóng vô tuyến 2.4GHz với Arduino</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/333-dieu-khien-arduino-thong-qua-bluetooth-bang-dien-thoai-android" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2014/11/14/0/814_882662-1415938508-0-untitled-1.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển Arduino thông qua Bluetooth bằng điện thoại Android</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/436-mot-cach-tiep-can-khac-voi-song-vo-tuyen-315-hay-433mhz" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2015/06/30/0/1414_812450-1435629354-0-rx315mhz-ic-2-500x500.400x400.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Một cách tiếp cận khác với sóng vô tuyến 315 hay 433Mhz</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/209-dieu-khien-toc-do-motor-dc" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2014/06/23/0/581_88281-1403528202-0-download.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển tốc độ Motor DC</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d" target="_blank"><div class="image-container image-format-square element-selected" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2015/05/27/0/1401_882105-1432712627-0-xe-cat.200x150.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Làm dự án xe với module điều khiển động cơ L293D </h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/181-gioi-thieu-servo-va-cach-dieu-khien-bang-bien-tro" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2014/06/19/0/618_123105-1403179198-0-servo.200x150.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Giới thiệu Servo và cách điều khiển bằng biến trở</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/541-sdcard-breakout-board-cach-dung-mach-doc-ghi-trong-du-su-dung-am-thanh" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2015/11/27/0/1748_8124688-1448638060-0-bk-sdcard.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">SDcard breakout board - Cách dùng mạch đọc ghi thẻ trong dự án sử dụng âm thanh</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/369-giao-tiep-i2c-va-su-dung-module-realtime-clock-ds1307" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2015/02/08/0/919_12381-1423393619-0-20120519140128202.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Giao tiếp I2C và sử dụng module Realtime clock DS1307 (module RTC)</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/464-dieu-khien-mach-arduino-thong-qua-wifi-su-dung-mach-xbee" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2015/08/11/0/1501_8123235-1439264306-0-2015-08-11-11.36.58.400x400.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển mạch Arduino thông qua Wifi sử dụng mạch XBee. </h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/256-hien-thi-hinh-anh-voi-led-matrix-8x8" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2014/07/11/0/624_88281-1405027504-0-images.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Hiển thị hình ảnh với LED MATRIX 8x8</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/1231-ket-noi-voi-esp8266-thuan-voi-board-mo-rong-va-ket-noi-voi-cp2102" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/09/11/0/3137_88212621-1473594848-0-esp-12.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Kết nối với ESP8266 thuần với board mở rộng và kết nối với CP2102</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/1172-lap-trinh-esp8266-bang-arduino-ide" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/08/15/0/3075_1234656-1471258090-0-wifi-serial-transceiver-module.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Lập trình ESP8266 bằng Arduino IDE</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/1171-dieu-khien-thiet-bi-qua-web-sever-voi-esp8266-khong-can-arduino" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/08/15/0/3075_1234656-1471258090-0-wifi-serial-transceiver-module.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển thiết bị qua Web Sever với ESP8266 không cần Arduino</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/951-gioi-thieu-ethernet-shield-ung-dung-dieu-khien-thiet-bi-o-moi-noi-tren-gioi-khi-co" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/07/04/0/2639_1234301-1467638715-0-ethernetshield-500x500.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Giới thiệu ethernet shield - ứng dụng điều khiển thiết bị ở mọi nơi trên thế giới khi có internet</h3></div></div></a></div></div></div></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content">Làm xe điều khiển</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><blockquote><p>Các bài viết tổng hợp về xe điều khiển từ xa, trải nghiệm ngay, bạn nhé. Các bài viết được tổng hợp đầy đủ, bạn không cần biết quá nhiều về Arduino hay tự động hóa, nhưng vẫn có thể làm được đó. Thử ngay!</p>
+</blockquote></div>  </div>  
+  <div class="views-field views-field-field-danh-sach-bai-viet">        <div class="field-content"><div class="grid full-render"><div class="row cells7"><div class="cell"><a href="http://arduino.vn/bai-viet/639-du-xe-dieu-khien-tu-xa-qua-bluetooth" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/02/17/0/1965_8827353-1455705108-0-20160214-230539.200x150.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Dự án xe điều khiển từ xa qua bluetooth</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/665-lam-xe-dieu-khien-tu-xa-qua-wifi-dieu-khien-bang-app-android-va-pcjava" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/02/27/0/2118_1237674-1456549931-0-2016-02-27-11.59.54.750x422.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Làm xe điều khiển từ xa qua Wifi, điều khiển bằng app Android và PC(Java)</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d" target="_blank"><div class="image-container image-format-square element-selected" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2015/05/27/0/1401_882105-1432712627-0-xe-cat.200x150.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Làm dự án xe với module điều khiển động cơ L293D </h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/973-tu-lam-xe-dieu-khien-tu-xa-bang-remote-tv-dieu-khien-xe-bang-hong-ngoai-kho-hay-de" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/07/12/0/2668_12310535-1468303587-0-daidien.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Tự làm Xe điều khiển từ xa bằng Remote TV - Điều khiển xe bằng Hồng Ngoại khó hay dễ?</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/657-huong-dan-su-dung-appinventor-lap-trinh-ung-dung-dieu-khien-xe-qua-bluetooth-ma-khong" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k3.arduino.vn/img/2016/02/22/0/2062_8127353-1456077254-0-ai-avatar.png&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Hướng dẫn sử dụng AppInventor - Lập trình ứng dụng điều khiển xe qua bluetooth mà không cần code</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/654-lam-xe-dieu-khien-tu-xa-bang-bluetooth-dieu-khien-bang-android-voi-app-inventor" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/02/21/0/2076_123450-1456020249-0-2041-8125029-1455995239-0-16.750x563.400x300.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Làm xe điều khiển từ xa bằng Bluetooth - Điều khiển bằng Android với App Inventor</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/1246-dieu-khien-toy-car-arduino-esp8266-smartphone" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k1.arduino.vn/img/2016/09/15/0/3204_12313472-1473919780-0-screenshot-2016-09-15-13-11-33.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Điều khiển toy car by arduino esp8266 smartphone</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/660-xe-dieu-khien-bang-tay-game-dual-shock3-thong-qua-bluetooth" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/02/23/0/2073_8827423-1456244207-0-dsc-1006.750x562.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Xe điều khiển bằng tay game Dual Shock3 thông qua Bluetooth</h3></div></div></a></div><div class="cell"><a href="http://arduino.vn/bai-viet/678-xe-dieu-khien-tu-xa-drift-su-dung-nrf24l01-ket-hop-voi-hoodloader2-de-dam-bao-su-truyen" target="_blank"><div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 170px; border-radius: 0px; background-image: url(&#39;http://k2.arduino.vn/img/2016/03/05/0/2134_8824913-1457184643-0-p-20160305-202648-bf.450x253.jpg&#39;); background-size: cover; background-repeat: no-repeat;"></div></div><div class="image-overlay"><h3 style="font-size:15.54px;">Xe điều khiển từ xa (DRIFT) sử dụng NRF24L01 - Kết hợp với Hoodloader2 để đảm bảo sự truyền nhận THỜI GIAN THỰC</h3></div></div></a></div></div></div></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  	</div><div id="block-fblikebutton-fblikebutton-dynamic-block" class="block block-fblikebutton odd">
+			
+<iframe src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/like.html" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 450px; height: 80px; " allowtransparency="true"></iframe>
+  	</div><div id="block-views-b-i-li-n-quan-block" class="block block-views even">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Bài liên quan</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div class="view view-b-i-li-n-quan view-id-b_i_li_n_quan view-display-id-block view-dom-id-0994b788e803b2cb4d52f66ec5ba45d6">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul class="simple-list">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://arduino.vn/bai-viet/1134-gioi-thieu-ve-arduino-m0">Giới thiệu về Arduino M0</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://arduino.vn/bai-viet/561-cuoc-thi-sang-tao-voi-arduinovn-creative-contest-arduinovn-cca">Cuộc thi Sáng tạo với Arduino.vn - Creative Contest with Arduino.VN (CCA)</a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://arduino.vn/bai-viet/1142-lap-trinh-arduino-khong-can-code-voi-visuino-phan-1-gioi-thieu-ve-visuino">Lập trình Arduino không cần code với Visuino - Giới thiệu về Visuino - một cách làm khác</a></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://arduino.vn/bai-viet/1018-fiat-lux-hay-co-anh-sang-phan-3-den-tu-ky-mood-lamp-voi-neopixel-ws2812">"Fiat Lux - Hãy có ánh sáng": (Phần 3) Đèn tự kỷ (mood lamp) với neopixel WS2812</a></span>  </div></li>
+          <li class="views-row views-row-5 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://arduino.vn/bai-viet/562-su-dung-module-nrf24l01">Sử dụng Module NRF24L01 - Thu phát sóng vô tuyến 2.4GHz với Arduino</a></span>  </div></li>
+          <li class="views-row views-row-6 views-row-even views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://arduino.vn/bai-viet/181-gioi-thieu-servo-va-cach-dieu-khien-bang-bien-tro">Giới thiệu Servo và cách điều khiển bằng biến trở</a></span>  </div></li>
+      </ul></div>    </div>
+  
+      <div class="item-list"><ul class="pager tabs"><li class="pager-previous first">&nbsp;</li>
+<li class="pager-current">1 trên 17</li>
+<li class="pager-next last"><a title="Đến trang sau" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d?page=1">sau ›</a></li>
+</ul></div>  
+  
+  
+  
+  
+</div>		    </div>
+		</div>
+	</div><div id="block-views-inspire-project-views-block" class="block block-views odd">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Các dự án được truyền cảm hứng</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div class="view view-inspire-project-views view-id-inspire_project_views view-display-id-block view-dom-id-2902f1d8d7102b0c6a790ca3b6866610">
+        
+  
+  
+      <div class="view-empty">
+      <p>Select any filter and click on Apply to see results</p>
+    <div class="tabcontrol"><ul class="tabs bg-orange"><li id="truyen_cam_hung"><a href="http://arduino.vn/node/add/results?edit%5Bfield_post_reference%5D%5Bund%5D%5B0%5D%5Bnid%5D=L%C3%A0m%20d%E1%BB%B1%20%C3%A1n%20xe%20v%E1%BB%9Bi%20module%20%C4%91i%E1%BB%81u%20khi%E1%BB%83n%20%C4%91%E1%BB%99ng%20c%C6%A1%20L293D%20%20%5Bnid%3A%20429%5D" class="fg-white">Bạn có một DỰ ÁN hay giống thế này? Chia sẻ nhé!</a></li></ul></div></div>
+  
+  
+  
+  
+  
+  
+</div>		    </div>
+		</div>
+	</div><div id="block-views-cac-bai-viet-cung-tac-gia-block" class="block block-views even">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Các bài viết cùng tác giả</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div class="view view-cac-bai-viet-cung-tac-gia view-id-cac_bai_viet_cung_tac_gia view-display-id-block view-dom-id-820d94663a0ba8ae2b23a0b1e71fb1ab">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <article class="node-1190 not-in-frontpage node node-tutorial node-promoted node-teaser clearfix" about="/bai-viet/1190-huong-dan-cai-dat-va-su-dung-tu-z-cho-orange-pi-lite-cai-armbian-va-ket-noi-wifi-lan" typeof="sioc:Item foaf:Document">
+<div class="truyen_cam_hung_link"><a href="http://arduino.vn/node/add/results?edit%5Bfield_post_reference%5D%5Bund%5D%5B0%5D%5Bnid%5D=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20c%C3%A0i%20%C4%91%E1%BA%B7t%20v%C3%A0%20s%E1%BB%AD%20d%E1%BB%A5ng%20t%E1%BB%AB%20A-Z%20cho%20Orange%20Pi%20Lite%20-%20C%C3%A0i%20Armbian%20v%C3%A0%20k%E1%BA%BFt%20n%E1%BB%91i%20wifi%20l%E1%BA%A7n%20%C4%91%E1%BA%A7u%20%5Bnid%3A%201190%5D">Bạn có một DỰ ÁN hay giống thế này? Chia sẻ nhé!</a></div>
+      <header>
+                    <h2 class="header" id="index12"><a class="fg-orange" href="http://arduino.vn/bai-viet/1190-huong-dan-cai-dat-va-su-dung-tu-z-cho-orange-pi-lite-cai-armbian-va-ket-noi-wifi-lan">Hướng dẫn cài đặt và sử dụng từ A-Z cho Orange Pi Lite - Cài Armbian và kết nối wifi lần đầu</a></h2>
+            <span property="dc:title" content="Hướng dẫn cài đặt và sử dụng từ A-Z cho Orange Pi Lite - Cài Armbian và kết nối wifi lần đầu" class="rdf-meta element-hidden"></span>
+              <p class="submitted text-secondary">
+                    <span property="dc:date dc:created" content="2016-08-23T10:40:20+07:00" datatype="xsd:dateTime" rel="sioc:has_creator"><a href="http://arduino.vn/users/ndt" title="Xem hồ sơ người dùng." class="username mif-user-md" xml:lang="" about="/users/ndt" typeof="sioc:UserAccount" property="foaf:name" datatype="">NDT</a> gửi vào <time pubdate="" datetime="2016-08-23T10:40:20+07:00">Thứ ba, 23 Tháng 8, 2016 - 10:40</time></span>        </p>
+        <div class="tabcontrol">
+          <ul class="links inline tabs"><li class="node-readmore first" style="display: none;"><a href="http://arduino.vn/bai-viet/1190-huong-dan-cai-dat-va-su-dung-tu-z-cho-orange-pi-lite-cai-armbian-va-ket-noi-wifi-lan" rel="tag" title="Hướng dẫn cài đặt và sử dụng từ A-Z cho Orange Pi Lite - Cài Armbian và kết nối wifi lần đầu">Xem thêm<span class="element-invisible"> về Hướng dẫn cài đặt và sử dụng từ A-Z cho Orange Pi Lite - Cài Armbian và kết nối wifi lần đầu</span></a></li>
+<li class="disqus_comments_num"><a href="http://arduino.vn/bai-viet/1190-huong-dan-cai-dat-va-su-dung-tu-z-cho-orange-pi-lite-cai-armbian-va-ket-noi-wifi-lan#disqus_thread" data-disqus-identifier="node/1190">6 bình luận</a></li>
+<li class="statistics_counter last"><a href="http://arduino.vn/bai-viet/1190-huong-dan-cai-dat-va-su-dung-tu-z-cho-orange-pi-lite-cai-armbian-va-ket-noi-wifi-lan"><span class="mif-eye" style="font-size: 12px">7938 lượt xem</span></a></li>
+</ul>        </div>
+      
+          </header>
+  
+  <div class="field field-name-field-avatar field-type-kImageManager field-label-hidden"><div class="field-items"><div class="field-item even padding10 image-container bordered float-left"><img src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/3105_123105-1471883219-0-123.jpg" style="width: 200px; height: auto; max-width: 170px;">
+</div></div></div><div class="field field-name-field-description field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Mục đích: Đây là loạt bài viết A-Z hướng dẫn các bạn cài đặt và sử dụng Orange Pi Lite để phát triển dự án Iot.&nbsp;</p>
+<p>Chủ đề: Hướng dẫn cài hệ điều hành Armbian và thiết đặt mạng wifi lần đầu cho Orange Pi Lite. Les't Go&nbsp;<img alt="wink" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/wink_smile.png" style="height: auto; width: 23px;" title="wink"></p>
+</div></div></div><div class="form-item form-type-item">
+  <p><label class="sub-header">Rate node </label></p>
+ <div class="rate-widget-1 rate-widget clear-block rate-user rate-widget-thumbs_up rate-171e6c36a25afc24e78c43fb3bc004df rate-node-1190-1-1 rate-processed" id="rate-node-1190-1-1"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-2" rel="nofollow" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d?rate=tfK1pZo4Ih-wg6PM1EQsIIMgS4PxjC1FV6OHgLak9oI" title="lên">lên</a><div class="rate-info">9 thành viên đã đánh giá bài viết này hữu ích.</div></div>
+</div>
+
+<iframe src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/like(1).html" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 450px; height: 80px; " allowtransparency="true"></iframe>
+  <div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-above"><div class="field-label">Từ khóa:&nbsp;</div><div class="field-items"><div class="field-item even tag success margin5"><a href="http://arduino.vn/tags/cai-he-dieu-hanh" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">cài hệ điều hành</a></div><div class="field-item odd tag success margin5"><a href="http://arduino.vn/tags/armbian" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">armbian</a></div><div class="field-item even tag success margin5"><a href="http://arduino.vn/tags/orange-pi-lite" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">orange pi lite</a></div><div class="field-item odd tag success margin5"><a href="http://arduino.vn/tags/cai-wifi-lan-dau" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="" class="fg-white">cài wifi lần đầu</a></div></div></div>    
+</article>
+  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+    <article class="node-928 not-in-frontpage node node-results node-promoted node-teaser clearfix" about="/bai-viet/928-shortcut01-truyen-thong-so-giua-hai-module-rf-315mhz" typeof="sioc:Item foaf:Document">
+<div class="truyen_cam_hung_link"><a href="http://arduino.vn/node/add/results?edit%5Bfield_post_reference%5D%5Bund%5D%5B0%5D%5Bnid%5D=Shortcut01%20%E2%80%93%20Truy%E1%BB%81n%20th%C3%B4ng%20s%E1%BB%91%20gi%E1%BB%AFa%20hai%20module%20RF%20315Mhz%20%5Bnid%3A%20928%5D">Bạn có một DỰ ÁN hay giống thế này? Chia sẻ nhé!</a></div>
+      <header>
+                    <h2 class="header" id="index13"><a class="fg-orange" href="http://arduino.vn/bai-viet/928-shortcut01-truyen-thong-so-giua-hai-module-rf-315mhz">Shortcut01 – Truyền thông số giữa hai module RF 315Mhz</a></h2>
+            <span property="dc:title" content="Shortcut01 – Truyền thông số giữa hai module RF 315Mhz" class="rdf-meta element-hidden"></span>
+              <p class="submitted text-secondary">
+                    <span property="dc:date dc:created" content="2016-06-30T18:04:08+07:00" datatype="xsd:dateTime" rel="sioc:has_creator"><a href="http://arduino.vn/users/ndt" title="Xem hồ sơ người dùng." class="username mif-user-md" xml:lang="" about="/users/ndt" typeof="sioc:UserAccount" property="foaf:name" datatype="">NDT</a> gửi vào <time pubdate="" datetime="2016-06-30T18:04:08+07:00">Thứ năm, 30 Tháng 6, 2016 - 18:04</time></span>        </p>
+        <div class="tabcontrol">
+          <ul class="links inline tabs"><li class="node-readmore first" style="display: none;"><a href="http://arduino.vn/bai-viet/928-shortcut01-truyen-thong-so-giua-hai-module-rf-315mhz" rel="tag" title="Shortcut01 – Truyền thông số giữa hai module RF 315Mhz">Xem thêm<span class="element-invisible"> về Shortcut01 – Truyền thông số giữa hai module RF 315Mhz</span></a></li>
+<li class="disqus_comments_num"><a href="http://arduino.vn/bai-viet/928-shortcut01-truyen-thong-so-giua-hai-module-rf-315mhz#disqus_thread" data-disqus-identifier="node/928">Bình luận</a></li>
+<li class="statistics_counter last"><a href="http://arduino.vn/bai-viet/1190-huong-dan-cai-dat-va-su-dung-tu-z-cho-orange-pi-lite-cai-armbian-va-ket-noi-wifi-lan"><span class="mif-eye" style="font-size: 12px">2555 lượt xem</span></a></li>
+</ul>        </div>
+      
+          </header>
+  
+  <div class="field field-name-field-avatar field-type-kImageManager field-label-hidden"><div class="field-items"><div class="field-item even padding10 image-container bordered float-left"><img src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/2608_123105-1467276090-0-sc01.png" style="width: 200px; height: auto; max-width: 170px;">
+</div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><span style="color:rgb(0, 0, 0)">Đây là loạt bài vắn tắt chia sẻ kinh nghiệm giúp các bạn có thể sử dụng các mudule cũng như tiếp cận code một cách ngắn gọn và dễ hiểu hơn&nbsp;</span><img alt="smiley" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/regular_smile.png" style="color: rgb(0, 0, 0); height: auto; line-height: 1.6; width: 22px;" title="smiley"><a href="http://arduino.vn/bai-viet/928-shortcut01-truyen-thong-so-giua-hai-module-rf-315mhz">.</a></p>
+<p><span style="color:rgb(0, 0, 0)"><strong>Mục đích bài viết:</strong>&nbsp;Hướng dẫn cách truyền các truyền và nhận giá trị từ cảm biến hoặc một biến số thay đổi giữa hai mạch 315Mhz (433Mhz)</span>&nbsp;<img alt="cool" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/shades_smile.png" style="height: auto; width: 22px;" title="cool"></p>
+</div></div></div><div class="form-item form-type-item">
+  <p><label class="sub-header">Rate node </label></p>
+ <div class="rate-widget-1 rate-widget clear-block rate-user rate-widget-thumbs_up rate-d0f327fb72e7c7c55494dad6475f71e7 rate-node-928-1-1 rate-processed" id="rate-node-928-1-1"><a class="rate-button rate-thumbs-up-btn-up" id="rate-button-3" rel="nofollow" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d?rate=PjvMbyba3EcVe7bcJ3Gvfvtz77M9n18uyJA6v3Hs3Ck" title="lên">lên</a><div class="rate-info">15 thành viên đã đánh giá bài viết này hữu ích.</div></div>
+</div>
+
+<iframe src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/like(2).html" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 450px; height: 80px; " allowtransparency="true"></iframe>
+      
+</article>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>		    </div>
+		</div>
+	</div><div id="block-disqus-disqus-comments" class="block block-disqus last odd">
+			<div id="disqus_thread"><iframe id="dsq-app8594" name="dsq-app8594" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 0px !important;"></iframe><iframe id="dsq-app8591" name="dsq-app8591" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/saved_resource(2).html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 7218px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="indicator-north" name="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 990px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 990px !important; max-width: 990px !important; position: fixed !important; z-index: 2147483646 !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; display: none !important;" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/saved_resource(3).html"></iframe><iframe id="indicator-south" name="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 990px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 990px !important; max-width: 990px !important; position: fixed !important; z-index: 2147483646 !important; height: 18px !important; min-height: 18px !important; max-height: 18px !important; display: none !important;" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/saved_resource(4).html"></iframe></div>  	</div>                          </div>
+                          <div class="cell">
+                  <section class="region region-sidebar-second column">
+    <div id="block-user-login" class="block block-user first odd" role="form">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Đăng nhập</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <form action="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d?destination=node/429" method="post" id="user-login-form" accept-charset="UTF-8" class="login-form"><div class="tabcontrol"><div class="form-item form-type-textfield form-item-name">
+  <p><label for="edit-name" class="sub-header">Tên người dùng <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control text"><span class="mif-user prepend-icon"></span><input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required"></div>
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <p><label for="edit-pass" class="sub-header">Mật khẩu <span class="form-required" title="Trường dữ liệu này là bắt buộc.">*</span></label></p>
+ <div class="full-size input-control password"><span class="mif-lock prepend-icon"></span><input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required"></div>
+</div>
+<div class="item-list tabs"><ul><li class="first"><a href="http://arduino.vn/user/register" title="Tạo tài khoản người dùng mới.">Tạo tài khoản mới</a></li>
+<li class="last"><a href="http://arduino.vn/user/password" title="Yêu cầu gửi mật khẩu mới qua thư điện tử.">Yêu cầu mật khẩu mới</a></li>
+</ul></div><input type="hidden" name="form_build_id" value="form-6_01PW2wfUBsMHljlUo1RkUTMvzTQH5dpqxbnr2zLrw">
+<input type="hidden" name="form_id" value="user_login_block">
+<div id="fbconnect_button" class="form-item form-type-item" style="text-align:center;">
+  <p style="display: none;"><label for="fbconnect_button" class="sub-header">Đăng nhập bằng Facebook </label></p>
+ <fb:login-button size="large" background="dark" v="3" data-scope="email" login_text="Connect" class=" fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1424185567850442&amp;container_width=57&amp;locale=vi_VN&amp;login_text=Connect&amp;scope=email&amp;sdk=joey&amp;size=large"><span style="vertical-align: bottom; width: 87px; height: 25px;"><iframe name="f1192de95f5b5a8" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:login_button Facebook Social Plugin" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/login_button(2).html" style="border: none; visibility: visible; width: 87px; height: 25px;" class=""></iframe></span></fb:login-button>
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2" style="text-align:center;"><input type="submit" id="edit-submit--2" name="op" value="Đăng nhập" class="form-submit button success block-shadow-success text-shadow"></div><div style="text-align:center;"><input type="submit" id="edit-submit-google" name="op" value="" class="form-submit"></div></div></form>		    </div>
+		</div>
+	</div><div id="block-block-20" class="block block-block even">
+			<p class="rtecenter">
+<iframe allowfullscreen="" frameborder="0" height="230" scrolling="no" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/zczdCQ1_PIw.html" width="560"></iframe></p>
+<h3 class="rtecenter"><a href="http://arduino.vn/bai-viet/diem-cong-dong/giai-thuong"><span style="color:#FF8C00;"><strong>Chia sẻ tình yêu với </strong></span></a></h3>
+<h3 class="rtecenter"><a href="http://arduino.vn/bai-viet/diem-cong-dong/giai-thuong"><span style="color:#FF8C00;"><strong><img alt="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/2678_882450-1468511881-0-icon-hot.gif" style="width: 30px; height: 12px;">&nbsp;</strong></span><span style="color:#008080;"><strong>Arduino</strong></span></a>&nbsp;<a href="http://arduino.vn/bai-viet/diem-cong-dong/giai-thuong"><span style="color: rgb(255, 140, 0);"><strong><img alt="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/2678_882450-1468511881-0-icon-hot.gif" style="width: 30px; height: 12px;"></strong></span></a></h3>
+  	</div><div id="block-disqus-disqus-recent-comments" class="block block-disqus odd">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Bình luận gần đây</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div id="dsq-recentcomments" class="dsq-widget"><script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/recent_comments_widget.js.tải xuống"></script> <style type="text/css" media="screen">	 .dsq-widget ul.dsq-widget-list {	 padding: 0;	 margin: 0;	 text-align: left;	 }	 img.dsq-widget-avatar {	 width: 32px;	 height: 32px;	 border: 0px;	 margin: 0px;	 padding: 0px 3px 3px 0px;	 float: left;	 }	 a.dsq-widget-user {	 font-weight: bold;	 }	 a.dsq-widget-thread {	 font-weight: bold;	 }	 p.dsq-widget-meta {	 clear: both;	 font-size: 80%;	 padding: 0;	 margin: 0;	 }	 li.dsq-widget-item {	 margin: 15px 0;	 list-style-type: none;	 clear: both;	 }	 span.dsq-widget-clout {	 padding: 0 2px;	 background-color: #ff7300;	 color: #fff;	 }	 table.dsq-widget-horiz td {	 padding-right: 15px;	 }	 .dsq-widget-comment p {	 display: inline;	 }	 </style>	 <ul class="dsq-widget-list">	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/mropopmropop/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/mropopmropop/">Mropop Mropop</a>	 <span class="dsq-widget-comment"><p>Có điều khiển được đổi chiều ko bạn?</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/685-huong-dan-dieu-khien-dong-co-buoc">Hướng dẫn điều khiển động cơ bước với thư viện Accel Stepper và driver điều khiển động cơ bước A4988 hoặc DRV8825</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/685-huong-dan-dieu-khien-dong-co-buoc#comment-3604231391">2 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/arduinovnn-ea7f2f9471927458f88b04f4b1832b2a/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92(1).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-ea7f2f9471927458f88b04f4b1832b2a/">duylong</a>	 <span class="dsq-widget-comment"><p>...</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/530-lam-nao-de-dieu-khien-led-rgb-led-3-mau">Làm thế nào để điều khiển LED RGB - Led 3 màu</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/530-lam-nao-de-dieu-khien-led-rgb-led-3-mau#comment-3604227551">2 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/arduinovnn-ea7f2f9471927458f88b04f4b1832b2a/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92(1).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-ea7f2f9471927458f88b04f4b1832b2a/">duylong</a>	 <span class="dsq-widget-comment"><p>ad có thể hướng dẫn mình làm mạch 89s52 điều khiển led RGB nháy 8 màu được k a?</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/530-lam-nao-de-dieu-khien-led-rgb-led-3-mau">Làm thế nào để điều khiển LED RGB - Led 3 màu</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/530-lam-nao-de-dieu-khien-led-rgb-led-3-mau#comment-3604223797">2 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/disqus_eQvuoMRmpb/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92(2).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_eQvuoMRmpb/">Nguyễn Đức Toàn</a>	 <span class="dsq-widget-comment"><p>Cho mình xin hướng dẫn cái bộ này cho xe máy nha mail: nguyenductoann@gmail.com <br>Cảm ơn ad nhìu lắm</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/851-su-dung-modul-sim900a-mini-voi-arduino">Sử dụng modul SIM900a mini với Arduino</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/851-su-dung-modul-sim900a-mini-voi-arduino#comment-3604113601">5 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/arduinovnn-0566a85f6665677610d6af3482ea8dc4/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92(3).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-0566a85f6665677610d6af3482ea8dc4/">Trung Phạm1510028864</a>	 <span class="dsq-widget-comment"><p>e về test bị lỗi ntn. mng chỉ giúp e xem đó là lỗi gì vậy ak lệnh AT thì báo oke còn lệnh gọi, nt, vài lệnh khác lỗi hết. e đã thay sim khác vào Module sim900a Mini...</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1552-dieu-khien-thiet-bi-bang-tin-nhan-dung-sim900a-voi-tap-lenh">Điều khiển thiết bị bằng tin nhắn dùng SIM900A với tập lệnh AT  </a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/1552-dieu-khien-thiet-bi-bang-tin-nhan-dung-sim900a-voi-tap-lenh#comment-3604041670">7 hours ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/arduinovnn-14749bb109fb4d289fd6969319dbce5b/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92(4).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-14749bb109fb4d289fd6969319dbce5b/">Tú Phó</a>	 <span class="dsq-widget-comment"><p>bạn ơi cho mình hỏi là nếu mà bh muốn xuất ra nồng độ khí CO2 của con MQ135 này thì làm ntn thế?</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1545-gioi-thieu-cam-bien-chat-luong-khong-khi-mq135">Giới thiệu cảm biến chất lượng không khí MQ135</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/1545-gioi-thieu-cam-bien-chat-luong-khong-khi-mq135#comment-3601362115">1 day ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/minhtuandao/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/minhtuandao/">minh tuan dao</a>	 <span class="dsq-widget-comment"><p>nếu gặp lỗi này thì phải làm gì hả các anh/chị <a href="https://uploads.disquscdn.com/images/6e36fae480f4c7df2a3993f1c44a035f798b1bae3552be3bd43ee1bd8bc88c31.png" rel="nofollow noopener" title="https://uploads.disquscdn.com/images/6e36fae480f4c7df2a3993f1c44a035f798b1bae3552be3bd43ee1bd8bc88c31.png">https://uploads.disquscdn.c...</a></p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/210-cac-loi-pho-bien-khi-lap-trinh-arduino">Các lỗi phổ biến khi lập trình Arduino</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/210-cac-loi-pho-bien-khi-lap-trinh-arduino#comment-3600978616">2 days ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/arduinovnn-7fbe9c04f99dbfbc738ae9079740a314/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92(5).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-7fbe9c04f99dbfbc738ae9079740a314/">sorasaki</a>	 <span class="dsq-widget-comment"><p>mình đang thử làm lại cái này của bạn nhưng không hiểu lắm cái chỗ nút nhấn nên chắc chỉnh lại chút còn hôm mình test chạy thử cái của mình nó chẳng chạy luôn vì đo...</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/result/1621-vong-deo-tay-ho-tro-nguoi-mu">Vòng đeo tay hỗ trợ người mù</a>&nbsp;·&nbsp;<a href="http://arduino.vn/result/1621-vong-deo-tay-ho-tro-nguoi-mu#comment-3600671933">2 days ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/arduinovnn-676207ddcc8087437135a4b461fc07cb/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92(6).jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-676207ddcc8087437135a4b461fc07cb/">Thuế Trần</a>	 <span class="dsq-widget-comment"><p>cho em hỏi code liên kết cảm biến Bh1750(hiển thị lux) vs led (cảm biến ánh sáng hiển thị lux&lt;50 thì đèn led sáng)</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/tutorial/1446-huong-dan-lap-trinh-arduino-bang-javascript-trong-moi-truong-nodejs">Hướng dẫn lập trình Arduino bằng Javascript trong môi trường NodeJS</a>&nbsp;·&nbsp;<a href="http://arduino.vn/tutorial/1446-huong-dan-lap-trinh-arduino-bang-javascript-trong-moi-truong-nodejs#comment-3599648275">3 days ago</a></p>	 </li>	 <li class="dsq-widget-item">	 <a href="https://disqus.com/by/vinhdangvan/"><img class="dsq-widget-avatar" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/avatar92.jpg"></a>	 <a class="dsq-widget-user" href="https://disqus.com/by/vinhdangvan/">vinh dang van</a>	 <span class="dsq-widget-comment"><p>ở cách thứ nhất là suất ra nồng độ khí gì vậy ạ ?</p></span>	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1545-gioi-thieu-cam-bien-chat-luong-khong-khi-mq135">Giới thiệu cảm biến chất lượng không khí MQ135</a>&nbsp;·&nbsp;<a href="http://arduino.vn/bai-viet/1545-gioi-thieu-cam-bien-chat-luong-khong-khi-mq135#comment-3599439428">3 days ago</a></p>	 </li>	 </ul>
+</div>		    </div>
+		</div>
+	</div><div id="block-disqus-disqus-popular-threads" class="block block-disqus even">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Bài đọc nhiều</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div id="dsq-popthreads" class="dsq-widget"><script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/popular_threads_widget.js.tải xuống"></script> <style type="text/css" media="screen">	 .dsq-widget ul.dsq-widget-list {	 padding: 0;	 margin: 0;	 text-align: left;	 }	 img.dsq-widget-avatar {	 border: 0px;	 margin: 0px;	 padding: 0px 3px 3px 0px;	 float: left;	 }	 a.dsq-widget-user {	 font-weight: bold;	 }	 a.dsq-widget-thread {	 font-weight: bold;	 }	 p.dsq-widget-meta {	 clear: both;	 font-size: 80%;	 padding: 0;	 margin: 0;	 }	 li.dsq-widget-item {	 margin: 15px 0;	 list-style-type: none;	 clear: both;	 }	 span.dsq-widget-clout {	 padding: 0 2px;	 background-color: #ff7300;	 color: #fff;	 }	 table.dsq-widget-horiz td {	 padding-right: 15px;	 }	 .dsq-widget-comment p {	 display: inline;	 }	 </style>	 <ul class="dsq-widget-list">	 <li class="dsq-widget-item">	 <a class="dsq-widget-thread" href="http://arduino.vn/result/1921-tu-lam-thiet-bi-bat-tat-den-dieu-khien-qua-phan-mem-inut-tren-android-va-iphone">Tự làm thiết bị bật tắt đèn điều khiển qua phần mềm iNut trên Android và iPhone</a>	 <p class="dsq-widget-meta">6 comments · 4 hours ago</p>	 </li>	 </ul>
+</div>		    </div>
+		</div>
+	</div><div id="block-block-4" class="block block-block last odd">
+			<p><a href="http://masocongty.vn/" style="text-decoration:none;"><span style="color:#FFFFFF;">mã số thuế</span></a><br><a href="http://timraovat.com/" style="text-decoration:none;"><span style="color:#FFFFFF;">Tìm kiếm</span></a><br><a href="http://ptj.vn/" style="text-decoration:none;"><span style="color:#FFFFFF;">Trang sức bạc</span><br>
+</a></p>
+  	</div>  </section>
+              </div>
+                      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row cells4 footer-column">
+      <div class="cell hide">
+        <div class="region region-footer-firstcolumn">
+    <div id="block-user-online" class="block block-user first last odd" role="complementary">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Thành viên trực tuyến</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <p>Hiện đang có 116 người trực tuyến.</p><div class="item-list"><ul class="simple-list"><li class="first"><a href="http://arduino.vn/users/cuongth" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/cuongth" typeof="sioc:UserAccount" property="foaf:name" datatype="">Cườngth</a></li>
+<li><a href="http://arduino.vn/users/raymondhunda" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/raymondhunda" typeof="sioc:UserAccount" property="foaf:name" datatype="">Raymondhunda</a></li>
+<li><a href="http://arduino.vn/users/binh-tran1510054231" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/binh-tran1510054231" typeof="sioc:UserAccount" property="foaf:name" datatype="">Binh Tran1510054231</a></li>
+<li><a href="http://arduino.vn/users/randydab" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/randydab" typeof="sioc:UserAccount" property="foaf:name" datatype="">RandyDab</a></li>
+<li class="last"><a href="http://arduino.vn/users/mamiboco" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/mamiboco" typeof="sioc:UserAccount" property="foaf:name" datatype="">mamiboco</a></li>
+</ul></div>		    </div>
+		</div>
+	</div>  </div>
+    </div>
+    <div class="cell hide">
+        <div class="region region-footer-secondcolumn">
+    <div id="block-user-new" class="block block-user first last odd" role="complementary">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Thành viên mới</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <div class="item-list"><ul class="simple-list"><li class="first"><a href="http://arduino.vn/users/vinhdl78" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/vinhdl78" typeof="sioc:UserAccount" property="foaf:name" datatype="">vinhdl78</a></li>
+<li><a href="http://arduino.vn/users/patrickkep" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/patrickkep" typeof="sioc:UserAccount" property="foaf:name" datatype="">PatrickKep</a></li>
+<li><a href="http://arduino.vn/users/michaelabivy" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/michaelabivy" typeof="sioc:UserAccount" property="foaf:name" datatype="">MichaelAbivy</a></li>
+<li><a href="http://arduino.vn/users/eddieunips" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/eddieunips" typeof="sioc:UserAccount" property="foaf:name" datatype="">EddieUnips</a></li>
+<li><a href="http://arduino.vn/users/luisazek" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/luisazek" typeof="sioc:UserAccount" property="foaf:name" datatype="">Luisazek</a></li>
+<li><a href="http://arduino.vn/users/justinknill" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/justinknill" typeof="sioc:UserAccount" property="foaf:name" datatype="">Justinknill</a></li>
+<li><a href="http://arduino.vn/users/stevenorems" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/stevenorems" typeof="sioc:UserAccount" property="foaf:name" datatype="">StevenOrems</a></li>
+<li class="last"><a href="http://arduino.vn/users/morrisswito" title="Xem hồ sơ người dùng." class="username" xml:lang="" about="/users/morrisswito" typeof="sioc:UserAccount" property="foaf:name" datatype="">Morrisswito</a></li>
+</ul></div>		    </div>
+		</div>
+	</div>  </div>
+    </div>
+    <div class="cell">
+        <div class="region region-footer-thirdcolumn">
+    <div id="block-block-1" class="block block-block first last odd">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Về chúng tôi</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <p class="rtejustify"><a href="http://arduino.vn/">Arduino.vn</a> được xây dựng trên nền tảng Drupal 7, phiên bản hiện tại 2.3 tên mã <a href="http://arduino.vn/changelog">Chia sẻ tình yêu với Arduino</a>.</p>
+<p class="rtejustify">Đây là trang thông tin phi lợi nhuận ra đời hướng tới cộng đồng trẻ, những chủ nhân tương lai của đất nước. <strong><a href="http://arduino.vn/ve-chung-toi">Tìm hiểu thêm</a></strong></p>
+		    </div>
+		</div>
+	</div>  </div>
+    </div>
+    <div class="cell">
+        <div class="region region-footer-fourthcolumn">
+    <div id="block-block-2" class="block block-block first last odd">
+			<div class="panel">
+						
+		    <div class="heading bg-teal">
+		        <span class="title uppercase">Liên kết</span>
+		    </div>
+			
+					    
+		    <div class="content padding10">
+		        <p>Một sản phẩm hợp tác với <a href="http://machtudong.vn/">Machtudong.vn</a></p>
+<p class="rtecenter"><img alt="" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/grzxrak875oi.png"></p>
+<script>
+<!--//--><![CDATA[// ><!--
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-103385129-1', 'auto');
+  ga('send', 'pageview');
+
+
+//--><!]]>
+</script>		    </div>
+		</div>
+	</div>  </div>
+    </div>
+    </div>
+<div class="row">
+  <div class="cell footer">
+      <div class="region region-bottom">
+    <div id="block-block-3" class="block block-block first last odd">
+			<div style="margin: 0; padding-top:15px;"><a class="dmca-badge" href="http://www.dmca.com/Protection/Status.aspx?ID=78aa6fcb-6c63-4023-b42d-872e89882865" style="line-height: 1.6;" title="DMCA.com Protection Program"><img alt="DMCA.com Protection Status" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/dmca_protected_sml_120m.png" style="border-style:solid; border-width:0px"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" style="line-height: 1.6; font-family: &#39;courier new&#39;, courier, monospace;"><img alt="Creative Commons License" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/88x31.png" style="border-style:solid; border-width:0px"></a><br><span style="font-size:14px"><span style="font-family:verdana,geneva,sans-serif">Nội dung trên trang <a href="http://arduino.vn/" style="font-family: &#39;courier new&#39;, courier, monospace; font-size: 14px; line-height: 1.6;">Arduino.vn</a> được phân phối theo giấy phép <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" style="font-family: &#39;courier new&#39;, courier, monospace; font-size: 14px; line-height: 1.6;">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span></span><br><span style="font-size:14px"><span style="font-family:verdana,geneva,sans-serif">Vui lòng ghi rõ nguồn và link về bài gốc nếu bạn tham khảo nội dung từ <a href="http://masocongty.vn/" target="_blank" style="color:#000000;text-decoration: none;">website</a> này.</span></span></div>
+  	</div>  </div>
+  </div>
+</div>
+<div data-role="dialog" id="dialog-place-top-center" class="padding20 dialog bg-darkTeal fg-white" data-close-button="true" data-place="top-center" style="width: auto; height: auto; visibility: hidden;">
+  <h3 class="header">Bạn ơi ^_^!</h3>
+  <div class="content align-center"></div>
+  <div class="fblike align-center">
+			
+<iframe src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/like(3).html" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 450px; height: 80px; " allowtransparency="true"></iframe>
+  	</div>
+  <div class="fanpage align-center">
+    <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/Arduino.Vietnam/?fref=ts" data-layout="button_count" data-action="recommend" data-size="small" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=recommend&amp;app_id=1424185567850442&amp;container_width=450&amp;href=https%3A%2F%2Fwww.facebook.com%2FArduino.Vietnam%2F%3Ffref%3Dts&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small"><span style="vertical-align: bottom; width: 146px; height: 20px;"><iframe name="f2ba266c3a84a6" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/like(4).html" style="border: none; visibility: visible; width: 146px; height: 20px;" class=""></iframe></span></div>
+  </div>
+</div>
+
+<div class="charm charmMobile right-side" data-role="charm" data-position="right" style="opacity: 1; display: none;">
+  <h2 class="header">Mục lục</h2>
+  <div class="content" style="display:none;;"><div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index0">
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index1">CHUẨN BỊ&nbsp;
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index2">GIỚI THIỆU VỀ MOTOR DRIVER SHIELD L293D
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index3">Motor Driver Shield L293D là shield mở rộng dành cho Arduino
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index4">Các thành phần Motor Driver Shield L293D có thể điều khiển
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index5">Các chân trên Shield được kết nối với board Arduino như sau
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index6">ĐIỀU KHIỂN MOTOR DC
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index7">KẾT NỐI
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index8">LẬP TRÌNH
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index9">ĐIỀU KHIỂN SERVO
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index10">KẾT NỐI
+</a></div>
+<div class="rteindent1">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index11">LẬP TRÌNH
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index12">Hướng dẫn cài đặt và sử dụng từ A-Z cho Orange Pi Lite - Cài Armbian và kết nối wifi lần đầu
+</a></div>
+<div class="rteindent0">
+<a class="fg-white" href="http://arduino.vn/bai-viet/429-lam-du-xe-voi-module-dieu-khien-dong-co-l293d#index13">Shortcut01 – Truyền thông số giữa hai module RF 315Mhz
+</a></div>
+</div>
+    <div class="region region-charm-guest">
+    <div id="block-block-19" class="block block-block first last odd">
+			<p>Hãy trở thành thành viên của Cộng đồng Arudino Việt Nam để mở khóa chức năng này.</p>
+  	</div>  </div>
+<span class="charm-closer"></span></div>
+
+<button class="button warning block-shadow-warning text-shadow large-button fixed-bottom menu-toggle" style="">Mục lục</button>
+<div style="display: none;"></div>
+
+
+<div data-role="dialog" id="login-please" class="padding20 dialog info" data-close-button="true" data-type="info" style="width: auto; height: auto; visibility: hidden;">
+    <h1>Bạn ơi</h1>
+    <p>
+        Cùng <a href="http://arduino.vn/user/login" class="fg-yellow"><strong>đăng nhập</strong></a> vào <strong>Cộng đồng Arduino Việt Nam</strong> để mở hết các chức năng của Cộng đồng nhé.
+    </p>
+    <span class="dialog-close-button"></span>
+</div>
+<script type="text/javascript">
+function showDialog(id){
+    var dialog = $(id).data('dialog');
+    dialog.open();
+    $("#login-please a").click(function() {
+      if (!$(".app-bar-element form input").length)
+        return true;
+      $("#login-please").hide();
+      $(".app-bar-element > a").last().click();
+      return false;
+    });
+}
+$(document).ready(function() {
+  $(".dialog-close-button").click(function() {
+    $("#login-please").hide();
+    $.cookie('timer1', 0);
+  });
+  var max = 60000 * 4;
+  if (intval($.cookie('timer1')) < max) {
+
+    var interval = setInterval(function() {
+      $.cookie('timer1', intval($.cookie('timer1')) + 1000);
+      if (intval($.cookie('timer1')) >= max) {
+        clearInterval(interval);
+        showDialog('#login-please');
+      } else 
+        console.log($.cookie('timer1'));
+    }, 1000);
+  } else 
+    showDialog('#login-please');
+})
+  
+</script>
+      <div class="region region-page-bottom">
+    <div id="fb-root" class=" fb_reset"><script src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/all.js.tải xuống" async=""></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/BbnCpbXY9X8.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/BbnCpbXY9X8(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+      <script type="text/javascript">
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId : '1424185567850442',
+            cookie : true, // enable cookies to allow the server to access the session
+            xfbml : true,
+            logging: '0',
+            channelURL: 'http://arduino.vn/sites/all/modules/fbconnect/channel.html',
+            oauth  : true
+          });
+          // whenever the user logs in, we tell our login service
+          FB.Event.subscribe('auth.login', function() {
+            window.location.reload();
+          });
+          FB.Event.subscribe('auth.logout', function(response) {
+            window.location.reload();
+          });
+
+          jQuery(document).trigger('fb:init');
+        };
+
+        (function() {
+          var e = document.createElement('script');
+          e.src = document.location.protocol + '//connect.facebook.net/vi_VN/all.js';
+          e.async = true;
+          document.getElementById('fb-root').appendChild(e);
+        }());
+      </script>  </div>
+  </div>
+
+
+</div><iframe style="display: none;" src="./Làm dự án xe với module điều khiển động cơ L293D _ Cộng đồng Arduino Việt Nam_files/saved_resource(5).html"></iframe></body></html>

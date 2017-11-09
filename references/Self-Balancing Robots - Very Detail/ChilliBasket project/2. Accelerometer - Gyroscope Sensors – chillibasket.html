@@ -1,0 +1,2562 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://wired.chillibasket.com/2014/10/accel-gyro-sensors/ -->
+<html lang="en-US" class=" js cssanimations csstransitions"><!--BEGIN head--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+                    <!-- Favicon -->
+            <!-- Firefox, Chrome, Safari, IE 11+ and Opera. -->
+            <link href="http://wired.chillibasket.com/wp-content/uploads/2015/03/4e9d6895b4e9e70456edbdb2b46312aa1-550c5afcv1_site_icon.png" rel="icon" type="image/x-icon">
+        
+        <!-- Meta Tags -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Accelerometer &amp; Gyroscope Sensors – chillibasket</title>
+<link rel="dns-prefetch" href="http://maps.googleapis.com/">
+<link rel="dns-prefetch" href="http://www.google.com/">
+<link rel="dns-prefetch" href="http://s0.wp.com/">
+<link rel="dns-prefetch" href="http://s.gravatar.com/">
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="chillibasket » Feed" href="http://wired.chillibasket.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="chillibasket » Comments Feed" href="http://wired.chillibasket.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="chillibasket » Accelerometer &amp; Gyroscope Sensors Comments Feed" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/feed/">
+		<script async="" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/analytics.js.tải xuống"></script><script type="text/javascript" async="" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/recaptcha__en.js.tải xuống"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/wired.chillibasket.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=261c7bf7d6d16263a6a86155c84aa6a5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/wp-emoji-release.min.js.tải xuống" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="parallaxcss-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/parallax.css" type="text/css" media="all">
+<link rel="stylesheet" id="fontawesomecss-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="maincss-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrapcss-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrapcsstheme-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/bootstrap-theme.css" type="text/css" media="all">
+<style id="bootstrapcsstheme-inline-css" type="text/css">
+ 
+body {
+    background-color: #ecebe9;
+}
+
+.home-content-boxes .content-box {
+    background: #efefef;
+    padding: 30px 10px;
+}
+
+.content-box p {
+    margin: 25px 0 50px 0;
+}
+
+@media (min-width: 768px) {
+    .home-content-boxes .content-box {
+        padding: 30px 20px 70px 20px;
+        margin: 0 0.98%;
+    }
+    .home-content-boxes .col-md-3.content-box {
+        width: 23%;
+    }
+    .home-content-boxes .col-md-4.content-box {
+        width: 31.33333333%;
+    }
+    .home-content-boxes .col-md-6.content-box {
+        width: 48%;
+        margin: 0 0.96%;
+    }
+    .home-content-boxes .col-md-12.content-box {
+        width: 98%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .home-content-boxes .col-md-3.content-box {
+        width: 23%;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-content-boxes .col-md-3.content-box {
+        width: 23%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cntbox_btn {
+        position: relative;
+        bottom: 0px;
+    }
+}
+
+.sticky-header .nav {
+    float: left;
+    margin-left: 25px;
+}
+
+ul.nav-menu li a:active,
+ul.nav-menu li:active > a,
+ul.nav-menu li a:focus,
+ul.nav-menu li:focus > a,
+ul.nav-menu li a:hover,
+ul.nav-menu li:hover> a,
+ul.nav-menu li:hover,
+ul.nav-menu li a:hover span,
+ul.nav-menu li:hover> a span,
+ul.nav-menu li:hover> .sf-with-ul::after {
+    color: #111111 !important;
+}
+ 
+@media only screen and (min-width: 768px) {
+    .link-effect a:hover span,
+    .link-effect a:focus span {
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+@media (min-width: 1005px) {
+    .container, 
+    #wrapper {
+	width: 985px!important;
+    }
+}
+
+#gmap {
+    width: 100%;
+    margin:0 auto;
+    height: 415px
+}
+
+@media only screen and (min-width: 768px) {
+    .link-effect a:hover span,
+    .link-effect a:focus span {
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%); 
+    } 
+}
+
+.entry-content .thumbnail-post:hover img {
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+
+.entry-content .thumbnail-post:hover .mask {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.entry-content .thumbnail-post:hover .icon {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    top: 50%;
+	left: 50%;	
+    margin-top: -21px;
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.header-pattern {
+    background: #313a43;
+}
+
+.header-pattern, 
+.footer {
+    background-image: url(http://wired.chillibasket.com/wp-content/themes/evolve/library/media/images/pattern/pattern_5_thumb.png);
+}
+
+.menu-back {
+    background-color: #595959;
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(#595959), to(#353535));
+    background: -webkit-radial-gradient(circle, #595959, #353535);
+    background: -moz-radial-gradient(circle, #595959, #353535);
+    background: -o-radial-gradient(circle, #595959, #353535);
+    background: -ms-radial-gradient(circle, #595959, #353535);
+}
+
+.da-dots span {
+    background: #3e3e3e
+}
+
+/**
+ * Posts Layout
+ * 
+ */   
+
+.home .type-post .entry-content, 
+.archive .type-post .entry-content, 
+.search .type-post .entry-content, 
+.page-template-blog-page-php .type-post .entry-content {
+    font-size: 13px;
+}
+
+.entry-content {
+    margin-top: 25px;
+}
+
+.home .odd0, 
+.archive .odd0, 
+.search .odd0, 
+.page-template-blog-page-php .odd0 {
+    clear: both;
+}
+
+.home .odd1, 
+.archive .odd1, 
+.search .odd1, 
+.page-template-blog-page-php .odd1 {
+    margin-right: 0px;
+}
+
+.home .entry-title, 
+.entry-title a, 
+.archive .entry-title, 
+.search .entry-title, 
+.page-template-blog-page-php .entry-title {
+    font-size: 120%!important;
+    line-height: 120%!important;
+    margin-bottom: 0;
+}
+
+.home .entry-header, 
+.archive .entry-header, 
+.search .entry-header, 
+.page-template-blog-page-php .entry-header {
+    font-size: 12px;
+    padding: 0;
+}
+
+.home .published strong, 
+.archive .published strong, 
+.search .published strong, 
+.page-template-blog-page-php .published strong {
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.home .hfeed, 
+.archive .hfeed,
+.single .hfeed, 
+.page .hfeed, 
+.page-template-blog-page-php .hfeed {
+    margin-right: 0px;
+}
+
+.home .type-post .entry-footer, 
+.archive .type-post .entry-footer, 
+.search .type-post .entry-footer, 
+.page-template-blog-page-php .type-post .entry-footer {
+    float: left;
+    width: 100%
+}
+
+.home .type-post .comment-count, 
+.archive .type-post .comment-count, 
+.search .type-post .comment-count, 
+.page-template-blog-page-php .type-post .comment-count {
+    background: none!important;
+    padding-right: 0;
+}
+
+.title-container #logo {
+    float: left;
+}
+
+.title-container #tagline {
+    padding-top: 20px;
+}
+
+.title-container #logo a {
+    padding: 0px 20px 0px 0px;
+}
+
+.title-container #logo a {
+    padding: 0px 20px 0px 3px;
+}
+#logo a{font-size:40px ;}#logo a{font-family:Roboto !important;}#logo a{font-weight:300 !important;}#logo a{color:#3a3a3a !important;}#logo a{letter-spacing:-.03em;}#tagline{font-size:13px ;}#tagline{font-family:Roboto !important;}#tagline{color:#878787 !important;}.entry-title, .entry-title a, .page-title{font-size:26px !important;}.entry-title, .entry-title a, .page-title{font-family:Roboto !important;}.entry-content{font-size:16px !important;}.entry-content{font-family:Roboto !important;}.entry-content{font-style:normal !important;}.entry-content{line-height:1.5em;}body{color: !important;}#sticky-logo a{font-size:25px ;}#sticky-logo a{font-family:Roboto !important;}#sticky-logo a{font-weight:400 !important;}#sticky-logo a{color:#3a3a3a !important;}#sticky-logo a{letter-spacing:-.03em;}ul.nav-menu a, .menu-header, #wrapper .dd-container label, #wrapper .dd-container a{font-size:14px ;}ul.nav-menu a, .menu-header, #wrapper .dd-container label, #wrapper .dd-container a{font-family:Roboto !important;}ul.nav-menu a, .menu-header, #wrapper .dd-container label, #wrapper .dd-container a{color:#3a3a3a !important;}#bootstrap-slider .carousel-caption h2 {font-size:30px ;}#bootstrap-slider .carousel-caption h2 {font-family:Roboto !important;}#bootstrap-slider .carousel-caption h2 {font-weight:700 !important;}#bootstrap-slider .carousel-caption p  {font-size:18px ;}#bootstrap-slider .carousel-caption p  {font-family:Roboto !important;}#bootstrap-slider .carousel-caption p  {font-weight:300 !important;}.da-slide h2 {font-size:36px ;}.da-slide h2 {font-family:Roboto !important;}.da-slide h2 {font-style:normal !important;}.da-slide p {font-size:18px ;}.da-slide p {font-family:Roboto !important;}#slide_holder .featured-title a {font-size:25px ;}#slide_holder .featured-title a {font-family:Roboto !important;}#slide_holder .featured-title a {font-weight:500 !important;}#slide_holder p {font-size:14px ;}#slide_holder p {font-family:Roboto !important;}#slide_holder p {font-weight:400 !important;}.widget-title{font-size:19px ;}.widget-title{font-family:Roboto !important;}.widget-content, .aside, .aside a{font-size:13px ;}.widget-content, .aside, .aside a{font-family:Roboto !important;}.widget-content, .widget-content a, .widget-content .tab-holder .news-list li .post-holder a, .widget-content .tab-holder .news-list li .post-holder .meta{color: !important;}.content-box h2{font-size:30px ;}.content-box h2{font-family:Roboto !important;}.content-box h2{font-weight:400 !important;}.content-box h2{color:#6b6b6b !important;}.content-box p{font-size:22px ;}.content-box p{font-family:Roboto !important;}.content-box p{font-weight:400 !important;}.content-box p{color:#888 !important;}.entry-content h1{font-size:46px ;}.entry-content h1{font-family:Roboto !important;}.entry-content h2{font-size:40px ;}.entry-content h2{font-family:Roboto !important;}.entry-content h3{font-size:34px ;}.entry-content h3{font-family:Roboto !important;}.entry-content h4{font-size:20px ;}.entry-content h4{font-family:Roboto !important;}.entry-content h5{font-size:16px ;}.entry-content h5{font-family:Roboto !important;}.entry-content h6{font-size:12px ;}.entry-content h6{font-family:Roboto !important;}
+ul.primary-menu-cont.nav-menu li:hover ul,
+ul.primary-menu-cont.nav-menu li.nav-hover ul {
+    top: 52px;
+}
+
+#bootstrap-slider .carousel-inner .img-responsive {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.sticky-header #logo {
+    float: left;
+    padding: 6px 6px 6px 3px;
+}
+
+.sticky-header #sticky-logo {
+    float: left;
+    padding: 0px 6px 0px 3px;
+}
+
+body #header.sticky-header img#logo-image {
+    margin-left: 10px;
+}
+
+#backtotop {
+    right: 2%;
+}
+
+#wrapper {
+    position: relative;
+    margin: 0 auto 30px auto !important;
+    background: #f9f9f9;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+}
+
+#wrapper:before {
+    -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+    left: 30px;
+    right: 30px;
+    position: absolute;
+    z-index: -1;
+    height: 20px;
+    bottom: 0px;
+    content: "";
+    -webkit-border-radius: 100px / 10px;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;		
+}
+
+a, 
+a:hover,
+a:focus,
+.entry-content a:link, 
+.entry-content a:active, 
+.entry-content a:visited, 
+#secondary a:hover, 
+#secondary-2 a:hover, 
+.tooltip-shortcode, 
+#jtwt .jtwt_tweet a:hover, 
+.contact_info a:hover, 
+.widget .wooslider h2.slide-title a, 
+.widget .wooslider h2.slide-title a:hover {
+    color: #7a9cad;
+}
+
+.header { 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.header .container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+	
+ul.nav-menu > li { 
+    padding: 0px 8px; 
+}
+
+@media only screen and (max-width: 1220px) {
+    body #header.sticky-header {
+    	margin: 0px !important;
+	left: 0px;
+    }
+}
+
+body #header.sticky-header {
+    margin-left: -16px;
+}
+
+#rss, 
+#email-newsletter, 
+#facebook, 
+#twitter, 
+#instagram, 
+#skype, 
+#youtube, 
+#flickr, 
+#linkedin, 
+#plus, 
+#pinterest, 
+#tumblr { 
+    color: #999999;
+}
+.sc_menu li a {
+    color: #999999;
+}
+
+#rss, 
+#email-newsletter, 
+#facebook, 
+#twitter, 
+#instagram, 
+#skype, 
+#youtube, 
+#flickr, 
+#linkedin, 
+#plus, 
+#pinterest, 
+#tumblr { 
+    font-size: normal;
+}
+.sc_menu li a {
+    font-size: normal;
+}
+
+.menu-back { 
+    background-repeat: no-repeat;
+}
+
+.content-box-1 i { 
+    color: #faa982;
+}
+
+.content-box-2 i { 
+    color: #8fb859;
+}
+
+.content-box-3 i { 
+    color: #78665e;
+}
+
+.content-box-4 i { 
+    color: #82a4fa;
+}
+
+.content {
+    background-color: #ffffff
+}
+
+.t4p-reading-box-container a.button-default,	
+button, 
+.button, 
+.bootstrap-button,
+input#submit, 
+.da-slide .da-link, 
+span.more a,
+a.read-more,
+a.comment-reply-link,	
+.entry-content a.t4p-button-default,
+.button.button-3d.button-small, 
+.button.default.button-3d.button-small, 
+.button.default.small,
+#reviews input#submit,
+.woocommerce .login .button,
+.woocommerce .register .button,
+.bbp-submit-wrapper button,
+.wpcf7-form input[type="submit"], 
+.wpcf7-submit,
+#wrapper a.read-more,
+input[type="submit"],
+.price_slider_amount button,
+.product-buttons .add_to_cart_button,
+.product-buttons .button.product_type_grouped, 
+.product-buttons .button.product_type_simple,
+.product-buttons .button.product_type_external {
+    -webkit-box-shadow: 0px 2px 0px #1d6e72;
+    -moz-box-shadow: 	0px 2px 0px #1d6e72;
+    box-shadow:         0px 2px 0px #1d6e72;		
+}	
+
+.t4p-reading-box-container a.button-default:active,
+button:active, 
+.button:active, 
+.bootstrap-button:active,
+input#submit:active, 
+.da-slide .da-link:active, 
+span.more a:active,
+a.read-more:active,
+a.comment-reply-link:active,
+.entry-content a.t4p-button-default:active,	
+.button.button-3d.button-small:active, 
+.button.default.button-3d.button-small:active, 
+.button.default.small:active,
+#reviews input#submit:active,
+.woocommerce .login .button:active, 
+.woocommerce .register .button:active,
+.bbp-submit-wrapper button:active,
+.wpcf7-form input[type="submit"]:active, 
+.wpcf7-submit:active,
+#wrapper a.read-more:active,
+input[type="submit"]:active,
+.product-buttons .add_to_cart_button:active,
+.product-buttons .button.product_type_grouped:active, 
+.product-buttons .button.product_type_simple:active,
+.product-buttons .button.product_type_external:active {
+    -webkit-box-shadow: 0px 1px 0px #1d6e72;
+    -moz-box-shadow: 	0px 1px 0px #1d6e72;
+    box-shadow:		0px 1px 0px #1d6e72;		
+}
+
+.t4p-reading-box-container a.button-default:hover,
+input[type="submit"]:hover, 
+button:hover, 
+.button:hover, 
+.bootstrap-button:hover,
+input#submit:hover, 
+.da-slide .da-link:hover, 
+span.more a:hover,
+a.read-more:hover,
+a.comment-reply-link:hover,
+.entry-content a.t4p-button-default:hover,
+.button.button-3d.button-small:hover, 
+.button.default.button-3d.button-small:hover, 
+.button.default.small:hover,
+.t4p-button.button-green.button-3d.button-small:hover,
+.button.green.button-3d.button-small:hover,
+.t4p-button.button-darkgreen.button-3d.button-small:hover,
+.button.darkgreen.button-3d.button-small:hover,
+.t4p-button.button-orange.button-3d.button-small:hover,
+.button.orange.button-3d.button-small:hover,
+.t4p-button.button-blue.button-3d.button-small:hover,
+.button.blue.button-3d.button-small:hover,
+.t4p-button.button-darkblue.button-3d.button-small:hover,
+.button.darkblue.button-3d.button-small:hover,
+.t4p-button.button-red.button-3d.button-small:hover,
+.button.darkred.button-3d.button-small:hover,
+.t4p-button.button-pink.button-3d.button-small:hover,
+.button.pink.button-3d.button-small:hover,
+.t4p-button.button-darkgray.button-3d.button-small:hover,
+.button.darkgray.button-3d.button-small:hover,
+.t4p-button.button-lightgray.button-3d.button-small:hover,
+.button.lightgray.button-3d.button-small:hover,   
+#reviews input#submit:hover,
+.woocommerce .login .button:hover, 
+.woocommerce .register .button:hover,
+.bbp-submit-wrapper button:hover,
+.wpcf7-form input[type="submit"]:hover, 
+.wpcf7-submit:hover,
+#wrapper a.read-more:hover,
+.price_slider_amount button:hover,
+.product-buttons .add_to_cart_button:hover,
+.product-buttons .button.product_type_grouped:hover, 
+.product-buttons .button.product_type_simple:hover,
+.product-buttons .button.product_type_external:hover {
+    -webkit-box-shadow:  0px 2px 0px #313a43;
+    -moz-box-shadow: 	 0px 2px 0px #313a43;
+    box-shadow:		 0px 2px 0px #313a43;		
+}
+
+.button.button-3d.button-medium, 
+.button.default.button-3d.button-medium, 
+.button.default.medium,   
+#comment-submit,
+.woocommerce form.checkout #place_order,
+.woocommerce .single_add_to_cart_button,
+.bbp-submit-wrapper button.button-medium,
+.wpcf7-form input[type="submit"].button-medium, 
+.wpcf7-submit.button-medium {
+    -webkit-box-shadow:  0px 3px 0px #1d6e72;
+    -moz-box-shadow: 	 0px 3px 0px #1d6e72;
+    box-shadow:		 0px 3px 0px #1d6e72;		
+}
+
+.button.button-3d.button-medium:active, 
+.button.default.button-3d.button-medium:active, 
+.button.default.medium:active,
+#comment-submit:active,
+.woocommerce form.checkout #place_order:active,
+.woocommerce .single_add_to_cart_button:active,
+.bbp-submit-wrapper button.button-medium:active,
+.wpcf7-form input[type="submit"].button-medium:active, 
+.wpcf7-submit.button-medium:active {
+    -webkit-box-shadow:  0px 1px 0px #1d6e72;
+    -moz-box-shadow: 	 0px 1px 0px #1d6e72;
+    box-shadow:		 0px 1px 0px #1d6e72;		
+}
+
+.button.button-3d.button-medium:hover, 
+.button.default.button-3d.button-medium:hover, 
+.button.default.medium:hover, 
+.t4p-button.button-green.button-3d.button-medium:hover,
+.button.green.button-3d.button-medium:hover,
+.t4p-button.button-darkgreen.button-3d.button-medium:hover,
+.button.darkgreen.button-3d.button-medium:hover,
+.t4p-button.button-orange.button-3d.button-medium:hover,
+.button.orange.button-3d.button-medium:hover,
+.t4p-button.button-blue.button-3d.button-medium:hover,
+.button.blue.button-3d.button-medium:hover,
+.t4p-button.button-darkblue.button-3d.button-medium:hover,
+.button.darkblue.button-3d.button-medium:hover,
+.t4p-button.button-red.button-3d.button-medium:hover,
+.button.darkred.button-3d.button-medium:hover,
+.t4p-button.button-pink.button-3d.button-medium:hover,
+.button.pink.button-3d.button-medium:hover,
+.t4p-button.button-darkgray.button-3d.button-medium:hover,
+.button.darkgray.button-3d.button-medium:hover,
+.t4p-button.button-lightgray.button-3d.button-medium:hover,
+.button.lightgray.button-3d.button-medium:hover,        
+#comment-submit:hover,
+.woocommerce form.checkout #place_order:hover,
+.woocommerce .single_add_to_cart_button:hover,
+.bbp-submit-wrapper button.button-medium:hover,
+.wpcf7-form input[type="submit"].button-medium:hover, 
+.wpcf7-submit.button-medium:hover {
+    -webkit-box-shadow:  0px 3px 0px #313a43;
+    -moz-box-shadow: 	 0px 3px 0px #313a43;
+    box-shadow: 	 0px 3px 0px #313a43;		
+}
+
+.button.button-3d.button-large, 
+.button.default.button-3d.button-large, 
+.button.default.large,
+.bbp-submit-wrapper button.button-large,
+.wpcf7-form input[type="submit"].button-large, 
+.wpcf7-submit.button-large {
+    -webkit-box-shadow:  0px 4px 0px #1d6e72;
+    -moz-box-shadow: 	 0px 4px 0px #1d6e72;
+    box-shadow: 	 0px 4px 0px #1d6e72;		
+}		
+
+.button.button-3d.button-large:active, 
+.button.default.button-3d.button-large:active, 
+.button.default.large:active,
+.bbp-submit-wrapper button.button-large:active,
+.wpcf7-form input[type="submit"].button-large:active, 
+.wpcf7-submit.button-large:active {
+    -webkit-box-shadow:  0px 1px 0px #1d6e72;
+    -moz-box-shadow: 	 0px 1px 0px #1d6e72;
+    box-shadow:		 0px 1px 0px #1d6e72;				
+}
+
+.button.button-3d.button-large:hover, 
+.button.default.button-3d.button-large:hover, 
+.button.default.large:hover,
+.t4p-button.button-green.button-3d.button-large:hover,
+.button.green.button-3d.button-large:hover,
+.t4p-button.button-darkgreen.button-3d.button-large:hover,
+.button.darkgreen.button-3d.button-large:hover,
+.t4p-button.button-orange.button-3d.button-large:hover,
+.button.orange.button-3d.button-large:hover,
+.t4p-button.button-blue.button-3d.button-large:hover,
+.button.blue.button-3d.button-large:hover,
+.t4p-button.button-darkblue.button-3d.button-large:hover,
+.button.darkblue.button-3d.button-large:hover,
+.t4p-button.button-red.button-3d.button-large:hover,
+.button.darkred.button-3d.button-large:hover,
+.t4p-button.button-pink.button-3d.button-large:hover,
+.button.pink.button-3d.button-large:hover,
+.t4p-button.button-darkgray.button-3d.button-large:hover,
+.button.darkgray.button-3d.button-large:hover,
+.t4p-button.button-lightgray.button-3d.button-large:hover,
+.button.lightgray.button-3d.button-large:hover,   
+.bbp-submit-wrapper button.button-large:hover,
+.wpcf7-form input[type="submit"].button-large:hover, 
+.wpcf7-submit.button-large:hover {
+    -webkit-box-shadow:  0px 4px 0px #313a43;
+    -moz-box-shadow: 	 0px 4px 0px #313a43;
+    box-shadow: 	 0px 4px 0px #313a43;				
+}
+
+.button.button-3d.button-xlarge, 
+.button.default.button-3d.button-xlarge, 
+.button.default.xlarge,
+.bbp-submit-wrapper button.button-xlarge,
+.wpcf7-form input[type="submit"].button-xlarge, 
+.wpcf7-submit.button-xlarge {
+    -webkit-box-shadow:  0px 5px 0px #1d6e72, 1px 7px 7px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 	 0px 5px 0px #1d6e72, 1px 7px 7px 3px rgba(0,0,0,0.3);
+    box-shadow: 	 0px 5px 0px #1d6e72, 1px 7px 7px 3px rgba(0,0,0,0.3);		
+}		
+
+.button.button-3d.button-xlarge:active, 
+.button.default.button-3d.button-xlarge:active, 
+.button.default.xlarge:active,
+.bbp-submit-wrapper button.button-xlarge:active,
+.wpcf7-form input[type="submit"].button-xlarge:active, 
+.wpcf7-submit.button-xlarge:active {
+    -webkit-box-shadow:  0px 2px 0px #1d6e72, 1px 7px 7px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 	 0px 2px 0px #1d6e72, 1px 7px 7px 3px rgba(0,0,0,0.3);
+    box-shadow: 	 0px 2px 0px #1d6e72, 1px 7px 7px 3px rgba(0,0,0,0.3);					
+}
+
+.button.button-3d.button-xlarge:hover, 
+.button.default.button-3d.button-xlarge:hover, 
+.button.default.xlarge:hover,
+.t4p-button.button-green.button-3d.button-xlarge:hover,
+.button.green.button-3d.button-xlarge:hover,
+.t4p-button.button-darkgreen.button-3d.button-xlarge:hover,
+.button.darkgreen.button-3d.button-xlarge:hover,
+.t4p-button.button-orange.button-3d.button-xlarge:hover,
+.button.orange.button-3d.button-xlarge:hover,
+.t4p-button.button-blue.button-3d.button-xlarge:hover,
+.button.blue.button-3d.button-xlarge:hover,
+.t4p-button.button-darkblue.button-3d.button-xlarge:hover,
+.button.darkblue.button-3d.button-xlarge:hover,
+.t4p-button.button-red.button-3d.button-xlarge:hover,
+.button.darkred.button-3d.button-xlarge:hover,
+.t4p-button.button-pink.button-3d.button-xlarge:hover,
+.button.pink.button-3d.button-xlarge:hover,
+.t4p-button.button-darkgray.button-3d.button-xlarge:hover,
+.button.darkgray.button-3d.button-xlarge:hover,
+.t4p-button.button-lightgray.button-3d.button-xlarge:hover,
+.button.lightgray.button-3d.button-xlarge:hover,   
+.bbp-submit-wrapper button.button-xlarge:hover,
+.wpcf7-form input[type="submit"].button-xlarge:hover, 
+.wpcf7-submit.button-xlarge:hover {
+    -webkit-box-shadow:  0px 5px 0px #313a43, 1px 7px 7px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: 	 0px 5px 0px #313a43, 1px 7px 7px 3px rgba(0,0,0,0.3);
+    box-shadow: 	 0px 5px 0px #313a43, 1px 7px 7px 3px rgba(0,0,0,0.3);					
+}
+
+.t4p-reading-box-container a.button-default,
+button, 
+.bootstrap-button,
+input#submit, 
+.da-slide .da-link, 
+span.more a,
+a.read-more,	
+a.comment-reply-link,
+.entry-content a.t4p-button-default,	
+.t4p-button,
+.button,
+.button.default,
+.gform_wrapper .gform_button,
+#comment-submit,
+.woocommerce form.checkout #place_order,
+.woocommerce .single_add_to_cart_button,
+#reviews input#submit,
+.woocommerce .login .button,
+.woocommerce .register .button,
+.woocommerce .button.view,
+.woocommerce .wc-backward,
+.bbp-submit-wrapper button,
+.wpcf7-form input[type="submit"], 
+.wpcf7-submit,
+input[type="submit"],
+.price_slider_amount button,
+.product-buttons .add_to_cart_button,
+.product-buttons .button.product_type_grouped, 
+.product-buttons .button.product_type_simple,
+.product-buttons .button.product_type_external,
+#content .entry-content .product-buttons a:link {
+    color: #f4f4f4;
+}
+
+.t4p-reading-box-container a.button-default:hover,	
+button:hover, 
+.bootstrap-button:hover,
+input#submit:hover, 
+.da-slide .da-link:hover, 
+span.more a:hover,
+a.read-more:hover,	
+a.comment-reply-link:hover,
+.entry-content a.t4p-button-default:hover,
+.t4p-button:hover,
+.button:hover,
+.button.default:hover,
+.gform_wrapper .gform_button:hover,
+#comment-submit:hover,
+.woocommerce form.checkout #place_order:hover,
+.woocommerce .single_add_to_cart_button:hover,
+#reviews input#submit:hover,
+.woocommerce .login .button:hover,
+.woocommerce .register .button:hover,
+.woocommerce .wc-backward,
+.woocommerce .button.view:hover,
+.bbp-submit-wrapper button:hover,
+.wpcf7-form input[type="submit"]:hover, 
+.wpcf7-submit:hover,
+#wrapper a.read-more:hover,
+input[type="submit"]:hover,
+.product-buttons .add_to_cart_button:hover,
+.product-buttons .button.product_type_grouped:hover, 
+.product-buttons .button.product_type_simple:hover,
+.product-buttons .button.product_type_external:hover,
+#content .entry-content .product-buttons a:hover {
+    color: #ffffff;
+}
+
+.tagcloud a:hover {
+    color: #ffffff!important;
+}
+
+.t4p-reading-box-container a.button-default,	
+input[type="submit"], 
+button, 
+.button, 
+.bootstrap-button,
+input#submit, 
+.da-slide .da-link, 
+span.more a,
+a.read-more,	
+a.comment-reply-link,	
+.entry-content a.t4p-button-default,	
+.t4p-button.button-flat,
+.home-content-boxes .t4p-button {
+    text-shadow: none!important;
+}
+
+.t4p-reading-box-container a.button-default,	
+button, 
+.bootstrap-button,
+input#submit, 
+.da-slide .da-link, 
+span.more a,
+a.read-more,	
+a.comment-reply-link,
+.entry-content a.t4p-button-default,	
+.t4p-button,
+.button,
+.button.default,
+.button-default,
+.gform_wrapper .gform_button,
+#comment-submit,
+.woocommerce form.checkout #place_order,
+.woocommerce .single_add_to_cart_button,
+#reviews input#submit,
+.woocommerce .login .button,
+.woocommerce .register .button,
+.woocommerce-message .wc-forward,
+.woocommerce .wc-backward,
+.woocommerce .button.view,
+.bbp-submit-wrapper button,
+.wpcf7-form input[type="submit"], 
+.wpcf7-submit,
+#wrapper a.read-more,
+input[type="submit"],
+.price_slider_amount button,
+.product-buttons .add_to_cart_button,
+.product-buttons .button.product_type_grouped, 
+.product-buttons .button.product_type_simple,
+.product-buttons .button.product_type_external {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.t4p-reading-box-container a.button-default:hover,
+input[type="submit"]:hover, 
+button:hover, 
+.button:hover, 
+.bootstrap-button:hover,
+input#submit:hover, 
+.da-slide .da-link:hover, 
+span.more a:hover,
+a.read-more:hover,
+a.comment-reply-link:hover,
+.entry-content a.t4p-button-default:hover,	
+.t4p-button:hover,
+.button:hover, 
+.button.default:hover, 
+.t4p-button.button-default:hover,
+#wrapper a.read-more:hover,
+.t4p-accordian .panel-title a.active,
+.price_slider_amount button:hover,
+.button:focus,
+.button:active {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.t4p-reading-box-container a.button-default,
+button, 
+.button, 
+.bootstrap-button,
+input#submit, 
+.da-slide .da-link, 
+span.more a,
+a.read-more,		
+a.comment-reply-link,		
+.entry-content a.t4p-button-default,	
+.t4p-button,
+.button.default,
+.button-default,
+.gform_wrapper .gform_button,
+#comment-submit,
+.woocommerce form.checkout #place_order,
+.woocommerce .single_add_to_cart_button,
+#reviews input#submit,
+.woocommerce .login .button,
+.woocommerce .register .button,
+.woocommerce-message .wc-forward,
+.woocommerce .wc-backward,
+.woocommerce .button.view,
+.bbp-submit-wrapper button,
+.wpcf7-form input[type="submit"], 
+.wpcf7-submit,
+#wrapper a.read-more,
+.woocommerce-pagination .current,
+.t4p-accordian .panel-title a.active,
+input[type="submit"],
+.price_slider_amount button,
+.product-buttons .add_to_cart_button,
+.product-buttons .button.product_type_grouped, 
+.product-buttons .button.product_type_simple,
+.product-buttons .button.product_type_external,
+.button:focus,
+.button:active {
+    border-color: #0bb697;
+}
+
+.t4p-reading-box-container a.button-default:hover,	
+button:hover, 
+.bootstrap-button:hover,
+input#submit:hover, 
+.da-slide .da-link:hover, 
+span.more a:hover,
+a.read-more:hover,	
+a.comment-reply-link:hover,	
+.entry-content a.t4p-button-default:hover,	
+.t4p-button:hover,
+.button:hover,
+.button.default:hover,
+.button-default:hover,
+.gform_wrapper .gform_button:hover,
+#comment-submit:hover,
+.woocommerce form.checkout #place_order:hover,
+.woocommerce .single_add_to_cart_button:hover,
+.woocommerce-message .wc-forward:hover,
+.woocommerce .wc-backward:hover,
+.woocommerce .button.view:hover,
+#reviews input#submit:hover,
+.woocommerce .login .button:hover,
+.woocommerce .register .button:hover,
+.bbp-submit-wrapper button:hover,
+.wpcf7-form input[type="submit"]:hover, 
+.wpcf7-submit:hover,
+#wrapper a.read-more:hover,
+.woocommerce-pagination .current:hover,
+input[type="submit"]:hover,
+.price_slider_amount button:hover,
+.product-buttons .add_to_cart_button:hover,
+.product-buttons .button.product_type_grouped:hover, 
+.product-buttons .button.product_type_simple:hover,
+.product-buttons .button.product_type_external:hover {
+    border-color: #313a43!important;
+}
+
+.t4p-reading-box-container a.button-default,	
+button, 
+.bootstrap-button,
+input#submit, 
+.da-slide .da-link, 
+span.more a,
+a.read-more,	
+a.comment-reply-link,	
+.entry-content a.t4p-button-default,	
+.t4p-button,
+.button,
+.button.default,
+#comment-submit,
+.woocommerce form.checkout #place_order,
+.woocommerce .single_add_to_cart_button,
+#reviews input#submit,
+.woocommerce .evolve-shipping-calculator-form .button,
+.woocommerce .login .button,
+.woocommerce .register .button,
+.woocommerce-message .wc-forward,
+.woocommerce .wc-backward,
+.woocommerce .button.view,
+.bbp-submit-wrapper button,
+.wpcf7-form input[type="submit"], 
+.wpcf7-submit,
+a.read-more,
+input[type="submit"],
+.price_slider_amount button,
+.product-buttons .add_to_cart_button,
+.product-buttons .button.product_type_grouped, 
+.product-buttons .button.product_type_simple,
+.product-buttons .button.product_type_external {
+    border-radius: 4px;
+}
+
+.t4p-reading-box-container a.button-default,	
+button, 
+.bootstrap-button,
+input#submit, 
+.da-slide .da-link, 
+span.more a,
+a.read-more,	
+a.comment-reply-link,	
+.entry-content a.t4p-button-default,	
+.t4p-button,
+.reading-box .button,
+.continue.button,
+#wrapper .portfolio-one .button,
+#wrapper .comment-submit,
+#reviews input#submit,
+.comment-form input[type="submit"],
+.button,
+.button-default,
+.button.default,
+a.read-more, 
+.tagcloud a:hover,
+h5.toggle.active a,
+h5.toggle.active a:hover,
+span.more a, 
+.project-content .project-info .project-info-box a.button,
+input[type="submit"], 
+.price_slider_amount button,
+.gform_wrapper .gform_button,
+.woocommerce-pagination .current,
+.widget_shopping_cart_content .buttons a,
+.woocommerce-success-message a.button, 
+.woocommerce .order-again .button,
+.woocommerce-message .wc-forward,
+.woocommerce .wc-backward,
+.woocommerce .button.view,
+.product-buttons .add_to_cart_button,
+.product-buttons .button.product_type_grouped, 
+.product-buttons .button.product_type_simple,
+.product-buttons .button.product_type_external,
+.wpcf7-form input.button,
+.wpcf7-form input[type="submit"],
+.wpcf7-submit, 
+.woocommerce .single_add_to_cart_button,
+.woocommerce .button.view,
+.woocommerce .shipping-calculator-form .button,
+.woocommerce form.checkout #place_order,
+.woocommerce .checkout_coupon .button,
+.woocommerce .login .button,
+.woocommerce .register .button,
+.woocommerce .evolve-order-details .order-again .button,
+.t4p-accordian .panel-title a.active {
+    background: #0bb697;
+		
+    background-image: -webkit-gradient( linear, left bottom, left top, from( #0bb697 ), to( #0bb697 ) );
+    background-image: -webkit-linear-gradient( bottom, #0bb697, #0bb697 );
+    background-image:    -moz-linear-gradient( bottom, #0bb697, #0bb697 );
+    background-image:      -o-linear-gradient( bottom, #0bb697, #0bb697 );
+    background-image: linear-gradient( to top, #0bb697, #0bb697 );	
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0bb697', endColorstr='#0bb697' );
+	
+}
+
+.t4p-reading-box-container a.button-default:hover,	
+input[type="submit"]:hover, 
+button:hover, 
+.bootstrap-button:hover,
+input#submit:hover, 
+.da-slide .da-link:hover, 
+span.more a:hover,
+a.read-more:hover,	
+a.comment-reply-link:hover,	
+.entry-content a.t4p-button-default:hover,	
+.t4p-button:hover,
+#wrapper .portfolio-one .button:hover,
+#wrapper .comment-submit:hover,
+#reviews input#submit:hover,
+.comment-form input[type="submit"]:hover,
+.wpcf7-form input[type="submit"]:hover,
+.wpcf7-submit:hover,
+.bbp-submit-wrapper button:hover,
+.button:hover,
+.button-default:hover,
+.button.default:hover,
+.price_slider_amount button:hover,
+.gform_wrapper .gform_button:hover,
+.woocommerce .single_add_to_cart_button:hover,
+.woocommerce .shipping-calculator-form .button:hover,
+.woocommerce form.checkout #place_order:hover,
+.woocommerce .checkout_coupon .button:hover,
+.woocommerce .login .button:hover,
+.woocommerce .register .button:hover,
+.woocommerce .evolve-order-details .order-again .button:hover,
+.woocommerce .button.view:hover,
+.reading-box .button:hover, 
+.continue.button:hover, 
+#wrapper .comment-form input[type="submit"]:hover,
+.comment-form input[type="submit"]:hover,
+.button:hover,
+.button .lightgray:hover,
+a.read-more:hover,
+span.more a:hover, 
+a.button:hover, 
+.woocommerce-pagination .page-numbers.current:hover,
+.product-buttons .add_to_cart_button:hover,
+.product-buttons .button.product_type_grouped:hover, 
+.product-buttons .button.product_type_simple:hover,
+.product-buttons .button.product_type_external:hover {
+    background: #313a43;
+
+    background-image: -webkit-gradient( linear, left bottom, left top, from( #313a43 ), to( #313a43 ) );
+    background-image: -webkit-linear-gradient( bottom, #313a43, #313a43 );
+    background-image:    -moz-linear-gradient( bottom, #313a43, #313a43 );
+    background-image:      -o-linear-gradient( bottom, #313a43, #313a43 );
+    background-image: linear-gradient( to top, #313a43, #313a43 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\#313a43', endColorstr=\#313a43');
+
+}
+
+/* Extra small devices (phones, <768px) */
+
+@media (max-width: 768px) { 
+    .da-slide h2, 
+    #bootstrap-slider .carousel-caption h2 {
+    	font-size: 120%!important;
+	letter-spacing: 1px; 
+    }
+    #slide_holder .featured-title a {
+	font-size: 80%!important;
+	letter-spacing: 1px;
+    } 
+    .da-slide p, 
+    #slide_holder p, 
+    #bootstrap-slider .carousel-caption p {
+    	font-size: 90%!important; 
+    }
+}
+
+/* Small devices (tablets, 768px) */
+
+@media (min-width: 768px) { 
+    .da-slide h2 {
+	font-size: 180%;
+	letter-spacing: 0; 
+    }
+    #slide_holder .featured-title a {
+	font-size: 120%;
+	letter-spacing: 0; 
+    }
+    .da-slide p, 
+    #slide_holder p {
+    	font-size: 100%; 
+    }
+}  
+
+/* Large devices (large desktops) */
+
+@media (min-width: 992px) { 
+    .da-slide h2 {
+	font-size: 36px;
+	line-height: 1em; 
+    } 
+    #slide_holder .featured-title a {
+	font-size: 25px;
+	line-height: 1em;
+    }
+    .da-slide p {
+    	font-size: 18px;
+    }
+    #slide_holder p {
+    	font-size: 14px;
+    }
+}
+
+input#s,
+#comment-input input,
+#comment-textarea textarea,
+.comment-form-comment textarea,
+.input-text,
+.post-password-form .password,
+.wpcf7-form .wpcf7-text,
+.wpcf7-form .wpcf7-quiz,
+.wpcf7-form .wpcf7-number,
+.wpcf7-form textarea,
+.wpcf7-form .wpcf7-select,
+.wpcf7-captchar,
+.wpcf7-form .wpcf7-date,
+.gform_wrapper .gfield input[type=text],
+.gform_wrapper .gfield input[type=email],
+.gform_wrapper .gfield textarea,
+.gform_wrapper .gfield select,
+#bbpress-forums .bbp-search-form #bbp_search,
+.bbp-reply-form input#bbp_topic_tags,
+.bbp-topic-form input#bbp_topic_title,
+.bbp-topic-form input#bbp_topic_tags,
+.bbp-topic-form select#bbp_stick_topic_select,
+.bbp-topic-form select#bbp_topic_status_select,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content,
+.main-nav-search-form input,
+.search-page-search-form input,
+.chzn-container-single .chzn-single,
+.chzn-container .chzn-drop,
+.evolve-select-parent,
+.evolve-select-parent select,
+.evolve-select-parent .evolve-select-arrow,
+.evolve-select-parent .country_to_state,
+#wrapper .select-arrow,
+#lang_sel_click a.lang_sel_sel,
+#lang_sel_click ul ul a,
+#lang_sel_click ul ul a:visited,
+#lang_sel_click a,
+#lang_sel_click a:visited,
+#wrapper .search-field input,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=file],
+textarea,
+select {
+    background-color: #ffffff !important;
+}
+    
+input#s,
+input#s .placeholder,
+#comment-input input,
+#comment-textarea textarea,
+#comment-input .placeholder,
+#comment-textarea .placeholder,
+.comment-form-comment textarea,
+.input-text,
+.post-password-form .password,
+.wpcf7-form .wpcf7-text,
+.wpcf7-form .wpcf7-quiz,
+.wpcf7-form .wpcf7-number,
+.wpcf7-form textarea,
+.wpcf7-form .wpcf7-select,
+.wpcf7-select-parent .select-arrow,
+.wpcf7-captchar,
+.wpcf7-form .wpcf7-date,
+.gform_wrapper .gfield input[type=text],
+.gform_wrapper .gfield input[type=email],
+.gform_wrapper .gfield textarea,
+.gform_wrapper .gfield select,
+#bbpress-forums .bbp-search-form #bbp_search,
+.bbp-reply-form input#bbp_topic_tags,
+.bbp-topic-form input#bbp_topic_title,
+.bbp-topic-form input#bbp_topic_tags,
+.bbp-topic-form select#bbp_stick_topic_select,
+.bbp-topic-form select#bbp_topic_status_select,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content,
+.main-nav-search-form input,
+.search-page-search-form input,
+.chzn-container-single .chzn-single,
+.chzn-container .chzn-drop,
+.evolve-select-parent,
+.evolve-select-parent select,
+.evolve-select-parent .country_to_state,
+.select2-container .select2-choice>.select2-chosen,
+#wrapper .search-field input,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=file],
+textarea,
+select {
+    color: #888888 !important;
+}
+
+input#s::-webkit-input-placeholder,
+#comment-input input::-webkit-input-placeholder,
+.post-password-form .password::-webkit-input-placeholder,
+#comment-textarea textarea::-webkit-input-placeholder,
+.comment-form-comment textarea::-webkit-input-placeholder,
+.input-text::-webkit-input-placeholder {
+    color: #888888;
+}
+
+input#s:-moz-placeholder,
+#comment-input input:-moz-placeholder,
+.post-password-form .password::-moz-input-placeholder,
+#comment-textarea textarea:-moz-placeholder,
+.comment-form-comment textarea:-moz-placeholder,
+.input-text:-moz-placeholder,
+input#s:-ms-input-placeholder,
+#comment-input input:-ms-input-placeholder,
+.post-password-form .password::-ms-input-placeholder,
+#comment-textarea textarea:-moz-placeholder,
+.comment-form-comment textarea:-ms-input-placeholder,
+.input-text:-ms-input-placeholder {
+    color: #888888;
+}
+
+input#s,
+#comment-input input,
+#comment-textarea textarea,
+.comment-form-comment textarea,
+.input-text,
+.post-password-form .password,
+.wpcf7-form .wpcf7-text,
+.wpcf7-form .wpcf7-quiz,
+.wpcf7-form .wpcf7-number,
+.wpcf7-form textarea,
+.wpcf7-form .wpcf7-select,
+.wpcf7-select-parent .select-arrow,
+.wpcf7-captchar,
+.wpcf7-form .wpcf7-date,
+.gform_wrapper .gfield input[type=text],
+.gform_wrapper .gfield input[type=email],
+.gform_wrapper .gfield textarea,
+.gform_wrapper .gfield_select[multiple=multiple],
+.gform_wrapper .gfield select,
+.gravity-select-parent .select-arrow,
+.select-arrow,
+#bbpress-forums .quicktags-toolbar,
+#bbpress-forums .bbp-search-form #bbp_search,
+.bbp-reply-form input#bbp_topic_tags,
+.bbp-topic-form input#bbp_topic_title,
+.bbp-topic-form input#bbp_topic_tags,
+.bbp-topic-form select#bbp_stick_topic_select,
+.bbp-topic-form select#bbp_topic_status_select,
+#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content,
+#wp-bbp_topic_content-editor-container,
+#wp-bbp_reply_content-editor-container,
+.main-nav-search-form input,
+.search-page-search-form input,
+.chzn-container-single .chzn-single,
+.chzn-container .chzn-drop,
+.evolve-select-parent,
+.evolve-select-parent select,
+.evolve-select-parent select2-container,
+.evolve-select-parent .evolve-select-arrow,
+.evolve-select-parent .country_to_state,
+#lang_sel_click a.lang_sel_sel,
+#lang_sel_click ul ul a,
+#lang_sel_click ul ul a:visited,
+#lang_sel_click a,
+#lang_sel_click a:visited,
+#wrapper .search-field input,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=file],
+textarea,
+select {
+    border-color: #E0E0E0 !important;
+}
+
+#bootstrap-slider .layout-left {
+    left: 0;
+    right: 50%;
+    margin-left: 60px;
+}
+
+#bootstrap-slider .carousel-caption {
+    bottom: 12%;
+}
+
+#bootstrap-slider .carousel-caption p {
+    background: rgba(0, 0, 0, .7);
+}
+
+#bootstrap-slider .carousel-control {
+    left: 60px;
+    bottom: 6%;
+}
+
+#bootstrap-slider .right.carousel-control {
+    left: 100px;
+}
+#jp-relatedposts h3.jp-relatedposts-headline em {
+    font-size: 22px;
+    line-height: 19px;
+    letter-spacing: 0px;
+    font-weight: normal !important;
+}
+
+#jp-relatedposts h3.jp-relatedposts-headline {
+    margin-bottom: 12px !important;
+}
+
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+font-size: 18px !important;
+}
+
+#slide_holder p {
+    margin: 0 0 0;
+}
+
+#slide_holder .featured-title {
+margin-bottom: 3px;
+}
+
+#slide_holder .featured-title {
+ width:45%;
+}
+
+.table-1 tr:first-child {
+ background-color: gray; 
+ color: white;
+ font-weight: bold;
+}
+
+.table-1 td:first-child {
+ background-color: #f5f5f5;
+}
+
+.table-1 tr:first-child td:first-child {
+ background-color: gray;
+}
+
+.woocommerce-menu-holder {
+    float: left;
+}
+
+.container-menu {
+    z-index: 3;
+}
+
+#search-text-top {
+    position: absolute;
+    right: 0;
+}
+
+#search-text-top:focus {
+    position: absolute;
+    right: 0px;
+    left: initial;
+}
+
+.header .woocommerce-menu {
+    margin-right: 20px;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .header_v0 .title-container #logo a {
+        padding: 0px;
+    }
+    #search-text-top {
+        background: #fff !important;
+        font-size: 12px;
+        font-weight: normal;
+        color: #888 !important;
+    }
+    .sc_menu {
+        float: none;
+        text-align: center;
+    }
+    #search-text-top {
+        border: 1px solid #fff;
+        height: 36px;
+        width: 190px;
+    }
+    .woocommerce-menu-holder {
+        float: none;
+    }
+    .header .woocommerce-menu {
+        float: none;
+        margin-right: 0;
+    }
+    .title-container #logo {
+        float: none;
+    }
+    #righttopcolumn,
+    #social,
+    .header a,
+    #tagline,
+    #logo {
+        width: auto;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header_v0 div#search-text-box {
+        margin-right: 0px
+    }
+}
+
+</style>
+<link rel="stylesheet" id="crayon-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/crayon.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-arduino-ide-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/arduino-ide.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/monaco.css" type="text/css" media="all">
+<link rel="stylesheet" id="redux-google-fonts-evl_options-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/jquery.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/jquery-migrate.min.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/parallax.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/modernizr.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/carousel.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/tipsy.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/fields.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/jquery.infinite-scroll.min.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/jquery.scroll.pack.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/supersubs.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/superfish.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/buttons.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/ddslick.js.tải xuống"></script><style id="css-ddslick" type="text/css">.dd-select{ border-radius:2px; border:solid 1px #ccc; position:relative; cursor:pointer;}.dd-desc { color:#aaa; display:block; overflow: hidden; font-weight:normal; line-height: 1.4em; }.dd-selected{ overflow:hidden; display:block; padding:10px; font-weight:bold;}.dd-pointer{ width:0; height:0; position:absolute; right:10px; top:50%; margin-top:-3px;}.dd-pointer-down{ border:solid 5px transparent; border-top:solid 5px #000; }.dd-pointer-up{border:solid 5px transparent !important; border-bottom:solid 5px #000 !important; margin-top:-8px;}.dd-options{ border:solid 1px #ccc; border-top:none; list-style:none; box-shadow:0px 1px 5px #ddd; display:none; position:absolute; z-index:2000; margin:0; padding:0;background:#fff; overflow:auto;}.dd-option{ padding:10px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }.dd-options > li:last-child > .dd-option{ border-bottom:none;}.dd-option:hover{ background:#f3f3f3; color:#000;}.dd-selected-description-truncated { text-overflow: ellipsis; white-space:nowrap; }.dd-option-selected { background:#f6f6f6; }.dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:5px; max-width:64px;}.dd-image-right { float:right; margin-right:15px; margin-left:5px;}.dd-container{ position:relative;}​ .dd-selected-text { font-weight:bold}​</style>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/js"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/api.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/bootstrap.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/related-posts.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"http:\/\/wired.chillibasket.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/crayon.min.js.tải xuống"></script>
+<link rel="https://api.w.org/" href="http://wired.chillibasket.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://wired.chillibasket.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://wired.chillibasket.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Introduction to Self-Balancing Robots" href="http://wired.chillibasket.com/2014/09/balancing-robot-intro/">
+<link rel="next" title="My Hobby Toolbox" href="http://wired.chillibasket.com/2014/10/my-hobby-toolbox/">
+
+<link rel="canonical" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/">
+<link rel="shortlink" href="http://wired.chillibasket.com/?p=109">
+<link rel="alternate" type="application/json+oembed" href="http://wired.chillibasket.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwired.chillibasket.com%2F2014%2F10%2Faccel-gyro-sensors%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://wired.chillibasket.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwired.chillibasket.com%2F2014%2F10%2Faccel-gyro-sensors%2F&amp;format=xml">
+
+<link rel="dns-prefetch" href="http://v0.wordpress.com/">
+<link rel="dns-prefetch" href="http://jetpack.wordpress.com/">
+<link rel="dns-prefetch" href="http://s0.wp.com/">
+<link rel="dns-prefetch" href="http://s1.wp.com/">
+<link rel="dns-prefetch" href="http://s2.wp.com/">
+<link rel="dns-prefetch" href="http://public-api.wordpress.com/">
+<link rel="dns-prefetch" href="http://0.gravatar.com/">
+<link rel="dns-prefetch" href="http://1.gravatar.com/">
+<link rel="dns-prefetch" href="http://2.gravatar.com/">
+<style type="text/css">img#wpstats{display:none}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #d3d3d3; background-image: url("http://wired.chillibasket.com/wp-content/uploads/2014/08/grey-chevron-stripes-patterns-5.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: fixed; }
+</style>
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Accelerometer &amp; Gyroscope Sensors">
+<meta property="og:url" content="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/">
+<meta property="og:description" content="If you haven’t already read the first part of this Self-balancing robot series, I would encourage you to do so now! The first section below deals with a little bit of theory behind the sensor…">
+<meta property="article:published_time" content="2014-10-09T13:02:20+00:00">
+<meta property="article:modified_time" content="2015-10-08T20:34:47+00:00">
+<meta property="og:site_name" content="chillibasket">
+<meta property="og:image" content="http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Featured.jpg">
+<meta property="og:image:width" content="3534">
+<meta property="og:image:height" content="2120">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:image" content="http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Featured.jpg?w=640">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="http://wired.chillibasket.com/wp-content/uploads/2015/03/4e9d6895b4e9e70456edbdb2b46312aa1-550c5afcv1_site_icon-32x32.png" sizes="32x32">
+<link rel="icon" href="http://wired.chillibasket.com/wp-content/uploads/2015/03/4e9d6895b4e9e70456edbdb2b46312aa1-550c5afcv1_site_icon-256x256.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://wired.chillibasket.com/wp-content/uploads/2015/03/4e9d6895b4e9e70456edbdb2b46312aa1-550c5afcv1_site_icon-256x256.png">
+<meta name="msapplication-TileImage" content="http://wired.chillibasket.com/wp-content/uploads/2015/03/4e9d6895b4e9e70456edbdb2b46312aa1-550c5afcv1_site_icon.png">
+<!-- BEGIN GADWP v5.1.2.2 Universal Analytics - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-68587581-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- END GADWP Universal Analytics -->
+
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="http://wired.chillibasket.com/wp-content/themes/evolve/ie.css">
+        <![endif]-->
+
+    <script type="text/javascript" charset="UTF-8" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/common.js.tải xuống"></script><script type="text/javascript" charset="UTF-8" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/util.js.tải xuống"></script><script type="text/javascript" charset="UTF-8" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/geocoder.js.tải xuống"></script><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/services.css"><script type="text/javascript" charset="UTF-8" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/stats.js.tải xuống"></script></head><!--END head-->
+
+      
+
+    <!--BEGIN body-->
+    <body class="post-template-default single single-post postid-109 single-format-standard custom-background">
+                    <div id="wrapper">
+                
+            <div class="menu-back">
+                                <div class="clearfix"></div>
+            </div><!--/.menu-back-->
+
+            <div id="top"></div>
+            <!--BEGIN .header-pattern-->
+<div class="header-pattern">
+    <!--BEGIN .header-border-->
+
+    <div class="header-border">
+        <div class="header-border-sticky">
+            <!--BEGIN .header-->
+            <div class="header">
+                <!--BEGIN .container-header-->
+                <div class="container container-header header_v0">
+                    <!--BEGIN #righttopcolumn-->
+                    <div id="righttopcolumn">
+                                                    <!--BEGIN #subscribe-follow-->
+                            <div id="social">
+                                   
+
+<ul class="sc_menu">
+       
+        <li><a target="_blank" href="http://wired.chillibasket.com/feed/rss/" class="tipsytext" id="rss" name="RSS Feed"><i class="t4p-icon-social-rss"></i></a></li>
+                       <li><a target="_blank" href="https://www.youtube.com/user/simonbluett" class="tipsytext" id="youtube" name="YouTube"><i class="t4p-icon-social-youtube"></i></a></li>
+        </ul>                                        
+                            </div>
+                            <!--END #subscribe-follow-->
+                                            </div>
+                    <!--END #righttopcolumn-->
+
+                                        <!--BEGIN .title-container-->
+                    <div class="title-container ">
+                                                         <div id="logo"><a href="http://wired.chillibasket.com/">chillibasket</a></div>
+                            <div id="tagline">A Student Technology Blog</div>                        
+                    </div>
+                    <!--END .title-container-->
+                </div>
+                <!--END .container-header-->
+            </div>
+            <!--END .header-->
+        </div>
+    </div>
+    <!--END .header-border-->
+</div>
+<!--END .header-pattern-->
+<div class="menu-container header_v0">
+    
+        <div class="menu-header">
+            <div class="menu-header-sticky">
+                <!--BEGIN .container-menu-->
+                <div class="container nacked-menu container-menu">
+                                            <div class="primary-menu">
+                            <nav class="nav nav-holder link-effect"><div class="menu-wired-menu-container"><ul id="menu-wired-menu" class="nav-menu sf-js-enabled sf-arrows"><li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-22"><a href="http://wired.chillibasket.com/"><span data-hover="Home">Home</span></a></li>
+<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="http://wired.chillibasket.com/tutorials/"><span data-hover="Tutorials">Tutorials</span></a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="http://wired.chillibasket.com/about/"><span data-hover="About">About</span></a></li>
+</ul></div>                            <div id="undefined" class="dd-container" style="width: 100%;"><div class="dd-select" style="width: 100%;"><input class="dd-selected-value" type="hidden" value=""><a class="dd-selected"><label class="dd-selected-text"><span class="t4p-icon-menu"></span></label></a></div><ul class="dd-options dd-click-off-close" style="width: 100%;"><li><a class="dd-option dd-option-selected"> <label class="dd-option-text"><span class="t4p-icon-menu"></span></label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="http://wired.chillibasket.com/"> <label class="dd-option-text">Home</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="http://wired.chillibasket.com/tutorials/"> <label class="dd-option-text">Tutorials</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="http://wired.chillibasket.com/about/"> <label class="dd-option-text">About</label></a></li></ul></div></nav>
+                        </div><!-- /.primary-menu -->
+                                                    <!--BEGIN #searchform-->
+                            <form action="http://wired.chillibasket.com/" method="get" class="searchform">
+                                <div id="search-text-box">
+                                    <label class="searchfield" id="search_label_top" for="search-text-top"><input id="search-text-top" type="text" tabindex="1" name="s" class="search" placeholder="Type your search"></label>
+                                </div>
+                            </form>
+                            <div class="clearfix"></div>
+                            <!--END #searchform-->
+                            <header id="header" class="sticky-header  container row" style="display: none;">
+    <div class="container">
+                <div class="sticky-menubar col-md-9 col-sm-9">    
+            <nav class="nav nav-holder link-effect"><div class="menu-wired-menu-container"><ul id="menu-wired-menu-1" class="nav-menu sf-js-enabled sf-arrows"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-22"><a href="http://wired.chillibasket.com/"><span data-hover="Home">Home</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="http://wired.chillibasket.com/tutorials/"><span data-hover="Tutorials">Tutorials</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="http://wired.chillibasket.com/about/"><span data-hover="About">About</span></a></li>
+</ul></div>            </nav>
+        </div>            
+                    <!--BEGIN #searchform-->
+            <form action="http://wired.chillibasket.com/" method="get" class="stickysearchform">
+                <div id="stickysearch-text-box" class="col-md-2 col-sm-2">
+                    <label class="searchfield" id="stickysearch_label" for="search-stickyfix"><input id="search-stickyfix" type="text" tabindex="1" name="s" class="search" placeholder="Type your search"></label>
+                </div>
+            </form>
+            <div class="clearfix"></div>
+            <!--END #searchform-->
+                    
+    </div>
+</header>                                    </div><!-- /.container -->
+            </div><!-- /.menu-header -->
+        </div>
+        </div>              
+            <div class="menu-container">
+                                    <div class="menu-back">
+                        <div class="sliderblock">
+    </div><!--/.sliderblock-->                        <div style="clear:both;"></div> 
+
+                                                                        
+                    </div><!--/.menu-back-->
+                    
+                <!--BEGIN .content-->
+                <div class="content chillibasket_wiredsingular single s-category-self-balancing s-category-tutorial s-tag-accelerometer s-tag-balancing s-tag-galileo s-tag-gen2 s-tag-gyroscope s-tag-mpu6050 s-tag-self-balancing s-tag-stabilisation s-tag-tutorial s-author-none">
+                                        <!--BEGIN .container-->
+                    <div class="container container-center row">
+                        <!--BEGIN #content-->
+                        <div id="content">
+                            
+<!--BEGIN #primary .hfeed-->
+<div id="primary" class=" col-xs-12 col-sm-6 col-md-8 col-md-8 col-single col-single">
+
+    <ul class="breadcrumbs"><li><a class="home" href="http://wired.chillibasket.com/">Home</a></li><li><a href="http://wired.chillibasket.com/category/tutorial/" title="Tutorial">Tutorial</a></li> <li><a href="http://wired.chillibasket.com/category/tutorial/self-balancing/" title="Self-balancing">Self-balancing</a></li><li>Accelerometer &amp; Gyroscope Sensors</li></ul>
+            <!--BEGIN .hentry-->
+            <div id="post-109" class="post-109 post type-post status-publish format-standard has-post-thumbnail hentry category-self-balancing category-tutorial tag-accelerometer tag-balancing tag-galileo tag-gen2 tag-gyroscope tag-mpu6050 tag-self-balancing tag-stabilisation tag-tutorial p publish first-post cat tag">
+
+                                        <h1 class="entry-title">Accelerometer &amp; Gyroscope Sensors</h1>
+                    
+                    <!--BEGIN .entry-meta .entry-header-->
+                    <div class="entry-meta entry-header">
+
+                        <a href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/"><span class="published updated">October 9, 2014</span></a>
+
+                                                    <span class="comment-count"><a href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/#comments">3 Comments</a></span>
+                            
+                        <span class="author vcard">
+                            Written by <strong><a class="url fn" href="http://wired.chillibasket.com/author/chillibasket_wired/" title="View all posts by Simon B.">Simon B.</a></strong>
+                        </span>
+                                              
+                        <!--END .entry-meta .entry-header-->
+                    </div> 
+
+                    
+                <!--BEGIN .entry-content .article-->
+                <div class="entry-content article">
+
+                    <p><img data-attachment-id="125" data-permalink="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/self-balancing-part-2/" data-orig-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/Self-balancing-Part-2.jpg" data-orig-size="1200,450" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;4.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;NIKON D3100&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1408559911&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;26&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.05&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Self-balancing Part 2" data-image-description="" data-medium-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/Self-balancing-Part-2-300x112.jpg" data-large-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/Self-balancing-Part-2-1024x384.jpg" class="aligncenter wp-image-125 size-full img-responsive" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/Self-balancing-Part-2.jpg" alt="Self-balancing Part 2" width="1200" height="450" srcset="http://wired.chillibasket.com/wp-content/uploads/2014/10/Self-balancing-Part-2.jpg 1200w, http://wired.chillibasket.com/wp-content/uploads/2014/10/Self-balancing-Part-2-300x112.jpg 300w, http://wired.chillibasket.com/wp-content/uploads/2014/10/Self-balancing-Part-2-1024x384.jpg 1024w" sizes="(max-width: 1200px) 100vw, 1200px"></p>
+<p>If you haven’t already read the first part of this Self-balancing robot series, I would encourage you to <a title="Self-Balancing Robot | Part 1" href="http://wired.chillibasket.com/2014/09/self-balancing-robot-part-1/">do so now</a>! The first section below deals with a little bit of theory behind the sensors, so if you want to get straight to the programming/building part, please feel free to skip to the second section…</p>
+<p>&nbsp;</p>
+<hr>
+<h4>Deciding which Gyroscope Module to Use</h4>
+<p>So you have decided to go ahead with the project and construct your own self-balancing robot? That’s great! Now we can start by looking at one of the most significant elements of this project; the sensor. Traditionally the sensor of preference for stabilisation&nbsp;is a gyroscope. Now-days gyroscopes are extremely small and very cheap to buy, so they are ideal for amateur electronics projects. Unfortunately these gyroscopes (both the cheap and the not-so-cheap versions) also come with their own problems. They are good for short-term and quick movements, but tend to drift over time as the error accumulates. They also record a lot of jitter and noise, which needs to be filtered by the micro-controller before the data can be used.</p>
+<p>To reduce this drifting effect of the gyroscope, it is possible to combine the sensor data with that from an accelerometer. The accelerometer is good at sensing slower and more prolonged movements, rather than the fast motion. Therefore if we take the best of both worlds and fuse the data together, we will be left with an extremely accurate picture of the motion&nbsp;of the robot.</p>
+<p>As a result I decided to use a combined accelerometer &amp; gyroscope breakout module (the MPU-6050), which is slightly more expensive than a simple gyro, but should lead to a superior stabilisation performance. <em>Note: the MPU-6050 comes with a library which does all of the calculations and filtrations for you, so that definitely is a plus!</em></p>
+<p>&nbsp;</p>
+<hr>
+<h4>Getting started with the Accel-Gyro Module</h4>
+<p>The MPU-6050 uses I<sup>2</sup>C to communicate with the micro-controller, so I started by connecting up the pins as shown in the schematics: the SDA line connects to the Analogue pin 4, the SCL to Analogue pin 5, power input to the 3.3v pin and the ground to the GND pin.</p>
+<div id="attachment_127" style="width: 1010px" class="wp-caption aligncenter"><a href="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/AccelGyro-Schematic.jpg"><img data-attachment-id="127" data-permalink="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/accelgyro-schematic/" data-orig-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/AccelGyro-Schematic.jpg" data-orig-size="1000,857" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Accel:Gyro Schematic" data-image-description="" data-medium-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/AccelGyro-Schematic-300x257.jpg" data-large-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/AccelGyro-Schematic.jpg" class="wp-image-127 size-full img-responsive" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/AccelGyro-Schematic.jpg" alt="Schematic for wiring the accel-gyro to the Galileo. (Made using Fritzing)" width="1000" height="857" srcset="http://wired.chillibasket.com/wp-content/uploads/2014/10/AccelGyro-Schematic.jpg 1000w, http://wired.chillibasket.com/wp-content/uploads/2014/10/AccelGyro-Schematic-300x257.jpg 300w" sizes="(max-width: 1000px) 100vw, 1000px"></a><p class="wp-caption-text">Schematic for wiring the accel-gyro to the Galileo. (Made using Fritzing)</p></div>
+<p>As I am using an Intel Galileo Gen2 board, I did not use the interrupt pin. In general it is very bad practice to disregard the interrupts, as it might cause the buffer holding the sensor data to overflow, but for some reason the Galileo does not support normal interrupts! In order to get the sensor working correctly on the Galileo Board,&nbsp;I spent a lot of time on getting the timing right so that there is no overflow of incoming sensor data.For all other Arduino-compatible board, you should use the interrupt so that the micro-controller deals with new sensor data the moment that it is sent. (The interrupt pin is connected to Arduino I/O pin 2)</p>
+<p>Now it is time to get some data from the accel-gyro module! To do this I simply used the sample code which came with the documentation of the MPU6050 in order to read the raw sensor data. For this sample to work, the <a href="https://github.com/jrowberg/i2cdevlib">I2Cdev</a>&nbsp;and the <a href="https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050">MPU6050</a>&nbsp;libraries need to be installed. Here is the code:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5a02793515cf0042775948" class="crayon-syntax crayon-theme-arduino-ide crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title">Read RAW sensor data from MPU6050</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button crayon-pressed" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">C</span></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important; margin-top: -21px; display: none;"><div>Press CTRL+C to Copy, CTRL+V to Paste</div></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 1; opacity: 1; overflow: hidden; height: 400px;">// I2C device class (I2Cdev) demonstration Arduino sketch for MPU6050 class
+// 10/7/2011 by Jeff Rowberg &lt;jeff@rowberg.net&gt;
+/* ============================================
+I2Cdev device library code is placed under the MIT license
+Copyright (c) 2011 Jeff Rowberg
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+===============================================
+*/
+
+// I2Cdev and MPU6050 must be installed as libraries, or else the .cpp/.h files
+// for both classes must be in the include path of your project
+#include "I2Cdev.h"
+#include "MPU6050.h"
+
+// Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
+// is used in I2Cdev.h
+#if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
+#include "Wire.h"
+#endif
+
+// class default I2C address is 0x68
+// specific I2C addresses may be passed as a parameter here
+// AD0 low = 0x68 (default for InvenSense evaluation board)
+// AD0 high = 0x69
+MPU6050 accelgyro;
+//MPU6050 accelgyro(0x69); // &lt;-- use for AD0 high
+
+int16_t ax, ay, az;
+int16_t gx, gy, gz;
+
+// uncomment "OUTPUT_READABLE_ACCELGYRO" if you want to see a tab-separated
+// list of the accel X/Y/Z and then gyro X/Y/Z values in decimal. Easy to read,
+// not so easy to parse, and slow(er) over UART.
+#define OUTPUT_READABLE_ACCELGYRO
+
+#define LED_PIN 13
+bool blinkState = false;
+
+void setup() {
+// join I2C bus (I2Cdev library doesn't do this automatically)
+#if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
+Wire.begin();
+#elif I2CDEV_IMPLEMENTATION == I2CDEV_BUILTIN_FASTWIRE
+Fastwire::setup(400, true);
+#endif
+
+// initialize serial communication
+// (38400 chosen because it works as well at 8MHz as it does at 16MHz, but
+// it's really up to you depending on your project)
+Serial.begin(38400);
+
+// initialize device
+Serial.println("Initializing I2C devices...");
+accelgyro.initialize();
+
+// verify connection
+Serial.println("Testing device connections...");
+Serial.print("MPU Connection ");
+Serial.println(accelgyro.testConnection() ? "successful" : "failed");
+
+// configure Arduino LED for
+pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+// read raw accel/gyro measurements from device
+accelgyro.getMotion6(&amp;ax, &amp;ay, &amp;az, &amp;gx, &amp;gy, &amp;gz);
+
+#ifdef OUTPUT_READABLE_ACCELGYRO
+// display tab-separated accel/gyro x/y/z values
+Serial.print("a/g:\t");
+Serial.print(ax); Serial.print("\t");
+Serial.print(ay); Serial.print("\t");
+Serial.print(az); Serial.print("\t");
+Serial.print(gx); Serial.print("\t");
+Serial.print(gy); Serial.print("\t");
+Serial.println(gz);
+#endif
+
+// blink LED to indicate activity
+blinkState = !blinkState;
+digitalWrite(LED_PIN, blinkState);
+}</textarea></div>
+			<div class="crayon-main" style="max-height: 400px; position: relative; z-index: 0; overflow: hidden; opacity: 0;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-2">2</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-4">4</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-6">6</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-8">8</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-10">10</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-12">12</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-14">14</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-16">16</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-18">18</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-20">20</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-22">22</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-23">23</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-24">24</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-25">25</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-26">26</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-27">27</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-28">28</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-29">29</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-30">30</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-31">31</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-32">32</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-33">33</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-34">34</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-35">35</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-36">36</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-37">37</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-38">38</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-39">39</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-40">40</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-41">41</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-42">42</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-43">43</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-44">44</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-45">45</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-46">46</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-47">47</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-48">48</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-49">49</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-50">50</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-51">51</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-52">52</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-53">53</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-54">54</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-55">55</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-56">56</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-57">57</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-58">58</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-59">59</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-60">60</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-61">61</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-62">62</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-63">63</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-64">64</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-65">65</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-66">66</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-67">67</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-68">68</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-69">69</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-70">70</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-71">71</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-72">72</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-73">73</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-74">74</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-75">75</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-76">76</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-77">77</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-78">78</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-79">79</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-80">80</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-81">81</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-82">82</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-83">83</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-84">84</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-85">85</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-86">86</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-87">87</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-88">88</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-89">89</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-90">90</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-91">91</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-92">92</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-93">93</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-94">94</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-95">95</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-96">96</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-97">97</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-98">98</div><div class="crayon-num" data-line="crayon-5a02793515cf0042775948-99">99</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515cf0042775948-100">100</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5a02793515cf0042775948-1"><span class="crayon-c">// I2C device class (I2Cdev) demonstration Arduino sketch for MPU6050 class</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-2"><span class="crayon-c">// 10/7/2011 by Jeff Rowberg &lt;jeff@rowberg.net&gt;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-3"><span class="crayon-c">/* ============================================</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-4"><span class="crayon-c">I2Cdev device library code is placed under the MIT license</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-5"><span class="crayon-c">Copyright (c) 2011 Jeff Rowberg</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-6">&nbsp;</div><div class="crayon-line" id="crayon-5a02793515cf0042775948-7"><span class="crayon-c">Permission is hereby granted, free of charge, to any person obtaining a copy</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-8"><span class="crayon-c">of this software and associated documentation files (the "Software"), to deal</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-9"><span class="crayon-c">in the Software without restriction, including without limitation the rights</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-10"><span class="crayon-c">to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-11"><span class="crayon-c">copies of the Software, and to permit persons to whom the Software is</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-12"><span class="crayon-c">furnished to do so, subject to the following conditions:</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-13">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-14"><span class="crayon-c">The above copyright notice and this permission notice shall be included in</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-15"><span class="crayon-c">all copies or substantial portions of the Software.</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-16">&nbsp;</div><div class="crayon-line" id="crayon-5a02793515cf0042775948-17"><span class="crayon-c">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-18"><span class="crayon-c">IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-19"><span class="crayon-c">FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-20"><span class="crayon-c">AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-21"><span class="crayon-c">LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-22"><span class="crayon-c">OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-23"><span class="crayon-c">THE SOFTWARE.</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-24"><span class="crayon-c">===============================================</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-25"><span class="crayon-c">*/</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-26">&nbsp;</div><div class="crayon-line" id="crayon-5a02793515cf0042775948-27"><span class="crayon-c">// I2Cdev and MPU6050 must be installed as libraries, or else the .cpp/.h files</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-28"><span class="crayon-c">// for both classes must be in the include path of your project</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-29"><span class="crayon-p">#include "I2Cdev.h"</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-30"><span class="crayon-p">#include "MPU6050.h"</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-31">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-32"><span class="crayon-c">// Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-33"><span class="crayon-c">// is used in I2Cdev.h</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-34"><span class="crayon-p">#if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-35"><span class="crayon-p">#include "Wire.h"</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-36"><span class="crayon-p">#endif</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-37">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-38"><span class="crayon-c">// class default I2C address is 0x68</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-39"><span class="crayon-c">// specific I2C addresses may be passed as a parameter here</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-40"><span class="crayon-c">// AD0 low = 0x68 (default for InvenSense evaluation board)</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-41"><span class="crayon-c">// AD0 high = 0x69</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-42"><span class="crayon-e">MPU6050 </span><span class="crayon-v">accelgyro</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-43"><span class="crayon-c">//MPU6050 accelgyro(0x69); // &lt;-- use for AD0 high</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-44">&nbsp;</div><div class="crayon-line" id="crayon-5a02793515cf0042775948-45"><span class="crayon-e">int16_t </span><span class="crayon-v">ax</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">ay</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">az</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-46"><span class="crayon-e">int16_t </span><span class="crayon-v">gx</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">gy</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">gz</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-47">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-48"><span class="crayon-c">// uncomment "OUTPUT_READABLE_ACCELGYRO" if you want to see a tab-separated</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-49"><span class="crayon-c">// list of the accel X/Y/Z and then gyro X/Y/Z values in decimal. Easy to read,</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-50"><span class="crayon-c">// not so easy to parse, and slow(er) over UART.</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-51"><span class="crayon-p">#define OUTPUT_READABLE_ACCELGYRO</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-52">&nbsp;</div><div class="crayon-line" id="crayon-5a02793515cf0042775948-53"><span class="crayon-p">#define LED_PIN 13</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-54"><span class="crayon-t">bool</span><span class="crayon-h"> </span><span class="crayon-v">blinkState</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-t">false</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-55">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-56"><span class="crayon-t">void</span><span class="crayon-h"> </span><span class="crayon-e">setup</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-57"><span class="crayon-c">// join I2C bus (I2Cdev library doesn't do this automatically)</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-58"><span class="crayon-p">#if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-59"><span class="crayon-v">Wire</span><span class="crayon-sy">.</span><span class="crayon-e">begin</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-60"><span class="crayon-p">#elif I2CDEV_IMPLEMENTATION == I2CDEV_BUILTIN_FASTWIRE</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-61"><span class="crayon-v">Fastwire</span><span class="crayon-o">::</span><span class="crayon-e">setup</span><span class="crayon-sy">(</span><span class="crayon-cn">400</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-t">true</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-62"><span class="crayon-p">#endif</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-63">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-64"><span class="crayon-c">// initialize serial communication</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-65"><span class="crayon-c">// (38400 chosen because it works as well at 8MHz as it does at 16MHz, but</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-66"><span class="crayon-c">// it's really up to you depending on your project)</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-67"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">begin</span><span class="crayon-sy">(</span><span class="crayon-cn">38400</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-68">&nbsp;</div><div class="crayon-line" id="crayon-5a02793515cf0042775948-69"><span class="crayon-c">// initialize device</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-70"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">println</span><span class="crayon-sy">(</span><span class="crayon-s">"Initializing I2C devices..."</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-71"><span class="crayon-v">accelgyro</span><span class="crayon-sy">.</span><span class="crayon-e">initialize</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-72">&nbsp;</div><div class="crayon-line" id="crayon-5a02793515cf0042775948-73"><span class="crayon-c">// verify connection</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-74"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">println</span><span class="crayon-sy">(</span><span class="crayon-s">"Testing device connections..."</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-75"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-s">"MPU Connection "</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-76"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">println</span><span class="crayon-sy">(</span><span class="crayon-v">accelgyro</span><span class="crayon-sy">.</span><span class="crayon-e">testConnection</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">?</span><span class="crayon-h"> </span><span class="crayon-s">"successful"</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-s">"failed"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-77">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-78"><span class="crayon-c">// configure Arduino LED for</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-79"><span class="crayon-e">pinMode</span><span class="crayon-sy">(</span><span class="crayon-v">LED_PIN</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">OUTPUT</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-80"><span class="crayon-sy">}</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-81">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-82"><span class="crayon-t">void</span><span class="crayon-h"> </span><span class="crayon-e">loop</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-sy">{</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-83"><span class="crayon-c">// read raw accel/gyro measurements from device</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-84"><span class="crayon-v">accelgyro</span><span class="crayon-sy">.</span><span class="crayon-e">getMotion6</span><span class="crayon-sy">(</span><span class="crayon-o">&amp;</span><span class="crayon-v">ax</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">&amp;</span><span class="crayon-v">ay</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">&amp;</span><span class="crayon-v">az</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">&amp;</span><span class="crayon-v">gx</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">&amp;</span><span class="crayon-v">gy</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-o">&amp;</span><span class="crayon-v">gz</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-85">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-86"><span class="crayon-p">#ifdef OUTPUT_READABLE_ACCELGYRO</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-87"><span class="crayon-c">// display tab-separated accel/gyro x/y/z values</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-88"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-s">"a/g:\t"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-89"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">ax</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-s">"\t"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-90"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">ay</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-s">"\t"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-91"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">az</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-s">"\t"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-92"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">gx</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-s">"\t"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-93"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">gy</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-s">"\t"</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-94"><span class="crayon-v">Serial</span><span class="crayon-sy">.</span><span class="crayon-e">println</span><span class="crayon-sy">(</span><span class="crayon-v">gz</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-95"><span class="crayon-p">#endif</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-96">&nbsp;</div><div class="crayon-line" id="crayon-5a02793515cf0042775948-97"><span class="crayon-c">// blink LED to indicate activity</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-98"><span class="crayon-v">blinkState</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-o">!</span><span class="crayon-v">blinkState</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5a02793515cf0042775948-99"><span class="crayon-e">digitalWrite</span><span class="crayon-sy">(</span><span class="crayon-v">LED_PIN</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">blinkState</span><span class="crayon-sy">)</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515cf0042775948-100"><span class="crayon-sy">}</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0119 seconds] -->
+<p>&nbsp;</p>
+<p>The result I got on the Serial Monitor looked like this:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5a02793515d03794240574" class="crayon-syntax crayon-theme-arduino-ide crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title">RAW Accel-Gyro Sensor Data</span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button crayon-pressed" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick show-plain-default" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 1; opacity: 1; height: 250px; overflow: hidden;">Initializing I2C devices...
+Testing device connections...
+MPU Connection successful 
+a/g:	-1428	14240	12120	-536	131	-149
+a/g:	-1416	14196	11972	-505	110	-169
+a/g:	-1484	14260	11948	-524	108	-147
+a/g:	-1508	14220	11968	-513	87	-151
+a/g:	-1540	14176	11920	-501	15	-164
+a/g:	-1408	14212	11984	-523	27	-153
+a/g:	-1472	14104	11888	-526	123	-137
+a/g:	-1400	14236	11936	-514	136	-148
+a/g:	-1512	14216	12008	-522	132	-142
+a/g:	-1412	14172	11956	-520	127	-158
+a/g:	-1456	14120	11936	-533	94	-166
+a/g:	-1496	14124	11936	-529	97	-161
+a/g:	-1496	14208	11996	-526	108	-177
+a/g:	-1420	14236	11992	-505	104	-151
+a/g:	-1540	14264	11984	-510	115	-171
+a/g:	-1468	14300	12068	-504	51	-143
+a/g:	-1508	14172	11868	-545	105	-137
+a/g:	-1416	14244	11812	-523	69	-154
+a/g:	-1472	14276	11956	-504	92	-146
+a/g:	-1492	14192	12028	-517	143	-175</textarea></div>
+			<div class="crayon-main" style="max-height: 250px; position: relative; z-index: 0; opacity: 0; overflow: hidden;">
+				<table class="crayon-table" style="">
+					<tbody><tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5a02793515d03794240574-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-2">2</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-4">4</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-6">6</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-8">8</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-10">10</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-12">12</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-14">14</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-16">16</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-18">18</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-19">19</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-20">20</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-21">21</div><div class="crayon-num crayon-striped-num" data-line="crayon-5a02793515d03794240574-22">22</div><div class="crayon-num" data-line="crayon-5a02793515d03794240574-23">23</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5a02793515d03794240574-1"><span class="crayon-e">Initializing </span><span class="crayon-e">I2C </span><span class="crayon-v">devices</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-2"><span class="crayon-e">Testing </span><span class="crayon-e">device </span><span class="crayon-v">connections</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-3"><span class="crayon-e">MPU </span><span class="crayon-e">Connection </span><span class="crayon-i">successful</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-4"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1428</span><span class="crayon-h">	</span><span class="crayon-cn">14240</span><span class="crayon-h">	</span><span class="crayon-cn">12120</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">536</span><span class="crayon-h">	</span><span class="crayon-cn">131</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">149</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-5"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1416</span><span class="crayon-h">	</span><span class="crayon-cn">14196</span><span class="crayon-h">	</span><span class="crayon-cn">11972</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">505</span><span class="crayon-h">	</span><span class="crayon-cn">110</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">169</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-6"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1484</span><span class="crayon-h">	</span><span class="crayon-cn">14260</span><span class="crayon-h">	</span><span class="crayon-cn">11948</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">524</span><span class="crayon-h">	</span><span class="crayon-cn">108</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">147</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-7"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1508</span><span class="crayon-h">	</span><span class="crayon-cn">14220</span><span class="crayon-h">	</span><span class="crayon-cn">11968</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">513</span><span class="crayon-h">	</span><span class="crayon-cn">87</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">151</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-8"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1540</span><span class="crayon-h">	</span><span class="crayon-cn">14176</span><span class="crayon-h">	</span><span class="crayon-cn">11920</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">501</span><span class="crayon-h">	</span><span class="crayon-cn">15</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">164</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-9"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1408</span><span class="crayon-h">	</span><span class="crayon-cn">14212</span><span class="crayon-h">	</span><span class="crayon-cn">11984</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">523</span><span class="crayon-h">	</span><span class="crayon-cn">27</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">153</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-10"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1472</span><span class="crayon-h">	</span><span class="crayon-cn">14104</span><span class="crayon-h">	</span><span class="crayon-cn">11888</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">526</span><span class="crayon-h">	</span><span class="crayon-cn">123</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">137</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-11"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1400</span><span class="crayon-h">	</span><span class="crayon-cn">14236</span><span class="crayon-h">	</span><span class="crayon-cn">11936</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">514</span><span class="crayon-h">	</span><span class="crayon-cn">136</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">148</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-12"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1512</span><span class="crayon-h">	</span><span class="crayon-cn">14216</span><span class="crayon-h">	</span><span class="crayon-cn">12008</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">522</span><span class="crayon-h">	</span><span class="crayon-cn">132</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">142</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-13"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1412</span><span class="crayon-h">	</span><span class="crayon-cn">14172</span><span class="crayon-h">	</span><span class="crayon-cn">11956</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">520</span><span class="crayon-h">	</span><span class="crayon-cn">127</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">158</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-14"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1456</span><span class="crayon-h">	</span><span class="crayon-cn">14120</span><span class="crayon-h">	</span><span class="crayon-cn">11936</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">533</span><span class="crayon-h">	</span><span class="crayon-cn">94</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">166</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-15"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1496</span><span class="crayon-h">	</span><span class="crayon-cn">14124</span><span class="crayon-h">	</span><span class="crayon-cn">11936</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">529</span><span class="crayon-h">	</span><span class="crayon-cn">97</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">161</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-16"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1496</span><span class="crayon-h">	</span><span class="crayon-cn">14208</span><span class="crayon-h">	</span><span class="crayon-cn">11996</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">526</span><span class="crayon-h">	</span><span class="crayon-cn">108</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">177</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-17"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1420</span><span class="crayon-h">	</span><span class="crayon-cn">14236</span><span class="crayon-h">	</span><span class="crayon-cn">11992</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">505</span><span class="crayon-h">	</span><span class="crayon-cn">104</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">151</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-18"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1540</span><span class="crayon-h">	</span><span class="crayon-cn">14264</span><span class="crayon-h">	</span><span class="crayon-cn">11984</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">510</span><span class="crayon-h">	</span><span class="crayon-cn">115</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">171</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-19"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1468</span><span class="crayon-h">	</span><span class="crayon-cn">14300</span><span class="crayon-h">	</span><span class="crayon-cn">12068</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">504</span><span class="crayon-h">	</span><span class="crayon-cn">51</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">143</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-20"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1508</span><span class="crayon-h">	</span><span class="crayon-cn">14172</span><span class="crayon-h">	</span><span class="crayon-cn">11868</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">545</span><span class="crayon-h">	</span><span class="crayon-cn">105</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">137</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-21"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1416</span><span class="crayon-h">	</span><span class="crayon-cn">14244</span><span class="crayon-h">	</span><span class="crayon-cn">11812</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">523</span><span class="crayon-h">	</span><span class="crayon-cn">69</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">154</span></div><div class="crayon-line crayon-striped-line" id="crayon-5a02793515d03794240574-22"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1472</span><span class="crayon-h">	</span><span class="crayon-cn">14276</span><span class="crayon-h">	</span><span class="crayon-cn">11956</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">504</span><span class="crayon-h">	</span><span class="crayon-cn">92</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">146</span></div><div class="crayon-line" id="crayon-5a02793515d03794240574-23"><span class="crayon-v">a</span><span class="crayon-o">/</span><span class="crayon-v">g</span><span class="crayon-o">:</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">1492</span><span class="crayon-h">	</span><span class="crayon-cn">14192</span><span class="crayon-h">	</span><span class="crayon-cn">12028</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">517</span><span class="crayon-h">	</span><span class="crayon-cn">143</span><span class="crayon-h">	</span><span class="crayon-o">-</span><span class="crayon-cn">175</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0112 seconds] -->
+<p>In this data we can see the readings from the accelerometer already divided into the x/y/z values, and the readings from the gyroscope divided into its x/y/z components. This is a great first step, but unfortunately this data is not very usable in its current form. We still have to fuse the accelerometer and gyroscope data together, and then filter it to remove all of the noise!</p>
+<div id="attachment_144" style="width: 1210px" class="wp-caption aligncenter"><img data-attachment-id="144" data-permalink="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/accel-gyro-test-setup/" data-orig-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Test-Setup.jpg" data-orig-size="1200,657" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;5.3&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;NIKON D3100&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1412707490&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;42&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.04&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Accel-Gyro Test Setup" data-image-description="" data-medium-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Test-Setup-300x164.jpg" data-large-file="http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Test-Setup-1024x560.jpg" class="wp-image-144 size-full img-responsive" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/Accel-Gyro-Test-Setup.jpg" alt="The MPU6050 module connected to a Galileo Gen 2 Board" width="1200" height="657" srcset="http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Test-Setup.jpg 1200w, http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Test-Setup-300x164.jpg 300w, http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Test-Setup-1024x560.jpg 1024w" sizes="(max-width: 1200px) 100vw, 1200px"><p class="wp-caption-text">The MPU6050 module connected to a Galileo Gen 2 Board</p></div>
+<p>&nbsp;</p>
+<hr>
+<h4>Manipulating the data</h4>
+<p>It is possible to calculate the tilt of the sensor manually through the use of a number of formulas, but fortunately (at least for the MPU-6050) there is a library to do this for us! As a matter of fact, the MPU-6050 has a builtin “Motion Processing Unit” (hence the initials) which can be used to process the sensor data, therefore minimising the load on the micro-processor. This library also automatically filters the data so that we get a clean and usable result straight away.<br>
+<img src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/latex.php" alt="tan^{-1} \frac{A_x}{A_y} = sin^{-1} \frac{A_x}{\sqrt{A^2_x + A^2_y}} = sin^{-1} \frac{A_x}{g} " title="tan^{-1} \frac{A_x}{A_y} = sin^{-1} \frac{A_x}{\sqrt{A^2_x + A^2_y}} = sin^{-1} \frac{A_x}{g} " class="latex img-responsive"></p>
+<p>Above is the equation used to calculate the angle of inclination from the accelerometer data. As I opted to use the lazier method (using the library), I don’t think that I am in a good position to explain all of these formulas to you. If you want to find out about calculating the angles manually, please visit: <a href="http://www.kerrywong.com/2012/03/08/a-self-balancing-robot-i/">http://www.kerrywong.com/2012/03/08/a-self-balancing-robot-i/</a>. Kerry Wong does an awesome job at describing the whole system, so I would encourage you to check it out! He covers all of the main topics such as the calculations, sensor fusion and the Kalman filter.</p>
+<p>As regards the filtering, here is another great post which looks at the main advantages and disadvantages of using the a complimentary filter instead of the MPU6050 motion-apps library: <a href="http://www.geekmomprojects.com/mpu-6050-redux-dmp-data-fusion-vs-complementary-filter/">http://www.geekmomprojects.com/mpu-6050-redux-dmp-data-fusion-vs-complementary-filter/</a></p>
+<p>&nbsp;</p>
+<hr>
+<blockquote><p><span style="color: #000000;"><em><strong>In Part 3:</strong> Using the MPU6050 motion apps, and calibrating the accelerometer-gyroscope module. <a title="Calibrating &amp; Optimising the MPU6050" href="http://wired.chillibasket.com/2015/01/self-balancing-robot-part-3/">View Part 3</a></em></span></p>
+<p>&nbsp;</p></blockquote>
+<p>Please leave a comment below if you have any questions or suggestions. You could consider subscribing if you want to be notified the moment I post the next part of this series!</p>
+
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-visual jp-relatedposts-grid "><div class="jp-relatedposts-post jp-relatedposts-post0 jp-relatedposts-post-thumbs" data-post-id="65" data-post-format="false"><a class="jp-relatedposts-post-a" href="http://wired.chillibasket.com/2014/09/balancing-robot-intro/" title="Introduction to Self-Balancing Robots
+
+Why should you build a self-balancing robot? That is a very good question, with an even better answer! Self-balancing systems can be seen in many places and they are essential for the smooth running of numerous types of machines. Some of the obvious include Segways, bipedal robots and space rockets…" rel="nofollow" data-origin="109" data-position="0"><img class="jp-relatedposts-post-img" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/Screen-Shot-2014-07-17-at-10.05.23.png" width="350" alt="Introduction to Self-Balancing Robots"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://wired.chillibasket.com/2014/09/balancing-robot-intro/" title="Introduction to Self-Balancing Robots
+
+Why should you build a self-balancing robot? That is a very good question, with an even better answer! Self-balancing systems can be seen in many places and they are essential for the smooth running of numerous types of machines. Some of the obvious include Segways, bipedal robots and space rockets…" rel="nofollow" data-origin="109" data-position="0">Introduction to Self-Balancing Robots</a></h4><p class="jp-relatedposts-post-excerpt">Why should you build a self-balancing robot? That is a very good question, with an even better answer! Self-balancing systems can be seen in many places and they are essential for the smooth running of numerous types of machines. Some of the obvious include Segways, bipedal robots and space rockets…</p><p class="jp-relatedposts-post-date" style="display: block;">September 7, 2014</p><p class="jp-relatedposts-post-context">In "Self-balancing"</p></div><div class="jp-relatedposts-post jp-relatedposts-post1 jp-relatedposts-post-thumbs" data-post-id="299" data-post-format="false"><a class="jp-relatedposts-post-a" href="http://wired.chillibasket.com/2015/10/putting-it-all-together/" title="Putting it all together!
+
+Up until now we have looked at all of the individual topics behind self-balancing robots. In this final part of the tutorial, I&#39;ll bring it all together and give you some guidelines to designing and assembling your own robot!   Designing the Robot Weight Distribution: Self-balancing robots work on the principle of an…" rel="nofollow" data-origin="109" data-position="1"><img class="jp-relatedposts-post-img" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/BalancerDiagram1.jpg" width="350" alt="Putting it all together!"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://wired.chillibasket.com/2015/10/putting-it-all-together/" title="Putting it all together!
+
+Up until now we have looked at all of the individual topics behind self-balancing robots. In this final part of the tutorial, I&#39;ll bring it all together and give you some guidelines to designing and assembling your own robot!   Designing the Robot Weight Distribution: Self-balancing robots work on the principle of an…" rel="nofollow" data-origin="109" data-position="1">Putting it all together!</a></h4><p class="jp-relatedposts-post-excerpt">Up until now we have looked at all of the individual&nbsp;topics behind self-balancing robots. In this final part of the tutorial, I'll bring it all together and&nbsp;give you some guidelines to designing and assembling your own robot! &nbsp; Designing the&nbsp;Robot Weight Distribution: Self-balancing robots work on the principle of an…</p><p class="jp-relatedposts-post-date" style="display: block;">October 8, 2015</p><p class="jp-relatedposts-post-context">In "Self-balancing"</p></div><div class="jp-relatedposts-post jp-relatedposts-post2 jp-relatedposts-post-thumbs" data-post-id="5" data-post-format="false"><a class="jp-relatedposts-post-a" href="http://wired.chillibasket.com/2014/08/welcome/" title="Welcome!
+
+I have always had a great interest in electronics and technical things. Over the past few years I worked on a number of projects which I would really like to share on this blog. My main blog has turned out to be more of a photography blog, so I decided…" rel="nofollow" data-origin="109" data-position="2"><img class="jp-relatedposts-post-img" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/Flick-Unit-3.jpg" width="350" alt="Welcome!"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://wired.chillibasket.com/2014/08/welcome/" title="Welcome!
+
+I have always had a great interest in electronics and technical things. Over the past few years I worked on a number of projects which I would really like to share on this blog. My main blog has turned out to be more of a photography blog, so I decided…" rel="nofollow" data-origin="109" data-position="2">Welcome!</a></h4><p class="jp-relatedposts-post-excerpt">I have always had a great interest in electronics and technical things. Over the past few years I worked on a number of projects which I would really like to share on this blog. My main blog has turned out to be more of a photography blog, so I decided…</p><p class="jp-relatedposts-post-date" style="display: block;">August 25, 2014</p><p class="jp-relatedposts-post-context">In "Announcement"</p></div></div></div>	
+
+                    <div class="clearfix"></div>
+
+                </div><!--END .entry-content .article-->
+
+                <!--BEGIN .entry-meta .entry-footer-->
+                <div class="entry-meta entry-footer row">
+
+                    <div class="col-md-6">				
+                                                    <div class="entry-categories"> <a href="http://wired.chillibasket.com/category/tutorial/self-balancing/" rel="category tag">Self-balancing</a>, <a href="http://wired.chillibasket.com/category/tutorial/" rel="category tag">Tutorial</a></div>
+                                                        <div class="entry-tags"> <a href="http://wired.chillibasket.com/tag/accelerometer/" rel="tag">Accelerometer</a>, <a href="http://wired.chillibasket.com/tag/balancing/" rel="tag">Balancing</a>, <a href="http://wired.chillibasket.com/tag/galileo/" rel="tag">Galileo</a>, <a href="http://wired.chillibasket.com/tag/gen2/" rel="tag">Gen2</a>, <a href="http://wired.chillibasket.com/tag/gyroscope/" rel="tag">Gyroscope</a>, <a href="http://wired.chillibasket.com/tag/mpu6050/" rel="tag">MPU6050</a>, <a href="http://wired.chillibasket.com/tag/self-balancing/" rel="tag">Self-balancing</a>, <a href="http://wired.chillibasket.com/tag/stabilisation/" rel="tag">Stabilisation</a>, <a href="http://wired.chillibasket.com/tag/tutorial/" rel="tag">Tutorial</a></div>
+                        							
+                    </div>
+
+                    <div class="col-md-6">
+                            <div class="share-this">
+        <a rel="nofollow" class="tipsytext" target="_blank" href="http://twitter.com/intent/tweet?status=Accelerometer%20&amp;%20Gyroscope%20Sensors+%C2%BB+http://tinyurl.com/q2ckzap" name="Share on Twitter"><i class="t4p-icon-social-twitter"></i></a>
+        <a rel="nofollow" class="tipsytext" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http://wired.chillibasket.com/2014/10/accel-gyro-sensors/&amp;t=Accelerometer%20&amp;%20Gyroscope%20Sensors" name="Share on Facebook"><i class="t4p-icon-social-facebook"></i></a>
+        <a rel="nofollow" class="tipsytext" target="_blank" href="https://plus.google.com/share?url=http://wired.chillibasket.com/2014/10/accel-gyro-sensors/" name="Share on Google Plus"><i class="t4p-icon-social-google-plus"></i></a>
+        <a rel="nofollow" class="tipsytext" target="_blank" href="http://pinterest.com/pin/create/button/?url=http://wired.chillibasket.com/2014/10/accel-gyro-sensors/&amp;media=http://wired.chillibasket.com/wp-content/uploads/2014/10/Accel-Gyro-Featured.jpg&amp;description=Accelerometer%20&amp;%20Gyroscope%20Sensors" name="Share on Pinterest"><i class="t4p-icon-social-pinterest"></i></a>			
+        <a rel="nofollow" class="tipsytext" target="_blank" href="http://www.addtoany.com/email?linkurl=http://wired.chillibasket.com/2014/10/accel-gyro-sensors/&amp;linkname=Accelerometer%20&amp;%20Gyroscope%20Sensors" name="Share by Email"><i class="t4p-icon-social-envelope-o"></i></a>
+        <a rel="nofollow" class="tipsytext" target="_blank" href="http://www.addtoany.com/share_save#url=http://wired.chillibasket.com/2014/10/accel-gyro-sensors/&amp;linkname=Accelerometer &amp; Gyroscope Sensors" name="More options"><i class="t4p-icon-redo"></i></a>
+    </div>
+                        </div>
+
+                </div><!--END .entry-meta .entry-footer-->
+
+                <!-- Auto Discovery Trackbacks
+                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/"
+    dc:identifier="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/"
+    dc:title="Accelerometer &#038; Gyroscope Sensors"
+    trackback:ping="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/trackback/" />
+</rdf:RDF>                -->
+
+                <!--END .hentry-->
+            </div>
+
+                <!--BEGIN .navigation-links-->
+    <div class="navigation-links single-page-navigation clearfix row">
+        <div class="col-sm-6 col-md-6 nav-previous"><a href="http://wired.chillibasket.com/2014/09/balancing-robot-intro/" rel="prev">Introduction to Self-Balancing Robots</a></div>
+        <div class="col-sm-6 col-md-6 nav-next"><a href="http://wired.chillibasket.com/2014/10/my-hobby-toolbox/" rel="next">My Hobby Toolbox</a></div>
+        <!--END .navigation-links-->
+    </div>
+    <div class="clearfix"></div> 
+
+<div id="comments">   
+            <!--BEGIN #comments-->
+
+                    <div class="comments-title-back"><h3 class="comment-title"><span class="comment-title-meta">3 Comments</span></h3>                <span class="comment-feed-link"><a class="tipsytext follow-replies" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/feed/" name="Follow replies"><i class="t4p-icon-social-rss"></i></a></span>
+                <div class="clearfix"></div>
+            </div>
+            
+        
+                    <!--BEGIN .comment-list-->
+            <ol class="comment-list">
+                
+    <!--BEING .comment-->
+    <li class="comment first-comment reader reader-leia-pauline-tonga microid-mailto+https:sha1:919f19c250ca5c0a7b744e620ae28eecd533d0e4" id="comment-259">
+    <!--BEGIN .comment-author-->
+<div class="comment-header"><div class="comment-author vcard">
+<img alt="Leia Pauline Tonga" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/307320af2e1c5a1410ae2b71f15dbbcc" srcset="http://0.gravatar.com/avatar/307320af2e1c5a1410ae2b71f15dbbcc?s=90&amp;d=retro&amp;r=g 2x" class="avatar avatar-45 photo img-responsive grav-hashed grav-hijack" height="45" width="45" id="grav-307320af2e1c5a1410ae2b71f15dbbcc-0"> <cite class="commenter fn n"><a href="https://plus.google.com/112857976844810798326" rel="external nofollow" class="url">Leia Pauline Tonga</a></cite>
+<!--END .comment-author-->
+</div>
+<!--BEGIN .comment-meta-->
+<div class="comment-meta">
+<span class="comment-date">March 20, 2017</span>
+&nbsp;&nbsp;&nbsp;<span class="comment-permalink"><a rel="bookmark" title="Permalink to this comment" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/#comment-259"><i class="t4p-icon-link"></i></a></span>
+ 
+<!--END .comment-meta-->
+</div></div>
+
+<!--BEGIN .comment-content-->
+<div class="comment-content">
+<p>Initializing I2C devices…<br>
+Testing device connections…<br>
+MPU Connection failed<br>
+a/g:	0	0	0	0	0	0<br>
+a/g:	0	0	0	0	0	0<br>
+a/g:	0	0	0	0	0	0<br>
+a/g:	0	0	0	0	0	0<br>
+a/g:	0	0	0	0	0	0<br>
+a/g:	0	0	0	0	0	0<br>
+a/g:	0	0	0	0	0	0<br>
+…<br>
+and it goes on…</p>
+<p>I checked the pin connections and they were right.<br>
+Do you the chip is damaged?</p>
+
+<!--END .comment-content-->
+</div>
+<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/?replytocom=259#respond" onclick="return addComment.moveForm( &quot;comment-259&quot;, &quot;259&quot;, &quot;respond&quot;, &quot;109&quot; )" aria-label="Reply to Leia Pauline Tonga">Reply</a></div>    <!--END .comment-->
+</li>
+
+    <!--BEING .comment-->
+    <li class="comment reader reader-leia-pauline-tonga microid-mailto+https:sha1:919f19c250ca5c0a7b744e620ae28eecd533d0e4" id="comment-257">
+    <!--BEGIN .comment-author-->
+<div class="comment-header"><div class="comment-author vcard">
+<img alt="Leia Pauline Tonga" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/307320af2e1c5a1410ae2b71f15dbbcc" srcset="http://0.gravatar.com/avatar/307320af2e1c5a1410ae2b71f15dbbcc?s=90&amp;d=retro&amp;r=g 2x" class="avatar avatar-45 photo img-responsive grav-hashed grav-hijack" height="45" width="45" id="grav-307320af2e1c5a1410ae2b71f15dbbcc-1"> <cite class="commenter fn n"><a href="https://plus.google.com/112857976844810798326" rel="external nofollow" class="url">Leia Pauline Tonga</a></cite>
+<!--END .comment-author-->
+</div>
+<!--BEGIN .comment-meta-->
+<div class="comment-meta">
+<span class="comment-date">March 19, 2017</span>
+&nbsp;&nbsp;&nbsp;<span class="comment-permalink"><a rel="bookmark" title="Permalink to this comment" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/#comment-257"><i class="t4p-icon-link"></i></a></span>
+ 
+<!--END .comment-meta-->
+</div></div>
+
+<!--BEGIN .comment-content-->
+<div class="comment-content">
+<p>When I run the code,<br>
+the monitor shows only zeroes as the values</p>
+<p>What should I do?</p>
+
+<!--END .comment-content-->
+</div>
+<div class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/?replytocom=257#respond" onclick="return addComment.moveForm( &quot;comment-257&quot;, &quot;257&quot;, &quot;respond&quot;, &quot;109&quot; )" aria-label="Reply to Leia Pauline Tonga">Reply</a></div>    <ul class="children">
+
+    <!--BEING .comment-->
+    <li class="comment administrator administrator-chillibasket_wired microid-mailto+http:sha1:f17aba137423b121906af586b97056ffa6155503" id="comment-258">
+    <!--BEGIN .comment-author-->
+<div class="comment-header"><div class="comment-author vcard">
+<img alt="Simon B." src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/c6edfd2247c1eb108913c553e0a55b52" srcset="http://0.gravatar.com/avatar/c6edfd2247c1eb108913c553e0a55b52?s=90&amp;d=retro&amp;r=g 2x" class="avatar avatar-45 photo img-responsive grav-hashed grav-hijack" height="45" width="45" id="grav-c6edfd2247c1eb108913c553e0a55b52-0"> <cite class="commenter fn n"><a href="http://www.chillibasket.com/" rel="external nofollow" class="url">Simon B.</a></cite>
+<!--END .comment-author-->
+</div>
+<!--BEGIN .comment-meta-->
+<div class="comment-meta">
+<span class="comment-date">March 19, 2017</span>
+&nbsp;&nbsp;&nbsp;<span class="comment-permalink"><a rel="bookmark" title="Permalink to this comment" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/#comment-258"><i class="t4p-icon-link"></i></a></span>
+ 
+<!--END .comment-meta-->
+</div></div>
+
+<!--BEGIN .comment-content-->
+<div class="comment-content">
+<p>To be able to help you, I’ll need a little bit more information.<br>
+&gt; What micro-controller are you using?<br>
+&gt; What other text do you see in the serial monitor (such as the first three lines in my sample)?<br>
+&gt; Have you connected all of the pins properly and set to serial monitor to the right baud rate?</p>
+
+<!--END .comment-content-->
+</div>
+    <!--END .comment-->
+</li>
+</ul><!-- .children -->
+<!--END .comment-->
+</li>
+                <!--END .comment-list-->
+            </ol>
+           
+
+        
+        <div class="navigation-links page-navigation clearfix row">
+            <div class="col-sm-6 col-md-6 nav-next"></div>
+            <div class="col-sm-6 col-md-6 nav-previous"></div>
+        </div>    
+
+        <!--END #comments-->
+
+        </div>
+
+    <!--BEGIN #respond-->
+
+    <!--BEGIN #comment-form-->
+
+    <div class="clearfix"></div>        
+
+    
+		<div id="respond" class="comment-respond">
+							<h3 id="reply-title" class="comment-reply-title">Leave a Reply					<small><a rel="nofollow" id="cancel-comment-reply-link" href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/#respond" style="display:none;">Cancel reply</a></small>
+				</h3>
+						<form id="commentform" class="comment-form">
+				<iframe src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/saved_resource.html" style="width: 100%; height: 58px; border: 0px;" name="jetpack_remote_comment" class="jetpack_remote_comment" id="jetpack_remote_comment" scrolling="no"></iframe>
+				<!--[if !IE]><!-->
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+						var commentForms = document.getElementsByClassName('jetpack_remote_comment');
+						for (var i = 0; i < commentForms.length; i++) {
+							commentForms[i].allowTransparency = false;
+							commentForms[i].scrolling = 'no';
+						}
+					});
+				</script>
+				<!--<![endif]-->
+			</form>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="">
+
+		    <!--END #comment-form-->
+
+    <!--END #respond-->
+
+    
+    <!--END #primary .hfeed-->
+</div>
+
+<!--BEGIN #secondary .aside-->
+<div id="secondary" class="aside col-sm-6 col-md-4">
+    <div id="search-2" class="widget widget_search"><div class="widget-content"><!--BEGIN #searchform-->
+<form action="http://wired.chillibasket.com/" method="get" class="searchform">
+    <div id="search-text-box">
+        <label class="searchfield" id="search_label" for="search-text">
+            <input id="search-text" type="text" tabindex="3" name="s" class="search" placeholder="Type your search">
+        </label>
+    </div>
+    <div id="search-button-box">
+        <button id="search-button" tabindex="4" type="submit" class="search-btn"></button>
+    </div>
+</form>
+<div class="clearfix"></div>
+<!--END #searchform--></div></div><div id="blog_subscription-2" class="widget jetpack_subscription_widget"><div class="widget-content"><div class="before-title"><div class="widget-title-background"></div><h3 class="widget-title">Subscribe via Email</h3></div>
+			<form action="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				<div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div>					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-2" style="clip: rect(1px 1px 1px 1px); position: absolute; height: 1px; width: 1px; overflow: hidden;">
+							Email Address						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address">
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="source" value="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-2">
+												<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget">
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-2]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-2'),
+					input = d.getElementById('subscribe-field-blog_subscription-2'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</div></div><div id="text-2" class="widget widget_text"><div class="widget-content"><div class="before-title"><div class="widget-title-background"></div><h3 class="widget-title">Tutorials</h3></div>			<div class="textwidget"><u><b>Self-balancing Robots</b></u>
+<ul>
+	<li><a title="Self-Balancing Robot | Part 1" href="http://wired.chillibasket.com/2014/09/self-balancing-robot-part-1/">Part 1: An Introduction</a></li>
+	<li><a title="Self-Balancing Robot | Part 2" href="http://wired.chillibasket.com/2014/10/self-balancing-robot-part-2/">Part 2: Accel &amp; Gyro Sensors</a></li>
+	<li><a title="Calibrating &amp; Optimising the MPU6050" href="http://wired.chillibasket.com/2015/01/self-balancing-robot-part-3/">Part 3: Calibrating the MPU-6050</a></li>
+	<li><a title="The PID Controller" href="http://wired.chillibasket.com/2015/03/self-balancing-robot-part-4/">Part 4: The PID Controller</a></li>
+	<li><span style="color: #000000;"><a href="http://wired.chillibasket.com/2015/10/putting-it-all-together/">Part 5: Putting it all Together</a></span></li>
+</ul>
+<br>
+<u><b>Arduino 101</b></u>
+<ul>
+	<li><a title="Arduino 101 - An Introduction" href="http://wired.chillibasket.com/2016/10/arduino-101-an-introduction/">Part 1: An Introduction</a></li>
+</ul>
+<br>
+<u><b>Hobby Electronics Tips &amp; Tricks</b></u>
+<ul>
+	<li><a title="My Hobby Toolbox" href="http://wired.chillibasket.com/2014/10/my-hobby-toolbox/">My Hobby Toolbox</a></li>
+	<li><a title="Powering Micro-controllers using Batteries" href="http://wired.chillibasket.com/2014/12/powering-micro-controllers-using-batteries/">Using Batteries with Micro-controllers</a></li>
+</ul></div>
+		</div></div><div id="categories-2" class="widget widget_categories"><div class="widget-content"><div class="before-title"><div class="widget-title-background"></div><h3 class="widget-title">Categories</h3></div>		<ul>
+	<li class="cat-item cat-item-43"><a href="http://wired.chillibasket.com/category/3d-printing/">3D Printing</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://wired.chillibasket.com/category/announcement/">Announcement</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="http://wired.chillibasket.com/category/tutorial/arduino-101/">Arduino 101</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://wired.chillibasket.com/category/equipment/">Equipment</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://wired.chillibasket.com/category/galileo/">Galileo</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://wired.chillibasket.com/category/projects/">Projects</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://wired.chillibasket.com/category/robotics/">Robotics</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="http://wired.chillibasket.com/category/tutorial/self-balancing/">Self-balancing</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="http://wired.chillibasket.com/category/techniques/">Techniques</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="http://wired.chillibasket.com/category/tutorial/">Tutorial</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://wired.chillibasket.com/category/uncategorized/">Uncategorized</a>
+</li>
+		</ul>
+</div></div><div id="archives-2" class="widget widget_archive"><div class="widget-content"><div class="before-title"><div class="widget-title-background"></div><h3 class="widget-title">Archives</h3></div>		<ul>
+			<li><a href="http://wired.chillibasket.com/2017/07/">July 2017</a></li>
+	<li><a href="http://wired.chillibasket.com/2016/10/">October 2016</a></li>
+	<li><a href="http://wired.chillibasket.com/2016/06/">June 2016</a></li>
+	<li><a href="http://wired.chillibasket.com/2015/10/">October 2015</a></li>
+	<li><a href="http://wired.chillibasket.com/2015/03/">March 2015</a></li>
+	<li><a href="http://wired.chillibasket.com/2015/01/">January 2015</a></li>
+	<li><a href="http://wired.chillibasket.com/2014/12/">December 2014</a></li>
+	<li><a href="http://wired.chillibasket.com/2014/10/">October 2014</a></li>
+	<li><a href="http://wired.chillibasket.com/2014/09/">September 2014</a></li>
+	<li><a href="http://wired.chillibasket.com/2014/08/">August 2014</a></li>
+		</ul>
+		</div></div></div><!--END #secondary .aside--><!--END #content-->
+</div>
+<!--END .container-->
+</div>
+<!--END .content-->
+</div>
+<!--BEGIN .content-bottom-->
+<div class="content-bottom">
+    <!--END .content-bottom-->
+</div>
+<!--BEGIN .footer-->
+<div class="footer">
+    <!--BEGIN .container-->
+    <div class="container container-footer">
+                <div class="clearfix"></div>
+        <p id="copyright"><span class="credits">© Copyright 2016 <a href="http://wired.chillibasket.com/about">Simon Bluett</a> • <a href="http://theme4press.com/evolve-multipurpose-wordpress-theme/">evolve</a> theme by Theme4Press&nbsp;&nbsp;•&nbsp;&nbsp;Powered by <a href="http://wordpress.org/">WordPress</a></span></p>        <!-- Theme Hook -->
+        
+    <script type="text/javascript">
+        var $jx = jQuery.noConflict();
+        $jx("div.post").mouseover(
+                function () {
+                    $jx(this).find("span.edit-post").css('visibility', 'visible');
+                }
+        ).mouseout(
+                function () {
+                    $jx(this).find("span.edit-post").css('visibility', 'hidden');
+                }
+        );
+        $jx("div.type-page").mouseover(
+                function () {
+                    $jx(this).find("span.edit-page").css('visibility', 'visible');
+                }
+        ).mouseout(
+                function () {
+                    $jx(this).find("span.edit-page").css('visibility', 'hidden');
+                }
+        );
+        $jx("div.type-attachment").mouseover(
+                function () {
+                    $jx(this).find("span.edit-post").css('visibility', 'visible');
+                }
+        ).mouseout(
+                function () {
+                    $jx(this).find("span.edit-post").css('visibility', 'hidden');
+                }
+        );
+        $jx("li.comment").mouseover(
+                function () {
+                    $jx(this).find("span.edit-comment").css('visibility', 'visible');
+                }
+        ).mouseout(
+                function () {
+                    $jx(this).find("span.edit-comment").css('visibility', 'hidden');
+                }
+        );</script> 
+
+    
+        <script type="text/javascript">
+            jQuery(document).ready(
+                    function ($) {
+                        if (jQuery('.sticky-header').length >= 1) {
+                            jQuery(window).scroll(function () {
+                                var header = jQuery(document).scrollTop();
+                                var headerHeight = jQuery('.new-top-menu').height() + jQuery('.menu-header').height() + jQuery('.header-pattern').height();
+                                if (header > headerHeight) {
+                                    jQuery('.sticky-header').addClass('sticky');
+                                    jQuery('.sticky-header').show();
+                                } else {
+                                    jQuery('.sticky-header').removeClass('sticky');
+                                    jQuery('.sticky-header').hide();
+                                }
+                            });
+                        }
+                    }
+            );</script>
+
+        
+        <script type="text/javascript">
+            /*----------------------------*/
+            /* Animated Buttons
+             /*----------------------------*/
+
+            var $animated = jQuery.noConflict();
+            $animated('.post-more').hover(
+                    function () {
+                        $animated(this).addClass('animated pulse')
+                    },
+                    function () {
+                        $animated(this).removeClass('animated pulse')
+                    }
+            )
+            $animated('.read-more').hover(
+                    function () {
+                        $animated(this).addClass('animated pulse')
+                    },
+                    function () {
+                        $animated(this).removeClass('animated pulse')
+                    }
+            )
+            $animated('#submit').hover(
+                    function () {
+                        $animated(this).addClass('animated pulse')
+                    },
+                    function () {
+                        $animated(this).removeClass('animated pulse')
+                    }
+            )
+            $animated('input[type="submit"]').hover(
+                    function () {
+                        $animated(this).addClass('animated pulse')
+                    },
+                    function () {
+                        $animated(this).removeClass('animated pulse')
+                    }
+            )
+
+        </script>
+
+        
+        <script type="text/javascript">
+            /*----------------*/
+            /* AnythingSlider
+             /*----------------*/
+            var $s = jQuery.noConflict();
+            $s(
+                    function () {
+                        $s('#slides')
+                                .anythingSlider({autoPlay: true, delay: 7000, })
+                    }
+            )
+        </script>
+
+                <script type="text/javascript">
+            /*----------------*/
+            /* Parallax Slider
+             /*----------------*/
+
+            var $par = jQuery.noConflict();
+            $par('#da-slider').cslider(
+                    {
+                        autoplay: true,
+                        bgincrement: 450,
+                        interval: 4000                    }
+            );</script>
+
+    
+    <script type="text/javascript">
+        /*----------------------*/
+        /* Bootstrap Slider
+         /*---------------------*/
+
+        var $carousel = jQuery.noConflict();
+        $carousel('#myCarousel').carousel(
+                {
+                    interval: 7000
+                }
+        )
+
+        $carousel('#carousel-nav a').click(
+                function (q) {
+                    q.preventDefault();
+                    targetSlide = $carousel(this).attr('data-to') - 1;
+                    $carousel('#myCarousel').carousel(targetSlide);
+                    $carousel(this).addClass('active').siblings().removeClass('active');
+                }
+        );
+        $carousel('#bootstrap-slider').carousel(
+                {
+                    interval: 7500                }
+        )
+
+        $carousel('#carousel-nav a').click(
+                function (q) {
+                    q.preventDefault();
+                    targetSlide = $carousel(this).attr('data-to') - 1;
+                    $carousel('#bootstrap-slider').carousel(targetSlide);
+                    $carousel(this).addClass('active').siblings().removeClass('active');
+                }
+        );
+    </script>
+
+            <!--END .container-->
+    </div>
+    <!--END .footer-->
+</div>
+<!--END body-->
+    <a href="http://wired.chillibasket.com/2014/10/accel-gyro-sensors/#top" id="top-link"><div id="backtotop" style="display: none;"></div></a>
+            </div>
+    	<div style="display:none">
+	<div class="grofile-hash-map-307320af2e1c5a1410ae2b71f15dbbcc">
+	</div>
+	<div class="grofile-hash-map-c6edfd2247c1eb108913c553e0a55b52">
+	</div>
+	</div>
+<script>
+            if (jQuery(".posts-container-infinite").length == 1) {
+                var ias = jQuery.ias({
+                    container: ".posts-container-infinite",
+                    item: "div.post",
+                    pagination: "div.pagination",
+                    next: "a.pagination-next",
+                });
+
+                ias.extension(new IASTriggerExtension({
+                        text: "Load more items",
+                        offset: 99999
+                }));
+                ias.extension(new IASSpinnerExtension({
+                }));
+                ias.extension(new IASNoneLeftExtension());
+            }else{}
+    </script><!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='http://wired.chillibasket.com/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel-ie8fix.css?ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/tabs.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var js_local_vars = {"language_flag":"","infinite_blog_finished_msg":"<em>All posts displayed<\/em>","infinite_blog_text":"<em>Loading the next set of posts...<\/em>","theme_url":"http:\/\/wired.chillibasket.com\/wp-content\/themes\/evolve","responsive_menu":"<span class=\"t4p-icon-menu\"><\/span>"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/main.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/gmap.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/devicepx-jetpack.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/gprofiles.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/wpgroho.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/comment-reply.min.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/wp-embed.min.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/spin.js.tải xuống"></script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/jquery.spin.js.tải xuống"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"http:\/\/wired.chillibasket.com\/wp-admin\/admin-ajax.php","nonce":"b03951010a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"http:\/\/wired.chillibasket.com\/admin-login?redirect_to=http%3A%2F%2Fwired.chillibasket.com%2F2014%2F10%2Faccel-gyro-sensors%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/jetpack-carousel.js.tải xuống"></script>
+
+		<!--[if IE]>
+		<script type="text/javascript">
+			if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+				// window.location.reload() doesn't respect the Hash in IE
+				window.location.hash = window.location.hash;
+			}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			(function () {
+				var comm_par_el = document.getElementById( 'comment_parent' ),
+					comm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',
+					frame = document.getElementById( 'jetpack_remote_comment' ),
+					tellFrameNewParent;
+
+				tellFrameNewParent = function () {
+					if ( comm_par ) {
+						frame.src = "http://jetpack.wordpress.com/jetpack-comment/?blogid=73605368&postid=109&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=retro&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=5.4&sig=16d728db3d225fffc58bb52313e440c87f414b5d#parent=http%3A%2F%2Fwired.chillibasket.com%2F2014%2F10%2Faccel-gyro-sensors%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+					} else {
+						frame.src = "http://jetpack.wordpress.com/jetpack-comment/?blogid=73605368&postid=109&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=retro&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=5.4&sig=16d728db3d225fffc58bb52313e440c87f414b5d#parent=http%3A%2F%2Fwired.chillibasket.com%2F2014%2F10%2Faccel-gyro-sensors%2F";
+					}
+				};
+
+				
+				if ( 'undefined' !== typeof addComment ) {
+					addComment._Jetpack_moveForm = addComment.moveForm;
+
+					addComment.moveForm = function ( commId, parentId, respondId, postId ) {
+						var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),
+							cancelClick, cancel;
+
+						if ( false === returnValue ) {
+							cancel = document.getElementById( 'cancel-comment-reply-link' );
+							cancelClick = cancel.onclick;
+							cancel.onclick = function () {
+								var cancelReturn = cancelClick.call( this );
+								if ( false !== cancelReturn ) {
+									return cancelReturn;
+								}
+
+								if ( ! comm_par ) {
+									return cancelReturn;
+								}
+
+								comm_par = 0;
+
+								tellFrameNewParent();
+
+								return cancelReturn;
+							};
+						}
+
+						if ( comm_par == parentId ) {
+							return returnValue;
+						}
+
+						comm_par = parentId;
+
+						tellFrameNewParent();
+
+						return returnValue;
+					};
+				}
+
+				
+				// Do the post message bit after the dom has loaded.
+				document.addEventListener( 'DOMContentLoaded', function () {
+					var iframe_url = "http:\/\/jetpack.wordpress.com";
+					if ( window.postMessage ) {
+						if ( document.addEventListener ) {
+							window.addEventListener( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						} else if ( document.attachEvent ) {
+							window.attachEvent( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						}
+					}
+				})
+
+			})();
+		</script>
+
+		<script type="text/javascript" src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/e-201745.js.tải xuống" async="" defer=""></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.4',blog:'73605368',post:'109',tz:'0',srv:'wired.chillibasket.com'} ]);
+	_stq.push([ 'clickTrackerInit', '73605368', '109' ]);
+</script>
+
+<!--END html(kthxbye)-->
+</div><img src="./2. Accelerometer - Gyroscope Sensors – chillibasket_files/g.gif" alt=":)" width="6" height="5" id="wpstats"></body></html>

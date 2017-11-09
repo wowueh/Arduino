@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://learn.adafruit.com/adafruit-motor-shield/faq -->
+<html lang="en-US" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="mask-icon" href="https://learn.adafruit.com/assets/adafruit_favicon-d77f206e6cc65b40101b6e5b8987f7c35cb6a283ea73c0adad50c37f7347c61a.svg" color="#000000">
+<link rel="shortcut icon" type="image/x-icon" href="https://learn.adafruit.com/assets/favicon-0c79bd4bc582e6d4cf3afe417bd1e28120527c09d92c08a6464690c5bf6b85f4.ico">
+<title>FAQ | Adafruit Motor Shield | Adafruit Learning System</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="4198Gg/oglMQCjq1FV8pnHmV625qPZQjQBR376k+KRD2fCEGue7eLG5Q/f0+Uy+eAljUapjC8+8+hN2TbjBwPw==">
+<link rel="alternate" type="application/atom+xml" title="ATOM" href="https://learn.adafruit.com/feed">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://learn.adafruit.com/feed.rss">
+<link rel="stylesheet" media="screen" href="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/application-fe53c19db8e5000fa82cea2fb94e168ba76e0d8b7249a7f48460893492e2140e.css">
+
+<script type="text/javascript" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/308175db61"></script><script type="text/javascript" async="" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/ec.js.tải xuống"></script><script type="text/javascript" async="" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/analytics.js.tải xuống"></script><script src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/1720153058307192" async=""></script><script async="" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/fbevents.js.tải xuống"></script><script src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/nr-1044.min.js.tải xuống"></script><script async="" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/gtm.js.tải xuống"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PRPXBQ6');</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@adafruit">
+<meta name="twitter:title" content="Adafruit Motor Shield">
+<meta name="twitter:description" content="Control servos, steppers and DC motors with an Arduino!">
+<meta name="twitter:image:src" content="https://s3.amazonaws.com/learn-production/guides/images/000/000/089/medium800/2237992158_d1be17779d_b.jpg">
+<meta name="twitter:domain" content="https://learn.adafruit.com">
+<link rel="canonical" href="https://learn.adafruit.com/adafruit-motor-shield/faq">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"308175db61","applicationID":"54271218","transactionName":"cVZXRUFeWghRShtEVlVcSh5AWVkT","queueTime":0,"applicationTime":31,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<!--[if lte IE 9]>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <![endif]-->
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="application pages show">
+
+<noscript>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRPXBQ6"
+  height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+
+<div id="outer-wrapper">
+<div id="inner-wrapper">
+<div id="messaging-wrapper" data-load="https://www.adafruit.com/api/multi_message.php"><div id="messaging-alert" class="messaging-container"><div class="msg-container container"><div class="message" data-message-id="79">Adafruit will not be shipping USPS orders Friday November 10, 2017 for Veterans Day. Any USPS orders placed after 11am ET Thursday November 9 will go out Monday November 13. All UPS orders will go out as normal.</div><a class="message-close" href="https://learn.adafruit.com/adafruit-motor-shield/faq#"><i class="fa fa-times"></i></a></div></div><div class="clear" <="" div=""></div></div>
+<header id="adafruit-header">
+<div id="small-header-content" class="container visible-xs">
+<a id="small-header-menu-button" class="menu-link" href="https://learn.adafruit.com/adafruit-motor-shield/faq#small-header-nav">
+<i class="fa fa-bars"> </i>
+ </a>
+<div class="small-header-logo">
+<a href="https://www.adafruit.com/">
+<img id="small-logo" height="50" width="50" alt="Adafruit Logo" title="Adafruit Logo" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/adafruit_logo_small.png">
+</a> </div>
+<a class="small-header-cart" href="https://www.adafruit.com/shopping_cart">
+<span class="small-cart-count">0</span>
+<i class="fa fa-shopping-cart"></i>
+</a> </div>
+<nav id="small-header-nav" role="navigation" class="visible-xs">
+<div class="block">
+<ul>
+<li>
+<div id="small-search-wrapper">
+<div id="small-search-inner-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="mobile-search" style="display:none;">Search</label>
+<input id="mobile-search" type="text" name="q" placeholder="Search Adafruit">
+<i class="fa fa-search"></i>
+</form>
+</div>
+</div>
+</li>
+<li>
+<a href="https://www.adafruit.com/categories">SHOP</a>
+</li>
+<li>
+<a href="https://blog.adafruit.com/">BLOG</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/">LEARN</a>
+</li>
+<li>
+<a href="https://forums.adafruit.com/">FORUMS</a>
+</li>
+<li>
+<a href="https://www.youtube.com/adafruit">VIDEOS</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/users/sign_in">SIGN IN</a>
+</li>
+<li>
+<a class="close-btn" id="small-nav-close-button" href="https://learn.adafruit.com/adafruit-motor-shield/faq#top">CLOSE MENU</a>
+</li>
+</ul>
+</div>
+</nav>
+<div id="header-content" class="container hidden-xs">
+<div id="header-profile">
+<a id="header-cart" href="https://www.adafruit.com/shopping_cart">
+0 Items <i class="fa fa-shopping-cart"></i>
+</a> <div id="account">
+<a href="https://learn.adafruit.com/users/sign_in">Sign In</a>
+</div>
+<div id="search-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="search" style="display:none;">Search</label>
+<input id="search" type="text" name="q" autocomplete="off" data-page="" ,="" data-app-id="W9DMM4OTH0" data-app-key="e613bcda3453b9ef887e2724362f9e57" data-app-index="learn_guides_production" data-app-uri="https://learn.adafruit.com">
+<i class="fa fa-search"></i>
+<input type="submit" style="visibility: hidden; position: fixed;">
+</form>
+</div>
+</div>
+<div id="navigation">
+<a href="https://www.adafruit.com/">
+<img id="logo" width="172" height="60" alt="Adafruit Logo" title="Adafruit Logo" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/logo_2x.png">
+</a> <nav class="hover-menu">
+<ul>
+<li id="nav-shop" data-load="https://www.adafruit.com/api/flyouts/shop.html"><a href="https://www.adafruit.com/">SHOP</a>
+</li>
+<li id="nav-blog" data-load="https://blog.adafruit.com/adafruit-blog-flyouts"><a href="https://blog.adafruit.com/">BLOG</a>
+</li>
+<li id="nav-learn" data-load="https://learn.adafruit.com/api/hover-menu/flyouts/learn.html"><a href="https://learn.adafruit.com/">LEARN</a>
+</li>
+<li id="nav-forums"><a href="https://forums.adafruit.com/">FORUMS</a>
+</li>
+<li id="nav-forums"><a href="https://www.youtube.com/adafruit">VIDEOS</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<div id="main-content">
+<div id="page-wrapper">
+<div id="content-wrapper" class="container" data-page-id="449" data-guide-id="89">
+<div class="row">
+<div class="sidebar-left-wrapper hidden-phone hidden-tablet col-lg-two-and-half col-md-3 col-sm-4 col-xs-12">
+<div class="sidebar-left-content" data-clampedwidth=".sidebar-left-wrapper" style="width: 255px;">
+<nav class="sidebar-left">
+<div class="title-bar">
+<img src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/2237992158_d1be17779d_b.jpg" class="img img-responsive">
+<div class="title">
+<h1><a href="https://learn.adafruit.com/adafruit-motor-shield/overview">Adafruit Motor Shield</a></h1>
+<span class="tagline"><a href="https://learn.adafruit.com/adafruit-motor-shield/overview">Control servos, steppers and DC motors with an Arduino!</a></span>
+</div>
+</div>
+<ul class="page-parent nav">
+<li class="parent ">
+<a class="sidebar-parent" href="https://learn.adafruit.com/adafruit-motor-shield/overview">Overview</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="parent active">
+<a class="sidebar-parent" href="https://learn.adafruit.com/adafruit-motor-shield/faq">FAQ</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="parent ">
+<a data-toggle="collapse" class="collapsed-icon collapsed" href="https://learn.adafruit.com/adafruit-motor-shield/faq#page-474-children"></a>
+<a class="sidebar-parent" href="https://learn.adafruit.com/adafruit-motor-shield/make-it">Make It!</a>
+<span class="page-draft-status">
+</span>
+<ul id="page-474-children" class="collapse  page-child nav">
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/preparation">Preparation</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/parts-list">Parts List</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/solder-it">Solder It</a>
+<span class="page-draft-status">
+</span>
+</li>
+</ul></li>
+<li class="parent ">
+<a data-toggle="collapse" class="collapsed-icon collapsed" href="https://learn.adafruit.com/adafruit-motor-shield/faq#page-481-children"></a>
+<a class="sidebar-parent" href="https://learn.adafruit.com/adafruit-motor-shield/use-it">Use It!</a>
+<span class="page-draft-status">
+</span>
+<ul id="page-481-children" class="collapse  page-child nav">
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/library-install">Library Install</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/power-requirements">Power Usage</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/using-rc-servos">Using RC Servos</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/using-stepper-motors">Using Stepper Motors</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/using-dc-motors">Using DC Motors</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/af-dcmotor-class">AF_DCMotor Class</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="">
+<a class="sidebar-child" href="https://learn.adafruit.com/adafruit-motor-shield/af-stepper-class">AF_Stepper Class</a>
+<span class="page-draft-status">
+</span>
+</li>
+</ul></li>
+<li class="parent ">
+<a class="sidebar-parent" href="https://learn.adafruit.com/adafruit-motor-shield/resources">Resources</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="parent ">
+<a class="sidebar-parent" href="https://learn.adafruit.com/adafruit-motor-shield/downloads">Downloads</a>
+<span class="page-draft-status">
+</span>
+</li>
+<li class="parent ">
+<a href="http://forums.ladyada.net/" target="blank">Forums<i class="fa fa-external-link"></i></a>
+</li>
+<li class="single-page-spacer"></li>
+<li class="single-page-link"><a href="https://learn.adafruit.com/adafruit-motor-shield?view=all">Single Page</a></li>
+<li><a href="https://cdn-learn.adafruit.com/downloads/pdf/adafruit-motor-shield.pdf">Download PDF</a></li>
+</ul>
+</nav>
+<header class="sidebar-meta hidden-xs">
+<h4>Contributors</h4>
+<div><a href="https://learn.adafruit.com/users/adafruit2">lady ada</a></div>
+</header>
+<header class="sidebar-meta hidden-xs">
+<a class="feedback-link" title="Feedback? Corrections?" rel="nofollow" data-remote="true" data-method="get" href="https://learn.adafruit.com/pages/449/settings_modal">
+Feedback? Corrections?
+</a> </header>
+</div>
+</div>
+<article class="col-lg-7 col-md-6 col-sm-8 col-xs-12">
+<div id="categories">
+<span class="category ">
+<a href="https://learn.adafruit.com/category/adafruit-products">ADAFRUIT PRODUCTS</a>
+</span>
+<span id="guide-favorite">
+<a class="favorites-link category right red" title="" data-toggle="tooltip" data-placement="left" data-remote="true" rel="nofollow" data-method="post" href="https://learn.adafruit.com/guides/89/favorites.js" data-original-title="Favorite this guide?">
+<i class="fa fa-heart-o"></i>
+</a></span>
+</div>
+<div class="content">
+<div class="page-title-wrapper">
+<h1 class="headline">
+<span id="faq">FAQ</span>
+</h1>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+<div class="page-content">
+<div class="row-fluid build-alert alert-warning">
+<div class="alert">
+<i class="fa fa-exclamation-circle"></i>
+This tutorial is for the now ancient V1 Motor shield. Chances are you have a V2, check out the tutorial <a href="https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino">https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino</a> This tutorial is for historical reference and previous customers only!
+</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-2" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-2" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+How many motors can I use with this shield?</h2>
+<div class="answer"><span>You can use 2 DC servos that run on 5V and up to 4 DC motors or 2 stepper motors (or 1 stepper and up to 2 DC motors)</span></div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-3" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-3" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+Can I connect more motors?</h2>
+<div class="answer"><span>No, at this time it is not possible to stack the shield or otherwise connect it up easily to control 4 steppers, for example.</span></div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-4" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-4" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+HELP! My motor doesnt work! - HELP! My motor doesnt work!...But the servos work FINE!</h2>
+<div class="answer">
+<p>Is the LED lit? The Stepper and DC motor connections wont do a single thing if the LED is not lit</p>
+<p>Don't bother writing up uploading code or wiring up motors if the LED doesn't light up, its not going to work.</p>
+</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-5" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-5" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+What is the LED for?</h2>
+<div class="answer">The LED indicates the DC/Stepper motor power supply is working. If it is not lit, then the DC/Stepper motors will not run. The servo ports are 5V powered and does not use the DC motor supply.</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-6" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-6" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+I'm trying to build this robot and it doesn't seem to run on a 9V battery....</h2>
+<div class="answer">Please read the&nbsp;<a href="http://learn.adafruit.com/adafruit-motor-shield/use-it">user manual</a>&nbsp;for information about appropriate power supplies.</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-7" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-7" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+Can this shield control small 3V motors?</h2>
+<div class="answer">Not really, its meant for larger, 6V+ motors. It does not work for 3V motors unless you overdrive them at 6V and then they will burn out faster<br></div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-8" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-8" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+What is the power connector on the shield for? How do I power my motors?</h2>
+<div class="answer">Please read the&nbsp;<a href="http://learn.adafruit.com/adafruit-motor-shield/use-it">user manual</a>&nbsp;for information about appropriate power supplies.</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-9" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-9" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+My Arduino freaks out when the motors are running! Is the shield broken?</h2>
+<div class="answer">Motors take a lot of power, and can cause 'brownouts' that reset the Arduino. For that reason the shield is designed for seperate (split) supplies - one for the electronics and one for the motor. Doing this will prevent brownouts. Please read the&nbsp;<a href="http://learn.adafruit.com/adafruit-motor-shield/use-it">user manual</a>&nbsp;for information about appropriate power supplies.</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-10" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-10" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+I have good solid power supplies, but the DC motors seem to 'cut out' or 'skip'.</h2>
+<div class="answer">Try soldering a ceramic or disc 0.1uF capacitor between the motor tabs (on the motor itself!) this will reduce noise that could be feeding back into the circuit (<a href="http://forums.adafruit.com/viewtopic.php?f=31&amp;t=10290">thanks macegr</a>!)</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-11" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-11" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+What if I need more than 600mA per motor?</h2>
+<div class="answer"><a href="http://learn.adafruit.com/adafruit-motor-shield/use-it">You can subsitute SN754410's (at your risk) or piggyback solder some more L293D drivers on top of the existing ones.</a></div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-12" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-12" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+What pins are not used on the motor shield?</h2>
+<div class="answer">
+<p><strong>All 6 analog input pins are available. They can also be used as digital pins (pins #14 thru 19)</strong></p>
+<p><strong>Digital pin 2, and 13 are not used.</strong></p>
+<p><strong>The following pins are in use only if the DC/Stepper noted is in use</strong>:<br>Digital pin 11: DC Motor #1 / Stepper #1 (activation/speed control)<br>Digital pin 3: DC Motor #2 / Stepper #1 (activation/speed control)<br>Digital pin 5: DC Motor #3 / Stepper #2 (activation/speed control)<br>Digital pin 6: DC Motor #4 / Stepper #2 (activation/speed control)<br></p>
+<p><strong>The following pins are in use if any DC/steppers are used</strong><br>Digital pin 4, 7, 8 and 12 are used to drive the DC/Stepper motors via the 74HC595 serial-to-parallel latch<br></p>
+<p><strong>The following pins are used only if that particular servo is in use</strong>:<br>Digitals pin 9: Servo #1 control<br>Digital pin 10: Servo #2 control</p>
+</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-13" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-13" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+Which pins are connected to the DC/Stepper motors?</h2>
+<div class="answer"><span>The DC/Stepper motors are NOT connected to the Arduino directly. They are connected to the 74HC595 latch which is spoken to by the Arduino. You CANNOT talk directly to the motors, you MUST use the motor shield library.</span></div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-14" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-14" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+Huh? I don't understand...</h2>
+<div class="answer"><a href="http://docs.google.com/View?docid=dgwf6cmm_2fznx7qgr" title="Link: http://docs.google.com/View?docid=dgwf6cmm_2fznx7qgr">You can try reading this nice overview written by Michael K</a></div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-15" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-15" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+How can I connect to the unused pins?</h2>
+<div class="answer">
+<p>The analog pins (analog 0-5 also known as digital pins 14-19) are broken out in the bottom right corner.</p>
+<p>Pin 2 has a small breakout since its the only truly unused pin</p>
+<p>The remaining pins are not broken out because they could be used by the motor shield. If you are sure that you are not using those pins then you can connect to them by using stacking headers when assembling the kit or soldering onto the top of the header with wires, or using a "Wing shield"</p>
+</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-16" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-16" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+I get the following error trying to run the example code: "error: AFMotor.h: No such file or directory...."</h2>
+<div class="answer"><span>Make sure you have installed the AFMotor library</span></div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-17" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-17" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+How do I install the library?</h2>
+<div class="answer"><a href="http://learn.adafruit.com/arduino-tips-tricks-and-techniques/arduino-libraries">Read our tutorial on libraries</a></div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-18" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-18" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+I have two stepper motors and I want to run them simulaneously but the example code can only control one and then the other?</h2>
+<div class="answer">
+<p>The stepper motor library step() routine does not have the ability to run both motors at a time. Instead, you will have to 'interleave' the calls. For example, to have both motors step forward 100 times you must write code like this:</p>
+<p>for (i=0; i&lt;100; i++) {<br>motor1.step(1, FORWARD, SINGLE);&nbsp;<br>motor2.step(1, FORWARD, SINGLE);<br>}</p>
+<p>If you want more intelligent control, check out the AccelStepper library (in the Downloads section) which has some concurrent stepper motor control examples<br></p>
+</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-19" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-19" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+What are some 'suggested motors'?</h2>
+<div class="answer">
+<p>Most people buy motors from surplus shops and no motor will make everyone happy</p>
+<p>However, since its a popular question, I suggest buying motors from Pololu (<a href="http://www.pololu.com/catalog/category/23">DC Servos</a>,&nbsp;<a href="http://www.pololu.com/catalog/category/51">DC motors</a>) or Jameco (<a href="http://www.jameco.com/webapp/wcs/stores/servlet/StoreCatalogDrillDownView?langId=-1&amp;storeId=10001&amp;catalogId=10001&amp;categoryName=cat_35&amp;subCategoryName=Motors&amp;category=3515&amp;refine=1&amp;jameco_page=54">all sorts</a>!) As well as the many&nbsp;<a href="http://www.ladyada.net/library/procure/hobbyist.html" title="Link: http://www.ladyada.net/library/procure/hobbyist.html">surplus webshops</a>.</p>
+</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-20" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-20" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+Is the motor shield compatible with the UNO R3 or Mega R3? What about the extra pins?</h2>
+<div class="answer">The motor shield is compatible with the R3 UNO and MEGA. &nbsp;The R3s have 2 extra pins on each header. &nbsp;These are duplicates of other pins on the header and are not needed by the shield.</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-21" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-21" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+I'm using a 4WD robot platform and I can't get anything to work.</h2>
+<div class="answer">The motors used in the 4WD robot platforms from Maker Shed, DF Robotics, Jameco and others have a lot of "brush noise". &nbsp;This feeds back into the Arduino circuitry and causes unstable operation. &nbsp;This problem can be solved by soldering 3 noise suppression capacitors to the motor. &nbsp;1 between the motor terminals, and one from each terminal to the motor casing.</div>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/3642">
+<img class="3642-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/003/642/medium260/adafruit_products_motor_capacitors.jpg?1396799310 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/003/642/medium640/adafruit_products_motor_capacitors.jpg?1396799310 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/003/642/medium800/adafruit_products_motor_capacitors.jpg?1396799310 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/003/642/large1024/adafruit_products_motor_capacitors.jpg?1396799310 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/adafruit_products_motor_capacitors.jpg" alt="adafruit_products_motor_capacitors.jpg">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-23" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-23" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+But my motor already has a capacitor on it and it still doesn't work.</h2>
+<div class="answer">These motors generate a lot of brush noise and usually need the full 3-capacitor treatment for adequate suppression.</div>
+</div>
+<div class="build-faq">
+<h2 class="question">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#faq-24" class="anchor-link"><span class="fa fa-link"></span></a>
+<span id="faq-24" class="anchor-link-target"></span>
+<i class="fa fa-question-circle"></i>
+Why don't you just design capacitors into the shield?</h2>
+<div class="answer">They would not be effective there. &nbsp;The noise must be suppressed at the source or the motor leads will act like antennae and broadcast it to the rest of the system.</div>
+</div>
+<div class="page-navigation">
+<a class="previous-page" href="https://learn.adafruit.com/adafruit-motor-shield/overview">
+<i class="fa fa-chevron-left"></i>OVERVIEW
+</a> <a class="next-page" href="https://learn.adafruit.com/adafruit-motor-shield/make-it">
+MAKE IT!<i class="fa fa-chevron-right"></i>
+</a> <div class="clear"></div>
+</div>
+<span class="page-last-updated">Last updated on 2015-06-07 at 05.16.33 PM</span>
+<span class="page-last-updated">Published on 2012-08-27 at 04.42.18 PM</span>
+</div>
+</div>
+</article>
+<div class="col-lg-two-and-half col-md-3 hidden-sm hidden-xs">
+<header class="sidebar-right">
+<div class="sidebar-right-content">
+<div class="product-wrapper">
+<div class="product-image">
+<a href="https://www.adafruit.com/product/50">
+<img src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/50-06.jpg" alt="50-06.jpg" height="233" class="img-responsive">
+</a> </div>
+<div class="product-details">
+<div class="product-title">Arduino Uno R3 (Atmega328 - assembled)</div>
+<span class="product-price">$24.95</span>
+<a id="50-product" class="product-buy" data-pid="50" data-qty="1" data-name="Arduino Uno R3 (Atmega328 - assembled)" data-price="24.95" href="https://www.adafruit.com/product/50">
+Add To Cart
+</a> </div>
+</div>
+<div class="add-all-to-cart-container">
+<a class="add-all-to-cart" href="https://learn.adafruit.com/adafruit-motor-shield/faq#" data-multi-add="{&quot;50&quot;:{&quot;quantity&quot;:1,&quot;price&quot;:24.95}}">ADD ALL TO CART</a>
+<div class="add-all-to-cart-progress"></div>
+</div>
+<div class="clear"></div>
+</div>
+</header>
+</div>
+</div>
+</div>
+<div class="related-guides-wrapper container">
+<div class="row">
+<div class="related-guides-title col-lg-12">
+<h2>
+RELATED GUIDES
+</h2>
+</div>
+</div>
+<div class="related-guides-content row">
+<div class="14-guide masonry-block col-lg-3 col-md-3 col-sm-4 col-xs-12">
+<div class="guide-block">
+<div class="title-bar">
+<div class="guide-type popular-guide">
+<a href="https://learn.adafruit.com/guides/popular">POPULAR</a>
+</div>
+<div class="title">
+<h5>
+<a href="https://learn.adafruit.com/ttl-serial-camera">
+TTL Serial Camera<br>
+</a> </h5>
+<div class="tagline">
+<a href="https://learn.adafruit.com/ttl-serial-camera">
+Snap, Snap!
+</a> </div>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+</div>
+<a href="https://learn.adafruit.com/ttl-serial-camera">
+<img src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/TTL_Serial_Camera.jpg" class="img-responsive guide-image" data-standard-image="https://s3.amazonaws.com/learn-production/guides/images/000/000/014/medium310/TTL_Serial_Camera.jpg?1448300900" data-mobile-image="https://s3.amazonaws.com/learn-production/guides/images/000/000/014/medium800/TTL_Serial_Camera.jpg?1448300900">
+</a> <div class="details">
+<div class="description">
+<a href="https://learn.adafruit.com/ttl-serial-camera">
+This guide is for our new TTL serial camera module with NTSC video output. These modules are a nice addition to a microcontroller project when you want to take a photo or control a video stream. The modules have a few features built in, such as the ability to change the brightness/saturation/hue of images, auto-contrast and auto-brightness adjustment, and motion detection.
+</a> </div>
+</div>
+</div>
+</div>
+<div class="15-guide masonry-block col-lg-3 col-md-3 col-sm-4 col-xs-12">
+<div class="guide-block">
+<div class="title-bar">
+<div class="title">
+<h5>
+<a href="https://learn.adafruit.com/el-wire">
+EL Wire<br>
+</a> </h5>
+<div class="tagline">
+<a href="https://learn.adafruit.com/el-wire">
+Working with Electroluminescent Wire
+</a> </div>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+</div>
+<a href="https://learn.adafruit.com/el-wire">
+<img src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/Heating_Element.jpg" class="img-responsive guide-image" data-standard-image="https://s3.amazonaws.com/learn-production/guides/images/000/000/015/medium310/Heating_Element.jpg?1448300901" data-mobile-image="https://s3.amazonaws.com/learn-production/guides/images/000/000/015/medium800/Heating_Element.jpg?1448300901">
+</a> <div class="details">
+<div class="description">
+<a href="https://learn.adafruit.com/el-wire">
+EL Wire, also known as Electroluminescent wire, is a stiff wire core coated with phosphor and then covered with a protective PVC sheath. When an AC signal is applied to it, it glows a cool neon color. Find out how to solder, power, and work with EL Wire in your next project.
+</a> </div>
+</div>
+</div>
+</div>
+<div class="16-guide masonry-block col-lg-3 col-md-3 col-sm-4 col-xs-12">
+<div class="guide-block">
+<div class="title-bar">
+<div class="title">
+<h5>
+<a href="https://learn.adafruit.com/hacking-the-kinect">
+Hacking the Kinect<br>
+</a> </h5>
+<div class="tagline">
+<a href="https://learn.adafruit.com/hacking-the-kinect">
+Reverse engineering the Microsoft Kinect
+</a> </div>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+</div>
+<a href="https://learn.adafruit.com/hacking-the-kinect">
+<img src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/kinect.jpg" class="img-responsive guide-image" data-standard-image="https://s3.amazonaws.com/learn-production/guides/images/000/000/016/medium310/kinect.jpg?1448300902" data-mobile-image="https://s3.amazonaws.com/learn-production/guides/images/000/000/016/medium800/kinect.jpg?1448300902">
+</a> <div class="details">
+<div class="description">
+<a href="https://learn.adafruit.com/hacking-the-kinect">
+Here's a step by step guide on how you can reverse engineer a Microsoft Kinect for the Xbox 360.
+</a> </div>
+</div>
+</div>
+</div>
+<div class="17-guide masonry-block col-lg-3 col-md-3 col-sm-4 col-xs-12">
+<div class="guide-block">
+<div class="title-bar">
+<div class="title">
+<h5>
+<a href="https://learn.adafruit.com/beaglebone">
+BeagleBone<br>
+</a> </h5>
+<div class="tagline">
+<a href="https://learn.adafruit.com/beaglebone">
+Tutorials for the TI embedded Linux board
+</a> </div>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+</div>
+<a href="https://learn.adafruit.com/beaglebone">
+<img src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/beaglebonetop_LRG.jpg" class="img-responsive guide-image" data-standard-image="https://s3.amazonaws.com/learn-production/guides/images/000/000/017/medium310/beaglebonetop_LRG.jpg?1448300904" data-mobile-image="https://s3.amazonaws.com/learn-production/guides/images/000/000/017/medium800/beaglebonetop_LRG.jpg?1448300904">
+</a> <div class="details">
+<div class="description">
+<a href="https://learn.adafruit.com/beaglebone">
+New from the fine people who have brought us the Beagle Board, we now have a smaller, lighter, but powerful single board linux computer, Beagle Bone! We like this move to a more compact and integrated SBC. For example, there is onboard Ethernet and USB host, as well as a USB client interface (a FTDI chip for shell access). It even comes preloaded with Angstrom Linux on the 4 GB microSD card! Here are some tips and tricks to get your BeagleBone up and running.
+</a> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-spacer"></div>
+</div>
+
+<div class="modal fade" id="notify-modal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#" class="close" data-dismiss="modal">×</a>
+<h5>OUT OF STOCK NOTIFICATION</h5>
+</div>
+<div class="modal-body">
+<p class="notify-modal-form-header"></p>
+<div class="notify-modal-products"></div>
+<form id="notify-modal-form" name="back_in_stock_notification">
+<p class="notify-modal-form-notice"></p>
+<div class="notify-modal-break"></div>
+<div class="form-group">
+<label class="inputLabel" for="name">YOUR NAME</label>
+<input type="text" size="25" maxlength="64" name="name" value="">
+</div>
+<div class="form-group">
+<label class="inputLabel" for="email">YOUR EMAIL</label>
+<input type="email" size="25" maxlength="96" name="email" value="">
+</div>
+<input type="text" name="daigo" style="display:none;">
+<input type="hidden" name="notify_me" value="true">
+</form>
+<div id="notify-modal-success" style="display:none">
+<p>You have been successfully subscribed to the Notification List for this product and will therefore receive an e-mail from us when it is back in stock!</p>
+<p>For security reasons, an e-mail has been sent to you acknowledging your subscription. Please remember that this subscription will not result in you receiving any e-mail from us about anything other than the restocking of this item.</p>
+<p>If, for any reason, you would like to unsubscribe from the Notification List for this product you will find details of how to do so in the e-mail that has just been sent to you!</p>
+</div>
+</div>
+<div class="modal-footer">
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#" id="close-notify" style="display: none" data-dismiss="modal" data-target="#notify-modal">CLOSE</a>
+<a href="https://learn.adafruit.com/adafruit-motor-shield/faq#" id="submit-notify" rel="nofollow" class="blue-button">NOTIFY ME</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="adafruit-footer">
+<div id="footer-content" class="container">
+<div class="row">
+<div class=" col-lg-6 col-md-6 col-sm-4 col-xs-12">
+<nav>
+<ul>
+<li><a href="https://www.adafruit.com/contact_us">CONTACT</a></li>
+<li><a href="https://www.adafruit.com/support">SUPPORT</a>
+</li><li><a href="https://www.adafruit.com/distributors">DISTRIBUTORS</a></li>
+<li><a href="https://www.adafruit.com/educators">EDUCATORS</a></li>
+<li><a href="https://www.adafruit.com/jobs">JOBS</a></li>
+<li><a href="https://www.adafruit.com/faq">FAQ</a></li>
+<li><a href="https://www.adafruit.com/shippinginfo/">SHIPPING &amp; RETURNS</a></li>
+<li><a href="https://www.adafruit.com/terms_of_service/">TERMS OF SERVICE</a></li>
+<li><a href="https://www.adafruit.com/privacy">PRIVACY &amp; LEGAL</a></li>
+<li><a href="https://www.adafruit.com/about">ABOUT US</a></li>
+</ul>
+</nav>
+<div id="footer-copyright">
+<a href="http://nytm.org/made-in-nyc/">ENGINEERED IN NYC</a> <span>Adafruit&nbsp;®</span>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-8 hidden-xs">
+<div id="footer-quote" class="">
+"Another belief of mine; that everyone else my age is an adult, whereas I am merely in disguise"
+<span class="quote-author">- <a href="https://en.wikiquote.org/wiki/Margaret_Atwood">Margaret Atwood</a></span>
+</div>
+</div>
+<div id="footer-seals">
+<img class="img-responsive" src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/seals_2x.jpg" alt="Seals 2x">
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script>
+    window.rails_env = 'production';
+  </script>
+<script src="./FAQ _ Adafruit Motor Shield (information about free-to-use PINs)_files/application-4039be9a976e587b184268a2681d6b94962ba6dee0bc54c4f088257270af2237.js.tải xuống"></script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://learn.adafruit.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://learn.adafruit.com/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    }
+  </script>
+
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1720153058307192");fbq("track","PageView");</script>
+<noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1720153058307192&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
+
+
+</body></html>
