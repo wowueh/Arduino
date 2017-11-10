@@ -1,0 +1,109 @@
+
+
+document.write(' \
+<style type="text/css" media="screen">\
+	 .dsq-widget ul.dsq-widget-list {\
+	 padding: 0;\
+	 margin: 0;\
+	 text-align: left;\
+	 }\
+	 img.dsq-widget-avatar {\
+	 width: 32px;\
+	 height: 32px;\
+	 border: 0px;\
+	 margin: 0px;\
+	 padding: 0px 3px 3px 0px;\
+	 float: left;\
+	 }\
+	 a.dsq-widget-user {\
+	 font-weight: bold;\
+	 }\
+	 a.dsq-widget-thread {\
+	 font-weight: bold;\
+	 }\
+	 p.dsq-widget-meta {\
+	 clear: both;\
+	 font-size: 80%;\
+	 padding: 0;\
+	 margin: 0;\
+	 }\
+	 li.dsq-widget-item {\
+	 margin: 15px 0;\
+	 list-style-type: none;\
+	 clear: both;\
+	 }\
+	 span.dsq-widget-clout {\
+	 padding: 0 2px;\
+	 background-color: #ff7300;\
+	 color: #fff;\
+	 }\
+	 table.dsq-widget-horiz td {\
+	 padding-right: 15px;\
+	 }\
+	 .dsq-widget-comment p {\
+	 display: inline;\
+	 }\
+	 </style>\
+	 <ul class="dsq-widget-list">\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_kcGIRSsFC4/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_kcGIRSsFC4/">bảo nguyễn</a>\
+	 <span class="dsq-widget-comment"><p>dạ,có cách nào nhấn giữ remote thì led sáng, chừng nào thả ra là led tắt không ạ</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/288-infrared-remote-control-voi-arduino">Infrared remote control với Arduino</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/288-infrared-remote-control-voi-arduino#comment-3607966574">17 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-601970c3dd46aedab36f193c9b381065/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27062/3185/avatar92.jpg?1510202163"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-601970c3dd46aedab36f193c9b381065/">Võ Trung Chánh</a>\
+	 <span class="dsq-widget-comment"><p>cho mình hỏi cái này điều khiển bằng cần điều khiển hay điều khiển bằng bluetooth thế..</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/893-cach-dung-module-dieu-khien-dong-co-l298n-cau-h-de-dieu-khien-dong-co-dc">Cách dùng Module điều khiển động cơ L298N - cầu H để điều khiển động cơ DC</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/893-cach-dung-module-dieu-khien-dong-co-l298n-cau-h-de-dieu-khien-dong-co-dc#comment-3607498730">1 day ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/caophcnguyn/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27050/8192/avatar92.jpg?1510060814"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/caophcnguyn/">Cao Phước Nguyên</a>\
+	 <span class="dsq-widget-comment"><p>Làm sao để esp8266 gửi lệnh lên server php và đọc dữ liệu từ trang php về?</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1272-phan-2-lap-trinh-truc-tiep-tren-esp8266-battat-led">[Phần 2] Lập trình trực tiếp trên ESP8266 Bật/Tắt LED</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/1272-phan-2-lap-trinh-truc-tiep-tren-esp8266-battat-led#comment-3604420936">2 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/mropopmropop/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/mropopmropop/">Mropop Mropop</a>\
+	 <span class="dsq-widget-comment"><p>Có điều khiển được đổi chiều ko bạn?</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/685-huong-dan-dieu-khien-dong-co-buoc">Hướng dẫn điều khiển động cơ bước với thư viện Accel Stepper và driver điều khiển động cơ bước A4988 hoặc DRV8825</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/685-huong-dan-dieu-khien-dong-co-buoc#comment-3604231391">2 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-0566a85f6665677610d6af3482ea8dc4/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27047/8081/avatar92.jpg?1510029148"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-0566a85f6665677610d6af3482ea8dc4/">Trung Phạm1510028864</a>\
+	 <span class="dsq-widget-comment"><p>e về test bị lỗi ntn. mng chỉ giúp e xem đó là lỗi gì vậy ak lệnh AT thì báo oke còn lệnh gọi, nt, vài lệnh khác lỗi hết. e đã thay sim khác vào Module sim900a Mini...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1552-dieu-khien-thiet-bi-bang-tin-nhan-dung-sim900a-voi-tap-lenh">Điều khiển thiết bị bằng tin nhắn dùng SIM900A với tập lệnh AT  </a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/1552-dieu-khien-thiet-bi-bang-tin-nhan-dung-sim900a-voi-tap-lenh#comment-3604041670">3 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-14749bb109fb4d289fd6969319dbce5b/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27031/227/avatar92.jpg?1509900229"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-14749bb109fb4d289fd6969319dbce5b/">Tú Phó</a>\
+	 <span class="dsq-widget-comment"><p>bạn ơi cho mình hỏi là nếu mà bh muốn xuất ra nồng độ khí CO2 của con MQ135 này thì làm ntn thế?</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1545-gioi-thieu-cam-bien-chat-luong-khong-khi-mq135">Giới thiệu cảm biến chất lượng không khí MQ135</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/1545-gioi-thieu-cam-bien-chat-luong-khong-khi-mq135#comment-3601362115">4 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/minhtuandao/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/minhtuandao/">minh tuan dao</a>\
+	 <span class="dsq-widget-comment"><p>nếu gặp lỗi này thì phải làm gì hả các anh/chị <a href="https://uploads.disquscdn.com/images/6e36fae480f4c7df2a3993f1c44a035f798b1bae3552be3bd43ee1bd8bc88c31.png" rel="nofollow noopener" title="https://uploads.disquscdn.com/images/6e36fae480f4c7df2a3993f1c44a035f798b1bae3552be3bd43ee1bd8bc88c31.png">https://uploads.disquscdn.c...</a></p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/210-cac-loi-pho-bien-khi-lap-trinh-arduino">Các lỗi phổ biến khi lập trình Arduino</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/210-cac-loi-pho-bien-khi-lap-trinh-arduino#comment-3600978616">4 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-7fbe9c04f99dbfbc738ae9079740a314/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/19417/361/avatar92.jpg?1509847966"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-7fbe9c04f99dbfbc738ae9079740a314/">sorasaki</a>\
+	 <span class="dsq-widget-comment"><p>mình đang thử làm lại cái này của bạn nhưng không hiểu lắm cái chỗ nút nhấn nên chắc chỉnh lại chút còn hôm mình test chạy thử cái của mình nó chẳng chạy luôn vì đo...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/result/1621-vong-deo-tay-ho-tro-nguoi-mu">Vòng đeo tay hỗ trợ người mù</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/result/1621-vong-deo-tay-ho-tro-nguoi-mu#comment-3600671933">5 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-676207ddcc8087437135a4b461fc07cb/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27019/4655/avatar92.jpg?1509790253"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-676207ddcc8087437135a4b461fc07cb/">Thuế Trần</a>\
+	 <span class="dsq-widget-comment"><p>cho em hỏi code liên kết cảm biến Bh1750(hiển thị lux) vs led (cảm biến ánh sáng hiển thị lux&lt;50 thì đèn led sáng)</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/tutorial/1446-huong-dan-lap-trinh-arduino-bang-javascript-trong-moi-truong-nodejs">Hướng dẫn lập trình Arduino bằng Javascript trong môi trường NodeJS</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/tutorial/1446-huong-dan-lap-trinh-arduino-bang-javascript-trong-moi-truong-nodejs#comment-3599648275">5 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/vinhdangvan/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/vinhdangvan/">vinh dang van</a>\
+	 <span class="dsq-widget-comment"><p>ở cách thứ nhất là suất ra nồng độ khí gì vậy ạ ?</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1545-gioi-thieu-cam-bien-chat-luong-khong-khi-mq135">Giới thiệu cảm biến chất lượng không khí MQ135</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/1545-gioi-thieu-cam-bien-chat-luong-khong-khi-mq135#comment-3599439428">6 days ago</a></p>\
+	 </li>\
+	 </ul>\
+');

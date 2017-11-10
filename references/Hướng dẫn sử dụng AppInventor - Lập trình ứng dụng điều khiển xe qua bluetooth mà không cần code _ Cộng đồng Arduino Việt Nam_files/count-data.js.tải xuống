@@ -1,0 +1,5 @@
+var DISQUSWIDGETS;
+
+if (typeof DISQUSWIDGETS != 'undefined') {
+    DISQUSWIDGETS.displayCount({"text":{"and":"v\u00e0","comments":{"zero":"B\u00ecnh lu\u1eadn","multiple":"{num} b\u00ecnh lu\u1eadn","one":"1 b\u00ecnh lu\u1eadn"}},"counts":[{"id":"node\/719","comments":16},{"id":"node\/639","comments":194},{"id":"node\/717","comments":23}]});
+}

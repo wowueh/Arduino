@@ -7,6 +7,15 @@ AF_DCMotor motorA(2, MOTOR12_64KHZ); // tạo động cơ #2, 64KHz pwm
 AF_DCMotor motorB(4, MOTOR12_64KHZ); // tạo động cơ #2, 64KHz pwm
 
 
+#include <SoftwareSerial.h>
+#define TX_PIN 10
+#define RX_PIN 9
+
+SoftwareSerial bluetooth(RX_PIN, TX_PIN);
+
+int baudRate[] = {300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200};
+byte command = 4;
+
 // Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
 // is used in I2Cdev.h
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
@@ -55,24 +64,34 @@ void dmpDataReady() {
 float p = 0;
 float i = 0;
 float d = 0;
-float kP = 50;
-float kI = 0;
-float kD = 0;
+float kP = 7.65;
+float kI = 0.025;
+float kD = 300;
 float setAngle = 0;
+float tiltAngle1 = 0;
+float tiltAngle2 = 0;
+float saveAngle = 0;
 float lastTime = millis();
 float lastPitch = setAngle;
 float beginTime = millis();
-float angleRange = 5;
+//float angleRange = 5;
 float sensitive = 10;
+float dP = 0;
+
 
 // =========================================================
 // ============== MOTOR           ==========================
 // =========================================================
 boolean motorDirect = 0;
 boolean brake = 1;
-int adjSpeedMotor = 5;
+int adjSpeedMotor = 22;
+int minMotorSpeed = 30;
 
 void setup() {
+
+  bluetooth.begin(115200);
+
+  
   // put your setup code here, to run once:
   // join I2C bus (I2Cdev library doesn't do this automatically)
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
@@ -105,12 +124,12 @@ void setup() {
   devStatus = mpu.dmpInitialize();
 
   // supply your own gyro offsets here, scaled for min sensitivity
-  mpu.setXGyroOffset(-256);
-  mpu.setYGyroOffset(65);
-  mpu.setZGyroOffset(49);
-  mpu.setXAccelOffset(-2548);
-  mpu.setYAccelOffset(-350);
-  mpu.setZAccelOffset(3703);
+  mpu.setXGyroOffset(-252);
+  mpu.setYGyroOffset(69);
+  mpu.setZGyroOffset(52);
+  mpu.setXAccelOffset(-1570);
+  mpu.setYAccelOffset(-365);
+  mpu.setZAccelOffset(2719);
 
   // make sure it worked (returns 0 if so)
   if (devStatus == 0) {
@@ -143,30 +162,98 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, LOW);
 wait01:
-  if (millis() - beginTime < 10000) {
+  if (millis() - beginTime < 14000) {
     goto wait01;
   }
+  digitalWrite(LED_PIN, HIGH);
+wait02:
+  if (millis() - beginTime < 20000) {
+    goto wait02;
+  }
+  digitalWrite(LED_PIN, LOW);
 setA:
   setAngle = calPitch();
-  if (setAngle == 0) {
+  if (calPitch()) {
+    setAngle = calPitch();
+    saveAngle = setAngle;
+    tiltAngle1 = setAngle - 1;
+    tiltAngle2 = setAngle + 1;
+  }else {
     goto setA;
   }
   digitalWrite(LED_PIN, HIGH);
+//  Serial.println(setAngle);
+//  Serial.println(saveAngle);
+//  Serial.println(tiltAngle1);
+//  Serial.println(tiltAngle2);
+//  
+  
 }
+
+
+
+
+
+
+
+
+
+
 
 void loop() {
   // put your main code here, to run repeatedly:
   if (millis() - beginTime > 10000)
   {
     float pitchV = calPitch();
-    //      Serial.print(pitchV);
-    //      Serial.print("\t");
-    //      Serial.print(calPID(pitchV));
-    //      Serial.print("\t");
-    //      Serial.println(setAngle);
+//          Serial.print(pitchV);
+//          Serial.print("\t");
+//          Serial.print(calPID(pitchV));
+//          Serial.print("\t");
+//          Serial.println(setAngle);
     MoveControl(calPID(pitchV));
   }
+
+  if (bluetooth.available()) {
+    command = bluetooth.read();
+  }
+
+  if(command == 49)
+  {
+//    motorA.setSpeed(minMotorSpeed+20);
+//    motorA.run(FORWARD);
+//    motorB.setSpeed(minMotorSpeed+20+20);
+//    motorB.run(FORWARD);
+//  setAngle=tiltAngle1;
+    dP= 20;
+  }else if (command == 48)
+  {
+//    motorA.setSpeed(minMotorSpeed+20);
+//    motorA.run(BACKWARD);
+//    motorB.setSpeed(minMotorSpeed+20+20);
+//    motorB.run(BACKWARD);
+
+//  setAngle= tiltAngle2;
+  dP= -20;
+  } else if (command ==52)
+  {
+//    setAngle = saveAngle;
+//    i = 0;
+  dP= 0;
+  }
+
+//  Serial.println(command);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 float calPitch()
@@ -243,21 +330,32 @@ int calPID(float pitch)
   float timeGap = millis() - lastTime;
   //  pitch = int(pitch);
   float error = round((pitch - setAngle) * sensitive) / sensitive;
-  p = kP * error;
+  p = kP * error + dP;
+  if(abs(i)<5){
   i += kI * error * timeGap;
-
+//  }else if(abs(i)>=5 && abs(i)<30){
+//  i += kI * error * timeGap * 4;  
+  } else {
+  i = constrain(i + kI * error * timeGap * 4,-255,255);
+  }
   d = kD * (pitch - lastPitch) / timeGap;
   int PID = int(p + i + d);
 
+//  Serial.print("P= ");
+//  Serial.print(p);
+//  Serial.print("\t");
+//  Serial.print("I= ");
+//  Serial.print(i);
+//  Serial.print("\t");
+//  Serial.print("D= ");
+//  Serial.println(d);
+  
+
   if (PID > 0) {
-    PID = PID + 30;
+    PID = map(abs(PID),0,255,minMotorSpeed,255);
   }
   if (PID < 0) {
-    PID = PID -30
-    \
-    
-    
-    ;
+    PID = -map(abs(PID),0,255,minMotorSpeed,255);
   }
 
   if (PID > 255) {

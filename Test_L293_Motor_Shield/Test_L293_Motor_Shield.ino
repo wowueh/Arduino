@@ -2,6 +2,7 @@
  
 AF_DCMotor motor(2, MOTOR12_64KHZ); // tạo động cơ #2, 64KHz pwm 
 AF_DCMotor motorb(4, MOTOR12_64KHZ); // tạo động cơ #2, 64KHz pwm 
+
  
 void setup() {  
     
@@ -12,6 +13,9 @@ void setup() {
     motor.setSpeed(30);     // chọn tốc độ maximum 255`/255
     motorb.setSpeed(35);
 
+
+    Serial.println(FORWARD);
+    
     Serial.print("tien");     
     
     motor.run(FORWARD);      // động cơ tiến 
