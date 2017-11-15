@@ -61,12 +61,14 @@ void dmpDataReady() {
 // ================================================================
 // ===              PID Controller                          =======
 // ================================================================
+int PID = 0;
 float p = 0;
 float i = 0;
+int addKi = 1;
 float d = 0;
-float kP = 7.65;
-float kI = 0.025;
-float kD = 300;
+float kP = 9.5;
+float kI = 0.1;
+float kD = 500;
 float setAngle = 0;
 float tiltAngle1 = 0;
 float tiltAngle2 = 0;
@@ -84,14 +86,14 @@ float dP = 0;
 // =========================================================
 boolean motorDirect = 0;
 boolean brake = 1;
-int adjSpeedMotor = 22;
+int adjSpeedMotor = 10;
 int minMotorSpeed = 30;
 
 void setup() {
 
   bluetooth.begin(115200);
 
-  
+
   // put your setup code here, to run once:
   // join I2C bus (I2Cdev library doesn't do this automatically)
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
@@ -178,16 +180,16 @@ setA:
     saveAngle = setAngle;
     tiltAngle1 = setAngle - 1;
     tiltAngle2 = setAngle + 1;
-  }else {
+  } else {
     goto setA;
   }
   digitalWrite(LED_PIN, HIGH);
-//  Serial.println(setAngle);
-//  Serial.println(saveAngle);
-//  Serial.println(tiltAngle1);
-//  Serial.println(tiltAngle2);
-//  
-  
+  //  Serial.println(setAngle);
+  //  Serial.println(saveAngle);
+  //  Serial.println(tiltAngle1);
+  //  Serial.println(tiltAngle2);
+  //
+
 }
 
 
@@ -205,43 +207,93 @@ void loop() {
   if (millis() - beginTime > 10000)
   {
     float pitchV = calPitch();
-//          Serial.print(pitchV);
-//          Serial.print("\t");
-//          Serial.print(calPID(pitchV));
-//          Serial.print("\t");
-//          Serial.println(setAngle);
-    MoveControl(calPID(pitchV));
+    //          Serial.print(pitchV);
+    //          Serial.print("\t");
+    //          Serial.print(calPID(pitchV));
+    //          Serial.print("\t");
+    //          Serial.println(setAngle);
+    PID = calPID(pitchV);
+    MoveControl(PID);
   }
 
+  // Recieve command from Smartphone
   if (bluetooth.available()) {
     command = bluetooth.read();
+    if (command == 'F')
+    {
+      //    motorA.setSpeed(minMotorSpeed+20);
+      //    motorA.run(FORWARD);
+      //    motorB.setSpeed(minMotorSpeed+20+20);
+      //    motorB.run(FORWARD);
+      //  setAngle=tiltAngle1;
+      dP = 80;
+    } else if (command == 'B')
+    {
+      //    motorA.setSpeed(minMotorSpeed+20);
+      //    motorA.run(BACKWARD);
+      //    motorB.setSpeed(minMotorSpeed+20+20);
+      //    motorB.run(BACKWARD);
+
+      //  setAngle= tiltAngle2;
+      dP = -80;
+    } else if (command == 'S')
+    {
+      //    setAngle = saveAngle;
+      //    i = 0;
+      dP = 0;
+    }
+    else if (command == 'P')
+    {
+      kP = bluetooth.parseFloat();
+    }
+    else if (command == 'I')
+    {
+      kI = bluetooth.parseFloat();
+    }
+    else if (command == 'D')
+    {
+      kD = bluetooth.parseFloat();
+    }
+    else if (command == '-')
+    {
+      setAngle -= 0.1;
+    }
+    else if (command == '+')
+    {
+      setAngle += 0.1;
+    }
+    else if (!isAlpha(command)&&isAlphaNumeric(command))
+    {
+      addKi = int(command);
+    }
+    for (int i = 1;i <=64; i++)
+    {
+      bluetooth.read();
+    }
   }
 
-  if(command == 49)
-  {
-//    motorA.setSpeed(minMotorSpeed+20);
-//    motorA.run(FORWARD);
-//    motorB.setSpeed(minMotorSpeed+20+20);
-//    motorB.run(FORWARD);
-//  setAngle=tiltAngle1;
-    dP= 20;
-  }else if (command == 48)
-  {
-//    motorA.setSpeed(minMotorSpeed+20);
-//    motorA.run(BACKWARD);
-//    motorB.setSpeed(minMotorSpeed+20+20);
-//    motorB.run(BACKWARD);
 
-//  setAngle= tiltAngle2;
-  dP= -20;
-  } else if (command ==52)
-  {
-//    setAngle = saveAngle;
-//    i = 0;
-  dP= 0;
-  }
-
-//  Serial.println(command);
+  // Send param status to Smartphone
+//  bluetooth.print("PID:");
+//  bluetooth.print(PID);
+//  bluetooth.print("\t");
+//  bluetooth.print("P:");
+//  bluetooth.print(p);
+//  bluetooth.print("\t");
+//  bluetooth.print("I:");
+//  bluetooth.print(i);
+//  bluetooth.print("\t");
+//  bluetooth.print("D:");
+//  bluetooth.println(d);
+//
+//  bluetooth.print("kP:");
+//  bluetooth.print(kP);
+//  bluetooth.print("\t");
+//  bluetooth.print("kI:");
+//  bluetooth.print(kI);
+//  bluetooth.print("\t");
+//  bluetooth.print("kD:");
+//  bluetooth.print(kD);
 }
 
 
@@ -331,31 +383,31 @@ int calPID(float pitch)
   //  pitch = int(pitch);
   float error = round((pitch - setAngle) * sensitive) / sensitive;
   p = kP * error + dP;
-  if(abs(i)<5){
-  i += kI * error * timeGap;
-//  }else if(abs(i)>=5 && abs(i)<30){
-//  i += kI * error * timeGap * 4;  
+  if (abs(i) < 5) {
+    i += kI * error * timeGap;
+    //  }else if(abs(i)>=5 && abs(i)<30){
+    //  i += kI * error * timeGap * 4;
   } else {
-  i = constrain(i + kI * error * timeGap * 4,-255,255);
+    i = constrain(i + kI * error * timeGap * addKi, -255, 255);
   }
-  d = kD * (pitch - lastPitch) / timeGap;
+  d = constrain(kD * (pitch - lastPitch) / timeGap,-255,255);
   int PID = int(p + i + d);
 
-//  Serial.print("P= ");
-//  Serial.print(p);
-//  Serial.print("\t");
-//  Serial.print("I= ");
-//  Serial.print(i);
-//  Serial.print("\t");
-//  Serial.print("D= ");
-//  Serial.println(d);
-  
+  //  Serial.print("P= ");
+  //  Serial.print(p);
+  //  Serial.print("\t");
+  //  Serial.print("I= ");
+  //  Serial.print(i);
+  //  Serial.print("\t");
+  //  Serial.print("D= ");
+  //  Serial.println(d);
+
 
   if (PID > 0) {
-    PID = map(abs(PID),0,255,minMotorSpeed,255);
+    PID = map(abs(PID), 0, 255, minMotorSpeed, 255);
   }
   if (PID < 0) {
-    PID = -map(abs(PID),0,255,minMotorSpeed,255);
+    PID = -map(abs(PID), 0, 255, minMotorSpeed, 255);
   }
 
   if (PID > 255) {
@@ -367,6 +419,8 @@ int calPID(float pitch)
   lastTime = millis();
   lastPitch = pitch;
   return PID;
+
+  bluetooth.print(PID);
 
 }
 
