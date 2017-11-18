@@ -148,6 +148,86 @@ ESP8266 wifi(&EspSerial);
                       mySwitch.send((address << 8) | 0b00000001, 24); // Send TURN-ON command
                     }
                   }
+
+             /* --- DEVICE #04  --- KARASSN KS-258
+            ----------------------------------------------------------------------------------------------------------------------------*/
+                  BLYNK_WRITE(V12)  // This Virtual pin is assigned to AWAY-HOME BUTTON
+                  {
+                    unsigned long address = 0b1111100110010100;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 1) {
+                      mySwitch.send((address << 8) | 0b11000000, 24); // Send AWAY-HOME command
+                    }
+                  }
+
+                  BLYNK_WRITE(V13)  // This Virtual pin is assigned to DISABLE-ALARM BUTTON
+                  {
+                    unsigned long address = 0b1111100110010100;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 1) {
+                      mySwitch.send((address << 8) | 0b00000011, 24); // Send DISABLE-ALARM command
+                    }
+                  }
+
+                  BLYNK_WRITE(V14)  // This Virtual pin is assigned to AT-HOME BUTTON
+                  {
+                    unsigned long address = 0b1111100110010100;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 1) {
+                      mySwitch.send((address << 8) | 0b00001100, 24); // Send AT-HOME command
+                    }
+                  }
+
+                  BLYNK_WRITE(V15)  // This Virtual pin is assigned to ACTIVATE-SIRENT BUTTON
+                  {
+                    unsigned long address = 0b1111100110010100;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 1) {
+                      mySwitch.send((address << 8) | 0b00110000, 24); // Send ACTIVATE-SIRENT command
+                    }
+                  }
+             /* --- DEVICE #05  --- LG AIR CONDITIONER
+            ----------------------------------------------------------------------------------------------------------------------------*/
+                  BLYNK_WRITE(V20)  // This Virtual pin is assigned to POWER BUTTON
+                  {
+                    unsigned long address = 0b1100000000000000;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 1) {
+                      mySwitch.send((address << 8) | 0b00000000, 24); // Send TURN-ON command
+                    }
+                    else if (value == 0) {
+                      mySwitch.send((address << 8) | 0b00000001, 24); // Send TURN-OFF command
+                    }
+                  }
+                  BLYNK_WRITE(V21)  // This Virtual pin is assigned to TEMP CONTROL
+                  {
+                    unsigned long address = 0b1100000000000000;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 26) {
+                      mySwitch.send((address << 8) | 0b00000010, 24); // Send TEMP26 command
+                    }
+                    else if (value == 27) {
+                      mySwitch.send((address << 8) | 0b00000011, 24); 
+                    }
+                    else if (value == 28) {
+                      mySwitch.send((address << 8) | 0b00000100, 24); 
+                    }
+                    else if (value == 29) {
+                      mySwitch.send((address << 8) | 0b00000101, 24); 
+                    }
+                  }
              /* ---- SEND TO UNO -----
              -----------------------------------------------------------------------------------*/
                       void sendToRX433()
@@ -269,9 +349,9 @@ void setup()
       /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 
-//      /*++++++++++++++++++++++++ CODE FOR LCD1602 +++++++++++++++++++++++++++++*/
-//          // Setup a function to be called every 1 second
-          timer.setInterval(5000L, sendToRX433);
+//      /*++++++++++++++++++++++++ CODE FOR RX433MHZ +++++++++++++++++++++++++++++*/
+//          // Setup a function to be called every 5 second
+          //timer.setInterval(5000L, sendToRX433);
 //      /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
 
