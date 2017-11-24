@@ -30,10 +30,12 @@
  *************************************************************/
 
 /* Comment this out to disable prints and save space */
-#define BLYNK_PRINT Serial
+//#define BLYNK_PRINT Serial
 #include <ESP8266_Lib.h>
 #include <BlynkSimpleShieldEsp8266.h>
+#include <SPI.h>
 
+WidgetTerminal terminal(V9);
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
 char auth[] = "ffc2800bf47846f2b101effcfd3f0751";
@@ -65,7 +67,6 @@ ESP8266 wifi(&EspSerial);
 
       /* +++++++++++++++++++++++++ CODE FOR DHTxx SENSOR +++++++++++++++++++++++++++++++*/
           #include <DHT.h>
-          #include <SPI.h>
           
           #define DHTPIN 6          // What digital pin we're connected to
           
@@ -84,15 +85,21 @@ ESP8266 wifi(&EspSerial);
           {
             float h = dht.readHumidity();
             float t = dht.readTemperature(); // or dht.readTemperature(true) for Fahrenheit
+            // Compute heat index in Celsius (isFahreheit = false)
+            float hic = dht.computeHeatIndex(t, h, false);
           
-            if (isnan(h) || isnan(t)) {
-              Serial.println("Failed to read from DHT sensor!");
+            if (isnan(h) || isnan(t)|| isnan(hic)) {
+              //Serial.println("Failed to read from DHT sensor!");
               return;
             }
             // You can send any value at any time.
             // Please don't send more that 10 values per second.
             Blynk.virtualWrite(V5, h);
             Blynk.virtualWrite(V6, t);
+            Blynk.virtualWrite(V8, hic);
+            terminal.println(t);
+            terminal.flush();
+            
           }
       /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
@@ -228,6 +235,69 @@ ESP8266 wifi(&EspSerial);
                       mySwitch.send((address << 8) | 0b00000101, 24); 
                     }
                   }
+                  BLYNK_WRITE(V22)  // This Virtual pin is assigned to TURBO
+                  {
+                    unsigned long address = 0b1100000000000000;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 1) {
+                      mySwitch.send((address << 8) | 0b00000110, 24); // Send ON command
+                    }
+                    else if (value == 0) {
+                      mySwitch.send((address << 8) | 0b00000111, 24); // Send OFF command
+                    }
+                  }
+                  BLYNK_WRITE(V23)  // This Virtual pin is assigned to MODE
+                  {
+                    unsigned long address = 0b1100000000000000;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 1) {
+                      mySwitch.send((address << 8) | 0b00001000, 24); // Send DRY command
+                    }
+                    else if (value == 2) {
+                      mySwitch.send((address << 8) | 0b00001001, 24); // Send AUTO command
+                    }
+                    else if (value == 3) {
+                      mySwitch.send((address << 8) | 0b00001010, 24); // Send AUTO L1 command
+                    }
+                    else if (value == 4) {
+                      mySwitch.send((address << 8) | 0b00001011, 24); // Send AUTO L2 command
+                    }
+                    else if (value == 5) {
+                      mySwitch.send((address << 8) | 0b00001100, 24); // Send AUTO H1 command
+                    }
+                    else if (value == 6) {
+                      mySwitch.send((address << 8) | 0b00001101, 24); // Send AUTO H2 command
+                    }
+                    else if (value == 7) {
+                      mySwitch.send((address << 8) | 0b00001110, 24); // Send COOL command
+                    }
+                    else if (value == 8) {
+                      mySwitch.send((address << 8) | 0b00001111, 24); // Send FAN command
+                    }
+                  }
+                  BLYNK_WRITE(V24)  // This Virtual pin is assigned to FAN SPEED
+                  {
+                    unsigned long address = 0b1100000000000000;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 0) {
+                      mySwitch.send((address << 8) | 0b00010000, 24); // Send CHAOS command
+                    }
+                    else if (value == 1) {
+                      mySwitch.send((address << 8) | 0b00010001, 24); // Send SPEED 1 command
+                    }
+                    else if (value == 2) {
+                      mySwitch.send((address << 8) | 0b00010010, 24); // Send SPEED 2 command
+                    }
+                    else if (value == 3) {
+                      mySwitch.send((address << 8) | 0b00010011, 24); // Send SPEED 3 command
+                    }
+                  }
              /* ---- SEND TO UNO -----
              -----------------------------------------------------------------------------------*/
                       void sendToRX433()
@@ -322,13 +392,15 @@ void setup()
 
   
   // Debug console
+  
   Serial.begin(9600);
   delay(10);
   // Set ESP8266 baud rate
   EspSerial.begin(ESP8266_BAUD);
   delay(10);
   Blynk.begin(auth, wifi, ssid, pass);
-       
+//  terminal.println(F("Hello"));
+
 
       /*|++++++++++++++++++++++++++ CODE FOR DHTxx SENSOR +++++++++++++++++++++++++++++++++++++|*/
           dht.begin();

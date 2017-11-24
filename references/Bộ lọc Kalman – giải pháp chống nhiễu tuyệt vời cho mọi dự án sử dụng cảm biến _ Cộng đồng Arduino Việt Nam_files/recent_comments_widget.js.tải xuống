@@ -1,0 +1,109 @@
+
+
+document.write(' \
+<style type="text/css" media="screen">\
+	 .dsq-widget ul.dsq-widget-list {\
+	 padding: 0;\
+	 margin: 0;\
+	 text-align: left;\
+	 }\
+	 img.dsq-widget-avatar {\
+	 width: 32px;\
+	 height: 32px;\
+	 border: 0px;\
+	 margin: 0px;\
+	 padding: 0px 3px 3px 0px;\
+	 float: left;\
+	 }\
+	 a.dsq-widget-user {\
+	 font-weight: bold;\
+	 }\
+	 a.dsq-widget-thread {\
+	 font-weight: bold;\
+	 }\
+	 p.dsq-widget-meta {\
+	 clear: both;\
+	 font-size: 80%;\
+	 padding: 0;\
+	 margin: 0;\
+	 }\
+	 li.dsq-widget-item {\
+	 margin: 15px 0;\
+	 list-style-type: none;\
+	 clear: both;\
+	 }\
+	 span.dsq-widget-clout {\
+	 padding: 0 2px;\
+	 background-color: #ff7300;\
+	 color: #fff;\
+	 }\
+	 table.dsq-widget-horiz td {\
+	 padding-right: 15px;\
+	 }\
+	 .dsq-widget-comment p {\
+	 display: inline;\
+	 }\
+	 </style>\
+	 <ul class="dsq-widget-list">\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/vnlongnguyn/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/forums/301/2034/avatar92.jpg?1402278895"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/vnlongnguyn/">Văn Long Nguyễn</a>\
+	 <span class="dsq-widget-comment"><p>Kiểu unsigned long là kiểu số nguyên nằm trong khoảng từ 0 đến 4,294,967,295 (0 đến 232 - 1). Mỗi biến mang kiểu dữ liệu này chiếm 4 byte bộ nhớ. =&gt; Sai nhé, Là đoạn...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/reference/unsigned-long">unsigned long</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/reference/unsigned-long#comment-3626697222">11 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-baf5ecd84c6a8766519b98f66eec1511/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27164/4323/avatar92.jpg?1511283191"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-baf5ecd84c6a8766519b98f66eec1511/">lodolfo</a>\
+	 <span class="dsq-widget-comment"><p>Các thánh cho hỏi tính giá trị điện trở để mắc vào mạch này như nào vậy? Sao lại chọn được các giá trị là 1k Ohm và 10k Ohm? Mình ko phải dân chuyên điện tử nên ko rõ...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/153-bai-8-dung-button-nut-bam-de-dieu-khien-mot-den-led">Bài 8: Dùng button (nút bấm) để điều khiển một đèn LED</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/153-bai-8-dung-button-nut-bam-de-dieu-khien-mot-den-led#comment-3626666392">11 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/ph_m_ph_ng_uy_n/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27183/7136/avatar92.jpg?1511264200"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/ph_m_ph_ng_uy_n/">Phạm Phương Uyên</a>\
+	 <span class="dsq-widget-comment"><p>cho em hỏi nếu thay l293d bằng l298n thì code có thay đổi gì không ạ</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/639-du-xe-dieu-khien-tu-xa-qua-bluetooth">Dự án xe điều khiển từ xa qua bluetooth</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/639-du-xe-dieu-khien-tu-xa-qua-bluetooth#comment-3626243032">16 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-2677c94cc946bd788a3828099d6bcd49/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/22458/1962/avatar92.jpg?1511246865"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-2677c94cc946bd788a3828099d6bcd49/">Văn Tường</a>\
+	 <span class="dsq-widget-comment"><p>Wire.write(0x07); // <br>Wire.write(0x10); // <br>Bạn cho mình hỏi 2 câu lệnh này là gì được ko?</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1053-giao-tiep-i2c-voi-nhieu-module">giao tiếp I2C với nhiều module</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/1053-giao-tiep-i2c-voi-nhieu-module#comment-3626061122">21 hours ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_BhrOMkN7IY/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/22784/2946/avatar92.jpg?1511145341"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_BhrOMkN7IY/">Nick Chung</a>\
+	 <span class="dsq-widget-comment"><p>Chào bạn, bạn cần tải và cài thư viện trước nhé, link down load thư viện ở gần phía cuối bài nhé bạn.</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/tutorial/1385-dieu-khien-module-dong-co-step-2-pha-va-thu-vien">Điều khiển module  động cơ step 2 pha và thư viện</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/tutorial/1385-dieu-khien-module-dong-co-step-2-pha-va-thu-vien#comment-3624182366">2 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_EyCKvWTfOC/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27164/354/avatar92.jpg?1511077791"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_EyCKvWTfOC/">Nguyễn Tuấn</a>\
+	 <span class="dsq-widget-comment"><p>mọi người ơi cho e hỏi. e code như trên rồi nhưng đến đoạn if((int)pos){//nêu có tin nhắn chưa đọc if(sms.GetSMS(pos, number, smstext, 160)){ điều kiện này lỗi, mặc dù...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/890-dieu-khien-thiet-bi-bang-tin-nhan-voi-sim900-va-arduino">Điều khiển thiết bị bằng tin nhắn với Sim900 và Arduino</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/890-dieu-khien-thiet-bi-bang-tin-nhan-voi-sim900-va-arduino#comment-3623039230">2 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-c7e791b16611deca87a347c22ce64e11/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/24592/4926/avatar92.jpg?1511021277"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-c7e791b16611deca87a347c22ce64e11/">Trần Tư</a>\
+	 <span class="dsq-widget-comment"><p>ad ơi bây giờ mình kết nối xong như này rồi mình có thể kết nối với LCD I2C đươc không ạ,tai mình cần mỗi con uno mình nối 1 cái LCD,ở cái chủ mình để LCD I2C còn cái...</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/1061-giao-tiep-i2c-giua-nhieu-arduino-voi-nhau">Giao tiếp I2C giữa nhiều arduino với nhau</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/1061-giao-tiep-i2c-giua-nhieu-arduino-voi-nhau#comment-3622123511">3 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/disqus_jAjf1Nyk7J/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27152/244/avatar92.jpg?1510950052"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/disqus_jAjf1Nyk7J/">Ờm Ờm</a>\
+	 <span class="dsq-widget-comment"><p>B ơi b fix dc lỗi này chưa ? Mình đang bị mà tìm hoài chưa fix nổi :|</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/854-sim900a-arduino-gui-va-nhan-sms">Sim900A &amp; Arduino | Gửi và nhận SMS</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/854-sim900a-arduino-gui-va-nhan-sms#comment-3621116612">4 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/nguynhusoi/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/14007/3947/avatar92.jpg?1421639674"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/nguynhusoi/">nguyễn hữu soái</a>\
+	 <span class="dsq-widget-comment"><p>bỏ lặp lại thì làm cách nào vậy mấy anh?<br>ví dụ mình ấn nút 1 cái là nó lên số 1 sau ấn thêm cái nữa nó không lên số 2 mà nó lại về số 0 rồi mới lên số 2</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/reference/boolean">boolean</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/reference/boolean#comment-3620284046">4 days ago</a></p>\
+	 </li>\
+	 <li class="dsq-widget-item">\
+	 <a href="https://disqus.com/by/arduinovnn-bc9e82730f512b188638dde8d5f51cd2/"><img class="dsq-widget-avatar" src="https://c.disquscdn.com/uploads/users/27099/6031/avatar92.jpg?1510852103"></a>\
+	 <a class="dsq-widget-user" href="https://disqus.com/by/arduinovnn-bc9e82730f512b188638dde8d5f51cd2/">Ngọc Thương Châu</a>\
+	 <span class="dsq-widget-comment"><p>bạn có nối chung GND của L298 với GND của ARDUINO chưa?</p></span>\
+	 <p class="dsq-widget-meta"><a href="http://arduino.vn/bai-viet/948-bam-xung-dieu-khien-toc-do-dong-co-bang-l298">Băm xung - Điều khiển tốc độ động cơ bằng L298</a>&nbsp;&middot;&nbsp;<a href="http://arduino.vn/bai-viet/948-bam-xung-dieu-khien-toc-do-dong-co-bang-l298#comment-3619145562">5 days ago</a></p>\
+	 </li>\
+	 </ul>\
+');
