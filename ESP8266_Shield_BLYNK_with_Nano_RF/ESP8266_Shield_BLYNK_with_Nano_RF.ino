@@ -211,6 +211,7 @@ ESP8266 wifi(&EspSerial);
                     // Check if the button is pressed:
                     if (value == 1) {
                       mySwitch.send((address << 8) | 0b00000000, 24); // Send TURN-ON command
+                      mySwitch.send((address << 8) | 0b00001010, 24); // Send AUTO L1 command=10                      
                     }
                     else if (value == 0) {
                       mySwitch.send((address << 8) | 0b00000001, 24); // Send TURN-OFF command
@@ -255,28 +256,28 @@ ESP8266 wifi(&EspSerial);
                   
                     // Check if the button is pressed:
                     if (value == 1) {
-                      mySwitch.send((address << 8) | 0b00001000, 24); // Send DRY command
+                      mySwitch.send((address << 8) | 0b00001000, 24); // Send DRY command=8
                     }
                     else if (value == 2) {
-                      mySwitch.send((address << 8) | 0b00001001, 24); // Send AUTO command
+                      mySwitch.send((address << 8) | 0b00001001, 24); // Send AUTO command=9
                     }
                     else if (value == 3) {
-                      mySwitch.send((address << 8) | 0b00001010, 24); // Send AUTO L1 command
+                      mySwitch.send((address << 8) | 0b00001010, 24); // Send AUTO L1 command=10
                     }
                     else if (value == 4) {
-                      mySwitch.send((address << 8) | 0b00001011, 24); // Send AUTO L2 command
+                      mySwitch.send((address << 8) | 0b00001011, 24); // Send AUTO L2 command=11
                     }
                     else if (value == 5) {
-                      mySwitch.send((address << 8) | 0b00001100, 24); // Send AUTO H1 command
+                      mySwitch.send((address << 8) | 0b00001100, 24); // Send AUTO H1 command=12
                     }
                     else if (value == 6) {
-                      mySwitch.send((address << 8) | 0b00001101, 24); // Send AUTO H2 command
+                      mySwitch.send((address << 8) | 0b00001101, 24); // Send AUTO H2 command=13
                     }
                     else if (value == 7) {
-                      mySwitch.send((address << 8) | 0b00001110, 24); // Send COOL command
+                      mySwitch.send((address << 8) | 0b00001110, 24); // Send COOL command=14
                     }
                     else if (value == 8) {
-                      mySwitch.send((address << 8) | 0b00001111, 24); // Send FAN command
+                      mySwitch.send((address << 8) | 0b00001111, 24); // Send FAN command=15
                     }
                   }
                   BLYNK_WRITE(V24)  // This Virtual pin is assigned to FAN SPEED
@@ -296,6 +297,16 @@ ESP8266 wifi(&EspSerial);
                     }
                     else if (value == 3) {
                       mySwitch.send((address << 8) | 0b00010011, 24); // Send SPEED 3 command
+                    }
+                  }
+                  BLYNK_WRITE(V25)  // This Virtual pin is assigned to SWING
+                  {
+                    unsigned long address = 0b1100000000000000;   // address is used to identify a specific device in RF tranmission.
+                    int value = param.asInt();    // Get value as integer
+                  
+                    // Check if the button is pressed:
+                    if (value == 1) {
+                      mySwitch.send((address << 8) | 0b00010100, 24); // Send ON/OFF command=20
                     }
                   }
              /* ---- SEND TO UNO -----

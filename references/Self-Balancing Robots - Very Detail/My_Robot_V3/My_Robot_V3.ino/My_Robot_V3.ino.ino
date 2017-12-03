@@ -1,3 +1,43 @@
+/********* SELF-BALANCING 2 WHEEL ROBOT ********************************************************************
+AUTHOR: ANDYHD88 email: wowueh@gmail.com
+
+This is a 2 wheels Self Balancing Robot which is able to
+recieve movement and setting commands through Bluetooth.
+
+* HARDWARE:
+  - 01 Arduino Uno R3
+  - 01 Adafruit Motor Shield L298D
+  - 01 MPU6050 GY-521 6DOF Breakout board.
+  - 01 HC-05 Bluetooth Module
+  - 02 5V motors
+  - 01 7.4V battery
+  - 02 Heatsink for 2 H-Brigde on Shield (Optional)
+  - 01 Switch for Power Supply (Optional)
+  - Acrylic Chasis
+
+* SOFTWARE:
+  - Bluetooth Controller installed on Smartphone (You can go to https://ai2.appinventor.com to create one)
+  - Upload this below sketch to your Arduino
+
+* WIRING:  
+  A. MOTORS AND SHIELD:
+    - Connect 02 motors to M2,M4 Port on Shield (Red wire is outside).
+    - Connect Battery to Shield (Use jumper to supply power to both Shield and Arduino).
+  
+  B. MPU6050 AND SHIELD:
+      INT ------> D2
+      VCC ------> 5V
+      GND ------> GND
+      SDA ------> A4
+      SCL ------> A5
+  
+  C. HC-05 AND SHIELD:
+      VCC ------> 5V
+      GND ------> GND
+      TX  ------> D9
+      RX  ------> D10
+  
+*************************************************************************************************************/
 #include "I2Cdev.h"
 
 #include "MPU6050_6Axis_MotionApps20.h"
@@ -10,7 +50,6 @@ AF_DCMotor motorB(4, MOTOR12_64KHZ); // tạo động cơ #2, 64KHz pwm
 #include <SoftwareSerial.h>
 #define TX_PIN 10
 #define RX_PIN 9
-
 SoftwareSerial bluetooth(RX_PIN, TX_PIN);
 
 int baudRate[] = {300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200};
@@ -64,12 +103,12 @@ void dmpDataReady() {
 int PID = 0;
 float p = 0;
 float i = 0;
-int addKi = 1;
-float d = 0;
+int addKi = 1; //USE IN INTERGRAL CALCULATION, DEFAULT = 1
+float d = 0; 
 float kP = 9.5;
 float kI = 0.1;
 float kD = 500;
-float setAngle = 0;
+float setAngle = 0; //BALANCE POINT
 float tiltAngle1 = 0;
 float tiltAngle2 = 0;
 float saveAngle = 0;
@@ -77,8 +116,8 @@ float lastTime = millis();
 float lastPitch = setAngle;
 float beginTime = millis();
 //float angleRange = 5;
-float sensitive = 10;
-float dP = 0;
+float sensitive = 10; // USE TO SET MINIMUM ANGLE CHANGE TO RESPOND
+float dP = 0; // USE TO ADD TO PID TO MAKE ROBOT MOVE, DEFAULT = 0
 
 
 // =========================================================
@@ -86,7 +125,7 @@ float dP = 0;
 // =========================================================
 boolean motorDirect = 0;
 boolean brake = 1;
-int adjSpeedMotor = 10;
+int adjSpeedMotor = 10; 
 int minMotorSpeed = 30;
 
 void setup() {
@@ -213,7 +252,7 @@ void loop() {
     //          Serial.print("\t");
     //          Serial.println(setAngle);
     PID = calPID(pitchV);
-    MoveControl(PID);
+    KeepBalance(PID);
   }
 
   // Recieve command from Smartphone
@@ -266,6 +305,8 @@ void loop() {
     {
       addKi = int(command);
     }
+
+    // CLEAR BUFFER TO AVOID ERROR
     for (int i = 1;i <=64; i++)
     {
       bluetooth.read();
@@ -469,7 +510,7 @@ void Move(boolean direction, int PID)
 // ============================================================
 // ============== MOVEMENT CONTROL   ==========================
 // ============================================================
-void MoveControl(int PID)
+void KeepBalance(int PID)
 {
   if (PID > 0)
   {
