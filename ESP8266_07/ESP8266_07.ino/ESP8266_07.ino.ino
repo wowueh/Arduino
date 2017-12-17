@@ -36,6 +36,18 @@
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
+#include <OneWire.h>
+#include <DallasTemperature.h>
+
+// Chân nối với Arduino
+#define ONE_WIRE_BUS 2
+//Thiết đặt thư viện onewire
+OneWire oneWire(ONE_WIRE_BUS);
+//Mình dùng thư viện DallasTemperature để đọc cho nhanh
+DallasTemperature sensors(&oneWire);
+
+BlynkTimer timer;
+
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
 char auth[] = "c0149a6046cd41538542d45f3a85184f";
@@ -45,16 +57,26 @@ char auth[] = "c0149a6046cd41538542d45f3a85184f";
 char ssid[] = "vinaphone";
 char pass[] = "nhatkim@412";
 
+void sendSensor()
+{
+  float t = sensors.getTempCByIndex(0);
+  Blynk.virtualWrite(V0, t);
+}
+
 void setup()
 {
   // Debug console
   Serial.begin(9600);
 
   Blynk.begin(auth, ssid, pass);
+  sensors.begin();
+
+  timer.setInterval(5000L, sendSensor);
 }
 
 void loop()
 {
   Blynk.run();
+  timer.run();
 }
 
