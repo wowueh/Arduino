@@ -1,0 +1,4 @@
+Ma nhap vao thiet bi trung tam (8chu so): 11100000
+
+ma 433Mhz phat ra Wireless Siren khi co bao dong:
+RAW: 111111000000000000100110 (decimal: 16515110)	length: 24	addr: 1111110000000000	command: 100110
